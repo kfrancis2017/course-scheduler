@@ -1,0 +1,23 @@
+[
+    {
+        "userID": 
+        "username":
+        "password":
+        "email":
+        "firstName":
+        "lastName":
+        "accountStatus":
+        "currentCourses":
+        "major":
+        "advisingSessions":
+        "program":
+        "currentAdvisor":
+        "major_GPA":
+        "overall_GPA":
+        "majorCompletionPercentage":
+        "coreCompletionPercentage":
+        "degreeCompletionPercentage":
+        "finishedCourses":
+        "failedCourses":
+    }
+]
