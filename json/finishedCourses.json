@@ -1,13 +1,8 @@
 [
     {
-        "courseID":
-        "title":
-        "description":
-        "prerequisite":
-        "corequisite":
-        "areaOfStudyRequirements":
-        "courseHolds":
-        "grade":
-        "passed": 
+        "id":"5b1abb53-9b30-460f-9719-0da7d333d59d",
+        "course":"b0f876c0-1e22-40a1-b588-2ad33839a55d",
+        "grade":52.3,
+        "passed":false 
     }
 ]

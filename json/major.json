@@ -1,10 +1,11 @@
 [
     {
-        "id":
-        "totalCreditsRequired":
-        "majorCreditsRequired":
-        "electiveCreditsRequired":
-        "coreCourses":
-        "electiveCourses":
+        "id":"94d14278-e626-466e-8743-757505f8fba6",
+        "name":"Computer Science",
+        "totalCreditsRequired":125,
+        "majorCreditsRequired":30,
+        "electiveCreditsRequired":31,
+        "coreCourses":["162f960e-06e9-4527-8703-00c7e5994d56","d9cd0b7f-7c42-4530-85b4-d7299538cc0e"],
+        "electiveCourses":["b0f876c0-1e22-40a1-b588-2ad33839a55d"]
     }
 ]

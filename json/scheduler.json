@@ -1,8 +1,7 @@
 [
     {
-        "studentID":
-        "credits":
-        "courses":
-        
+        "studentID":"6f56258d-70fa-4b72-964d-974990611dc4",
+        "credits":15,
+        "courses":["b0f876c0-1e22-40a1-b588-2ad33839a55d"]
     }
 ]

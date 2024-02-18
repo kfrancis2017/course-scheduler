@@ -7,33 +7,18 @@
         "firstName":"Dominic",
         "lastName":"Spears",
         "accountStatus":"Open",
-        "currentCourses": [{
-            "courseID":"2a4537a7-a2c8-470b-9e2a-0c4354df63d0",
-            "title":"English 101",
-            "description":"Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
-            "prerequisite":null,
-            "corequisite":null,
-            "areaOfStudyRequirements":"CC-CMW",
-            "courseHolds":false
-        }],
-        "major": [{
-            "id":"94d14278-e626-466e-8743-757505f8fba6",
-            "totalCreditsRequired":125,
-            "majorCreditsRequired":30,
-            "electiveCreditsRequired":31,
-            "coreCourses":
-            "electiveCourses":
-        }],
-        "advisingSessions":
-        "program":
-        "currentAdvisor":
-        "major_GPA":
-        "overall_GPA":
-        "majorCompletionPercentage":
-        "coreCompletionPercentage":
-        "degreeCompletionPercentage":
-        "finishedCourses":
-        "failedCourses":
+        "currentCourses": ["2a4537a7-a2c8-470b-9e2a-0c4354df63d0","162f960e-06e9-4527-8703-00c7e5994d56","b0f876c0-1e22-40a1-b588-2ad33839a55d"],
+        "major": ["94d14278-e626-466e-8743-757505f8fba6"],
+        "advisingSessions":["6586706b-c825-4b39-bd18-3ab2676e92f6"],
+        "program":"CEC",
+        "currentAdvisor":"591eb9db-17d4-4731-bce5-13547764ffdb",
+        "major_GPA":4.0,
+        "overall_GPA":3.8,
+        "majorCompletionPercentage":8.0,
+        "coreCompletionPercentage":15.0,
+        "degreeCompletionPercentage":23.0,
+        "finishedCourses":null,
+        "failedCourses":["5b1abb53-9b30-460f-9719-0da7d333d59d"]
     },{
         "userID": "",
         "username":

@@ -13,7 +13,7 @@
         "description":"UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
         "prerequisite":["c91ff163-e682-4da0-944d-8d3f1df93b1d"],
         "corequisite":null,
-        "areaOfStudyRequirements":"",
+        "areaOfStudyRequirements":"PR",
         "courseHolds":false
     },{
         "courseID":"162f960e-06e9-4527-8703-00c7e5994d56",
@@ -22,6 +22,14 @@
         "prerequisite":null,
         "corequisite":null,
         "areaOfStudyRequirements":"PR",
+        "courseHolds":false
+    },{
+        "courseID":"b0f876c0-1e22-40a1-b588-2ad33839a55d",
+        "title":"HIST 101 European Civilization from Ancient Times to the Mid-17th Century",
+        "description":"The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
+        "prerequisite":null,
+        "corequisite":null,
+        "areaOfStudyRequirements":"CC-GHS",
         "courseHolds":false
     }
 ]
