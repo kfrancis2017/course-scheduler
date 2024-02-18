@@ -1,6 +1,41 @@
 [
     {
-        "userID": 
+        "userID":"6f56258d-70fa-4b72-964d-974990611dc4",
+        "username":"dspears",
+        "password":"iluvdogs2004",
+        "email":"dspears@email.sc.edu",
+        "firstName":"Dominic",
+        "lastName":"Spears",
+        "accountStatus":"Open",
+        "currentCourses": [{
+            "courseID":"2a4537a7-a2c8-470b-9e2a-0c4354df63d0",
+            "title":"English 101",
+            "description":"Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
+            "prerequisite":null,
+            "corequisite":null,
+            "areaOfStudyRequirements":"CC-CMW",
+            "courseHolds":false
+        }],
+        "major": [{
+            "id":"94d14278-e626-466e-8743-757505f8fba6",
+            "totalCreditsRequired":125,
+            "majorCreditsRequired":30,
+            "electiveCreditsRequired":31,
+            "coreCourses":
+            "electiveCourses":
+        }],
+        "advisingSessions":
+        "program":
+        "currentAdvisor":
+        "major_GPA":
+        "overall_GPA":
+        "majorCompletionPercentage":
+        "coreCompletionPercentage":
+        "degreeCompletionPercentage":
+        "finishedCourses":
+        "failedCourses":
+    },{
+        "userID": "",
         "username":
         "password":
         "email":
