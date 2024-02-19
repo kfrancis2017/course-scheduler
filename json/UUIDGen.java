@@ -2,6 +2,7 @@ package json;
 
 import java.util.UUID;
 
+// Use to generate unique identifiers
 public class UUIDGen {
     
     public static void main(String[] args) {
