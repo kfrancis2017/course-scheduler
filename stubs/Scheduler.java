@@ -13,7 +13,7 @@ public class Scheduler {
         return 0.0;
     }
 
-    public Major loadMajor(MajorList majorDB) {
+    public Major loadMajor(String majorDB) {
         return null;
     }
 

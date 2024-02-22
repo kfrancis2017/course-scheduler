@@ -13,6 +13,10 @@ public class Course {
 
     }
 
+    public Course(Course course) {
+        
+    }
+
     public boolean isAvailable(String semester) {
         return true;
     }

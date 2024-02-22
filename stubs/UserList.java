@@ -12,7 +12,7 @@ public class UserList {
         
     }
 
-    public void updateUserList(UserDB userDB) {
+    public void updateUserList(String userDB) {
         
     }
 
