@@ -10,8 +10,8 @@ public class Advisor extends User {
 
     }
 
-    public AdviseeList getAdviseeList(String userDB) {
-        
+    public String getAdviseeList(String userDB) {
+        return null;
     }
 
     public void monitorProgress(String username) {
