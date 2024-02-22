@@ -10,4 +10,6 @@ public class DegreeWorks {
     public boolean login(String username, String password) {
         return true;
     }
+
+    // need a signup method as well
 }
