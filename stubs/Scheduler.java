@@ -5,7 +5,7 @@ public class Scheduler {
     private CourseList courses;
     private CourseList userCompletedCourses;
 
-    public void calculateTotalCreditHours(Schedule schedule) {
+    public void calculateTotalCreditHours(CourseList schedule) {
         
     }
 
@@ -13,7 +13,7 @@ public class Scheduler {
         return 0.0;
     }
 
-    public Major loadMajor(MajorDB majorDB) {
+    public Major loadMajor(MajorList majorDB) {
         return null;
     }
 

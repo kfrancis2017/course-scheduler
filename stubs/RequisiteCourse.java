@@ -1,9 +1,9 @@
 package stubs;
 
 public class RequisiteCourse extends Course{
-    private char minGrade;
+    public char minGrade;
 
-    public RequisiteCourse(course, minGrade) {
+    public RequisiteCourse(Course course, char minGrade) {
         
     }
 }

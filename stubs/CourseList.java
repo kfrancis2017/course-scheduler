@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CourseList {
     private ArrayList<Course> courses;
 
-    public boolean updateCourseList(CourseDB courseDB) {
+    public boolean updateCourseList(CourseList courseDB) {
         return false;
     }
 

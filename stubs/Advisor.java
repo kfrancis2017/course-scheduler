@@ -2,7 +2,7 @@ package stubs;
 
 import java.util.ArrayList;
 
-public class Advisor extends User{
+public class Advisor extends User {
     
     private ArrayList<Student> adviseeList;
 
@@ -10,7 +10,7 @@ public class Advisor extends User{
 
     }
 
-    public AdviseeList getAdviseeList(userDB) {
+    public AdviseeList getAdviseeList(String userDB) {
         
     }
 

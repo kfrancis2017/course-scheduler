@@ -2,11 +2,11 @@ package stubs;
 
 import java.util.ArrayList;
 
-public class Student extends User{
+public class Student extends User {
     private ArrayList<Course> currentCourses;
     private Major major;
     private ArrayList<String> advisingNotes;
-    private Program program;
+    private String program;
     private String advisor;
     private double majorGPA;
     private double overallGPA;
@@ -30,7 +30,7 @@ public class Student extends User{
         return ""; 
     }
 
-    public void changeProgram(Program newData) {
+    public void changeProgram(String newData) {
         
     }
 
