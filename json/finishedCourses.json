@@ -11,15 +11,7 @@
         "passed":true 
     },{
         "id":"d9c82b8c-1e54-4d45-8a4d-ecd8ed2d8fad",
-        "course":{
-            "courseID":"e4219885-b600-45c4-8603-d6662eaf353b",
-            "title":"CSCE 146 Algorithmic Design II",
-            "description":"Continuation of CSCE 145. Rigorous development of algorithms and computer programs; elementary data structures. Three lecture hours and two laboratory hours per week. Open to all majors.",
-            "prerequisite":["162f960e-06e9-4527-8703-00c7e5994d56"],
-            "corequisite":null,
-            "areaOfStudyRequirements":"PR",
-            "courseHolds":false
-        },
+        "course":"e4219885-b600-45c4-8603-d6662eaf353b",
         "grade":92.5,
         "passed":true 
     },{

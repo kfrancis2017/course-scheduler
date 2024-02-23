@@ -1,35 +1,47 @@
 [
     {
-        "courseID":"2a4537a7-a2c8-470b-9e2a-0c4354df63d0",
-        "title":"ENGL 101 Critical Reading and Composition",
-        "description":"Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
-        "prerequisite":null,
-        "corequisite":null,
-        "areaOfStudyRequirements":"CC-CMW",
-        "courseHolds":false
-    },{
-        "courseID":"d9cd0b7f-7c42-4530-85b4-d7299538cc0e",
-        "title":"CSCE 215 UNIX/Linux Fundamentals",
-        "description":"UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
-        "prerequisite":["c91ff163-e682-4da0-944d-8d3f1df93b1d"],
-        "corequisite":null,
-        "areaOfStudyRequirements":"PR",
-        "courseHolds":false
-    },{
-        "courseID":"162f960e-06e9-4527-8703-00c7e5994d56",
-        "title":"CSCE 145 Algorithmic Design I",
-        "description":"Problem-solving, algorithmic design, and programming. Two lecture hours and four laboratory hours per week. Open to all majors.",
-        "prerequisite":null,
-        "corequisite":null,
-        "areaOfStudyRequirements":"PR",
-        "courseHolds":false
-    },{
-        "courseID":"b0f876c0-1e22-40a1-b588-2ad33839a55d",
-        "title":"HIST 101 European Civilization from Ancient Times to the Mid-17th Century",
-        "description":"The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
-        "prerequisite":null,
-        "corequisite":null,
-        "areaOfStudyRequirements":"CC-GHS",
-        "courseHolds":false
+        "courseID": "ENGL101",
+        "title": "Critical Reading and Composition",
+        "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
+        "prerequisites": [
+            ["course1", "course2"],
+            ["course3"]
+        ],
+        "corequisites": [
+            ["course4", "course5"]
+        ],
+        "AOS_Req": "CC-CMW",
+        "courseHolds": false,
+        "minGrade": null,
+        "userGrade": null
+    },
+    {
+        "courseID": "CSCE215",
+        "title": "UNIX/Linux Fundamentals",
+        "description": "UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
+        "prerequisites": [
+            ["c91ff163-e682-4da0-944d-8d3f1df93b1d"] 
+        ],
+        "corequisites": null,
+        "areaOfStudyRequirements": "PR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE145",
+        "title": "Algorithmic Design I",
+        "description": "Problem-solving, algorithmic design, and programming. Two lecture hours and four laboratory hours per week. Open to all majors.",
+        "prerequisites": null,
+        "corequisites": null,
+        "areaOfStudyRequirements": "PR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "b0f876c0-1e22-40a1-b588-2ad33839a55d",
+        "title": "HIST 101 European Civilization from Ancient Times to the Mid-17th Century",
+        "description": "The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
+        "prerequisites": null,
+        "corequisites": null,
+        "areaOfStudyRequirements": "CC-GHS",
+        "courseHolds": false
     }
 ]
