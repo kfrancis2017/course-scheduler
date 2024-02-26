@@ -68,7 +68,9 @@ public class User {
     public String viewProfile() {
         return "Username: " + this.username
                 + "\nPassword: " + this.password
-                +;
+                + "\nFirst Name: " + this.firstname
+                + "\nLast Name: " + this.lastname
+                + "\nLast Login: " + this.lastLogin;
     }
 
     public String getUsername() {
