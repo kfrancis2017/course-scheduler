@@ -11,5 +11,7 @@ public class DegreeWorks {
         return true;
     }
 
-    // need a signup method as well
+    public boolean signup(String username, String password, String firstname, String lastname) {
+        return true;
+    }
 }

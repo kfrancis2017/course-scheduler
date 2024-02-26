@@ -8,7 +8,7 @@ public class UserList {
      * Initializes a static UserList
      */
     public UserList() {
-        users = new ArrayList<>();
+        users = new ArrayList<User>();
     }
 
     /**
