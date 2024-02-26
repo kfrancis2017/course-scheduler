@@ -1,4 +1,4 @@
-package stubs;
+package java;
 
 public class Admin extends User {
     private String officeLocation;

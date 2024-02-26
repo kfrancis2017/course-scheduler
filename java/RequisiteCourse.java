@@ -1,4 +1,4 @@
-package stubs;
+package java;
 
 public class RequisiteCourse extends Course{
     public char minGrade;

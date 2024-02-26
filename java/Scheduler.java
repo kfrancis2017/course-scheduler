@@ -1,4 +1,4 @@
-package stubs;
+package java;
 
 public class Scheduler {
     private int maxCreditsPerSemester;
