@@ -1,4 +1,4 @@
-package java;
+package degreeswork;
 
 public class Course {
     

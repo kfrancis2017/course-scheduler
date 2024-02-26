@@ -1,4 +1,4 @@
-package java;
+package degreeswork;
 
 public class FinishedCourse  extends Course {
     private char grade;

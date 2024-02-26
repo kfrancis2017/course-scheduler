@@ -1,3 +1,5 @@
+package degreeswork;
+
 import java.util.ArrayList;
 
 public class UserList {
@@ -44,6 +46,10 @@ public class UserList {
                     return user;
             }
         }
+        return null;
+    }
+
+    public User getUser(String username, String password){
         return null;
     }
 

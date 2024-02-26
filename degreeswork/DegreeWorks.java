@@ -1,3 +1,5 @@
+package degreeswork;
+
 public class DegreeWorks {
     
     // private User user;

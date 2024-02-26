@@ -1,3 +1,5 @@
+package degreeswork;
+
 import java.util.ArrayList;
 
 public class CourseList {
