@@ -66,7 +66,13 @@ public class User {
      * @return String representation of the profile details
      */
     public String viewProfile() {
-        return null;
+        return "Username: " + this.username
+                + "\nPassword: " + this.password
+                +;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
 

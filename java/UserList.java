@@ -15,20 +15,9 @@ public class UserList {
      * Adds User to the list
      * @param user User to be added
      */
-    public void addUsers(User user) {
-        
-    }
-
-    /**
-     * 
-     * @param userDB
-     */
-    public void updateUserList(String userDB) {
-        
-    }
-
-    public boolean updateDB() {
-        return false;
+    public void addUsers(String username, String password, String firstname, String lastname) {
+        if (!searchUser(username))
+            users.add(new User(username, password, firstname, lastname));
     }
 
     /**
@@ -37,6 +26,10 @@ public class UserList {
      * @return A boolean value depending on the success of the search
      */
     public boolean searchUser(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username))
+                return true;
+        }
         return false;
     }
 
@@ -46,6 +39,12 @@ public class UserList {
      * @return A User representing the specified User
      */
     public User getUser(String username) {
+        if (searchUser(username)) {
+            for (User user : users) {
+                if (user.getUsername().equals(username))
+                    return user;
+            }
+        }
         return null;
     }
 
