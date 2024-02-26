@@ -5,6 +5,10 @@ public class Major {
     private CourseList coreCourses;
     private CourseList electiveCourses;
 
+
+    public Major(String name) {
+        this.name = name;
+    }
     public void addRequirement(Course course) {
         
     }

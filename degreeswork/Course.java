@@ -17,6 +17,45 @@ public class Course {
         
     }
 
+    public Course() {
+        this.prereq = new CourseList();
+        this.coreq = new CourseList();
+        this.AOS_Req = "";
+        this.courseName = "";
+        this.courseID = "";
+        this.description = "";
+    }
+
+    // Setter for prereq
+    public void setPrereq(CourseList prereq) {
+        this.prereq = prereq;
+    }
+
+    // Setter for coreq
+    public void setCoreq(CourseList coreq) {
+        this.coreq = coreq;
+    }
+
+    // Setter for AOS_Req
+    public void setAOS_Req(String AOS_Req) {
+        this.AOS_Req = AOS_Req;
+    }
+
+    // Setter for courseName
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    // Setter for courseID
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
+    }
+
+    // Setter for description
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     public boolean isAvailable(String semester) {
         return true;
     }
