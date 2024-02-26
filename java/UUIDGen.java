@@ -1,4 +1,4 @@
-package json;
+package java;
 
 import java.util.UUID;
 
