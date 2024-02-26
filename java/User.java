@@ -1,12 +1,10 @@
-package java;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class User {
     
     private String username;
-    private String password;
+    public String password;
 
     private String lastLogin;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -56,7 +54,7 @@ public class User {
      * @return A boolean value depending on the equivalence of the passwords
      */
     public boolean checkPassword(String password) {
-        if (this.password == password)
+        if (this.password.equals(password))
             return true;
         return false;
     }
@@ -66,9 +64,7 @@ public class User {
      * @return String representation of the profile details
      */
     public String viewProfile() {
-        return "Username: " + this.username
-                + "\nPassword: " + this.password
-                +;
+        return "Username: " + this.username + "\nPassword: " + this.password;
     }
 
     public String getUsername() {

@@ -1,10 +1,12 @@
-package java;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 //comment line 168 is login and 458 is create a new user.
 
 public class GUI extends JFrame {
+    // In your GUI class
+    private DegreeWorks degreeWorks;
+
     private JTextField userTextField;
     private JPasswordField passwordField;
     private JButton loginButton, resetButton;
@@ -32,6 +34,8 @@ public class GUI extends JFrame {
                 updateComponentPositions();
             }
         });
+        
+        degreeWorks = new DegreeWorks();
     }
 
     private void createUI() {
@@ -165,7 +169,7 @@ public class GUI extends JFrame {
                 char[] password = passwordField.getPassword(); // Get password as char array for security
 
                 // Here you should check the actual credentials, for demonstration I use placeholder values
-                if (username.equals("admin") && new String(password).equals("admin")) {
+                if (degreeWorks.login(username, String.valueOf(password))) {
                     navigateToWelcomePage(); // Call this method if login is successful
                 } else {
                     // Show login error
@@ -457,7 +461,31 @@ public class GUI extends JFrame {
         saveUserButton.setForeground(Color.WHITE);
         saveUserButton.setFocusPainted(false);
         saveUserButton.setFont(new Font("Arial", Font.BOLD, 12));
-        saveUserButton.addActionListener(e -> navigateToWelcomePage());
+        saveUserButton.addActionListener(e -> {
+            // Retrieve user input
+            String username = newUserTextField.getText().trim();
+            String password = new String(newPasswordField.getPassword()).trim();
+            String firstName = firstNameTextField.getText().trim();
+            String lastName = lastNameTextField.getText().trim();
+        
+            // Check that all fields are filled out
+            if (username.isEmpty() || username.equals("Username") ||
+                password.isEmpty() || password.equals("Password") ||
+                firstName.isEmpty() || firstName.equals("First Name") ||
+                lastName.isEmpty() || lastName.equals("Last Name")) {
+                JOptionPane.showMessageDialog(null, "Please fill in all fields correctly.");
+            } else {
+                // Call the signup method
+                boolean success = degreeWorks.signup(username, password, firstName, lastName);
+                if (success) {
+                    JOptionPane.showMessageDialog(null, "User created successfully.");
+                    navigateToWelcomePage(); // Navigate back to the welcome page
+                } else {
+                    // Handle the case where signup fails (e.g., if username is already taken)
+                    JOptionPane.showMessageDialog(null, "Signup failed, please try again.");
+                }
+            }
+        });
     
         // Add focus listeners (keep your existing focus listeners here)
     // Focus listeners to handle placeholder text for each text field
