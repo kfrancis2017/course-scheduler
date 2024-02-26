@@ -13,7 +13,7 @@ public class DegreeWorks {
         mUserList = new UserList();
         mUserList.addUsers("admin", "admin", "admin", "admin");
         mUserList.addUsers("student", "student", "student", "student");
-        mUserList.addUsers("jvaught", "", "Jacob", "Vaught");
+        mUserList.addUsers("jvaught", "DoremInc1.", "Jacob", "Vaught");
     }
 
     public boolean login(String username, String password) {
@@ -40,5 +40,8 @@ public class DegreeWorks {
             System.out.println(mUserList.getUser(username).viewProfile());
         }
         return true;
+    }
+    public String getUser(String username) {
+        return mUserList.getUser(username).viewProfile();
     }
 }

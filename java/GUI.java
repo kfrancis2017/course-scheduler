@@ -6,13 +6,9 @@ import java.awt.event.*;
 public class GUI extends JFrame {
     // In your GUI class
     private DegreeWorks degreeWorks;
-
-    private JTextField userTextField;
-    private JPasswordField passwordField;
-    private JButton loginButton, resetButton;
-    private JCheckBox rememberMeCheckbox;
-    private JLabel loginLabel, forgotPasswordLabel;
-
+    
+    
+    
     // Class-level variables for easy adjustment of component positions and sizes
     private int initialFrameWidth = 500; // Initial frame width for reference
     private int initialFrameHeight = 400; // Initial frame height for reference
@@ -20,7 +16,7 @@ public class GUI extends JFrame {
     private int componentHeight = 30; // Component height
     private int verticalSpacing = 15; // Space between components
     private int topMargin = 80; // Top margin for the first component
-
+    
     public GUI() {
         createUI();
         setTitle("Custom Login Form");
@@ -28,45 +24,64 @@ public class GUI extends JFrame {
         setSize(initialFrameWidth, initialFrameHeight); // Set initial size
         setLocationRelativeTo(null);
         getContentPane().setBackground(Color.WHITE); // Set background to white
-        addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                updateComponentPositions();
-            }
-        });
         
         degreeWorks = new DegreeWorks();
     }
-
+    
+    //TODO: REMOVE THIS FUNCTION
     private void createUI() {
-        setLayout(null); // Use null layout for absolute positioning
-
-        // Initialize components with initial positions and sizes
-        loginLabel = new JLabel("LOGIN", SwingConstants.CENTER);
-        userTextField = new JTextField("Username/email");
-        passwordField = new JPasswordField("Password");
-        rememberMeCheckbox = new JCheckBox("Remember me");
-        forgotPasswordLabel = new JLabel("<HTML><U>Forgot?</U></HTML>");
-        loginButton = new JButton("LOGIN");
-        resetButton = new JButton("<HTML><FONT color=\"#000099\"><U>Reset Password</U></FONT></HTML>");
-
         // Set properties and add components
         setupComponents();
-
+        
         // Adding components to the frame
-        add(loginLabel);
-        add(userTextField);
-        add(passwordField);
-        add(rememberMeCheckbox);
-        add(forgotPasswordLabel);
-        add(loginButton);
-        add(resetButton);
+        
     }
-
+    
     private void setupComponents() {
+        //clear screen
+        getContentPane().removeAll();
+        // Create components
+        JLabel loginLabel = new JLabel("LOGIN", SwingConstants.CENTER);
+        JTextField userTextField = new JTextField("Username/email");
+        JPasswordField passwordField = new JPasswordField("Password");
+        JButton loginButton = new JButton("LOGIN");
+        JButton resetButton = new JButton("Forgot?");
+        JCheckBox rememberMeCheckbox = new JCheckBox("Remember me");
+
+        // Set fixed positions and sizes for components
+        int fixedCenterX = 150; // You can change this to fit your layout
+        int fixedTopMargin = 50; // Starting y position
+        int fixedComponentWidth = 200; // Width of text fields and buttons
+        int fixedComponentHeight = 30; // Height of text fields and buttons
+        int fixedVerticalSpacing = 40; // Vertical space between components
+
+        // Update component positions
+        loginLabel.setBounds(0, fixedTopMargin, fixedComponentWidth, fixedComponentHeight);
+        userTextField.setBounds(fixedCenterX, fixedTopMargin + fixedComponentHeight + fixedVerticalSpacing, fixedComponentWidth, fixedComponentHeight);
+        passwordField.setBounds(fixedCenterX, fixedTopMargin + 2 * (fixedComponentHeight + fixedVerticalSpacing), fixedComponentWidth, fixedComponentHeight);
+        rememberMeCheckbox.setBounds(fixedCenterX, fixedTopMargin + 3 * (fixedComponentHeight + fixedVerticalSpacing), fixedComponentWidth / 2, fixedComponentHeight);
+        //forgotPasswordLabel.setBounds(fixedCenterX + fixedComponentWidth - fixedComponentWidth / 7, fixedTopMargin + 3 * (fixedComponentHeight + fixedVerticalSpacing), fixedComponentWidth / 2, fixedComponentHeight);
+        loginButton.setBounds(fixedCenterX, fixedTopMargin + 4 * (fixedComponentHeight + fixedVerticalSpacing), fixedComponentWidth, fixedComponentHeight + 10);
+        resetButton.setBounds(fixedCenterX, fixedTopMargin + 10 * (fixedComponentHeight + fixedVerticalSpacing), fixedComponentWidth, fixedComponentHeight + 10);
+
+        // Add components to the container
+        getContentPane().add(loginLabel);
+        getContentPane().add(userTextField);
+        getContentPane().add(passwordField);
+        getContentPane().add(rememberMeCheckbox);
+        //getContentPane().add(forgotPasswordLabel);
+        getContentPane().add(loginButton);
+        getContentPane().add(resetButton);
+
+        // Refresh the frame to show the new content
+        validate();
+        repaint();
+
+        
+        
         // Login Label
         loginLabel.setFont(new Font("Arial", Font.BOLD, 20)); // Set font size and style for the login label
-    
+        
         // Username TextField
         userTextField.setForeground(Color.GRAY); // Set the foreground color to gray to simulate placeholder text
         userTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.GRAY)); // Set custom border
@@ -78,7 +93,7 @@ public class GUI extends JFrame {
                     userTextField.setForeground(Color.BLACK);
                 }
             }
-    
+            
             @Override
             public void focusLost(FocusEvent e) {
                 if (userTextField.getText().isEmpty()) {
@@ -87,7 +102,7 @@ public class GUI extends JFrame {
                 }
             }
         });
-    
+        
         // PasswordField
         passwordField.setText("Password");
         passwordField.setEchoChar((char) 0); // Initially display password as plain text
@@ -102,7 +117,7 @@ public class GUI extends JFrame {
                     passwordField.setForeground(Color.BLACK);
                 }
             }
-    
+            
             @Override
             public void focusLost(FocusEvent e) {
                 if (String.valueOf(passwordField.getPassword()).isEmpty()) {
@@ -112,12 +127,12 @@ public class GUI extends JFrame {
                 }
             }
         });
-    
+        
         // Remember Me Checkbox with a custom round icon
         rememberMeCheckbox = new JCheckBox("Remember me");
         rememberMeCheckbox.setOpaque(false);
         rememberMeCheckbox.setFocusPainted(false);
-
+        
         // Custom icons for checkbox states
         Icon normalIcon = new Icon() {
             @Override
@@ -127,18 +142,18 @@ public class GUI extends JFrame {
                 g2.drawOval(x, y, getIconWidth() - 1, getIconHeight() - 1);
                 g2.drawOval(x + 1, y + 1, getIconWidth() - 3, getIconHeight() - 3);
             }
-
+            
             @Override
             public int getIconWidth() {
                 return 16;
             }
-
+            
             @Override
             public int getIconHeight() {
                 return 16;
             }
         };
-
+        
         Icon selectedIcon = new Icon() {
             @Override
             public void paintIcon(Component c, Graphics g, int x, int y) {
@@ -150,87 +165,77 @@ public class GUI extends JFrame {
                 g2.drawOval(x, y, getIconWidth() - 1, getIconHeight() - 1);
                 g2.drawOval(x + 1, y + 1, getIconWidth() - 3, getIconHeight() - 3);
             }
-
+            
             @Override
             public int getIconWidth() {
                 return 16;
             }
-
+            
             @Override
             public int getIconHeight() {
                 return 16;
             }
         };
-
-           // Implement a common method for login validation and navigation
-            Runnable performLogin = () -> {
-                // Simulate checking credentials
-                String username = userTextField.getText();
-                char[] password = passwordField.getPassword(); // Get password as char array for security
-
-                // Here you should check the actual credentials, for demonstration I use placeholder values
-                if (degreeWorks.login(username, String.valueOf(password))) {
-                    navigateToWelcomePage(); // Call this method if login is successful
-                } else {
-                    // Show login error
-                    showErrorMessage("Invalid username or password.", "Login Failed");
+        
+        // Implement a common method for login validation and navigation
+        Runnable performLogin = () -> {
+            // Simulate checking credentials
+            String username = userTextField.getText();
+            char[] password = passwordField.getPassword(); // Get password as char array for security
+            
+            // Here you should check the actual credentials, for demonstration I use placeholder values
+            if (degreeWorks.login(username, String.valueOf(password))) {
+                navigateToWelcomePage(username); // Call this method if login is successful
+            } else {
+                // Show login error
+                showErrorMessage("Invalid username or password.", "Login Failed");
+            }
+        };
+        
+        // Key listener for both userTextField and passwordField
+        KeyListener enterKeyListener = new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    performLogin.run();
                 }
-            };
-
-            // Key listener for both userTextField and passwordField
-            KeyListener enterKeyListener = new KeyAdapter() {
-                @Override
-                public void keyPressed(KeyEvent e) {
-                    if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                        performLogin.run();
-                    }
-                }
-            };
-
+            }
+        };
+        
         userTextField.addKeyListener(enterKeyListener);
         passwordField.addKeyListener(enterKeyListener);
-
+        
         // Set custom icons
         rememberMeCheckbox.setIcon(normalIcon);
         rememberMeCheckbox.setSelectedIcon(selectedIcon);
-
-        // Forgot Password Label
-        forgotPasswordLabel.setCursor(new Cursor(Cursor.HAND_CURSOR)); // Change the cursor when hovering
-    
-    // Login Button
-    loginButton.setBackground(new Color(102, 0, 153)); // Set background color
-    loginButton.setForeground(Color.WHITE); // Set text color
-    loginButton.setFocusPainted(false); // Remove focus outline
-    loginButton.addActionListener(e -> performLogin.run());
-
-    // Reset Button
-    resetButton.setBorderPainted(false);
-    resetButton.setOpaque(false);
-    resetButton.setContentAreaFilled(false); // Make it look like a hyperlink
-    resetButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-    resetButton.addActionListener(e -> showResetPasswordDialog());
-    validate();
-    repaint();
+        
+        
+        // Login Button
+        loginButton.setBackground(new Color(102, 0, 153)); // Set background color
+        loginButton.setForeground(Color.WHITE); // Set text color
+        loginButton.setFocusPainted(false); // Remove focus outline
+        loginButton.addActionListener(e -> performLogin.run());
+        
+        // Reset Button
+        resetButton.setBorderPainted(false);
+        resetButton.setOpaque(false);
+        resetButton.setContentAreaFilled(false); // Make it look like a hyperlink
+        resetButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        resetButton.addActionListener(e -> showResetPasswordDialog());
+        
+        add(loginLabel);
+        add(userTextField);
+        add(passwordField);
+        add(rememberMeCheckbox);
+        add(loginButton);
+        add(resetButton);
+        
+        validate();
+        repaint();
     }
     
-
-    private void updateComponentPositions() {
-        // This method updates the positions and sizes of components based on the current frame size
-        int frameWidth = getWidth(); // Get current frame width
-        int frameHeight = getHeight(); // Get current frame height
-
-        // Calculate new center and positions based on current frame size
-        int centerX = (frameWidth / 2) - (componentWidth / 2);
-
-        // Update component positions
-        loginLabel.setBounds(0, topMargin, frameWidth, componentHeight);
-        userTextField.setBounds(centerX, topMargin + componentHeight + verticalSpacing, componentWidth, componentHeight);
-        passwordField.setBounds(centerX, topMargin + 2 * (componentHeight + verticalSpacing), componentWidth, componentHeight);
-        rememberMeCheckbox.setBounds(centerX, topMargin + 3 * (componentHeight + verticalSpacing), componentWidth / 2, componentHeight);
-        forgotPasswordLabel.setBounds(centerX + componentWidth - componentWidth / 7, topMargin + 3 * (componentHeight + verticalSpacing), componentWidth / 2, componentHeight);
-        loginButton.setBounds(centerX, topMargin + 4 * (componentHeight + verticalSpacing), componentWidth, componentHeight + 10);
-        resetButton.setBounds(centerX, topMargin + 5 * (componentHeight + verticalSpacing), componentWidth, componentHeight);
-    }
+    
+    
     private void showResetPasswordDialog() {
         // Create a dialog frame for resetting the password
         JDialog resetDialog = new JDialog(this, "Reset Password", true);
@@ -238,7 +243,7 @@ public class GUI extends JFrame {
         resetDialog.setSize(300, 150);
         resetDialog.setLocationRelativeTo(this); // Center the dialog relative to the main frame
         resetDialog.getContentPane().setBackground(Color.WHITE); // Set background to white
-    
+        
         // Components for the email input
         JLabel emailLabel = new JLabel("Enter your email:");
         JTextField emailTextField = new JTextField(20);
@@ -249,12 +254,12 @@ public class GUI extends JFrame {
         sendCodeButton.setFocusPainted(false); // Remove focus outline
         sendCodeButton.setBorderPainted(false); // Remove button border
         sendCodeButton.setOpaque(true); // Apply background color
-    
+        
         // Initially, show only the email components
         resetDialog.add(emailLabel);
         resetDialog.getContentPane().add(emailTextField);
         resetDialog.getContentPane().add(sendCodeButton);
-    
+        
         // Common method to validate email and show next step or error
         Runnable emailValidation = () -> {
             String email = emailTextField.getText();
@@ -277,7 +282,7 @@ public class GUI extends JFrame {
                 verifyButton.setFocusPainted(false); // Remove focus outline
                 verifyButton.setBorderPainted(false); // Remove button border
                 verifyButton.setOpaque(true); // Apply background color
-        
+                
                 resetDialog.add(pinLabel);
                 resetDialog.add(pinTextField);
                 resetDialog.add(verifyButton);
@@ -288,10 +293,10 @@ public class GUI extends JFrame {
                 showErrorMessage("Please enter a valid email address.", "Invalid Email");
             }
         };
-    
+        
         // Action listener for the send code button
         sendCodeButton.addActionListener(e -> emailValidation.run());
-    
+        
         // Key listener for the email text field
         emailTextField.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
@@ -300,7 +305,7 @@ public class GUI extends JFrame {
                 }
             }
         });
-    
+        
         resetDialog.setVisible(true); // Show the dialog
     }
     
@@ -311,17 +316,17 @@ public class GUI extends JFrame {
         errorDialog.setSize(300, 120); // Adjusted for larger text
         errorDialog.setLocationRelativeTo(this); // Center the dialog relative to the main frame
         errorDialog.getContentPane().setBackground(Color.WHITE); // Set background to white
-    
+        
         // Set the container and layout
         Container contentPane = errorDialog.getContentPane();
         contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS)); // Set BoxLayout
-    
+        
         // Create a label for the error message with larger font and centered text
         JLabel messageLabel = new JLabel(message);
         messageLabel.setForeground(Color.RED); // Set the text color to red for visibility
         messageLabel.setFont(new Font("Arial", Font.BOLD, 14)); // Increase font size
         messageLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Center the label horizontally in the container
-    
+        
         // Create a button for closing the dialog that matches other interface buttons
         JButton okButton = new JButton("OK");
         okButton.setBackground(new Color(102, 0, 153)); // Set background color
@@ -332,31 +337,31 @@ public class GUI extends JFrame {
         okButton.setFont(new Font("Arial", Font.BOLD, 12)); // Match font size with other buttons
         okButton.setAlignmentX(Component.CENTER_ALIGNMENT); // Center the button
         okButton.addActionListener(e -> errorDialog.dispose()); // Close the dialog when clicked
-    
+        
         // Adding a MouseListener to change button color on press for visual consistency
         okButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 okButton.setBackground(new Color(80, 0, 120)); // Darker shade when pressed
             }
-    
+            
             @Override
             public void mouseReleased(MouseEvent e) {
                 okButton.setBackground(new Color(102, 0, 153)); // Original color when released
             }
         });
-    
+        
         // Add components to the dialog
         contentPane.add(Box.createVerticalStrut(10)); // Add some space at the top
         contentPane.add(messageLabel);
         contentPane.add(Box.createVerticalStrut(10)); // Add some space between label and button
         contentPane.add(okButton);
         contentPane.add(Box.createVerticalStrut(10)); // Add some space at the bottom
-    
+        
         errorDialog.setVisible(true); // Show the dialog
     }
-       
-    private void navigateToWelcomePage() {
+    
+    private void navigateToWelcomePage(String username) {
         // Clear all content from the frame
         getContentPane().removeAll();
         setLayout(new BorderLayout()); // Set layout for the welcome page
@@ -370,37 +375,39 @@ public class GUI extends JFrame {
         logoutButton.setFocusPainted(false); // Remove focus outline
         logoutButton.setFont(new Font("Arial", Font.BOLD, 12)); // Match font size and style with other buttons
         logoutButton.addActionListener(e -> {
-            showLoginScreen();
+            setupComponents();
         });
         topBar.add(logoutButton);
-    
+        
         // Welcome message
-        JLabel welcomeLabel = new JLabel("Welcome to V0.1 of DegreeWorks", SwingConstants.CENTER);
+        String labelText = degreeWorks.getUser(username).replace("\n", "<br>");
+        JLabel welcomeLabel = new JLabel("<html>" + labelText + "</html>", SwingConstants.CENTER);
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 24)); // Set font size and style
-    
+        
+        
         // Create a panel for the buttons
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 20)); // horizontal gap, vertical gap
         buttonPanel.setBackground(Color.WHITE); // Set background or any color you like
-    
+        
         // Create New User button
         JButton createUserButton = new JButton("Create New User");
         customizeButton(createUserButton);
-        createUserButton.addActionListener(e -> showCreateUserScreen());
-
-    
+        createUserButton.addActionListener(e -> showCreateUserScreen(username));
+        
+        
         // View List of Users button
         JButton viewUsersButton = new JButton("View List of Users");
         customizeButton(viewUsersButton);
-    
+        
         // Add buttons to the panel
         buttonPanel.add(createUserButton);
         buttonPanel.add(viewUsersButton);
-    
+        
         // Adding components to the frame
         add(topBar, BorderLayout.NORTH);
         add(welcomeLabel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
-    
+        
         // Refresh the frame to show the new content
         validate();
         repaint();
@@ -412,34 +419,12 @@ public class GUI extends JFrame {
         button.setFocusPainted(false); // Remove focus outline
         button.setFont(new Font("Arial", Font.BOLD, 12)); // Match font size and style with other buttons
     }
-    private void showLoginScreen() {
-        getContentPane().removeAll(); // Remove all components
-        setupComponents(); // Re-setup the login components
     
-        // Reset user input fields
-        userTextField.setText("Username/email");
-        passwordField.setText("Password");
-        passwordField.setEchoChar((char) 0); // Show password as plain text because of focus listener
-        rememberMeCheckbox.setSelected(false);
-    
-        // Ensure the frame is refreshed
-        getContentPane().validate();
-        getContentPane().repaint();
-    
-        // Restore the frame's layout manager if it was changed
-        getContentPane().setLayout(null); // Set back to null if that's what setupComponents expects
-    
-        // Reset the size and visibility of the frame, if necessary
-        setSize(initialFrameWidth, initialFrameHeight); // Reset to original size if changed
-        setLocationRelativeTo(null); // Center frame on screen
-        setVisible(true); // Make sure the frame is visible
-    }
-    
-    private void showCreateUserScreen() {
+    private void showCreateUserScreen(String username_current) {
         // Clear all content from the frame
         getContentPane().removeAll();
         setLayout(null); // Use null layout for absolute positioning
-    
+        
         // Initialize components with placeholder text and custom border
         JTextField newUserTextField = new JTextField("Username");
         newUserTextField.setForeground(Color.GRAY);
@@ -454,7 +439,7 @@ public class GUI extends JFrame {
         JTextField lastNameTextField = new JTextField("Last Name");
         lastNameTextField.setForeground(Color.GRAY);
         lastNameTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.GRAY));
-    
+        
         // Create the save button and apply the standard formatting
         JButton saveUserButton = new JButton("Save User");
         saveUserButton.setBackground(new Color(102, 0, 153));
@@ -467,79 +452,79 @@ public class GUI extends JFrame {
             String password = new String(newPasswordField.getPassword()).trim();
             String firstName = firstNameTextField.getText().trim();
             String lastName = lastNameTextField.getText().trim();
-        
+            
             // Check that all fields are filled out
             if (username.isEmpty() || username.equals("Username") ||
-                password.isEmpty() || password.equals("Password") ||
-                firstName.isEmpty() || firstName.equals("First Name") ||
-                lastName.isEmpty() || lastName.equals("Last Name")) {
+            password.isEmpty() || password.equals("Password") ||
+            firstName.isEmpty() || firstName.equals("First Name") ||
+            lastName.isEmpty() || lastName.equals("Last Name")) {
                 JOptionPane.showMessageDialog(null, "Please fill in all fields correctly.");
             } else {
                 // Call the signup method
                 boolean success = degreeWorks.signup(username, password, firstName, lastName);
                 if (success) {
                     JOptionPane.showMessageDialog(null, "User created successfully.");
-                    navigateToWelcomePage(); // Navigate back to the welcome page
+                    navigateToWelcomePage(username_current); // Navigate back to the welcome page
                 } else {
                     // Handle the case where signup fails (e.g., if username is already taken)
                     JOptionPane.showMessageDialog(null, "Signup failed, please try again.");
                 }
             }
         });
-    
+        
         // Add focus listeners (keep your existing focus listeners here)
-    // Focus listeners to handle placeholder text for each text field
-    FocusListener clearText = new FocusAdapter() {
-        @Override
-        public void focusGained(FocusEvent e) {
-            JTextField source = (JTextField) e.getComponent();
-            String text = source.getText();
-            if (source == newUserTextField && text.equals("Username")) {
-                source.setText("");
-            } else if (source == newPasswordField && text.equals("Password")) {
-                source.setText("");
-                ((JPasswordField) source).setEchoChar('*');
-            } else if (source == firstNameTextField && text.equals("First Name")) {
-                source.setText("");
-            } else if (source == lastNameTextField && text.equals("Last Name")) {
-                source.setText("");
-            }
-            source.setForeground(Color.BLACK);
-        }
-
-        @Override
-        public void focusLost(FocusEvent e) {
-            JTextField source = (JTextField) e.getComponent();
-            if (source.getText().isEmpty()) {
-                if (source == newUserTextField) {
-                    source.setText("Username");
-                } else if (source == newPasswordField) {
-                    source.setText("Password");
-                    ((JPasswordField) source).setEchoChar((char) 0);
-                } else if (source == firstNameTextField) {
-                    source.setText("First Name");
-                } else if (source == lastNameTextField) {
-                    source.setText("Last Name");
+        // Focus listeners to handle placeholder text for each text field
+        FocusListener clearText = new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                JTextField source = (JTextField) e.getComponent();
+                String text = source.getText();
+                if (source == newUserTextField && text.equals("Username")) {
+                    source.setText("");
+                } else if (source == newPasswordField && text.equals("Password")) {
+                    source.setText("");
+                    ((JPasswordField) source).setEchoChar('*');
+                } else if (source == firstNameTextField && text.equals("First Name")) {
+                    source.setText("");
+                } else if (source == lastNameTextField && text.equals("Last Name")) {
+                    source.setText("");
                 }
-                source.setForeground(Color.GRAY);
+                source.setForeground(Color.BLACK);
             }
-        }
-    };
-
-    // Add focus listeners to each text field
-    newUserTextField.addFocusListener(clearText);
-    newPasswordField.addFocusListener(clearText);
-    firstNameTextField.addFocusListener(clearText);
-    lastNameTextField.addFocusListener(clearText);
-
-    
+            
+            @Override
+            public void focusLost(FocusEvent e) {
+                JTextField source = (JTextField) e.getComponent();
+                if (source.getText().isEmpty()) {
+                    if (source == newUserTextField) {
+                        source.setText("Username");
+                    } else if (source == newPasswordField) {
+                        source.setText("Password");
+                        ((JPasswordField) source).setEchoChar((char) 0);
+                    } else if (source == firstNameTextField) {
+                        source.setText("First Name");
+                    } else if (source == lastNameTextField) {
+                        source.setText("Last Name");
+                    }
+                    source.setForeground(Color.GRAY);
+                }
+            }
+        };
+        
+        // Add focus listeners to each text field
+        newUserTextField.addFocusListener(clearText);
+        newPasswordField.addFocusListener(clearText);
+        firstNameTextField.addFocusListener(clearText);
+        lastNameTextField.addFocusListener(clearText);
+        
+        
         // Add components to the frame
         add(newUserTextField);
         add(newPasswordField);
         add(firstNameTextField);
         add(lastNameTextField);
         add(saveUserButton);
-    
+        
         // Define a method to update component positions based on frame size
         Runnable updateComponentPositions = () -> {
             int frameWidth = getWidth();
@@ -547,17 +532,17 @@ public class GUI extends JFrame {
             int width = 200, height = 25, gap = 40;
             int startX = (frameWidth - width) / 2;
             int startY = (frameHeight - (5 * height + 4 * gap)) / 2;
-    
+            
             newUserTextField.setBounds(startX, startY, width, height);
             newPasswordField.setBounds(startX, startY + gap, width, height);
             firstNameTextField.setBounds(startX, startY + 2 * gap, width, height);
             lastNameTextField.setBounds(startX, startY + 3 * gap, width, height);
             saveUserButton.setBounds(startX, startY + 4 * gap, width, height);
         };
-    
+        
         // Call updateComponentPositions initially to set component positions
         updateComponentPositions.run();
-    
+        
         // Add a ComponentListener to the frame to handle resizing
         addComponentListener(new ComponentAdapter() {
             @Override
@@ -565,7 +550,7 @@ public class GUI extends JFrame {
                 updateComponentPositions.run();
             }
         });
-    
+        
         // Refresh the frame to show the new content
         validate();
         repaint();
