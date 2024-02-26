@@ -29,6 +29,15 @@ public class User {
         this.lastLogin = LocalDateTime.now().format(formatter);
     }
 
+    public User(){
+        //creating default values
+        this.username="";
+        this.password="";
+        this.firstname="";
+        this.lastname="";
+        this.lastLogin="";
+    }
+
     /**
      * Edit attributes of the User's profile
      * @param details 
