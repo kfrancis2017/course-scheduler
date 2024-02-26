@@ -35,6 +35,7 @@ public class User {
      * @return A boolean value depending on the success of the profile update
      */
     public boolean updateProfile(String details) {
+        lastLogin = LocalDateTime.now().format(formatter);
         return true;
     }
 
@@ -43,6 +44,9 @@ public class User {
      * @return A boolean value depending on the success of the password change.
      */
     public boolean changePassword(String password) {
+        if (this.password == password)
+            return false;
+        this.password = password;
         return true;
     }
 
@@ -52,7 +56,9 @@ public class User {
      * @return A boolean value depending on the equivalence of the passwords
      */
     public boolean checkPassword(String password) {
-        return true;
+        if (this.password == password)
+            return true;
+        return false;
     }
 
     /**
