@@ -49,7 +49,20 @@ public class UserList {
         return null;
     }
 
-    public User getUser(String username, String password){
+    public User getUser(String username, String password) {
+        return null;
+    }
+
+    /**
+     * Uses username and password to login (return) a User
+     * @param username The User's username
+     * @param password The User's password
+     * @return A User if a one exists with specified username and password
+     */
+    public User login(String username, String password) {
+        if (searchUser(username) && getUser(username).checkPassword(password))
+            return getUser(username);
+        System.out.println("Username or password incorrect");
         return null;
     }
 

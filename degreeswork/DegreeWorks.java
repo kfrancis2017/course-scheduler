@@ -18,20 +18,28 @@ public class DegreeWorks {
         mUserList.addUsers("jvaught", "DoremInc1.", "Jacob", "Vaught");
     }
 
-    public boolean login(String username, String password) {
-        if (mUserList.searchUser(username)) {
-            User user = mUserList.getUser(username); // Get the user object
-            if (user.checkPassword(password)) {
-                System.out.println("Login successful for username: " + username);
-                return true;
-            } else {
-                System.out.println("Login attempt for username: " + username + " - Incorrect password.");
-                System.out.println(password + " - Incorrect password. Expected: "+user.password);
-            }
-        } else {
-            System.out.println("Login attempt with non-existing username: " + username);
-        }
-        return false;
+    /**
+     * Uses UserList's login method
+     * @param username The User's username
+     * @param password The User's password
+     */
+    public void login(String username, String password) {
+        mUserList.login(username, password);
+
+
+        // if (mUserList.searchUser(username)) {
+        //     User user = mUserList.getUser(username); // Get the user object
+        //     if (user.checkPassword(password)) {
+        //         System.out.println("Login successful for username: " + username);
+        //         return true;
+        //     } else {
+        //         System.out.println("Login attempt for username: " + username + " - Incorrect password.");
+        //         System.out.println(password + " - Incorrect password. Expected: "+user.password);
+        //     }
+        // } else {
+        //     System.out.println("Login attempt with non-existing username: " + username);
+        // }
+        // return false;
     }
     
 
