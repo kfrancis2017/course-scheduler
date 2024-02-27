@@ -8,8 +8,7 @@
         "lastName":"Francis",
         "accountStatus":"Open",
         "adviseeList":["6f56258d-70fa-4b72-964d-974990611dc4"],
-        "advisorSpecialization":"CEC",
-        "currentStudent":"6f56258d-70fa-4b72-964d-974990611dc4"
+        "advisorSpecialization":"CEC"
     }
 ]
 
