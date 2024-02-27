@@ -59,10 +59,6 @@ public class Student extends User {
         super.setLastName(lastName); // Assuming the lastName is handled in the User class
     }
 
-    public void setAccountStatus(String accountStatus) {
-        super.setAccountStatus(accountStatus); // Assuming the accountStatus is handled in the User class
-    }
-
     public void setCurrentCourses(ArrayList<Course> currentCourses) {
         this.currentCourses = currentCourses;
     }

@@ -21,6 +21,13 @@ public class UserList {
             users.add(new User(username, password, firstname, lastname));
     }
 
+    public void addStudent(Student student) {
+        if (!searchUser(student.getUsername()))
+            users.add(student);
+        //TODO add error message in UI if user exists
+    }
+    
+
     /**
      * Searches for a User in the list
      * @param username The User's username
@@ -51,6 +58,10 @@ public class UserList {
 
     public User getUser(String username, String password) {
         return null;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
     }
 
     /**

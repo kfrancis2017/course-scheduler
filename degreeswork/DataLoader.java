@@ -11,23 +11,23 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class DataLoader {
-    
+
     public UserList getAllStudents() {
         UserList students = new UserList(); // Assuming UserList can store Student objects
-        
+
         JSONParser parser = new JSONParser();
         try {
-            JSONArray studentData = (JSONArray) parser.parse(new FileReader("student.json"));
+            JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
             for (Object obj : studentData) {
                 JSONObject studentJson = (JSONObject) obj;
                 // Parse student data here and create a Student object
                 Student student = parseStudent(studentJson);
-                students.add(student); // Assuming UserList has an add method similar to List
+                students.addStudent(student); // Assuming UserList has an add method similar to List
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
+
         return students;
     }
 
@@ -40,8 +40,8 @@ public class DataLoader {
         student.setEmail((String) studentJson.get("email"));
         student.setFirstName((String) studentJson.get("firstName"));
         student.setLastName((String) studentJson.get("lastName"));
-        student.setAccountStatus((String) studentJson.get("accountStatus"));
 
+        /* 
         // Convert JSON array to List or appropriate data structure for courses
         JSONArray currentCoursesArray = (JSONArray) studentJson.get("currentCourses");
         List<Course> currentCoursesList = new ArrayList<>();
@@ -49,9 +49,10 @@ public class DataLoader {
             Course course = new Course();
             currentCoursesList.add(courseList.findCourse((String) courseObj));//<-- need to define courseList
         }
-        student.setCurrentCourses(currentCoursesList); // Make sure to convert JSONArray to the correct type
+        */
+        //student.setCurrentCourses(currentCoursesList); // Make sure to convert JSONArray to the correct type
         student.setMajor(new Major((String) studentJson.get("major")));
-        student.addSessionNote(new ArrayList<String>(studentJson.get("sessionNotes")));
+        //student.addSessionNote(new ArrayList<String>(studentJson.get("sessionNotes")));
         student.setProgram((String) studentJson.get("program"));
         student.setCurrentAdvisor(UUID.fromString((String) studentJson.get("currentAdvisor")));
         student.setMajorGPA((Double) studentJson.get("major_GPA"));
@@ -61,20 +62,18 @@ public class DataLoader {
         student.setDegreeCompletionPercentage((Double) studentJson.get("degreeCompletionPercentage"));
         // Handle null for finishedCourses if necessary
         // Handle additional fields as needed
-        
+
         return student;
     }
-    
-    // Other methods ...
-}
 
-    
+    // Other methods ...
+
     public UserList getAllAdvisors() {
         UserList advisors = new UserList();
-        
+
         JSONParser parser = new JSONParser();
         try {
-            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("advisor.json"));
+            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("json/advisor.json"));
             for (Object obj : advisorData) {
                 JSONObject advisor = (JSONObject) obj;
                 // Parse advisor data and add to advisors list
@@ -82,16 +81,17 @@ public class DataLoader {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
+
         return advisors;
     }
-    
+
+    /* 
     public UserList getAllAdmins() {
         UserList admins = new UserList();
-        
+
         JSONParser parser = new JSONParser();
         try {
-            JSONArray adminData = (JSONArray) parser.parse(new FileReader("admins.json"));
+            JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admins.json"));
             for (Object obj : adminData) {
                 JSONObject admin = (JSONObject) obj;
                 // Parse admin data and add to admins list
@@ -99,10 +99,11 @@ public class DataLoader {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
+
         return admins;
     }
-    
+    */
+
     public void testFunctions() {
         // Test retrieving all students
         UserList allStudents = getAllStudents();
@@ -110,7 +111,7 @@ public class DataLoader {
         for (User student : allStudents.getUsers()) {
             System.out.println(student);
         }
-        
+
         // Test retrieving all advisors
         UserList allAdvisors = getAllAdvisors();
         System.out.println("\nAll Advisors:");
@@ -118,7 +119,23 @@ public class DataLoader {
             System.out.println(advisor);
         }
     }
-    
+
+    public static void main(String[] args) {
+        DataLoader dataLoader = new DataLoader();
+
+        // Testing functionality to retrieve all students
+        System.out.println("Testing getAllStudents:");
+        UserList students = dataLoader.getAllStudents();
+        for (User student : students.getUsers()) {
+            System.out.println(student);
+        }
+
+        // Optionally, you can test other functionalities
+        // For example, testing getAllAdvisors:
+        System.out.println("\nTesting getAllAdvisors:");
+        UserList advisors = dataLoader.getAllAdvisors();
+        for (User advisor : advisors.getUsers()) {
+            System.out.println(advisor);
+        }
+    }
 }
-
-

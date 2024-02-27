@@ -2,15 +2,16 @@ package degreeswork;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 public class User {
     
+    private UUID userID;
     private String username;
-    public String password;
-
+    private String password;
+    private String email;
     private String lastLogin;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-
     public String firstname;
     public String lastname;
 
@@ -74,7 +75,7 @@ public class User {
      * Returns String of profile details
      * @return String representation of the profile details
      */
-    public String viewProfile() {
+    public String toString() {
         return "Username: " + this.username
                 + "\nPassword: " + this.password
                 + "\nFirst Name: " + this.firstname
@@ -86,5 +87,34 @@ public class User {
         return username;
     }
 
+    //Setters
+        // Setter for userID
+    public void setUserID(UUID userID) {
+        this.userID = userID;
+    }
 
+    // Setter for username
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    // Setter for password
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    // Setter for email
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Setter for firstName
+    public void setFirstName(String firstName) {
+        this.firstname = firstName;
+    }
+
+    // Setter for lastName
+    public void setLastName(String lastName) {
+        this.lastname = lastName;
+    }
 }
