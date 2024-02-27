@@ -117,4 +117,29 @@ public class User {
     public void setLastName(String lastName) {
         this.lastname = lastName;
     }
+    
+    // Getter for userID
+    public UUID getUserID() {
+        return userID;
+    }
+
+    // Getter for email
+    public String getEmail() {
+        return email;
+    }
+
+    // Getter for lastLogin
+    public String getLastLogin() {
+        return lastLogin;
+    }
+
+    // Getter for firstname (already public, but adding for consistency)
+    public String getFirstName() {
+        return firstname;
+    }
+
+    // Getter for lastname (already public, but adding for consistency)
+    public String getLastName() {
+        return lastname;
+    }
 }

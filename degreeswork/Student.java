@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Student extends User {
-    private ArrayList<Course> currentCourses;
+    private ArrayList<String> currentCourses;
     private Major major;
     private ArrayList<String> advisingNotes;
     private String program;
@@ -19,7 +19,7 @@ public class Student extends User {
 
     public Student() {
         // Initialize all attributes with default values
-        this.currentCourses = new ArrayList<>();
+        this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
         this.advisingNotes = new ArrayList<>();
         this.program = ""; // Assuming empty string means no program assigned yet.
@@ -59,7 +59,7 @@ public class Student extends User {
         super.setLastName(lastName); // Assuming the lastName is handled in the User class
     }
 
-    public void setCurrentCourses(ArrayList<Course> currentCourses) {
+    public void setCurrentCourses(ArrayList<String> currentCourses) {
         this.currentCourses = currentCourses;
     }
 
@@ -69,6 +69,10 @@ public class Student extends User {
 
     public void setAdvisingNotes(ArrayList<String> advisingNotes) {
         this.advisingNotes = advisingNotes; // Assuming sessionNotes map to advisingNotes
+    }
+
+    public void addAdvisingNotes(String advisingNotes) {
+        this.advisingNotes.add(advisingNotes); // Assuming sessionNotes map to advisingNotes
     }
 
     public void setProgram(String program) {
@@ -141,4 +145,30 @@ public class Student extends User {
     public void viewRecord() {
         
     }
+    @Override
+public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Student{");
+    sb.append("\nuserID=").append(super.getUserID());
+    sb.append(", \nusername='").append(getUsername()).append('\'');
+    sb.append(", \nemail='").append(getEmail()).append('\'');
+    sb.append(", \nfirstName='").append(getFirstName()).append('\'');
+    sb.append(", \nlastName='").append(getLastName()).append('\'');
+    sb.append(", \ncurrentCourses=").append(currentCourses);
+    sb.append(", \nmajor=").append(major);
+    sb.append(", \nadvisingNotes=").append(advisingNotes);
+    sb.append(", \nprogram='").append(program).append('\'');
+    sb.append(", \nadvisor='").append(advisor).append('\'');
+    sb.append(", \nmajorGPA=").append(majorGPA);
+    sb.append(", \noverallGPA=").append(overallGPA);
+    sb.append(", \nprogramCompletionPercentage=").append(programCompletionPercentage);
+    sb.append(", \ncoreCompletionPercentage=").append(coreCompletionPercentage);
+    sb.append(", \ndegreeCompletionPercentage=").append(degreeCompletionPercentage);
+    sb.append(", \nfinishedCourses=").append(finishedCourses);
+    sb.append(", \ndashboardWarnings=").append(dashboardWarnings);
+    sb.append('}');
+    return sb.toString();
+}
+
+
 }

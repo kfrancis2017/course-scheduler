@@ -20,9 +20,12 @@
         "title": "UNIX/Linux Fundamentals",
         "description": "UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
         "prerequisites": [
-            ["c91ff163-e682-4da0-944d-8d3f1df93b1d"] 
+            [["course1", "A+"], ["course2", "B+"]],
+            [["course3",null]]
         ],
-        "corequisites": null,
+        "corequisites": [
+            ["course4", "course5"]
+        ],
         "areaOfStudyRequirements": "PR",
         "courseHolds": false
     },
@@ -36,8 +39,8 @@
         "courseHolds": false
     },
     {
-        "courseID": "b0f876c0-1e22-40a1-b588-2ad33839a55d",
-        "title": "HIST 101 European Civilization from Ancient Times to the Mid-17th Century",
+        "courseID": "HIST101",
+        "title": "European Civilization from Ancient Times to the Mid-17th Century",
         "description": "The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
         "prerequisites": null,
         "corequisites": null,
