@@ -117,7 +117,6 @@ public class User {
     public void setLastName(String lastName) {
         this.lastname = lastName;
     }
-
     public UUID getUserID() {
         return userID;
     }
@@ -125,7 +124,6 @@ public class User {
     public String getPassword() {
         return password;
     }
-
     public String getEmail() {
         return email;
     }
