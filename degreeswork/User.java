@@ -14,6 +14,7 @@ public class User {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     public String firstname;
     public String lastname;
+    public String status;
 
     /**
      * Initializes new User with specified params and sets lastLogin to current date/time
@@ -117,6 +118,12 @@ public class User {
     public void setLastName(String lastName) {
         this.lastname = lastName;
     }
+
+    // setter for Account Status
+    public void setAccountStatus(String accountStatus) {
+        this.status = accountStatus;
+    }
+    // Getters
     public UUID getUserID() {
         return userID;
     }

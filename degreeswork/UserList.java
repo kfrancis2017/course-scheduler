@@ -37,6 +37,13 @@ public class UserList {
             users.add(student);
         //TODO add error message in UI if user exists
     }
+
+    public void addAdvisor(Advisor advisor) {
+        if (!searchUser(advisor.getUsername())){
+            users.add(advisor);
+        }
+        //TODO add error message in UI if user exists
+    }
     
 
     /**

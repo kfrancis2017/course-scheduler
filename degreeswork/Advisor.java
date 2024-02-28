@@ -10,7 +10,7 @@ public class Advisor extends User {
 
     }
 
-    public String getAdviseeList(String userDB) {
+    public String getAdviseeList() {
         return null;
     }
 
@@ -28,5 +28,15 @@ public class Advisor extends User {
 
     public void getStudentInfo(User student) {
 
+    }
+
+    public void setAdviseeList(ArrayList<String> advisees) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setAdviseeList'");
+    }
+
+    public void setAdvisorSpecialization(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setAdvisorSpecialization'");
     }
 }

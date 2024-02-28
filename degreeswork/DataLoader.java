@@ -3,6 +3,7 @@ package degreeswork;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 import org.json.simple.JSONArray;
@@ -83,21 +84,47 @@ public class DataLoader {
 
 
     public UserList getAllAdvisors() {
-        UserList advisors = UserList.getInstance();
-
+        UserList advisors = UserList.getInstance(); // Assuming this is a singleton pattern for managing user lists
+    
         JSONParser parser = new JSONParser();
         try {
             JSONArray advisorData = (JSONArray) parser.parse(new FileReader("json/advisor.json"));
             for (Object obj : advisorData) {
-                JSONObject advisor = (JSONObject) obj;
-                // Parse advisor data and add to advisors list
+                JSONObject advisorJSON = (JSONObject) obj;
+                Advisor advisor = new Advisor();
+    
+                // Assuming the Advisor class inherits userID, username, password, email, firstName, lastName, and accountStatus from User
+                advisor.setUserID(UUID.fromString((String) advisorJSON.get("userID")));
+                advisor.setUsername((String) advisorJSON.get("username"));
+                advisor.setPassword((String) advisorJSON.get("password"));
+                advisor.setEmail((String) advisorJSON.get("email"));
+                advisor.setFirstName((String) advisorJSON.get("firstName"));
+                advisor.setLastName((String) advisorJSON.get("lastName"));
+                advisor.setAccountStatus((String) advisorJSON.get("accountStatus"));
+    
+                // Special handling for adviseeList and advisorSpecialization as they are specific to Advisor
+                JSONArray adviseeIDs = (JSONArray) advisorJSON.get("adviseeList");
+                ArrayList<String> advisees = new ArrayList<>();
+                for (Object id : adviseeIDs) {
+                    // Here you should convert each ID to a Student object. 
+                    // I'm assuming you have a method or mechanism to do this, perhaps needing only the ID.
+                    advisees.add((String) id); // You need to implement this method based on your setup.
+                }
+                advisor.setAdviseeList(advisees);
+    
+                advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
+    
+                advisors.addAdvisor(advisor); // Add the fully constructed advisor to the list
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
+    
         return advisors;
     }
+    
+
+    
 
     public UserList getAllAdmins() {
         UserList admins = new UserList();
