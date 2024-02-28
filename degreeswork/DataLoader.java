@@ -13,14 +13,10 @@ import org.json.simple.parser.ParseException;
 public class DataLoader {
 
     public UserList getAllStudents() {
-        // Initialize a new UserList to hold Student objects
-        UserList students = new UserList();
-    
-        // Create a JSON parser for reading the student data
-        JSONParser parser = new JSONParser();
+        UserList students = UserList.getInstance(); // Assuming UserList can store Student objects
 
-        try {
-            // Parse the JSON file containing student data into a JSONArray
+        JSONParser parser = new JSONParser();
+        try {   
             JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
     
             // Iterate through each object in the student data array
@@ -87,7 +83,7 @@ public class DataLoader {
 
 
     public UserList getAllAdvisors() {
-        UserList advisors = new UserList();
+        UserList advisors = UserList.getInstance();
 
         JSONParser parser = new JSONParser();
         try {

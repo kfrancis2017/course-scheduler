@@ -3,13 +3,24 @@ package degreeswork;
 import java.util.ArrayList;
 
 public class UserList {
-    private static ArrayList<User> users;
+    private static UserList userList;
+    private ArrayList<User> users;
 
     /**
      * Initializes a static UserList
      */
     public UserList() {
         users = new ArrayList<User>();
+    }
+
+    /**
+     * Return static UserList if one does not exist
+     * @return Static UserList
+     */
+    public static UserList getInstance() {
+        if (userList == null)
+            userList = new UserList();
+        return userList;
     }
 
     /**
