@@ -16,7 +16,7 @@ public class DataWriter {
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < studentList.size(); i++) {
-            jsonUsers.add(getUserJSON(studentList.get(i)));
+            jsonUsers.add(getStudentJSON(studentList.get(i)));
         }
 
         try (FileWriter file = new FileWriter("json/student.json")) {
@@ -27,7 +27,7 @@ public class DataWriter {
         }
     }
 
-    public static JSONObject getUserJSON(User user) {
+    public static JSONObject getStudentJSON(User user) {
         JSONObject studentDetails = new JSONObject();
         studentDetails.put("userID", user.getUserID());
         studentDetails.put("username", user.getUsername());
