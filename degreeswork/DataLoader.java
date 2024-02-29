@@ -172,11 +172,11 @@ public class DataLoader {
 
         // Optionally, you can test other functionalities
         // For example, testing getAllAdvisors:
-        System.out.println("\nTesting getAllAdvisors:");
-        UserList advisors = dataLoader.getAllAdvisors();
-        for (User advisor : advisors.getUsers()) {
-            System.out.println(advisor);
-            System.out.println("\n");
-        }
+        // System.out.println("\nTesting getAllAdvisors:");
+        // UserList advisors = dataLoader.getAllAdvisors();
+        // for (User advisor : advisors.getUsers()) {
+        //     System.out.println(advisor);
+        //     System.out.println("\n");
+        // }
     }
 }
