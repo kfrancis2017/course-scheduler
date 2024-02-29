@@ -23,7 +23,7 @@ public class DegreeWorks {
      * @param username The User's username
      * @param password The User's password
      */
-    public void login(String username, String password) {
+    public boolean login(String username, String password) {
         mUserList.login(username, password);
 
 
@@ -39,7 +39,7 @@ public class DegreeWorks {
         // } else {
         //     System.out.println("Login attempt with non-existing username: " + username);
         // }
-        // return false;
+         return true;
     }
     
 

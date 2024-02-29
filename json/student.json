@@ -17,7 +17,11 @@
         "majorCompletionPercentage":8.0,
         "coreCompletionPercentage":15.0,
         "degreeCompletionPercentage":23.0,
-        "finishedCourses":null
+        "finishedCourses":[["ELCT101", "A"], 
+                            ["HIST101", "A"], 
+                            ["ENGL101", "A"], 
+                            ["CSCE215", "F"], 
+                            ["CSCE145", "A"]]
     },{
         "userID": "a73bf1c8-9f37-468a-a444-c54c8a91ab51",
         "username": "vtho24",
@@ -36,7 +40,10 @@
         "majorCompletionPercentage": 20.0,
         "coreCompletionPercentage": 15.0,
         "degreeCompletionPercentage": 35.0,
-        "finishedCourses": null,
-        "failedCourses": null
+        "finishedCourses": [["ELCT101", "B"], 
+        ["HIST101", "B"], 
+        ["ENGL101", "B"], 
+        ["CSCE215", "F"], 
+        ["CSCE145", "C"]]
     }
 ]

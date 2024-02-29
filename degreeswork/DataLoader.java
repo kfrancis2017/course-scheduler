@@ -176,6 +176,7 @@ public class DataLoader {
         UserList advisors = dataLoader.getAllAdvisors();
         for (User advisor : advisors.getUsers()) {
             System.out.println(advisor);
+            System.out.println("\n");
         }
     }
 }

@@ -1,14 +1,59 @@
 [
     {
-        "userID":"591eb9db-17d4-4731-bce5-13547764ffdb",
-        "username":"dfrancis",
-        "password":"31459",
-        "email":"dfrancis@csce.sc.edu",
-        "firstName":"Dee",
-        "lastName":"Francis",
-        "accountStatus":"Open",
-        "adviseeList":["6f56258d-70fa-4b72-964d-974990611dc4"],
-        "advisorSpecialization":"CEC"
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "username": "dfrancis",
+        "password": "31459",
+        "email": "dfrancis@sc.edu",
+        "firstName": "Dee",
+        "lastName": "Francis",
+        "accountStatus": "Open",
+        "adviseeList": ["6f56258d-70fa-4b72-964d-974990611dc4"],
+        "advisorSpecialization": "CEC"
+    },
+    {
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "username": "bjensen",
+        "password": "aBc123!",
+        "email": "bjensen@sc.edu",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "accountStatus": "Closed",
+        "adviseeList": [],
+        "advisorSpecialization": "ME"
+    },
+    {
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "username": "emily1985",
+        "password": "123456",
+        "email": "emily@sc.edu",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "accountStatus": "Pending",
+        "adviseeList": ["d3f5935d-4c12-4b9a-9478-620945233dfe", "9d8f0b7d-c3d0-4f56-95a9-9f202c448c47", "7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"],
+        "advisorSpecialization": "ECE"
+    },
+    {
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "username": "invalid_email",
+        "password": "78910",
+        "email": "thisisnotanemail",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "accountStatus": "Open",
+        "adviseeList": ["f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"],
+        "advisorSpecialization": "CS"
+    },
+    {
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "username": "testaccount",
+        "password": "",
+        "email": "testaccount@sc.edu",
+        "firstName": "Test",
+        "lastName": "Account",
+        "accountStatus": "Open",
+        "adviseeList": ["missing", "", "12345678-abcd-90ef-1234-567890abcdef"],
+        "advisorSpecialization": "IE"
     }
 ]
+
 
