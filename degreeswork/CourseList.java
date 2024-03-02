@@ -42,11 +42,19 @@ public class CourseList {
         return false;
     }
 
+    /**
+     * Utilizes the HashMap to find courses by their "key"
+     * @param courseID The "key" to access elements of the HashMap
+     * @return The desired Course
+     */
     public Course findCourseByCode(String courseID) {
         loadHashMap();
         return coursesByCode.get(courseID);
     }
 
+    /**
+     * Transfers the ArrayList of Courses into the Hashmap
+     */
     public void loadHashMap() {
 
         for (Course course : courses) {
