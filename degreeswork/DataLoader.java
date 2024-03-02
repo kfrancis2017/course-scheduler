@@ -161,25 +161,4 @@ public class DataLoader {
             System.out.println(advisor);
         }
     }
-
-    // public static void main(String[] args) {
-    //     DataLoader dataLoader = new DataLoader();
-
-    //     // Testing functionality to retrieve all students
-    //     System.out.println("Testing getAllStudents:");
-    //     UserList students = dataLoader.getAllStudents();
-    //     for (User student : students.getUsers()) {
-    //         System.out.println(student);
-    //         System.out.println("\n");
-    //     }
-
-    //     // Optionally, you can test other functionalities
-    //     // For example, testing getAllAdvisors:
-    //     // System.out.println("\nTesting getAllAdvisors:");
-    //     // UserList advisors = dataLoader.getAllAdvisors();
-    //     // for (User advisor : advisors.getUsers()) {
-    //     //     System.out.println(advisor);
-    //     //     System.out.println("\n");
-    //     // }
-    // }
 }
