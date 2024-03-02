@@ -14,9 +14,12 @@ import org.json.simple.parser.ParseException;
 
 public class DataLoader {
 
+    public DataLoader() {
+        
+    }
+
     public UserList getAllStudents() {
         UserList students = UserList.getInstance(); // Assuming UserList can store Student objects
-
         JSONParser parser = new JSONParser();
         try {   
             JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
@@ -156,26 +159,6 @@ public class DataLoader {
         UserList allAdvisors = getAllAdvisors();
         System.out.println("\nAll Advisors:");
         for (User advisor : allAdvisors.getUsers()) {
-            System.out.println(advisor);
-        }
-    }
-
-    public static void main(String[] args) {
-        DataLoader dataLoader = new DataLoader();
-
-        // Testing functionality to retrieve all students
-        System.out.println("Testing getAllStudents:");
-        UserList students = dataLoader.getAllStudents();
-        for (User student : students.getUsers()) {
-            System.out.println(student);
-            System.out.println("\n");
-        }
-
-        // Optionally, you can test other functionalities
-        // For example, testing getAllAdvisors:
-        System.out.println("\nTesting getAllAdvisors:");
-        UserList advisors = dataLoader.getAllAdvisors();
-        for (User advisor : advisors.getUsers()) {
             System.out.println(advisor);
         }
     }

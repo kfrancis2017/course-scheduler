@@ -1,24 +1,31 @@
 [
     {
-        "userID":"6f56258d-70fa-4b72-964d-974990611dc4",
-        "username":"dspears",
-        "password":"iluvdogs2004",
-        "email":"dspears@email.sc.edu",
-        "firstName":"Dominic",
-        "lastName":"Spears",
-        "accountStatus":"Open",
+        "userID": "6f56258d-70fa-4b72-964d-974990611dc4",
+        "username": "dspears",
+        "password": "iluvdogs2004",
+        "email": "dspears@email.sc.edu",
+        "firstName": "Dominic",
+        "lastName": "Spears",
+        "accountStatus": "Open",
         "currentCourses": ["HIST101", "ENGL101", "CSCE215", "CSCE145"],
         "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
-        "sessionNotes":["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
-        "program":"CEC",
-        "currentAdvisor":"591eb9db-17d4-4731-bce5-13547764ffdb",
-        "major_GPA":4.0,
-        "overall_GPA":3.8,
-        "majorCompletionPercentage":8.0,
-        "coreCompletionPercentage":15.0,
-        "degreeCompletionPercentage":23.0,
-        "finishedCourses":null
-    },{
+        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
+        "program": "CEC",
+        "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "major_GPA": 4.0,
+        "overall_GPA": 3.8,
+        "majorCompletionPercentage": 8.0,
+        "coreCompletionPercentage": 15.0,
+        "degreeCompletionPercentage": 23.0,
+        "finishedCourses": [
+            ["ELCT101", "A"],
+            ["HIST101", "A"],
+            ["ENGL101", "A"],
+            ["CSCE215", "F"],
+            ["CSCE145", "A"]
+        ]
+    },
+    {
         "userID": "a73bf1c8-9f37-468a-a444-c54c8a91ab51",
         "username": "vtho24",
         "password": "wetbanana",
@@ -36,7 +43,64 @@
         "majorCompletionPercentage": 20.0,
         "coreCompletionPercentage": 15.0,
         "degreeCompletionPercentage": 35.0,
-        "finishedCourses": null,
-        "failedCourses": null
+        "finishedCourses": [
+            ["ELCT101", "B"],
+            ["HIST101", "B"],
+            ["ENGL101", "B"],
+            ["CSCE215", "F"],
+            ["CSCE145", "C"]
+        ]
+    },
+    {
+        "userID": "b34fd1e8-c6a1-4d2a-9d5c-34fa3d041c54",
+        "username": "lmarquez",
+        "password": "Secur3P@55",
+        "email": "lmarquez@email.sc.edu",
+        "firstName": "Luisa",
+        "lastName": "Marquez",
+        "accountStatus": "Probation",
+        "currentCourses": ["MATH241", "PHYS211", "CHEM111"],
+        "major": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "program": "SCI",
+        "currentAdvisor": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "sessionNotes": ["bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. 03012024"],
+        "major_GPA": 2.5,
+        "overall_GPA": 2.7,
+        "majorCompletionPercentage": 30.0,
+        "coreCompletionPercentage": 20.0,
+        "degreeCompletionPercentage": 50.0,
+        "finishedCourses": [
+            ["MATH141", "C"],
+            ["PHYS201", "B"],
+            ["CHEM101", "C"],
+            ["ENGL102", "D"],
+            ["CSCE102", "B"]
+        ]
+    },
+    {
+        "userID": "c48d89a3-aae1-4b59-bcde-29d2db5d3e4d",
+        "username": "amitchell",
+        "password": "12345",
+        "email": "amitchell@email.sc.edu",
+        "firstName": "Anna",
+        "lastName": "Mitchell",
+        "accountStatus": "Pending",
+        "currentCourses": [],
+        "major": "3fcb4e94-8b64-45e5-85f8-0c5d5e5f2b56",
+        "program": "ARTS",
+        "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "sessionNotes": ["emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"],
+        "major_GPA": 3.2,
+        "overall_GPA": 3.5,
+        "majorCompletionPercentage": 40.0,
+        "coreCompletionPercentage": 25.0,
+        "degreeCompletionPercentage": 65.0,
+        "finishedCourses": [
+            ["ARTS101", "B"],
+            ["ARTS102", "A"],
+            ["HIST105", "A"],
+            ["ENGL110", "B"],
+            ["PHIL101", "C"]
+        ]
     }
 ]

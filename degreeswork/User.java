@@ -119,6 +119,11 @@ public class User {
         this.lastname = lastName;
     }
 
+    // Setter for lastLogin
+    public void setLastLogin(String lastLogin) {
+        this.lastLogin = lastLogin;
+    }
+
     // setter for Account Status
     public void setAccountStatus(String accountStatus) {
         this.status = accountStatus;

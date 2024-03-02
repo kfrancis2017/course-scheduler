@@ -5,38 +5,25 @@ import java.util.ArrayList;
 public class Advisor extends User {
     
     private ArrayList<Student> adviseeList;
+    private String advisorSpecialization;
 
     public Advisor() {
 
     }
 
-    public String getAdviseeList() {
-        return null;
-    }
-
-    public void monitorProgress(String username) {
-
+    public ArrayList<Student> getAdviseeList() {
+        return this.adviseeList;
     }
 
     public void addAdvisingSession(User student) {
-
-    }
-
-    public void createSechedule(String username) {
-
-    }
-
-    public void getStudentInfo(User student) {
-
+        //ok
     }
 
     public void setAdviseeList(ArrayList<String> advisees) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setAdviseeList'");
+        this.adviseeList = new ArrayList<>();
     }
 
     public void setAdvisorSpecialization(String string) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setAdvisorSpecialization'");
+        this.advisorSpecialization = string;
     }
 }
