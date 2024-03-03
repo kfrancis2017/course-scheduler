@@ -37,11 +37,25 @@
         "title": "UNIX/Linux Fundamentals",
         "description": "UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
         "prerequisites": [
-            [["course1", "A+"], ["course2", "B+"]],
-            [["course3",null]]
+            {
+            "options": [
+                { "precourseID": "course1", "grade": "C" },
+                { "precourseID": "course2", "grade": "C" }
+            ]
+            },
+            {
+            "options": [
+                { "precourseID": "course3", "grade": null }
+            ]
+            }
         ],
         "corequisites": [
-            ["course4", "course5"]
+            {
+            "options": [
+                { "cocourseID": "course4" },
+                { "cocourseID": "course5" }
+            ]
+            }
         ],
         "areaOfStudyRequirements": "PR",
         "courseHolds": false
