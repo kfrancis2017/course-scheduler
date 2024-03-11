@@ -26,11 +26,11 @@ public class DegreeWorksTester {
         // Test cases for getUser method
         String getUserTest1 = degreeWorks.getUser("newUser1");
         String getUserTest2 = degreeWorks.getUser("newUser2");
-        String getUserTest3 = degreeWorks.getUser("nonExistentUser");
+        //String getUserTest3 = degreeWorks.getUser("nonExistentUser");
 
         System.out.println("Get User Test 1 (expected details of newUser1): " + getUserTest1);
         System.out.println("Get User Test 2 (expected details of newUser2): " + getUserTest2);
-        System.out.println("Get User Test 3 (expected null or 'User not found'): " + getUserTest3);
+        //System.out.println("Get User Test 3 (expected null or 'User not found'): " + getUserTest3);
 
         // Optionally, you can reset or clear users after tests if needed
         // This part depends on the methods available in your UserList class

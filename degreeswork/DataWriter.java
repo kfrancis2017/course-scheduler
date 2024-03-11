@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;;
+import org.json.simple.JSONObject;
 
 public class DataWriter {
 
@@ -16,7 +16,7 @@ public class DataWriter {
         JSONArray jsonUsers = new JSONArray();
 
         for (int i = 0; i < studentList.size(); i++) {
-            jsonUsers.add(getUserJSON(studentList.get(i)));
+            jsonUsers.add(getStudentJSON(studentList.get(i)));
         }
 
         try (FileWriter file = new FileWriter("json/student.json")) {
@@ -27,7 +27,7 @@ public class DataWriter {
         }
     }
 
-    public static JSONObject getUserJSON(User user) {
+    public static JSONObject getStudentJSON(User user) {
         JSONObject studentDetails = new JSONObject();
         studentDetails.put("userID", user.getUserID());
         studentDetails.put("username", user.getUsername());
