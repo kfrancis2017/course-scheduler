@@ -1,51 +1,47 @@
 [
     {
-        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
-        "username": "dfrancis",
-        "password": "31459",
-        "email": "dfrancis@sc.edu",
-        "firstName": "Dee",
-        "lastName": "Francis",
+        "userID": "a1e34bf5-d6f7-48cc-a675-c8c475a737b2",
+        "username": "jsmith",
+        "password": "Js!2024",
+        "email": "jsmith@sc.edu",
+        "firstName": "John",
+        "lastName": "Smith",
         "accountStatus": "Open"
     },
     {
-        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
-        "username": "bjensen",
-        "password": "aBc123!",
-        "email": "bjensen@sc.edu",
-        "firstName": "Bob",
-        "lastName": "Jensen",
+        "userID": "b23dcf8a-27d5-4c5f-8d3b-d575b61715d5",
+        "username": "amartinez",
+        "password": "Secure*987",
+        "email": "amartinez@sc.edu",
+        "firstName": "Ana",
+        "lastName": "Martinez",
         "accountStatus": "Open"
     },
     {
-        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
-        "username": "emily1985",
-        "password": "123456",
-        "email": "emily@sc.edu",
-        "firstName": "Emily",
-        "lastName": "Rodriguez",
+        "userID": "c345fde6-1234-5678-9101-11a2b3c4d5e6",
+        "username": "tjackson",
+        "password": "Tj2024!",
+        "email": "tjackson@sc.edu",
+        "firstName": "Tanya",
+        "lastName": "Jackson",
         "accountStatus": "Pending"
     },
     {
-        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
-        "username": "invalid_email",
-        "password": "78910",
-        "email": "thisisnotanemail",
-        "firstName": "Invalid",
-        "lastName": "User",
-        "accountStatus": "Open",
-        "adviseeList": ["f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"],
-        "advisorSpecialization": "CS"
+        "userID": "d4567ef8-9a1b-2c3d-4e5f-67890a1b2c3d",
+        "username": "chloe92",
+        "password": "ChloE*923",
+        "email": "chloe92@sc.edu",
+        "firstName": "Chloe",
+        "lastName": "Taylor",
+        "accountStatus": "Open"
     },
     {
-        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "username": "testaccount",
-        "password": "",
-        "email": "testaccount@sc.edu",
-        "firstName": "Test",
-        "lastName": "Account",
+        "userID": "e56789fa-b1c2-3d4e-5f6e-7a8b9c0d1e2f",
+        "username": "mark_admin",
+        "password": "M4rk3d!",
+        "email": "mark_admin@sc.edu",
+        "firstName": "Mark",
+        "lastName": "Johnson",
         "accountStatus": "Open"
     }
 ]
-
-

@@ -106,7 +106,7 @@ public class DataLoader {
         
         JSONParser parser = new JSONParser();
         try {
-            JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admins.json"));
+            JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admin.json"));
             for (Object obj : adminData) {
                 JSONObject adminJSON = (JSONObject) obj;
                 Admin admin = new Admin();
