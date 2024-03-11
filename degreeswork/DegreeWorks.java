@@ -1,5 +1,7 @@
 package degreeswork;
 
+import java.util.ArrayList;
+
 public class DegreeWorks {
 
     private User mUser;
@@ -18,7 +20,10 @@ public class DegreeWorks {
 
     public boolean login(String username, String password) {
        this.mUser = mUserList.login(username, password);
-       return true;
+       if(this.mUser==null)
+        return false;
+       else
+        return true;
     }
     
     public boolean signup(String username, String password, String firstname, String lastname) {
@@ -27,6 +32,18 @@ public class DegreeWorks {
     }
 
     public String getUser(String username) {
-        return mUserList.getUser(username).toString();
+        if(mUserList.searchUser(username))
+            return mUserList.getUser(username).toString();
+        else
+            return null;
+    }
+
+    public void printUserList() {
+        //create for loop here to print all user.getEmail() in the array list. 
+        ArrayList<User> arr=mUserList.getUsers();
+        for (User user : arr) {
+            System.out.println(user.getEmail());
+        }
+
     }
 }

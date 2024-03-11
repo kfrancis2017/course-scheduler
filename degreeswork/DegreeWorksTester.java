@@ -5,6 +5,7 @@ public class DegreeWorksTester {
     public static void main(String[] args) {
         // Initialize UserList and DegreeWorks instances for testing
         DegreeWorks degreeWorks = new DegreeWorks();
+        degreeWorks.printUserList();
 
         // Test cases for signup method
         boolean signupTest1 = degreeWorks.signup("newUser1", "pass123", "John", "Doe");
