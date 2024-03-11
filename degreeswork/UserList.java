@@ -16,24 +16,22 @@ public class UserList {
         return userList;
     }
 
-    public void addUsers(String username, String password, String firstname, String lastname) {
-        if (!searchUser(username))
-            users.add(new User(username, password, firstname, lastname));
-    }
-
-    public void addStudent(Student student) {
-        if (!searchUser(student.getUsername()))
-            users.add(student);
-        //TODO add error message in UI if user exists
-    }
-
-    public void addAdvisor(Advisor advisor) {
-        if (!searchUser(advisor.getUsername())){
-            users.add(advisor);
-        }
-        //TODO add error message in UI if user exists
+    public boolean addUser(User user) {
+        if (!searchUser(user.getUsername()))
+            return users.add(user);
+        return false;
     }
     
+    public void addUsers(ArrayList<User> users) {
+        for (User user : users) {
+            addUser(user);
+        }
+    }
+
+    public void addUser(String username, String password, String firstname, String lastname) {
+        addUser(new User(username, password, firstname, lastname));
+    }
+
     public boolean searchUser(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username))
@@ -43,36 +41,70 @@ public class UserList {
     }
 
     public User getUser(String username) {
-        if (searchUser(username)) {
-            for (User user : users) {
-                if (user.getUsername().equals(username))
-                    return user;
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                return user;
             }
         }
-        return null;
-    }
-
-    public User getUser(String username, String password) {
-        return null;
+        return null; // User not found
     }
 
     public ArrayList<User> getUsers() {
         return users;
     }
+    public ArrayList<Student> getStudents() {
+        ArrayList<Student> students = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Student) {
+                students.add((Student) user);
+            }
+        }
+        return students;
+    }
+
+    public ArrayList<Advisor> getAdvisors() {
+        ArrayList<Advisor> advisors = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Advisor) {
+                advisors.add((Advisor) user);
+            }
+        }
+        return advisors;
+    }
+
+    public ArrayList<Admin> getAdmins() {
+        ArrayList<Admin> admins = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Admin) {
+                admins.add((Admin) user);
+            }
+        }
+        return admins;
+    }
 
     public User login(String username, String password) {
         if (searchUser(username)){
-            System.out.println("User exists");
             if (getUser(username).checkPassword(password)){
-                System.out.println("Password matches");
                 return getUser(username);
             }
         }
         return null;
     }
 
-    public void modifyUser(User user) {
-        
+    public void modifyUser(User user, User newUser) {
+        int index = users.indexOf(user);
+        if (index != -1) {
+            users.set(index, newUser);
+        }
+    }
+
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (User user : this.getUsers()) {
+            result.append(user.getFirstName()).append("\t");
+            result.append(user.getLastName()).append("\n");
+        }
+        return result.toString();
     }
 
 }

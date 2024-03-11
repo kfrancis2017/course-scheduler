@@ -9,41 +9,114 @@ import org.json.simple.JSONObject;
 
 public class DataWriter {
 
-    
-    public void SaveAllStudents() {
-        UserList students = UserList.getInstance();
-        ArrayList<User> studentList = students.getUsers();
-        JSONArray jsonUsers = new JSONArray();
+    // ... (existing code)
 
-        for (int i = 0; i < studentList.size(); i++) {
-            jsonUsers.add(getStudentJSON(studentList.get(i)));
+    public void SaveAllUsers(UserList userList) {
+        saveStudents(userList);
+        saveAdvisors(userList);
+        saveAdmins(userList);
+    }
+
+    private void saveStudents(UserList userList) {
+        ArrayList<Student> studentList = userList.getStudents();
+        JSONArray jsonStudents = new JSONArray();
+
+        for (Student student : studentList) {
+            jsonStudents.add(getStudentJSON(student));
         }
 
-        try (FileWriter file = new FileWriter("json/student.json")) {
-            file.write(jsonUsers.toJSONString());
+        writeJSONToFile("json/students.json", jsonStudents);
+    }
+
+    private void saveAdvisors(UserList userList) {
+        ArrayList<Advisor> advisorList = userList.getAdvisors();
+        JSONArray jsonAdvisors = new JSONArray();
+
+        for (Advisor advisor : advisorList) {
+            jsonAdvisors.add(getAdvisorJSON(advisor));
+        }
+
+        writeJSONToFile("json/advisors.json", jsonAdvisors);
+    }
+
+    private void saveAdmins(UserList userList) {
+        ArrayList<Admin> adminList = userList.getAdmins();
+        JSONArray jsonAdmins = new JSONArray();
+
+        for (Admin admin : adminList) {
+            jsonAdmins.add(getAdminJSON(admin));
+        }
+
+        writeJSONToFile("json/admins.json", jsonAdmins);
+    }
+
+    private void writeJSONToFile(String filename, JSONArray jsonArray) {
+        try (FileWriter file = new FileWriter(filename)) {
+            file.write(jsonArray.toJSONString());
             file.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static JSONObject getStudentJSON(User user) {
+    private JSONObject getStudentJSON(Student student) {
         JSONObject studentDetails = new JSONObject();
-        studentDetails.put("userID", user.getUserID());
-        studentDetails.put("username", user.getUsername());
-        studentDetails.put("password", user.getPassword());
-        studentDetails.put("email", user.getEmail());
-        studentDetails.put("firstname", user.getFirstName());
-        studentDetails.put("lastname", user.getLastName());
+        studentDetails.put("userID", student.getUserID().toString());
+        studentDetails.put("username", student.getUsername());
+        studentDetails.put("password", student.getPassword());
+        studentDetails.put("email", student.getEmail());
+        studentDetails.put("firstName", student.getFirstName());
+        studentDetails.put("lastName", student.getLastName());
+
+        // Convert List of current courses to JSON Array
+        JSONArray currentCoursesArray = new JSONArray();
+        currentCoursesArray.addAll(student.getCurrentCourses());
+        studentDetails.put("currentCourses", currentCoursesArray);
+
+        // Convert List of session notes to JSON Array
+        JSONArray sessionNotesArray = new JSONArray();
+        sessionNotesArray.addAll(student.getAdvisingNotes());
+        studentDetails.put("sessionNotes", sessionNotesArray);
+
+        studentDetails.put("major", student.getMajor().getName()); // Assuming 'Major' has a 'getName()' method
+        studentDetails.put("program", student.getProgram());
+        studentDetails.put("currentAdvisor", student.getAdvisor().toString());
 
         return studentDetails;
     }
 
-    public void SaveAllAdvisors() {
-        
+    private JSONObject getAdvisorJSON(Advisor advisor) {
+        JSONObject advisorDetails = new JSONObject();
+        advisorDetails.put("userID", advisor.getUserID().toString());
+        advisorDetails.put("username", advisor.getUsername());
+        advisorDetails.put("password", advisor.getPassword());
+        advisorDetails.put("email", advisor.getEmail());
+        advisorDetails.put("firstName", advisor.getFirstName());
+        advisorDetails.put("lastName", advisor.getLastName());
+        advisorDetails.put("accountStatus", advisor.getAccountStatus());
+
+        // Convert List of advisee IDs to JSON Array
+        JSONArray adviseeIDs = new JSONArray();
+        adviseeIDs.addAll(advisor.getAdviseeList());
+        advisorDetails.put("adviseeList", adviseeIDs);
+
+        advisorDetails.put("advisorSpecialization", advisor.getAdvisorSpecialization());
+
+        return advisorDetails;
     }
 
-    public void SaveAllAdmins() {
+    private JSONObject getAdminJSON(Admin admin) {
+        JSONObject adminDetails = new JSONObject();
+        adminDetails.put("userID", admin.getUserID().toString());
+        adminDetails.put("username", admin.getUsername());
+        adminDetails.put("password", admin.getPassword());
+        adminDetails.put("email", admin.getEmail());
+        adminDetails.put("firstName", admin.getFirstName());
+        adminDetails.put("lastName", admin.getLastName());
+        adminDetails.put("accountStatus", admin.getAccountStatus());
 
+        return adminDetails;
     }
+
+    
 }

@@ -13,41 +13,29 @@ import org.json.simple.parser.ParseException;
 
 
 public class DataLoader {
-
     public DataLoader() {
         
     }
 
-    public UserList getAllStudents() {
-        UserList students = UserList.getInstance(); // Assuming UserList can store Student objects
+    public ArrayList<User> getAllStudents() {
+        ArrayList<User> students = new ArrayList<>();
         JSONParser parser = new JSONParser();
         try {   
             JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
-    
-            // Iterate through each object in the student data array
             for (Object obj : studentData) {
                 JSONObject studentJson = (JSONObject) obj;
-    
-                // Parse individual student JSON object into a Student object
                 Student student = parseStudent(studentJson);
-    
-                // Add the parsed Student object to the UserList
-                students.addStudent(student);
+                students.add(student);
             }
         } catch (IOException | ParseException e) {
-            // Print the stack trace for debugging if an exception occurs
             e.printStackTrace();
         }
-    
-        // Return the list of parsed Student objects
         return students;
     }
     
     private Student parseStudent(JSONObject studentJson) {
-        // Create a new Student instance
         Student student = new Student();
     
-        // Set "User" properties from the JSON object
         student.setUserID(UUID.fromString((String) studentJson.get("userID")));
         student.setUsername((String) studentJson.get("username"));
         student.setPassword((String) studentJson.get("password"));
@@ -55,49 +43,35 @@ public class DataLoader {
         student.setFirstName((String) studentJson.get("firstName"));
         student.setLastName((String) studentJson.get("lastName"));
     
-        // Convert JSON array of current courses into a List<String>
         JSONArray currentCoursesArray = (JSONArray) studentJson.get("currentCourses");
         ArrayList<String> currentCoursesList = new ArrayList<>();
-        for (Object courseObj : currentCoursesArray) {
-            currentCoursesList.add((String) courseObj);
-        }
+        for (Object courseObj : currentCoursesArray) {currentCoursesList.add((String) courseObj);}
         student.setCurrentCourses(currentCoursesList);
     
         // Convert JSON array of session notes into a List<String>
         JSONArray sessionNotesArray = (JSONArray) studentJson.get("sessionNotes");
         ArrayList<String> sessionNotesList = new ArrayList<>();
-        for (Object noteObj : sessionNotesArray) {
-            sessionNotesList.add((String) noteObj);
-        }
+        for (Object noteObj : sessionNotesArray) {sessionNotesList.add((String) noteObj);}
         student.setAdvisingNotes(sessionNotesList);
-    
-        // Set additional student properties from the JSON object
+
         student.setMajor(new Major((String) studentJson.get("major")));
         student.setProgram((String) studentJson.get("program"));
         student.setCurrentAdvisor(UUID.fromString((String) studentJson.get("currentAdvisor")));
-        student.setMajorGPA((Double) studentJson.get("major_GPA"));
-        student.setOverallGPA((Double) studentJson.get("overall_GPA"));
-        student.setMajorCompletionPercentage((Double) studentJson.get("majorCompletionPercentage"));
-        student.setCoreCompletionPercentage((Double) studentJson.get("coreCompletionPercentage"));
-        student.setDegreeCompletionPercentage((Double) studentJson.get("degreeCompletionPercentage"));
-    
-        // Return the fully populated Student object
         return student;
     }
     
 
 
-    public UserList getAllAdvisors() {
-        UserList advisors = UserList.getInstance(); // Assuming this is a singleton pattern for managing user lists
-    
+    public ArrayList<User> getAllAdvisors() {
+        ArrayList<User> advisors = new ArrayList<>();
+        
         JSONParser parser = new JSONParser();
         try {
             JSONArray advisorData = (JSONArray) parser.parse(new FileReader("json/advisor.json"));
             for (Object obj : advisorData) {
                 JSONObject advisorJSON = (JSONObject) obj;
                 Advisor advisor = new Advisor();
-    
-                // Assuming the Advisor class inherits userID, username, password, email, firstName, lastName, and accountStatus from User
+                
                 advisor.setUserID(UUID.fromString((String) advisorJSON.get("userID")));
                 advisor.setUsername((String) advisorJSON.get("username"));
                 advisor.setPassword((String) advisorJSON.get("password"));
@@ -105,40 +79,47 @@ public class DataLoader {
                 advisor.setFirstName((String) advisorJSON.get("firstName"));
                 advisor.setLastName((String) advisorJSON.get("lastName"));
                 advisor.setAccountStatus((String) advisorJSON.get("accountStatus"));
-    
-                // Special handling for adviseeList and advisorSpecialization as they are specific to Advisor
+                
                 JSONArray adviseeIDs = (JSONArray) advisorJSON.get("adviseeList");
                 ArrayList<String> advisees = new ArrayList<>();
                 for (Object id : adviseeIDs) {
-                    // Here you should convert each ID to a Student object. 
-                    // I'm assuming you have a method or mechanism to do this, perhaps needing only the ID.
-                    advisees.add((String) id); // You need to implement this method based on your setup.
+                    advisees.add((String) id);
                 }
                 advisor.setAdviseeList(advisees);
-    
+                
                 advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
-    
-                advisors.addAdvisor(advisor); // Add the fully constructed advisor to the list
+                
+                advisors.add(advisor);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-    
+        
         return advisors;
     }
     
 
     
 
-    public UserList getAllAdmins() {
-        UserList admins = new UserList();
-
+    public ArrayList<User> getAllAdmins() {
+        ArrayList<User> admins = new ArrayList<>();
+        
         JSONParser parser = new JSONParser();
         try {
             JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admins.json"));
             for (Object obj : adminData) {
-                JSONObject admin = (JSONObject) obj;
-                // Parse admin data and add to admins list
+                JSONObject adminJSON = (JSONObject) obj;
+                Admin admin = new Admin();
+                
+                admin.setUserID(UUID.fromString((String) adminJSON.get("userID")));
+                admin.setUsername((String) adminJSON.get("username"));
+                admin.setPassword((String) adminJSON.get("password"));
+                admin.setEmail((String) adminJSON.get("email"));
+                admin.setFirstName((String) adminJSON.get("firstName"));
+                admin.setLastName((String) adminJSON.get("lastName"));
+                admin.setAccountStatus((String) adminJSON.get("accountStatus"));
+                
+                admins.add(admin);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
@@ -146,20 +127,4 @@ public class DataLoader {
         return admins;
     }
     
-
-    public void testFunctions() {
-        // Test retrieving all students
-        UserList allStudents = getAllStudents();
-        System.out.println("All Students:");
-        for (User student : allStudents.getUsers()) {
-            System.out.println(student);
-        }
-
-        // Test retrieving all advisors
-        UserList allAdvisors = getAllAdvisors();
-        System.out.println("\nAll Advisors:");
-        for (User advisor : allAdvisors.getUsers()) {
-            System.out.println(advisor);
-        }
-    }
 }

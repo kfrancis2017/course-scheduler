@@ -12,9 +12,9 @@ public class User {
     private String email;
     private String lastLogin;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-    public String firstname;
-    public String lastname;
-    public String status;
+    private String firstname;
+    private String lastname;
+    private String status;
 
     /**
      * Initializes new User with specified params and sets lastLogin to current date/time
@@ -88,8 +88,8 @@ public class User {
         return username;
     }
 
-    //Setters
-        // Setter for userID
+//Setters
+    // Setter for userID
     public void setUserID(UUID userID) {
         this.userID = userID;
     }
@@ -146,5 +146,9 @@ public class User {
 
     public String getLastName() {
         return lastname;
+    }
+
+    public String getAccountStatus(){
+        return status;
     }
 }
