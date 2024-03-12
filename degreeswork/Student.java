@@ -126,7 +126,36 @@ public class Student extends User {
         return new ArrayList<>(this.dashboardWarnings); // Provides a copy of the dashboardWarnings list
     }
 
+    public void updateStudentTranscript(String courseID, String grade) {
+        boolean courseFound = false;
+        for (ArrayList<String> course : finishedCourses) {
+            if (course.get(0).equals(courseID)) { // Assuming first element is the courseID
+                course.set(1, grade); // Update the grade
+                courseFound = true;
+                break;
+            }
+        }
 
+        if (!courseFound) {
+            // If the course is not found, add a new entry for it
+            ArrayList<String> newCourseEntry = new ArrayList<>();
+            newCourseEntry.add(courseID);
+            newCourseEntry.add(grade);
+            finishedCourses.add(newCourseEntry);
+        }
+    }
+
+    public void viewRecord() {
+        System.out.println("Student Record for: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("Major: " + (this.major != null ? this.major.getName() : "Undeclared"));
+        System.out.println("Program: " + this.program);
+        System.out.println("Completed Courses:");
+        for (ArrayList<String> courseEntry : finishedCourses) {
+            // Assuming the format is [CourseID, Grade]
+            System.out.println(courseEntry.get(0) + "\t" + courseEntry.get(1)); // Prints in the format "EMCH101 \t A"
+        }
+    }
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

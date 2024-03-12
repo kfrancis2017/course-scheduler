@@ -37,7 +37,7 @@ public class DegreeWorksTester {
     }
 
     private static void testLogin(DegreeWorks degreeWorks) {
-        System.out.println("Testing Login Functionality\n");
+        System.out.println("Testing NewUser Login Functionality\n");
         boolean loginTest1 = degreeWorks.login("newUser1", "pass123");
         boolean loginTest2 = degreeWorks.login("nonExistentUser", "pass789");
         System.out.println("Login Test 1 (expected true): " + loginTest1);
@@ -49,10 +49,10 @@ public class DegreeWorksTester {
         System.out.println("Testing GetUser Functionality\n");
         String getUserTest1 = degreeWorks.getUser("newUser1");
         String getUserTest2 = degreeWorks.getUser("newUser2");
-        //String getUserTest3 = degreeWorks.getUser("nonExistentUser");
+        String getUserTest3 = degreeWorks.getUser("nonExistentUser");
         System.out.println("Get User Test 1 (expected details of newUser1): " + getUserTest1);
         System.out.println("Get User Test 2 (expected details of newUser2): " + getUserTest2);
-        //System.out.println("Get User Test 3 (expected null or 'User not found'): " + getUserTest3);
+        System.out.println("Get User Test 3 (expected null or 'User not found'): " + getUserTest3);
         System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
     }
 
