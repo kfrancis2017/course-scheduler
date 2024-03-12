@@ -26,20 +26,37 @@ public class CourseList {
         return courseList;
     }
 
+    /**
+     * Adds a course object to the course
+     * @param course
+     * @return
+     */
     public boolean addCourse(Course course) {
-        return false;
+        if (course == null)
+            return false;
+        courses.add(course);
+        return true;
     }
 
     public boolean addCourse(String coursename, String courseID, String description, CourseList prereq, CourseList coreq, String AOS_Req) {
+        courses.add(new Course(coursename, courseID, description, prereq, coreq, AOS_Req));
         return true;
     }
 
     public boolean modifyCourse(Course newCourse, Course oldCourse) {
-        return false;
+        if (newCourse == oldCourse)
+            return false;
+        courses.remove(newCourse);
+        courses.add(oldCourse);
+        return true;
+
     }
 
     public boolean deleteCourse(Course course) {
-        return false;
+        if (course != findCourseByCode(course.getCourseID()))
+            return false;
+        courses.remove(course);
+        return true;
     }
 
     /**
