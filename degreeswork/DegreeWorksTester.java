@@ -1,4 +1,5 @@
 package degreeswork;
+import java.util.ArrayList;
 
 public class DegreeWorksTester {
 
@@ -15,6 +16,9 @@ public class DegreeWorksTester {
         testDatabaseLogin(degreeWorks);
         testLogin(degreeWorks);
         testGetUser(degreeWorks);
+        testGetStudents(degreeWorks);
+        testGetAdvisors(degreeWorks);
+        testGetAdmins(degreeWorks);
     }
 
     private static void testSignup(DegreeWorks degreeWorks) {
@@ -56,5 +60,33 @@ public class DegreeWorksTester {
         System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
     }
 
-    // Additional test methods can be added here for advisor, advisee, etc.
+    private static void testGetStudents(DegreeWorks degreeWorks) {
+        System.out.println("Testing getStudents Functionality\n");
+        ArrayList<Student> students = degreeWorks.getStudents();
+        System.out.println("Students:");
+        for (Student student : students) {
+            System.out.println(student.getUsername() + ": " + student.getFirstName() + " " + student.getLastName());
+        }
+        System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+    }
+
+    private static void testGetAdvisors(DegreeWorks degreeWorks) {
+        System.out.println("Testing getAdvisors Functionality\n");
+        ArrayList<Advisor> advisors = degreeWorks.getAdvisors();
+        System.out.println("Advisors:");
+        for (Advisor advisor : advisors) {
+            System.out.println(advisor.getUsername() + ": " + advisor.getFirstName() + " " + advisor.getLastName());
+        }
+        System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+    }
+
+    private static void testGetAdmins(DegreeWorks degreeWorks) {
+        System.out.println("Testing getAdmins Functionality\n");
+        ArrayList<Admin> admins = degreeWorks.getAdmins();
+        System.out.println("Admins:");
+        for (Admin admin : admins) {
+            System.out.println(admin.getUsername() + ": " + admin.getFirstName() + " " + admin.getLastName());
+        }
+        System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+    }
 }

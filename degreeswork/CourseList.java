@@ -1,9 +1,11 @@
 package degreeswork;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 
+import java.util.HashMap;
+
 public class CourseList {
+<<<<<<< HEAD
     private static CourseList courseList;
     private ArrayList<Course> courses;
     private HashMap<String, Course> coursesByCode;
@@ -67,26 +69,30 @@ public class CourseList {
             return false;
         courses.remove(course);
         return true;
+=======
+    
+    private static HashMap<String, Course>courseHash = new HashMap<String, Course>();
+    private static ArrayList<Course> courses;
+    
+    public boolean addCourse(Course course) {
+        courseHash.put(course.courseID, course);
+        return false;
     }
 
-    /**
-     * Utilizes the HashMap to find courses by their "key"
-     * @param courseID The "key" to access elements of the HashMap
-     * @return The desired Course
-     */
-    public Course findCourseByCode(String courseID) {
-        loadHashMap();
-        return coursesByCode.get(courseID);
+    public boolean modifyCourse(Course newCourse, Course oldCourse) {
+        courseHash.remove(oldCourse);
+        courseHash.put(newCourse.courseID, newCourse);
+        return false;
     }
 
-    /**
-     * Transfers the ArrayList of Courses into the Hashmap
-     */
-    public void loadHashMap() {
+    public boolean deleteCourse(Course course) {
+        courseHash.remove(course);
+        return false;
+>>>>>>> 6b5331cad303fd6386e11a7b43d9d74df951a6d0
+    }
 
-        for (Course course : courses) {
-            coursesByCode.put(course.getCourseID(), course);
-        }
-
+    public Course findCourse(String courseID) {
+        courseHash.get(courseID);
+        return null;
     }
 }

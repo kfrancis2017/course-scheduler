@@ -14,13 +14,13 @@ import org.json.simple.parser.ParseException;
 
 public class DataLoader {
     public DataLoader() {
-        
+
     }
 
     public ArrayList<User> getAllStudents() {
         ArrayList<User> students = new ArrayList<>();
         JSONParser parser = new JSONParser();
-        try {   
+        try {
             JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
             for (Object obj : studentData) {
                 JSONObject studentJson = (JSONObject) obj;
@@ -32,26 +32,31 @@ public class DataLoader {
         }
         return students;
     }
-    
+
+    //Why is parseStudent the only one separate from getAllStudents?
     private Student parseStudent(JSONObject studentJson) {
         Student student = new Student();
-    
+
         student.setUserID(UUID.fromString((String) studentJson.get("userID")));
         student.setUsername((String) studentJson.get("username"));
         student.setPassword((String) studentJson.get("password"));
         student.setEmail((String) studentJson.get("email"));
         student.setFirstName((String) studentJson.get("firstName"));
         student.setLastName((String) studentJson.get("lastName"));
-    
+
         JSONArray currentCoursesArray = (JSONArray) studentJson.get("currentCourses");
         ArrayList<String> currentCoursesList = new ArrayList<>();
-        for (Object courseObj : currentCoursesArray) {currentCoursesList.add((String) courseObj);}
+        for (Object courseObj : currentCoursesArray) {
+            currentCoursesList.add((String) courseObj);
+        }
         student.setCurrentCourses(currentCoursesList);
-    
+
         // Convert JSON array of session notes into a List<String>
         JSONArray sessionNotesArray = (JSONArray) studentJson.get("sessionNotes");
         ArrayList<String> sessionNotesList = new ArrayList<>();
-        for (Object noteObj : sessionNotesArray) {sessionNotesList.add((String) noteObj);}
+        for (Object noteObj : sessionNotesArray) {
+            sessionNotesList.add((String) noteObj);
+        }
         student.setAdvisingNotes(sessionNotesList);
 
         student.setMajor(new Major((String) studentJson.get("major")));
@@ -59,19 +64,17 @@ public class DataLoader {
         student.setCurrentAdvisor(UUID.fromString((String) studentJson.get("currentAdvisor")));
         return student;
     }
-    
-
 
     public ArrayList<User> getAllAdvisors() {
         ArrayList<User> advisors = new ArrayList<>();
-        
+
         JSONParser parser = new JSONParser();
         try {
             JSONArray advisorData = (JSONArray) parser.parse(new FileReader("json/advisor.json"));
             for (Object obj : advisorData) {
                 JSONObject advisorJSON = (JSONObject) obj;
                 Advisor advisor = new Advisor();
-                
+
                 advisor.setUserID(UUID.fromString((String) advisorJSON.get("userID")));
                 advisor.setUsername((String) advisorJSON.get("username"));
                 advisor.setPassword((String) advisorJSON.get("password"));
@@ -79,38 +82,35 @@ public class DataLoader {
                 advisor.setFirstName((String) advisorJSON.get("firstName"));
                 advisor.setLastName((String) advisorJSON.get("lastName"));
                 advisor.setAccountStatus((String) advisorJSON.get("accountStatus"));
-                
+
                 JSONArray adviseeIDs = (JSONArray) advisorJSON.get("adviseeList");
                 ArrayList<String> advisees = new ArrayList<>();
                 for (Object id : adviseeIDs) {
                     advisees.add((String) id);
                 }
                 advisor.setAdviseeList(advisees);
-                
+
                 advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
-                
+
                 advisors.add(advisor);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
+
         return advisors;
     }
-    
-
-    
 
     public ArrayList<User> getAllAdmins() {
         ArrayList<User> admins = new ArrayList<>();
-        
+
         JSONParser parser = new JSONParser();
         try {
             JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admin.json"));
             for (Object obj : adminData) {
                 JSONObject adminJSON = (JSONObject) obj;
                 Admin admin = new Admin();
-                
+
                 admin.setUserID(UUID.fromString((String) adminJSON.get("userID")));
                 admin.setUsername((String) adminJSON.get("username"));
                 admin.setPassword((String) adminJSON.get("password"));
@@ -118,7 +118,7 @@ public class DataLoader {
                 admin.setFirstName((String) adminJSON.get("firstName"));
                 admin.setLastName((String) adminJSON.get("lastName"));
                 admin.setAccountStatus((String) adminJSON.get("accountStatus"));
-                
+
                 admins.add(admin);
             }
         } catch (IOException | ParseException e) {
@@ -126,5 +126,5 @@ public class DataLoader {
         }
         return admins;
     }
-    
+
 }
