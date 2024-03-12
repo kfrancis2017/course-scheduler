@@ -27,7 +27,7 @@ public class CourseList {
     }
 
     /**
-     * Adds a course object to the course
+     * Adds a Course object to the list
      * @param course
      * @return
      */
@@ -38,6 +38,16 @@ public class CourseList {
         return true;
     }
 
+    /**
+     * Creates a new Course object and adds to the list
+     * @param coursename 
+     * @param courseID
+     * @param description
+     * @param prereq
+     * @param coreq
+     * @param AOS_Req
+     * @return
+     */
     public boolean addCourse(String coursename, String courseID, String description, CourseList prereq, CourseList coreq, String AOS_Req) {
         courses.add(new Course(coursename, courseID, description, prereq, coreq, AOS_Req));
         return true;
