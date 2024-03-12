@@ -9,15 +9,6 @@
         "accountStatus": "Open"
     },
     {
-        "userID": "b23dcf8a-27d5-4c5f-8d3b-d575b61715d5",
-        "username": "amartinez",
-        "password": "Secure*987",
-        "email": "amartinez@sc.edu",
-        "firstName": "Ana",
-        "lastName": "Martinez",
-        "accountStatus": "Open"
-    },
-    {
         "userID": "c345fde6-1234-5678-9101-11a2b3c4d5e6",
         "username": "tjackson",
         "password": "Tj2024!",

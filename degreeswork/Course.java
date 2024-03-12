@@ -9,7 +9,17 @@ public class Course {
     public CourseList coreq;
     public String AOS_Req;
 
-    public Course(String coursename, String courseID, String description, CourseList prereq, CourseList coreq, String AOS_Req) {
+    public Course(String coursename, String courseID, String description, CourseList prereq, CourseList coreq,
+            String AOS_Req) {
+        this.courseName = coursename;
+        this.courseID = courseID;
+        this.description = description;
+        this.prereq = prereq;
+        this.coreq = coreq;
+        this.AOS_Req = AOS_Req;
+    }
+
+    public Course(String prereq, String grade, boolean pre) {
 
     }
 
