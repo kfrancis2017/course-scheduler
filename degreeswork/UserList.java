@@ -3,29 +3,35 @@ package degreeswork;
 import java.util.ArrayList;
 
 public class UserList {
-    private static ArrayList<User> users;
+    private static UserList userList;
+    private ArrayList<User> users;
 
-    /**
-     * Initializes a static UserList
-     */
     public UserList() {
         users = new ArrayList<User>();
     }
 
-    /**
-     * Adds User to the list
-     * @param user User to be added
-     */
-    public void addUsers(String username, String password, String firstname, String lastname) {
-        if (!searchUser(username))
-            users.add(new User(username, password, firstname, lastname));
+    public static UserList getInstance() {
+        if (userList == null)
+            userList = new UserList();
+        return userList;
     }
 
-    /**
-     * Searches for a User in the list
-     * @param username The User's username
-     * @return A boolean value depending on the success of the search
-     */
+    public boolean addUser(User user) {
+        if (!searchUser(user.getUsername()))
+            return users.add(user);
+        return false;
+    }
+    
+    public void addUsers(ArrayList<User> users) {
+        for (User user : users) {
+            addUser(user);
+        }
+    }
+
+    public void addUser(String username, String password, String firstname, String lastname) {
+        addUser(new User(username, password, firstname, lastname));
+    }
+
     public boolean searchUser(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username))
@@ -34,44 +40,71 @@ public class UserList {
         return false;
     }
 
-    /**
-     * Returns a User from the list
-     * @param username The User's username
-     * @return A User representing the specified User
-     */
     public User getUser(String username) {
-        if (searchUser(username)) {
-            for (User user : users) {
-                if (user.getUsername().equals(username))
-                    return user;
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null; // User not found
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+    public ArrayList<Student> getStudents() {
+        ArrayList<Student> students = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Student) {
+                students.add((Student) user);
+            }
+        }
+        return students;
+    }
+
+    public ArrayList<Advisor> getAdvisors() {
+        ArrayList<Advisor> advisors = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Advisor) {
+                advisors.add((Advisor) user);
+            }
+        }
+        return advisors;
+    }
+
+    public ArrayList<Admin> getAdmins() {
+        ArrayList<Admin> admins = new ArrayList<>();
+        for (User user : users) {
+            if (user instanceof Admin) {
+                admins.add((Admin) user);
+            }
+        }
+        return admins;
+    }
+
+    public User login(String username, String password) {
+        if (searchUser(username)){
+            if (getUser(username).checkPassword(password)){
+                return getUser(username);
             }
         }
         return null;
     }
 
-    public User getUser(String username, String password) {
-        return null;
+    public void modifyUser(User user, User newUser) {
+        int index = users.indexOf(user);
+        if (index != -1) {
+            users.set(index, newUser);
+        }
     }
 
-    /**
-     * Uses username and password to login (return) a User
-     * @param username The User's username
-     * @param password The User's password
-     * @return A User if a one exists with specified username and password
-     */
-    public User login(String username, String password) {
-        if (searchUser(username) && getUser(username).checkPassword(password))
-            return getUser(username);
-        System.out.println("Username or password incorrect");
-        return null;
-    }
-
-    /**
-     * Accesses and modifies a User in the list
-     * @param user The specified User
-     */
-    public void modifyUser(User user) {
-        
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (User user : this.getUsers()) {
+            result.append(user.getFirstName()).append("\t");
+            result.append(user.getLastName()).append("\n");
+        }
+        return result.toString();
     }
 
 }

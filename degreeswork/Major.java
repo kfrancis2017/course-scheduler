@@ -9,6 +9,10 @@ public class Major {
     public Major(String name) {
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
     public void addRequirement(Course course) {
         
     }

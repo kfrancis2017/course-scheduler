@@ -4,25 +4,59 @@
         "title": "Critical Reading and Composition",
         "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
         "prerequisites": [
-            [["course1", "A+"], ["course2", "B+"]],
-            [["course3",null]]
+            {
+            "options": [
+                { "precourseID": "course1", "grade": "A+" },
+                { "precourseID": "course2", "grade": "B+" }
+            ]
+            },
+            {
+            "options": [
+                { "precourseID": "course3", "grade": null }
+            ]
+            }
         ],
         "corequisites": [
-            ["course4", "course5"]
-        ],
+            {
+            "options": [
+                { "cocourseID": "course4" },
+                { "cocourseID": "course5" }
+            ]
+            }
+        ], 
         "AOS_Req": "CC-CMW",
         "courseHolds": false,
         "minGrade": null,
         "userGrade": null
     },
+
+
+
     {
         "courseID": "CSCE215",
         "title": "UNIX/Linux Fundamentals",
         "description": "UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
         "prerequisites": [
-            ["c91ff163-e682-4da0-944d-8d3f1df93b1d"] 
+            {
+            "options": [
+                { "precourseID": "course1", "grade": "C" },
+                { "precourseID": "course2", "grade": "C" }
+            ]
+            },
+            {
+            "options": [
+                { "precourseID": "course3", "grade": null }
+            ]
+            }
         ],
-        "corequisites": null,
+        "corequisites": [
+            {
+            "options": [
+                { "cocourseID": "course4" },
+                { "cocourseID": "course5" }
+            ]
+            }
+        ],
         "areaOfStudyRequirements": "PR",
         "courseHolds": false
     },
@@ -36,8 +70,8 @@
         "courseHolds": false
     },
     {
-        "courseID": "b0f876c0-1e22-40a1-b588-2ad33839a55d",
-        "title": "HIST 101 European Civilization from Ancient Times to the Mid-17th Century",
+        "courseID": "HIST101",
+        "title": "European Civilization from Ancient Times to the Mid-17th Century",
         "description": "The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
         "prerequisites": null,
         "corequisites": null,

@@ -1,57 +1,76 @@
 package degreeswork;
 
-public class DegreeWorks {
-    
-    // private User user;
-    // private CourseList mCourseList;
-    // private MajorList mProgramList;
-    private UserList mUserList;
+import java.util.ArrayList;
+import java.util.HashMap;
 
-    public DegreeWorks(UserList users) {
-        mUserList = users;
+public class DegreeWorks {
+
+    private User mUser;
+    private UserList allUsers;
+    private CourseList allCourses;
+
+    public DegreeWorks(UserList users, CourseList courses) {
+        this.allUsers = users;
+        this.allCourses = courses;
     }
 
     public DegreeWorks() {
-        mUserList = new UserList();
-        mUserList.addUsers("admin", "admin", "admin", "admin");
-        mUserList.addUsers("student", "student", "student", "student");
-        mUserList.addUsers("jvaught", "DoremInc1.", "Jacob", "Vaught");
+        DataLoader loader = new DataLoader();
+        this.allUsers = new UserList();
+        this.allCourses = new CourseList();
+
+        // Combine all users into one list
+        this.allUsers.addUsers(loader.getAllStudents());
+        this.allUsers.addUsers(loader.getAllAdvisors());
+        this.allUsers.addUsers(loader.getAllAdmins());
     }
 
-    /**
-     * Uses UserList's login method
-     * @param username The User's username
-     * @param password The User's password
-     */
-    public void login(String username, String password) {
-        mUserList.login(username, password);
-
-
-        // if (mUserList.searchUser(username)) {
-        //     User user = mUserList.getUser(username); // Get the user object
-        //     if (user.checkPassword(password)) {
-        //         System.out.println("Login successful for username: " + username);
-        //         return true;
-        //     } else {
-        //         System.out.println("Login attempt for username: " + username + " - Incorrect password.");
-        //         System.out.println(password + " - Incorrect password. Expected: "+user.password);
-        //     }
-        // } else {
-        //     System.out.println("Login attempt with non-existing username: " + username);
-        // }
-        // return false;
+    public boolean login(String username, String password) {
+        this.mUser = allUsers.login(username, password);
+        return this.mUser != null;
     }
-    
 
     public boolean signup(String username, String password, String firstname, String lastname) {
-        mUserList.addUsers(username, password, firstname, lastname);
-        System.out.println("Sign up successful for username: " + username);
-        if(mUserList.searchUser(username)) {
-            System.out.println(mUserList.getUser(username).viewProfile());
-        }
+        allUsers.addUser(username, password, firstname, lastname);
         return true;
     }
+
     public String getUser(String username) {
-        return mUserList.getUser(username).viewProfile();
+        if (allUsers.searchUser(username))
+            return allUsers.getUser(username).toString();
+        else
+            return null;
+    }
+
+    public ArrayList<Student> getStudents() {
+        return allUsers.getStudents();
+    }
+
+    public ArrayList<Advisor> getAdvisors() {
+        return allUsers.getAdvisors();
+    }
+
+    public ArrayList<Admin> getAdmins() {
+        return allUsers.getAdmins();
+    }
+
+    public void printUserList() {
+        System.out.println(allUsers.toString());
+    }
+
+    public boolean addCourse(Course course) {
+        return allCourses.addCourse(course);
+    }
+
+    public boolean modifyCourse(Course newCourse, Course oldCourse) {
+        return allCourses.modifyCourse(newCourse, oldCourse);
+    }
+
+    public boolean deleteCourse(Course course) {
+        return allCourses.deleteCourse(course);
+    }
+
+    public Course findCourse(String courseID) {
+        return allCourses.findCourse(courseID);
     }
 }

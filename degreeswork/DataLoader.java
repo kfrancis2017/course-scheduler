@@ -3,6 +3,7 @@ package degreeswork;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 import org.json.simple.JSONArray;
@@ -10,115 +11,120 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 public class DataLoader {
-    
-    public UserList getAllStudents() {
-        UserList students = new UserList(); // Assuming UserList can store Student objects
-        
+    public DataLoader() {
+
+    }
+
+    public ArrayList<User> getAllStudents() {
+        ArrayList<User> students = new ArrayList<>();
         JSONParser parser = new JSONParser();
         try {
-            JSONArray studentData = (JSONArray) parser.parse(new FileReader("student.json"));
+            JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
             for (Object obj : studentData) {
                 JSONObject studentJson = (JSONObject) obj;
-                // Parse student data here and create a Student object
                 Student student = parseStudent(studentJson);
-                students.add(student); // Assuming UserList has an add method similar to List
+                students.add(student);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
         return students;
     }
 
+    //Why is parseStudent the only one separate from getAllStudents?
     private Student parseStudent(JSONObject studentJson) {
-        // Assuming Student has a constructor that matches this structure or set methods for each field
         Student student = new Student();
+
         student.setUserID(UUID.fromString((String) studentJson.get("userID")));
         student.setUsername((String) studentJson.get("username"));
         student.setPassword((String) studentJson.get("password"));
         student.setEmail((String) studentJson.get("email"));
         student.setFirstName((String) studentJson.get("firstName"));
         student.setLastName((String) studentJson.get("lastName"));
-        student.setAccountStatus((String) studentJson.get("accountStatus"));
 
-        // Convert JSON array to List or appropriate data structure for courses
         JSONArray currentCoursesArray = (JSONArray) studentJson.get("currentCourses");
-        List<Course> currentCoursesList = new ArrayList<>();
+        ArrayList<String> currentCoursesList = new ArrayList<>();
         for (Object courseObj : currentCoursesArray) {
-            Course course = new Course();
-            currentCoursesList.add(courseList.findCourse((String) courseObj));//<-- need to define courseList
+            currentCoursesList.add((String) courseObj);
         }
-        student.setCurrentCourses(currentCoursesList); // Make sure to convert JSONArray to the correct type
+        student.setCurrentCourses(currentCoursesList);
+
+        // Convert JSON array of session notes into a List<String>
+        JSONArray sessionNotesArray = (JSONArray) studentJson.get("sessionNotes");
+        ArrayList<String> sessionNotesList = new ArrayList<>();
+        for (Object noteObj : sessionNotesArray) {
+            sessionNotesList.add((String) noteObj);
+        }
+        student.setAdvisingNotes(sessionNotesList);
+
         student.setMajor(new Major((String) studentJson.get("major")));
-        student.addSessionNote(new ArrayList<String>(studentJson.get("sessionNotes")));
         student.setProgram((String) studentJson.get("program"));
         student.setCurrentAdvisor(UUID.fromString((String) studentJson.get("currentAdvisor")));
-        student.setMajorGPA((Double) studentJson.get("major_GPA"));
-        student.setOverallGPA((Double) studentJson.get("overall_GPA"));
-        student.setMajorCompletionPercentage((Double) studentJson.get("majorCompletionPercentage"));
-        student.setCoreCompletionPercentage((Double) studentJson.get("coreCompletionPercentage"));
-        student.setDegreeCompletionPercentage((Double) studentJson.get("degreeCompletionPercentage"));
-        // Handle null for finishedCourses if necessary
-        // Handle additional fields as needed
-        
         return student;
     }
-    
-    // Other methods ...
-}
 
-    
-    public UserList getAllAdvisors() {
-        UserList advisors = new UserList();
-        
+    public ArrayList<User> getAllAdvisors() {
+        ArrayList<User> advisors = new ArrayList<>();
+
         JSONParser parser = new JSONParser();
         try {
-            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("advisor.json"));
+            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("json/advisor.json"));
             for (Object obj : advisorData) {
-                JSONObject advisor = (JSONObject) obj;
-                // Parse advisor data and add to advisors list
+                JSONObject advisorJSON = (JSONObject) obj;
+                Advisor advisor = new Advisor();
+
+                advisor.setUserID(UUID.fromString((String) advisorJSON.get("userID")));
+                advisor.setUsername((String) advisorJSON.get("username"));
+                advisor.setPassword((String) advisorJSON.get("password"));
+                advisor.setEmail((String) advisorJSON.get("email"));
+                advisor.setFirstName((String) advisorJSON.get("firstName"));
+                advisor.setLastName((String) advisorJSON.get("lastName"));
+                advisor.setAccountStatus((String) advisorJSON.get("accountStatus"));
+
+                JSONArray adviseeIDs = (JSONArray) advisorJSON.get("adviseeList");
+                ArrayList<String> advisees = new ArrayList<>();
+                for (Object id : adviseeIDs) {
+                    advisees.add((String) id);
+                }
+                advisor.setAdviseeList(advisees);
+
+                advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
+
+                advisors.add(advisor);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
+
         return advisors;
     }
-    
-    public UserList getAllAdmins() {
-        UserList admins = new UserList();
-        
+
+    public ArrayList<User> getAllAdmins() {
+        ArrayList<User> admins = new ArrayList<>();
+
         JSONParser parser = new JSONParser();
         try {
-            JSONArray adminData = (JSONArray) parser.parse(new FileReader("admins.json"));
+            JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admin.json"));
             for (Object obj : adminData) {
-                JSONObject admin = (JSONObject) obj;
-                // Parse admin data and add to admins list
+                JSONObject adminJSON = (JSONObject) obj;
+                Admin admin = new Admin();
+
+                admin.setUserID(UUID.fromString((String) adminJSON.get("userID")));
+                admin.setUsername((String) adminJSON.get("username"));
+                admin.setPassword((String) adminJSON.get("password"));
+                admin.setEmail((String) adminJSON.get("email"));
+                admin.setFirstName((String) adminJSON.get("firstName"));
+                admin.setLastName((String) adminJSON.get("lastName"));
+                admin.setAccountStatus((String) adminJSON.get("accountStatus"));
+
+                admins.add(admin);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        
         return admins;
     }
-    
-    public void testFunctions() {
-        // Test retrieving all students
-        UserList allStudents = getAllStudents();
-        System.out.println("All Students:");
-        for (User student : allStudents.getUsers()) {
-            System.out.println(student);
-        }
-        
-        // Test retrieving all advisors
-        UserList allAdvisors = getAllAdvisors();
-        System.out.println("\nAll Advisors:");
-        for (User advisor : allAdvisors.getUsers()) {
-            System.out.println(advisor);
-        }
-    }
-    
+
 }
-
-

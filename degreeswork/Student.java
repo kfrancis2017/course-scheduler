@@ -4,66 +4,26 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Student extends User {
-    private ArrayList<Course> currentCourses;
+    private ArrayList<String> currentCourses;
     private Major major;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
-    private double majorGPA;
-    private double overallGPA;
-    private double programCompletionPercentage;
-    private double coreCompletionPercentage;
-    private double degreeCompletionPercentage;
-    private ArrayList<Course> finishedCourses;
+    private ArrayList<ArrayList<String>> finishedCourses;
     public ArrayList<String> dashboardWarnings;
 
     public Student() {
         // Initialize all attributes with default values
-        this.currentCourses = new ArrayList<>();
+        this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
         this.advisingNotes = new ArrayList<>();
         this.program = ""; // Assuming empty string means no program assigned yet.
         this.advisor = ""; // Assuming empty string means no advisor assigned yet.
-        this.majorGPA = 0.0;
-        this.overallGPA = 0.0;
-        this.programCompletionPercentage = 0.0;
-        this.coreCompletionPercentage = 0.0;
-        this.degreeCompletionPercentage = 0.0;
         this.finishedCourses = new ArrayList<>();
         this.dashboardWarnings = new ArrayList<>();
     }
 
-    // Setters
-
-     public void setUserID(UUID userID) {
-        super.setUserID(userID); // Assuming the userID is handled in the User class
-    }
-
-    public void setUsername(String username) {
-        super.setUsername(username); // Assuming the username is handled in the User class
-    }
-
-    public void setPassword(String password) {
-        super.setPassword(password); // Assuming the password is handled in the User class
-    }
-
-    public void setEmail(String email) {
-        super.setEmail(email); // Assuming the email is handled in the User class
-    }
-
-    public void setFirstName(String firstName) {
-        super.setFirstName(firstName); // Assuming the firstName is handled in the User class
-    }
-
-    public void setLastName(String lastName) {
-        super.setLastName(lastName); // Assuming the lastName is handled in the User class
-    }
-
-    public void setAccountStatus(String accountStatus) {
-        super.setAccountStatus(accountStatus); // Assuming the accountStatus is handled in the User class
-    }
-
-    public void setCurrentCourses(ArrayList<Course> currentCourses) {
+    public void setCurrentCourses(ArrayList<String> currentCourses) {
         this.currentCourses = currentCourses;
     }
 
@@ -75,6 +35,10 @@ public class Student extends User {
         this.advisingNotes = advisingNotes; // Assuming sessionNotes map to advisingNotes
     }
 
+    public void addAdvisingNotes(String advisingNotes) {
+        this.advisingNotes.add(advisingNotes); // Assuming sessionNotes map to advisingNotes
+    }
+
     public void setProgram(String program) {
         this.program = program;
     }
@@ -83,66 +47,134 @@ public class Student extends User {
         this.advisor = currentAdvisor.toString(); // Assuming the advisor is stored as a String
     }
 
-    public void setMajorGPA(double majorGPA) {
-        this.majorGPA = majorGPA;
-    }
-
-    public void setOverallGPA(double overallGPA) {
-        this.overallGPA = overallGPA;
-    }
-
-    public void setMajorCompletionPercentage(double majorCompletionPercentage) {
-        this.programCompletionPercentage = majorCompletionPercentage; // Check the corresponding attribute
-    }
-
-    public void setCoreCompletionPercentage(double coreCompletionPercentage) {
-        this.coreCompletionPercentage = coreCompletionPercentage;
-    }
-
-    public void setDegreeCompletionPercentage(double degreeCompletionPercentage) {
-        this.degreeCompletionPercentage = degreeCompletionPercentage;
-    }
-
     public void setAdvisor(String advisor) {
         this.advisor = advisor;
     }
 
-    public void setProgramCompletionPercentage(double programCompletionPercentage) {
-        this.programCompletionPercentage = programCompletionPercentage;
+    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades) {
+        // Check if courseNames and grades have the same length
+        if (courseNames.size() != grades.size()) {
+            throw new IllegalArgumentException("Course names and grades must be of equal length");
+        }
+    
+        // Initialize the finishedCourses list
+        this.finishedCourses = new ArrayList<>();
+    
+        // Iterate through the lists of course names and grades
+        for (int i = 0; i < courseNames.size(); i++) {
+            // Create a new list to store the course name and the corresponding grade
+            ArrayList<String> courseWithGrade = new ArrayList<>();
+            courseWithGrade.add(courseNames.get(i)); // Add course name
+            courseWithGrade.add(grades.get(i));      // Add grade
+    
+            // Add the courseWithGrade list to the finishedCourses list
+            this.finishedCourses.add(courseWithGrade);
+        }
     }
 
-    public void setFinishedCourses(ArrayList<Course> finishedCourses) {
-        this.finishedCourses = finishedCourses;
+    public void addFinishedCourse(String courseID, String grade) {
+        // Create a new ArrayList to store the course and grade
+        ArrayList<String> courseWithGrade = new ArrayList<>();
+        
+        // Add the course ID and grade to the list
+        courseWithGrade.add(courseID); // First element is the course ID
+        courseWithGrade.add(grade);    // Second element is the grade
+        
+        // Add this course and grade list to the list of finished courses
+        finishedCourses.add(courseWithGrade);
     }
-
+    
     public void setDashboardWarnings(ArrayList<String> dashboardWarnings) {
         this.dashboardWarnings = dashboardWarnings;
     }
 
-
-    public String viewCourseDetails(String courseID) {
-       
-        return "";
+    public void createSchedule() {
+        //TODO LAST 
     }
 
-    public String viewProgramRequirements() {
-        
-        return ""; 
+    public ArrayList<String> getCurrentCourses() {
+        return new ArrayList<>(this.currentCourses); // Provides a copy of the currentCourses list
     }
 
-    public void changeProgram(String newData) {
-        
+    public Major getMajor() {
+        return this.major; // Returns the major
+    }
+
+    public ArrayList<String> getAdvisingNotes() {
+        return new ArrayList<>(this.advisingNotes); // Provides a copy of the advisingNotes list
+    }
+
+    public String getProgram() {
+        return this.program; // Returns the program name
+    }
+
+    public String getAdvisor() {
+        return this.advisor; // Returns the advisor ID
+    }
+
+    public ArrayList<ArrayList<String>> getFinishedCourses() {
+        // Provides a deep copy of the finishedCourses list to avoid privacy leaks
+        ArrayList<ArrayList<String>> copyOfFinishedCourses = new ArrayList<>();
+        for (ArrayList<String> courseGradePair : this.finishedCourses) {
+            // Create a new list from each pair (to prevent modification of the original lists)
+            copyOfFinishedCourses.add(new ArrayList<>(courseGradePair));
+        }
+        return copyOfFinishedCourses;
+    }
+    
+    public ArrayList<String> getDashboardWarnings() {
+        return new ArrayList<>(this.dashboardWarnings); // Provides a copy of the dashboardWarnings list
     }
 
     public void updateStudentTranscript(String courseID, String grade) {
-        
-    }
+        boolean courseFound = false;
+        for (ArrayList<String> course : finishedCourses) {
+            if (course.get(0).equals(courseID)) { // Assuming first element is the courseID
+                course.set(1, grade); // Update the grade
+                courseFound = true;
+                break;
+            }
+        }
 
-    public void createSchedule() {
-        
+        if (!courseFound) {
+            // If the course is not found, add a new entry for it
+            ArrayList<String> newCourseEntry = new ArrayList<>();
+            newCourseEntry.add(courseID);
+            newCourseEntry.add(grade);
+            finishedCourses.add(newCourseEntry);
+        }
     }
 
     public void viewRecord() {
-        
+        System.out.println("Student Record for: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("Major: " + (this.major != null ? this.major.getName() : "Undeclared"));
+        System.out.println("Program: " + this.program);
+        System.out.println("Completed Courses:");
+        for (ArrayList<String> courseEntry : finishedCourses) {
+            // Assuming the format is [CourseID, Grade]
+            System.out.println(courseEntry.get(0) + "\t" + courseEntry.get(1)); // Prints in the format "EMCH101 \t A"
+        }
     }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Student{");
+        sb.append("\nuserID=").append(super.getUserID());
+        sb.append(", \nusername='").append(getUsername()).append('\'');
+        sb.append(", \nemail='").append(getEmail()).append('\'');
+        sb.append(", \nfirstName='").append(getFirstName()).append('\'');
+        sb.append(", \nlastName='").append(getLastName()).append('\'');
+        sb.append(", \ncurrentCourses=").append(currentCourses);
+        sb.append(", \nmajor=").append(major);
+        sb.append(", \nadvisingNotes=").append(advisingNotes);
+        sb.append(", \nprogram='").append(program).append('\'');
+        sb.append(", \nadvisor='").append(advisor).append('\'');
+        sb.append(", \nfinishedCourses=").append(finishedCourses);
+        sb.append(", \ndashboardWarnings=").append(dashboardWarnings);
+        sb.append('}');
+        return sb.toString();
+    }
+
+
 }

@@ -9,7 +9,17 @@ public class Course {
     public CourseList coreq;
     public String AOS_Req;
 
-    public Course(String coursename, String courseID, String description, CourseList prereq, CourseList coreq, String AOS_Req) {
+    public Course(String coursename, String courseID, String description, CourseList prereq, CourseList coreq,
+            String AOS_Req) {
+        this.courseName = coursename;
+        this.courseID = courseID;
+        this.description = description;
+        this.prereq = prereq;
+        this.coreq = coreq;
+        this.AOS_Req = AOS_Req;
+    }
+
+    public Course(String prereq, String grade, boolean pre) {
 
     }
 
@@ -56,6 +66,36 @@ public class Course {
         this.description = description;
     }
     
+// Setter for prereq
+public CourseList getPrereq(CourseList prereq) {
+    return prereq;
+}
+
+// Setter for coreq
+public CourseList getCoreq(CourseList coreq) {
+    return coreq;
+}
+
+// Setter for AOS_Req
+public String getAOS_Req(String AOS_Req) {
+    return AOS_Req;
+}
+
+// Setter for courseName
+public String getCourseName(String courseName) {
+    return courseName;
+}
+
+// Setter for courseID
+public String getCourseID() {
+    return courseID;
+}
+
+// Setter for description
+public String getDescription(String description) {
+    return description;
+}
+
     public boolean isAvailable(String semester) {
         return true;
     }
