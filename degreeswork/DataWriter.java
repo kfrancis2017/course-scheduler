@@ -11,39 +11,55 @@ public class DataWriter {
 
     // ... (existing code)
 
-    public void SaveAllUsers(UserList userList) {
-        saveStudents(userList);
-        saveAdvisors(userList);
-        saveAdmins(userList);
+    /**
+     * Calls the following methods to save all types of users
+     */
+    public void SaveAllUsers() {
+        saveStudents();
+        saveAdvisors();
+        saveAdmins();
     }
 
-    private void saveStudents(UserList userList) {
-        ArrayList<Student> studentList = userList.getStudents();
+    /**
+     * Uses singleton to write student JSON file
+     */
+    private void saveStudents() {
+        UserList users = UserList.getInstance();
+        ArrayList<Student> students = users.getStudents();
         JSONArray jsonStudents = new JSONArray();
 
-        for (Student student : studentList) {
+        for (Student student : students) {
             jsonStudents.add(getStudentJSON(student));
         }
 
         writeJSONToFile("json/students.json", jsonStudents);
     }
 
-    private void saveAdvisors(UserList userList) {
-        ArrayList<Advisor> advisorList = userList.getAdvisors();
+    /**
+     * Uses singleton to write advisor JSON file
+     */
+    private void saveAdvisors() {
+        UserList users = UserList.getInstance();
+        ArrayList<Advisor> advisors = users.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
 
-        for (Advisor advisor : advisorList) {
+        for (Advisor advisor : advisors) {
             jsonAdvisors.add(getAdvisorJSON(advisor));
         }
 
         writeJSONToFile("json/advisors.json", jsonAdvisors);
     }
 
-    private void saveAdmins(UserList userList) {
-        ArrayList<Admin> adminList = userList.getAdmins();
+    /**
+     * Uses singleton to write admin JSON file
+     */
+    private void saveAdmins() {
+        UserList users = UserList.getInstance();
+        ArrayList<Admin> admins = users.getAdmins();
+
         JSONArray jsonAdmins = new JSONArray();
 
-        for (Admin admin : adminList) {
+        for (Admin admin : admins) {
             jsonAdmins.add(getAdminJSON(admin));
         }
 
