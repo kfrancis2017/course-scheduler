@@ -9,7 +9,7 @@ public class Course {
     private String description;
     private ArrayList<ArrayList<String>> prereq; // ArrayList of ArrayList to represent ANDs of ORs logic.
     private ArrayList<ArrayList<String>> coreq; // Same structure for corequisites.
-    private String AOS_Req;
+    private String AOS_Req; 
 
     public Course() {
         this.prereq = new ArrayList<>();
