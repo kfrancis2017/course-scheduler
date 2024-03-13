@@ -17,6 +17,63 @@ public class DataLoader {
 
     }
 
+    public ArrayList<Course> getAllCourses() {
+        JSONParser parser = new JSONParser();
+        ArrayList<Course> courses = new ArrayList<>();
+
+        try {
+            // Read the array of courses from the file
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/courses.json"));
+            for (Object courseObj : courseDataArray) {
+                JSONObject courseData = (JSONObject) courseObj;
+                Course course = new Course();
+
+                course.setCourseID((String) courseData.get("courseID"));
+                course.setTitle((String) courseData.get("title"));
+                course.setDescription((String) courseData.get("description"));
+
+                List<List<Prerequisite>> prerequisites = new ArrayList<>();
+                JSONArray prereqData = (JSONArray) courseData.get("prerequisites");
+                for (Object obj : prereqData) {
+                    List<Prerequisite> prerequisiteList = new ArrayList<>();
+                    JSONArray innerArray = (JSONArray) obj;
+                    for (Object innerObj : innerArray) {
+                        JSONObject prereqJSON = (JSONObject) innerObj;
+                        Prerequisite prerequisite = new Prerequisite();
+                        prerequisite.setPrecourseID((String) prereqJSON.get("precourseID"));
+                        prerequisite.setGrade((String) prereqJSON.get("grade"));
+                        prerequisiteList.add(prerequisite);
+                    }
+                    prerequisites.add(prerequisiteList);
+                }
+                course.setPrerequisites(prerequisites);
+
+                List<Course> corequisites = new ArrayList<>();
+                JSONArray coreqData = (JSONArray) courseData.get("corequisites");
+                for (Object obj : coreqData) {
+                    JSONObject coreqJSON = (JSONObject) obj;
+                    Course corequisite = new Course();
+                    corequisite.setCourseID((String) coreqJSON.get("cocourseID"));
+                    corequisites.add(corequisite);
+                }
+                course.setCorequisites(corequisites);
+
+                course.setAOS_Req((String) courseData.get("AOS_Req"));
+                course.setCourseHolds((Boolean) courseData.get("courseHolds"));
+                course.setMinGrade((String) courseData.get("minGrade")); // This is assumed to be a string, change if necessary.
+                course.setUserGrade((String) courseData.get("userGrade")); // This is assumed to be a string, change if necessary.
+
+                courses.add(course);
+            }
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+        }
+
+        return courses;
+    }
+    
+
+
     public ArrayList<User> getAllStudents() {
         ArrayList<User> students = new ArrayList<>();
         JSONParser parser = new JSONParser();
