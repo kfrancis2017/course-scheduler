@@ -96,7 +96,48 @@ public class Course {
     }
     
     public String toString() {
-        
+        //to string: courseID | courseName
+        //tostring description
+        //tostring AOS req and holds
+        //tostring prereq, with the ANDs being the outside arraylist, and the ors bing the inside one
+        //tostring coreq, same as above
+        StringBuffer sb = new StringBuffer();
+        sb.append(courseID);
+        sb.append(" | ");
+        sb.append(courseName);
+        sb.append("\n");
+        sb.append(description);
+        sb.append("\n");
+        sb.append(AOS_Req);
+        sb.append(" ");
+        sb.append(courseHolds);
+        sb.append("\n");
+        // Initialize a flag to check if it's the first group
+        boolean isFirstGroup = true;
+        for (ArrayList<String> or : prereq) {
+            if (!isFirstGroup) sb.append(" and ");
+            isFirstGroup = false; // After the first group, set this to false
+            boolean isFirstItem = true;
+            for (String and : or) {
+                if (!isFirstItem) sb.append(" or ");
+                isFirstItem = false; // After the first item, set this to false
+                sb.append(and);
+            }
+        }
+        sb.append("\n");
+
+        isFirstGroup = true;
+        for (ArrayList<String> or : coreq) {
+            if (!isFirstGroup) sb.append(" and ");
+            isFirstGroup = false; // After the first group, set this to false
+            boolean isFirstItem = true;
+            for (String and : or) {
+                if (!isFirstItem) sb.append(" or ");
+                isFirstItem = false; // After the first item, set this to false
+                sb.append(and);
+            }
+        }
+        return sb.toString();
     }
     // Additional methods might go here, such as isAvailable, updateCourseDetails, displayCourseDetails, isEligible, etc.
 }
