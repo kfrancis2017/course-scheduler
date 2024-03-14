@@ -71,10 +71,6 @@ public class DataLoader {
         return courses;
     }
     
-
-
-    public ArrayList<User> getAllStudents() {
-        ArrayList<User> students = new ArrayList<>();
   
       /**
      * Redone getAllStudents to be more in line with other "getAll" methods
