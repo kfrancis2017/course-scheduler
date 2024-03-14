@@ -21,6 +21,7 @@ public class DegreeWorks {
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
         DataLoader.getAllAdmins();
+        
     }
 
     public boolean login(String username, String password) {

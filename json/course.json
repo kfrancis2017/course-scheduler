@@ -1,74 +1,230 @@
 [
     {
-        "courseID": "ENGL101",
-        "title": "Critical Reading and Composition",
-        "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
+        "courseID": "CSCE145",
+        "title": "Algorithmic Design I",
+        "description": "Problem solving and algorithm design in engineering; introduction to programming and the use of software tools.",
         "prerequisites": [
             [
-                { "precourseID": "course1", "grade": "C" },
-                { "precourseID": "course2", "grade": "D" }
+                {
+                    "precourseID": "MATH111",
+                    "grade": "B"
+                }
             ],
             [
-                { "precourseID": "course3", "grade": "F" }
+                {
+                    "precourseID": "MATH115",
+                    "grade": "B"
+                }
             ]
-
         ],
-        "corequisites": [
-            { "cocourseID": "course4" },
-            { "cocourseID": "course5" }
-        ], 
-        "AOS_Req": "CC-CMW",
-        "courseHolds": false,
-        "minGrade": null,
-        "userGrade": null
-    },
-
-
-
-    {
-        "courseID": "CSCE215",
-        "title": "UNIX/Linux Fundamentals",
-        "description": "UNIX operating system, user-level system commands, and programming tools. UNIX scripting languages.",
-        "prerequisites": [
-            {
-            "options": [
-                { "precourseID": "course1", "grade": "C" },
-                { "precourseID": "course2", "grade": "C" }
-            ]
-            },
-            {
-            "options": [
-                { "precourseID": "course3", "grade": null }
-            ]
-            }
-        ],
-        "corequisites": [
-            {
-            "options": [
-                { "cocourseID": "course4" },
-                { "cocourseID": "course5" }
-            ]
-            }
-        ],
-        "areaOfStudyRequirements": "PR",
+        "corequisites": [],
+        "AOS_Req": "Engineering",
         "courseHolds": false
     },
     {
-        "courseID": "CSCE145",
-        "title": "Algorithmic Design I",
-        "description": "Problem-solving, algorithmic design, and programming. Two lecture hours and four laboratory hours per week. Open to all majors.",
-        "prerequisites": null,
-        "corequisites": null,
-        "areaOfStudyRequirements": "PR",
+        "courseID": "ECHE310",
+        "title": "Thermodynamics of Chemical Systems",
+        "description": "Principles of thermodynamics applied to chemical processes; includes laws of thermodynamics, properties of solutions, and phase equilibria.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "CHEM102",
+                    "grade": "C"
+                }
+            ],
+            [
+                {
+                    "precourseID": "PHYS212",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MATH242",
+                    "grade": "C"
+                }
+            ],
+            [
+                {
+                    "precourseID": "ECHE220",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MECE201",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "Engineering",
+        "courseHolds": false
+    },
+    {
+        "courseID": "BIOL301",
+        "title": "Genetics",
+        "description": "Principles of heredity with emphasis on the chemical nature of genetic material, gene expression, and genetic control mechanisms.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "BIOL101",
+                    "grade": "C"
+                }
+            ],
+            [
+                {
+                    "precourseID": "CHEM111",
+                    "grade": "C"
+                }
+            ],
+            [
+                {
+                    "precourseID": "BIOL102",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "BIOL120",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ENGL101",
+        "title": "Critical Reading and Composition",
+        "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "CC-CMW",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MECE201",
+        "title": "Statics",
+        "description": "Analysis of force systems, centroids, moments of inertia, equilibrium of rigid bodies; static analysis of structures.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH142",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "ENGR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ECEE211",
+        "title": "Electric Circuits",
+        "description": "Basic concepts of electrical engineering, including circuit elements, Kirchhoff's laws, basic network theorems, operational amplifiers, and phasor relationships for capacitors and inductors.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "PHYS212",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MATH241",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [
+            [
+                {
+                    "cocourseID": "ECE211L"
+                }
+            ]
+        ],
+        "AOS_Req": "ENGR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "POLI101",
+        "title": "Introduction to Political Science",
+        "description": "Fundamental concepts and terms of political science; different understandings of politics, political systems, and the role of governments.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "SS",
         "courseHolds": false
     },
     {
         "courseID": "HIST101",
-        "title": "European Civilization from Ancient Times to the Mid-17th Century",
-        "description": "The rise and development of European civilization from its Mediterranean origins through the Renaissance and Reformation.",
-        "prerequisites": null,
-        "corequisites": null,
-        "areaOfStudyRequirements": "CC-GHS",
+        "title": "European Civilization to 1648",
+        "description": "Survey of European history from ancient times through the Middle Ages to the end of the Thirty Years' War, emphasizing the distinctive nature of the European heritage.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "HS",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ENGL101",
+        "title": "Critical Reading and Composition",
+        "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "CC-CMW",
+        "courseHolds": false
+    },
+    {
+        "courseID": "EMCH200",
+        "title": "Statics",
+        "description": "Analysis of force systems, centroids, moments of inertia, equilibrium of rigid bodies; static analysis of structures.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH142",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "ENGR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ELCT221",
+        "title": "Electric Circuits",
+        "description": "Basic concepts of electrical engineering, including circuit elements, Kirchhoff's laws, basic network theorems, operational amplifiers, and phasor relationships for capacitors and inductors.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "PHYS212",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MATH241",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [
+            [
+                {
+                    "cocourseID": "ELCT201"
+                }
+            ]
+        ],
+        "AOS_Req": "ENGR",
+        "courseHolds": false
+    },
+    {
+        "courseID": "POLI101",
+        "title": "Introduction to Political Science",
+        "description": "Fundamental concepts and terms of political science; different understandings of politics, political systems, and the role of governments.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "SS",
+        "courseHolds": false
+    },
+    {
+        "courseID": "HIST101",
+        "title": "European Civilization to 1648",
+        "description": "Survey of European history from ancient times through the Middle Ages to the end of the Thirty Years' War, emphasizing the distinctive nature of the European heritage.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "HS",
         "courseHolds": false
     }
 ]

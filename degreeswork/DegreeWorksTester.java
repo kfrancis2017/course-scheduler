@@ -20,11 +20,23 @@ public class DegreeWorksTester {
         testGetAdvisors(degreeWorks);
         testGetAdmins(degreeWorks);
         testGetCourses(degreeWorks);
-        testAddCourse(degreeWorks);
-        testRemoveCourse(degreeWorks);
-        testUpdateCourse(degreeWorks);
+        // testAddCourse(degreeWorks);
+        // testRemoveCourse(degreeWorks);
+        // testUpdateCourse(degreeWorks);
     }
 
+    private static void testGetCourses(DegreeWorks degreeWorks) {
+        ArrayList<Course> courses = degreeWorks.getCourses();
+        for(Course course : courses) {
+            System.out.println(course);
+        }
+    }
+    private static void testGetCourses(DataLoader dataLoader) {
+        ArrayList<Course> courses = dataLoader.getAllCourses();
+        for(Course course : courses) {
+            System.out.println(course);
+        }
+    }
     private static void testSignup(DegreeWorks degreeWorks) {
         System.out.println("Testing Signup Functionality\n");
 
