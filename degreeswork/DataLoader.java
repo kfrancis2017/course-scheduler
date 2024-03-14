@@ -17,7 +17,7 @@ public class DataLoader {
 
     }
 
-    public ArrayList<User> getAllStudents() {
+    public static ArrayList<User> getAllStudents() {
         ArrayList<User> students = new ArrayList<>();
         JSONParser parser = new JSONParser();
         try {
@@ -34,7 +34,7 @@ public class DataLoader {
     }
 
     //Why is parseStudent the only one separate from getAllStudents?
-    private Student parseStudent(JSONObject studentJson) {
+    private static Student parseStudent(JSONObject studentJson) {
         Student student = new Student();
 
         student.setUserID(UUID.fromString((String) studentJson.get("userID")));
@@ -65,7 +65,7 @@ public class DataLoader {
         return student;
     }
 
-    public ArrayList<User> getAllAdvisors() {
+    public static ArrayList<User> getAllAdvisors() {
         ArrayList<User> advisors = new ArrayList<>();
 
         JSONParser parser = new JSONParser();
@@ -101,7 +101,7 @@ public class DataLoader {
         return advisors;
     }
 
-    public ArrayList<User> getAllAdmins() {
+    public static ArrayList<User> getAllAdmins() {
         ArrayList<User> admins = new ArrayList<>();
 
         JSONParser parser = new JSONParser();
