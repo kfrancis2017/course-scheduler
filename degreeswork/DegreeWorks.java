@@ -1,7 +1,6 @@
 package degreeswork;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DegreeWorks {
 
@@ -21,6 +20,7 @@ public class DegreeWorks {
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
         DataLoader.getAllAdmins();
+        
     }
 
     public boolean login(String username, String password) {
