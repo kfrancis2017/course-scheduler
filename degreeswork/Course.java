@@ -20,7 +20,7 @@ public class Course {
         this.description = "";
     }
 
-    public Course(String courseName, String courseID, String description, ArrayList<ArrayList<Course>> prereq, ArrayList<ArrayList<Course>> coreq, String AOS_Req) {
+    public Course(String courseName, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req) {
         this.courseName = courseName;
         this.courseID = courseID;
         this.description = description;
@@ -42,11 +42,11 @@ public class Course {
         return description;
     }
 
-    public ArrayList<ArrayList<Course>> getPrereq() {
+    public ArrayList<ArrayList<String>> getPrereq() {
         return prereq;
     }
 
-    public ArrayList<ArrayList<Course>> getCoreq() {
+    public ArrayList<ArrayList<String>> getCoreq() {
         return coreq;
     }
 

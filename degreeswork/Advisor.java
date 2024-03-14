@@ -12,8 +12,8 @@ public class Advisor extends User {
         this.adviseeList = new ArrayList<>();
     }
 
-    public List<String> getAdviseeList() {
-        List<String> adviseeDetails = new ArrayList<>();
+    public ArrayList<String> getAdviseeList() {
+        ArrayList<String> adviseeDetails = new ArrayList<String>();
         UserList userList = UserList.getInstance();
 
         for (String username : this.adviseeList) {
@@ -29,9 +29,6 @@ public class Advisor extends User {
         return adviseeDetails;
     }
 
-    public void addAdvisee(String username) {
-        this.adviseeList.add(username);
-    }
 
     public String getAdviseeDetails(String username) {
         UserList userList = UserList.getInstance(); // Access the singleton UserList instance

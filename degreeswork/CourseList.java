@@ -48,8 +48,8 @@ public class CourseList {
      * @param AOS_Req The Area of Study Requirements the course falls under
      * @return Boolean value of true
      */
-    public boolean addCourse(String coursename, String courseID, String description, CourseList prereq, CourseList coreq, String AOS_Req) {
-        courses.add(new Course(coursename, courseID, description, prereq, coreq, AOS_Req));
+    public boolean addCourse(String courseName, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req) {
+        courses.add(new Course(courseName, courseID, description, prereq, coreq, AOS_Req));
         return true;
     }
 
