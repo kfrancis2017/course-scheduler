@@ -65,8 +65,9 @@ public class DataLoader {
         return student;
     }
 
-    public static ArrayList<User> getAllAdvisors() {
-        ArrayList<User> advisors = new ArrayList<>();
+    public static void getAllAdvisors() {
+        UserList users = UserList.getInstance();
+
 
         JSONParser parser = new JSONParser();
         try {
@@ -92,13 +93,12 @@ public class DataLoader {
 
                 advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
 
-                advisors.add(advisor);
+                users.addUser(advisor);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
 
-        return advisors;
     }
 
     public static ArrayList<User> getAllAdmins() {
