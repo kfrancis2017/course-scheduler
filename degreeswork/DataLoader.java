@@ -55,7 +55,7 @@ public class DataLoader {
                     corequisite.setCourseID((String) coreqJSON.get("cocourseID"));
                     corequisites.add(corequisite);
                 }
-                course.setCorequisites(corequisites);
+                course.setCoreq(corequisites);
 
                 course.setAOS_Req((String) courseData.get("AOS_Req"));
                 course.setCourseHolds((Boolean) courseData.get("courseHolds"));
