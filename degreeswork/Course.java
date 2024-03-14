@@ -94,5 +94,9 @@ public class Course {
     public void setCourseHolds(boolean holds) {
         this.courseHolds = holds;
     }
+    
+    public String toString() {
+        
+    }
     // Additional methods might go here, such as isAvailable, updateCourseDetails, displayCourseDetails, isEligible, etc.
 }
