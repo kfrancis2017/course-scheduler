@@ -16,7 +16,6 @@ public class DataLoader {
     public DataLoader() {
 
     }
-
     public ArrayList<Course> getAllCourses() {
         JSONParser parser = new JSONParser();
         ArrayList<Course> courses = new ArrayList<>();
@@ -76,54 +75,58 @@ public class DataLoader {
 
     public ArrayList<User> getAllStudents() {
         ArrayList<User> students = new ArrayList<>();
+  
+      /**
+     * Redone getAllStudents to be more in line with other "getAll" methods
+     */
+    public static void getAllStudents() {
+        UserList users = UserList.getInstance();
         JSONParser parser = new JSONParser();
         try {
             JSONArray studentData = (JSONArray) parser.parse(new FileReader("json/student.json"));
             for (Object obj : studentData) {
-                JSONObject studentJson = (JSONObject) obj;
-                Student student = parseStudent(studentJson);
-                students.add(student);
+                JSONObject studentJSON = (JSONObject) obj;
+                Student student = new Student();
+
+                student.setUserID(UUID.fromString((String) studentJSON.get("userID")));
+                student.setUsername((String) studentJSON.get("username"));
+                student.setPassword((String) studentJSON.get("password"));
+                student.setEmail((String) studentJSON.get("email"));
+                student.setFirstName((String) studentJSON.get("firstName"));
+                student.setLastName((String) studentJSON.get("lastName"));
+
+                JSONArray currentCoursesArray = (JSONArray) studentJSON.get("currentCourses");
+                ArrayList<String> currentCoursesList = new ArrayList<>();
+                for (Object courseObj : currentCoursesArray) {
+                    currentCoursesList.add((String) courseObj);
+                }
+                student.setCurrentCourses(currentCoursesList);
+
+                // Convert JSON array of session notes into a List<String>
+                JSONArray sessionNotesArray = (JSONArray) studentJSON.get("sessionNotes");
+                ArrayList<String> sessionNotesList = new ArrayList<>();
+                for (Object noteObj : sessionNotesArray) {
+                    sessionNotesList.add((String) noteObj);
+                }
+                student.setAdvisingNotes(sessionNotesList);
+
+                student.setMajor(new Major((String) studentJSON.get("major")));
+                student.setProgram((String) studentJSON.get("program"));
+                student.setCurrentAdvisor(UUID.fromString((String) studentJSON.get("currentAdvisor")));
+
+                users.addUser(student);
+
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        return students;
     }
 
-    //Why is parseStudent the only one separate from getAllStudents?
-    private Student parseStudent(JSONObject studentJson) {
-        Student student = new Student();
-
-        student.setUserID(UUID.fromString((String) studentJson.get("userID")));
-        student.setUsername((String) studentJson.get("username"));
-        student.setPassword((String) studentJson.get("password"));
-        student.setEmail((String) studentJson.get("email"));
-        student.setFirstName((String) studentJson.get("firstName"));
-        student.setLastName((String) studentJson.get("lastName"));
-
-        JSONArray currentCoursesArray = (JSONArray) studentJson.get("currentCourses");
-        ArrayList<String> currentCoursesList = new ArrayList<>();
-        for (Object courseObj : currentCoursesArray) {
-            currentCoursesList.add((String) courseObj);
-        }
-        student.setCurrentCourses(currentCoursesList);
-
-        // Convert JSON array of session notes into a List<String>
-        JSONArray sessionNotesArray = (JSONArray) studentJson.get("sessionNotes");
-        ArrayList<String> sessionNotesList = new ArrayList<>();
-        for (Object noteObj : sessionNotesArray) {
-            sessionNotesList.add((String) noteObj);
-        }
-        student.setAdvisingNotes(sessionNotesList);
-
-        student.setMajor(new Major((String) studentJson.get("major")));
-        student.setProgram((String) studentJson.get("program"));
-        student.setCurrentAdvisor(UUID.fromString((String) studentJson.get("currentAdvisor")));
-        return student;
-    }
-
-    public ArrayList<User> getAllAdvisors() {
-        ArrayList<User> advisors = new ArrayList<>();
+    /**
+     * Doesn't return an ArrayList, instead populates the singleton, where you can use getAdvisors
+     */
+    public static void getAllAdvisors() {
+        UserList users = UserList.getInstance();
 
         JSONParser parser = new JSONParser();
         try {
@@ -149,17 +152,19 @@ public class DataLoader {
 
                 advisor.setAdvisorSpecialization((String) advisorJSON.get("advisorSpecialization"));
 
-                advisors.add(advisor);
+                users.addUser(advisor);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
 
-        return advisors;
     }
 
-    public ArrayList<User> getAllAdmins() {
-        ArrayList<User> admins = new ArrayList<>();
+    /**
+     * Populates singleton, same logic as above
+     */
+    public static void getAllAdmins() {
+        UserList users = UserList.getInstance();
 
         JSONParser parser = new JSONParser();
         try {
@@ -176,12 +181,11 @@ public class DataLoader {
                 admin.setLastName((String) adminJSON.get("lastName"));
                 admin.setAccountStatus((String) adminJSON.get("accountStatus"));
 
-                admins.add(admin);
+                users.addUser(admin);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        return admins;
     }
 
 }

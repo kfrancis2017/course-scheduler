@@ -5,11 +5,24 @@ import java.util.ArrayList;
 public class UserList {
     private static UserList userList;
     private ArrayList<User> users;
+    private ArrayList<Student> students;
+    private ArrayList<Advisor> advisors;
+    private ArrayList<Admin> admins;
 
+    /**
+     * Initialize the userlists
+     */
     public UserList() {
         users = new ArrayList<User>();
+        students = new ArrayList<Student>();
+        advisors = new ArrayList<Advisor>();
+        admins = new ArrayList<Admin>();
     }
 
+    /**
+     * Create singleton UserList
+     * @return The static UserList object
+     */
     public static UserList getInstance() {
         if (userList == null)
             userList = new UserList();
@@ -53,7 +66,6 @@ public class UserList {
         return users;
     }
     public ArrayList<Student> getStudents() {
-        ArrayList<Student> students = new ArrayList<>();
         for (User user : users) {
             if (user instanceof Student) {
                 students.add((Student) user);
@@ -63,7 +75,6 @@ public class UserList {
     }
 
     public ArrayList<Advisor> getAdvisors() {
-        ArrayList<Advisor> advisors = new ArrayList<>();
         for (User user : users) {
             if (user instanceof Advisor) {
                 advisors.add((Advisor) user);
@@ -73,7 +84,6 @@ public class UserList {
     }
 
     public ArrayList<Admin> getAdmins() {
-        ArrayList<Admin> admins = new ArrayList<>();
         for (User user : users) {
             if (user instanceof Admin) {
                 admins.add((Admin) user);
@@ -100,7 +110,7 @@ public class UserList {
 
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (User user : this.getUsers()) {
+        for (User user : users) {
             result.append(user.getFirstName()).append("\t");
             result.append(user.getLastName()).append("\n");
         }

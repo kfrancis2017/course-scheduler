@@ -4,6 +4,7 @@ public class Admin extends User {
     private String officeLocation;
 
     public Admin() {
+        
     }
 
     public void createUser(User userInfo) {
