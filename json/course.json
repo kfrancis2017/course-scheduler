@@ -4,25 +4,18 @@
         "title": "Critical Reading and Composition",
         "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
         "prerequisites": [
-            {
-            "options": [
-                { "precourseID": "course1", "grade": "A+" },
-                { "precourseID": "course2", "grade": "B+" }
+            [
+                { "precourseID": "course1", "grade": "C" },
+                { "precourseID": "course2", "grade": "D" }
+            ],
+            [
+                { "precourseID": "course3", "grade": "F" }
             ]
-            },
-            {
-            "options": [
-                { "precourseID": "course3", "grade": null }
-            ]
-            }
+
         ],
         "corequisites": [
-            {
-            "options": [
-                { "cocourseID": "course4" },
-                { "cocourseID": "course5" }
-            ]
-            }
+            { "cocourseID": "course4" },
+            { "cocourseID": "course5" }
         ], 
         "AOS_Req": "CC-CMW",
         "courseHolds": false,

@@ -110,7 +110,7 @@ public class UserList {
 
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (User user : this.getUsers()) {
+        for (User user : users) {
             result.append(user.getFirstName()).append("\t");
             result.append(user.getLastName()).append("\n");
         }

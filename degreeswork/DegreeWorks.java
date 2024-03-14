@@ -15,14 +15,12 @@ public class DegreeWorks {
     }
 
     public DegreeWorks() {
-        DataLoader loader = new DataLoader();
-        this.allUsers = new UserList();
-        this.allCourses = new CourseList();
+        this.allUsers = UserList.getInstance();
+        this.allCourses = CourseList.getInstance();
 
-        // Combine all users into one list
-        this.allUsers.addUsers(loader.getAllStudents());
-        this.allUsers.addUsers(loader.getAllAdvisors());
-        this.allUsers.addUsers(loader.getAllAdmins());
+        DataLoader.getAllStudents();
+        DataLoader.getAllAdvisors();
+        DataLoader.getAllAdmins();
     }
 
     public boolean login(String username, String password) {
@@ -71,6 +69,6 @@ public class DegreeWorks {
     }
 
     public Course findCourse(String courseID) {
-        return allCourses.findCourse(courseID);
+        return allCourses.findCourseByCode(courseID);
     }
 }

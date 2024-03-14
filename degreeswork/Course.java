@@ -1,114 +1,87 @@
 package degreeswork;
 
+import java.util.ArrayList;
+
 public class Course {
-    
-    public String courseName;
-    public String courseID;
-    public String description;
-    public CourseList prereq;
-    public CourseList coreq;
-    public String AOS_Req;
 
-    public Course(String coursename, String courseID, String description, CourseList prereq, CourseList coreq,
-            String AOS_Req) {
-        this.courseName = coursename;
-        this.courseID = courseID;
-        this.description = description;
-        this.prereq = prereq;
-        this.coreq = coreq;
-        this.AOS_Req = AOS_Req;
-    }
-
-    public Course(String prereq, String grade, boolean pre) {
-
-    }
-
-    public Course(Course course) {
-        
-    }
+    private String courseName;
+    private String courseID;
+    private String description;
+    private ArrayList<ArrayList<String>> prereq; // ArrayList of ArrayList to represent ANDs of ORs logic.
+    private ArrayList<ArrayList<String>> coreq; // Same structure for corequisites.
+    private String AOS_Req; 
 
     public Course() {
-        this.prereq = new CourseList();
-        this.coreq = new CourseList();
+        this.prereq = new ArrayList<>();
+        this.coreq = new ArrayList<>();
         this.AOS_Req = "";
         this.courseName = "";
         this.courseID = "";
         this.description = "";
     }
 
-    // Setter for prereq
-    public void setPrereq(CourseList prereq) {
+    public Course(String courseName, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req) {
+        this.courseName = courseName;
+        this.courseID = courseID;
+        this.description = description;
         this.prereq = prereq;
-    }
-
-    // Setter for coreq
-    public void setCoreq(CourseList coreq) {
         this.coreq = coreq;
-    }
-
-    // Setter for AOS_Req
-    public void setAOS_Req(String AOS_Req) {
         this.AOS_Req = AOS_Req;
     }
 
-    // Setter for courseName
+    // Getters
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public String getCourseID() {
+        return courseID;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public ArrayList<ArrayList<String>> getPrereq() {
+        return prereq;
+    }
+
+    public ArrayList<ArrayList<String>> getCoreq() {
+        return coreq;
+    }
+
+    public String getAOS_Req() {
+        return AOS_Req;
+    }
+
+    // Setters
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
 
-    // Setter for courseID
     public void setCourseID(String courseID) {
         this.courseID = courseID;
     }
 
-    // Setter for description
+    public void setTitle() {
+        
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
-    
-// Setter for prereq
-public CourseList getPrereq(CourseList prereq) {
-    return prereq;
-}
 
-// Setter for coreq
-public CourseList getCoreq(CourseList coreq) {
-    return coreq;
-}
-
-// Setter for AOS_Req
-public String getAOS_Req(String AOS_Req) {
-    return AOS_Req;
-}
-
-// Setter for courseName
-public String getCourseName(String courseName) {
-    return courseName;
-}
-
-// Setter for courseID
-public String getCourseID() {
-    return courseID;
-}
-
-// Setter for description
-public String getDescription(String description) {
-    return description;
-}
-
-    public boolean isAvailable(String semester) {
-        return true;
+    public void setPrereq(ArrayList<ArrayList<String>> prereq) {
+        this.prereq = prereq;
     }
 
-    public void updateCourseDetails(String updatedDetails, CourseList courseDB) {
-
+    public void setCoreq(ArrayList<ArrayList<String>> coreq) {
+        this.coreq = coreq;
     }
 
-    public void displayCourseDetails() {
-
+    public void setAOS_Req(String AOS_Req) {
+        this.AOS_Req = AOS_Req;
     }
 
-    public boolean isEligible(CourseList courses, CourseList finishedCourses, Major major) {
-        return true;
-    }
+    // Additional methods might go here, such as isAvailable, updateCourseDetails, displayCourseDetails, isEligible, etc.
 }

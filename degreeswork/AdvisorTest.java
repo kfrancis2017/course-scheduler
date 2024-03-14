@@ -1,5 +1,7 @@
 package degreeswork;
 
+import java.util.ArrayList;
+
 public class AdvisorTest{
 
     public static void main (String[] args){
@@ -10,13 +12,14 @@ public class AdvisorTest{
 
     private static void test(String advisorName){
 
+        DataLoader.getAllAdvisors();
+
         Advisor advisor = (Advisor)UserList.getInstance().getUser(advisorName);
 
-        if(!UserList.getInstance().searchUser(advisorName)){
+        if(!UserList.getInstance().searchUser(advisor.getUsername())){
             System.out.println("Not exsting");
             return;
         }
 
     }
 }
-
