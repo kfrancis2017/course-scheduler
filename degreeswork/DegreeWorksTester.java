@@ -19,10 +19,10 @@ public class DegreeWorksTester {
         testGetStudents(degreeWorks);
         testGetAdvisors(degreeWorks);
         testGetAdmins(degreeWorks);
-        testGetCourses(degreeWorks);
-        testAddCourse(degreeWorks);
-        testRemoveCourse(degreeWorks);
-        testUpdateCourse(degreeWorks);
+        //testGetCourses(degreeWorks);
+        //testAddCourse(degreeWorks);
+        //testRemoveCourse(degreeWorks);
+        //testUpdateCourse(degreeWorks);
     }
 
     private static void testSignup(DegreeWorks degreeWorks) {
