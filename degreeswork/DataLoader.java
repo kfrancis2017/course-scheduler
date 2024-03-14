@@ -18,7 +18,7 @@ public class DataLoader {
     }
     public ArrayList<Course> getAllCourses() {
         JSONParser parser = new JSONParser();
-        ArrayList<Course> courses = new ArrayList<>();
+        CourseList courses = CourseList.getInstance();
 
         try {
             // Read the array of courses from the file
