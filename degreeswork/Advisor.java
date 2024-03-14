@@ -12,8 +12,25 @@ public class Advisor extends User {
         this.adviseeList = new ArrayList<>();
     }
 
-    public ArrayList<String> getAdviseeList() {
-        return this.adviseeList;
+    public List<String> getAdviseeList() {
+        List<String> adviseeDetails = new ArrayList<>();
+        UserList userList = UserList.getInstance();
+
+        for (String username : this.adviseeList) {
+            User user = userList.getUser(username); 
+            if (user != null) {
+    
+                adviseeDetails.add(user.getUsername());
+            }
+            else {
+                adviseeDetails.add("User not found: " +username);
+            }
+        }
+        return adviseeDetails;
+    }
+
+    public void addAdvisee(String username) {
+        this.adviseeList.add(username);
     }
 
     public String getAdvisorSpecialization() {
