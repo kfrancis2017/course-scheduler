@@ -114,27 +114,27 @@ public class Course {
         sb.append("\n");
         // Initialize a flag to check if it's the first group
         boolean isFirstGroup = true;
-        for (ArrayList<String> or : prereq) {
+        for (ArrayList<String> andArr : prereq) {
             if (!isFirstGroup) sb.append(" and ");
             isFirstGroup = false; // After the first group, set this to false
             boolean isFirstItem = true;
-            for (String and : or) {
+            for (String orArr : andArr) {
                 if (!isFirstItem) sb.append(" or ");
                 isFirstItem = false; // After the first item, set this to false
-                sb.append(and);
+                sb.append(orArr);
             }
         }
         sb.append("\n");
 
         isFirstGroup = true;
-        for (ArrayList<String> or : coreq) {
+        for (ArrayList<String> andArr : coreq) {
             if (!isFirstGroup) sb.append(" and ");
             isFirstGroup = false; // After the first group, set this to false
             boolean isFirstItem = true;
-            for (String and : or) {
+            for (String orArr : andArr) {
                 if (!isFirstItem) sb.append(" or ");
                 isFirstItem = false; // After the first item, set this to false
-                sb.append(and);
+                sb.append(orArr);
             }
         }
         return sb.toString();

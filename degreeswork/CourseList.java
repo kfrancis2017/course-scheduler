@@ -69,4 +69,13 @@ public class CourseList {
         }
         return sb.toString();
     }
+
+    public String allToString() {
+        StringBuilder sb = new StringBuilder();
+        for (Course course : courses) {
+            sb.append(course.toString());
+            sb.append("\n");
+        }
+        return sb.toString();        
+    }
 }

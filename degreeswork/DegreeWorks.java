@@ -52,6 +52,19 @@ public class DegreeWorks {
         return allUsers.getAdmins();
     }
 
+    public ArrayList<Course> getCourses() {
+        return allCourses.getCourses();
+    }
+
+    public String courseToString() {
+        StringBuffer sb = new StringBuffer();
+        for (Course course : allCourses.getCourses()) {
+            sb.append(course.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
     public void printUserList() {
         System.out.println(allUsers.toString());
     }
