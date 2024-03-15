@@ -5,17 +5,68 @@
         "totalCreditsRequired":125,
         "majorCreditsRequired":90,
         "electiveCreditsRequired":35,
-        "options":[[{"course":"ENGL101","prefSem":1}],
-                   [{"course":"MATH141","prefSem":1}],
-                   [{"course":"CSCE145", "prefSem": 1}],
-                   [{"course":"CSCE190", "prefSem": 1}],
-                   [{}]
+        "options": [
+            [{"course": "ENGL101", "prefSem": 1}],
+            [{"course": "MATH141", "prefSem": 1}], 
+            [{"course": "CSCE145", "prefSem": 1}],
+            [{"course": "CSCE190", "prefSem": 1}],
+            [{"course": "AFAM202"}, {"course": "ARTH105"}, {"course": "FAMS240"}],
 
-                   [{"course":"PHYS211", "prefSem": 2},{"course":"CHEM111", "prefSem": 2}],
-                   [{}]
+            [{"course": "ENGL102", "prefSem": 2}],
+            [{"course": "MATH142", "prefSem": 2}],
+            [{"course": "CHEM111", "prefSem": 2}, {"course": "PHYS211", "prefSem": 2}],
+            [{"course": "CSCE146", "prefSem": 2}],
+            [{"course": "CSCE215", "prefSem": 2}],
+
+            [{"course": "CSCE211", "prefSem": 3}],
+            [{"course": "CSCE240", "prefSem": 3}],
+            [{"course": "MATH374", "prefSem": 3}],
+            [{"course": "CHEM112", "prefSem": 3}, {"course": "PHYS212", "prefSem": 3}],
+            [{"course": "PHIL213", "prefSem": 3}, {"course": "SPCH140", "prefSem": 3}, {"course": "SAEL200", "prefSem": 3}],
+
+            [{"course": "CSCE212", "prefSem": 4}], 
+            [{"course": "CSCE247", "prefSem": 4}],
+            [{"course": "MATH241", "prefSem": 4}],
+            [{"course": "GEOL101", "prefSem": 4}, {"course": "ANTH161","prefSem": 4}, {"course": "MSCI101", "prefSem": 4}],
+            [{"course": "CYBR101", "prefSem": 4}, {"course": "ANTH210", "prefSem": 4}, {"course": "AFAM218", "prefSem": 4}],
+
+            [{"course": "CSCE311", "prefSem": 5}], 
+            [{"course": "CSCE330", "prefSem": 5}], 
+            [{"course": "CSCE350", "prefSem": 5}], 
+            [{"course": "CSCE390", "prefSem": 5}], 
+            [{"course": "ENGL462", "prefSem": 5}, {"course": "ENGL463", "prefSem": 5}],
+            [{"course": "CSCE517", "prefSem": 5},{"course": "CSCE520", "prefSem": 5}, {"course": "PSYC101", "prefSem": 5} ] 
+
+            [{"course": "CSCE416", "prefSem": 6}], 
+            [{"course": "STAT509", "prefSem": 6}],
+            [{"course": "CSCE317", "prefSem": 6}, {"course": "CSCE512", "prefSem": 6}, {"course": "CSCE513", "prefSem": 6}],
+            [{"course": "AERO401", "prefSem": 6},{"course": "ANTH101", "prefSem": 6},{"course": "ECON123", "prefSem": 6}],
+            [{"course": "CSCE517", "prefSem": 6},{"course": "CSCE520", "prefSem": 6}, {"course": "PSYC101", "prefSem": 6}], 
+
+            [{"course": "CSCE490", "prefSem": 7}], 
+            [{"course": "CSCE355", "prefSem": 7}],
+            [{"course": "MATH344", "prefSem": 7}],
+            [{"course": "CSCE317", "prefSem": 7}, {"course": "CSCE512", "prefSem": 7}, {"course": "CSCE513", "prefSem": 7}],
+            [{"course": "CSCE517", "prefSem": 7},{"course": "CSCE520", "prefSem": 7}, {"course": "PSYC101", "prefSem": 7}], 
+            
+            [{"course": "CSCE492", "prefSem": 8}],
+            [{"course": "CSCE317", "prefSem": 8}, {"course": "CSCE512", "prefSem": 8}, {"course": "CSCE513", "prefSem": 8}],
+            [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
+            [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
+            [{"course": "ARTH107", "prefSem": 8},{"course": "FAM300", "prefSem": 8},{"course": "GERM280", "prefSem": 8}]
+
+            [{"course": "FREN122", "prefSem": "Any"},{"course": "ITAL122", "prefSem": "Any"},{"course": "LATN110", "prefSem": "Any"}],
+            [{"course": "GERM122", "prefSem": "Any"},{"course": "JAP122", "prefSem": "Any"},{"course": "PORT121", "prefSem": "Any"}]
 
         ]
-    },{
+          
+    },
+    
+
+
+
+
+    {
         "id":"fa28a55a-983a-4ad7-9357-ec7a6e73b001",
         "name":"Computer Information Systems",
         "totalCreditsRequired":120,
