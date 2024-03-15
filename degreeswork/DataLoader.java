@@ -3,8 +3,6 @@ package degreeswork;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import java.util.UUID;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,13 +14,13 @@ public class DataLoader {
     public DataLoader() {
 
     }
-    public ArrayList<Course> getAllCourses() {
+    public static void getAllCourses() {
         JSONParser parser = new JSONParser();
-        ArrayList<Course> courses = new ArrayList<>();
+        CourseList courses = CourseList.getInstance();
 
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/courses.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/course.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -31,44 +29,41 @@ public class DataLoader {
                 course.setTitle((String) courseData.get("title"));
                 course.setDescription((String) courseData.get("description"));
 
-                List<List<Prerequisite>> prerequisites = new ArrayList<>();
+                ArrayList<ArrayList<String>> prerequisites = new ArrayList<>();
                 JSONArray prereqData = (JSONArray) courseData.get("prerequisites");
                 for (Object obj : prereqData) {
-                    List<Prerequisite> prerequisiteList = new ArrayList<>();
+                    ArrayList<String> prerequisiteList = new ArrayList<>();
                     JSONArray innerArray = (JSONArray) obj;
                     for (Object innerObj : innerArray) {
                         JSONObject prereqJSON = (JSONObject) innerObj;
-                        Prerequisite prerequisite = new Prerequisite();
-                        prerequisite.setPrecourseID((String) prereqJSON.get("precourseID"));
-                        prerequisite.setGrade((String) prereqJSON.get("grade"));
+                        String prerequisite = ((String) prereqJSON.get("precourseID")) + "\t" + (String) prereqJSON.get("grade");
                         prerequisiteList.add(prerequisite);
                     }
                     prerequisites.add(prerequisiteList);
                 }
-                course.setPrerequisites(prerequisites);
+                course.setPrereq(prerequisites);
 
-                List<Course> corequisites = new ArrayList<>();
+                ArrayList<ArrayList<String>> corequisites = new ArrayList<>();
                 JSONArray coreqData = (JSONArray) courseData.get("corequisites");
                 for (Object obj : coreqData) {
-                    JSONObject coreqJSON = (JSONObject) obj;
-                    Course corequisite = new Course();
-                    corequisite.setCourseID((String) coreqJSON.get("cocourseID"));
-                    corequisites.add(corequisite);
+                    ArrayList<String> corequisiteList = new ArrayList<>();
+                    JSONArray innerArray = (JSONArray) obj;
+                    for (Object innerObj : innerArray) {
+                        JSONObject coreqJSON = (JSONObject) innerObj;
+                        String corequisite = ((String) coreqJSON.get("cocourseID")) + "\t" + (String) coreqJSON.get("grade");
+                        corequisiteList.add(corequisite);
+                    }
+                    corequisites.add(corequisiteList);
                 }
-                course.setCorequisites(corequisites);
+                course.setCoreq(corequisites);
 
                 course.setAOS_Req((String) courseData.get("AOS_Req"));
                 course.setCourseHolds((Boolean) courseData.get("courseHolds"));
-                course.setMinGrade((String) courseData.get("minGrade")); // This is assumed to be a string, change if necessary.
-                course.setUserGrade((String) courseData.get("userGrade")); // This is assumed to be a string, change if necessary.
-
-                courses.add(course);
+                courses.addCourse(course);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-
-        return courses;
     }
     
   

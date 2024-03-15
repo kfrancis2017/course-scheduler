@@ -1,7 +1,6 @@
 package degreeswork;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DegreeWorks {
 
@@ -21,6 +20,7 @@ public class DegreeWorks {
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
         DataLoader.getAllAdmins();
+        DataLoader.getAllCourses();
     }
 
     public boolean login(String username, String password) {
@@ -50,6 +50,19 @@ public class DegreeWorks {
 
     public ArrayList<Admin> getAdmins() {
         return allUsers.getAdmins();
+    }
+
+    public ArrayList<Course> getCourses() {
+        return allCourses.getCourses();
+    }
+
+    public String courseToString() {
+        StringBuffer sb = new StringBuffer();
+        for (Course course : allCourses.getCourses()) {
+            sb.append(course.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
     public void printUserList() {

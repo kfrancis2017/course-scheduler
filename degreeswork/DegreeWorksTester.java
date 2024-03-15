@@ -2,29 +2,36 @@ package degreeswork;
 import java.util.ArrayList;
 
 public class DegreeWorksTester {
-
     public static void main(String[] args) {
         // Initialize UserList and DegreeWorks instances for testing
-        DegreeWorks degreeWorks = new DegreeWorks();
-        System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
-        System.out.println("Printing User List");
+         DegreeWorks degreeWorks = new DegreeWorks();
+        // System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+        // System.out.println("Printing User List");
 
-        degreeWorks.printUserList();
-        System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
-        // Running test cases
-        testSignup(degreeWorks);
-        testDatabaseLogin(degreeWorks);
-        testLogin(degreeWorks);
-        testGetUser(degreeWorks);
-        testGetStudents(degreeWorks);
-        testGetAdvisors(degreeWorks);
-        testGetAdmins(degreeWorks);
+        // degreeWorks.printUserList();
+        // System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+        // // Running test cases
+        // testSignup(degreeWorks);
+        // testDatabaseLogin(degreeWorks);
+        // testLogin(degreeWorks);
+        // testGetUser(degreeWorks);
+        // testGetStudents(degreeWorks);
+        // testGetAdvisors(degreeWorks);
+        // testGetAdmins(degreeWorks);
+        // testGetCourses(degreeWorks);
+        // testAddCourse(degreeWorks);
+        // testRemoveCourse(degreeWorks);
+        // testUpdateCourse(degreeWorks);
         testGetCourses(degreeWorks);
-        testAddCourse(degreeWorks);
-        testRemoveCourse(degreeWorks);
-        testUpdateCourse(degreeWorks);
+        System.out.println(degreeWorks.courseToString());
     }
 
+    private static void testGetCourses(DegreeWorks degreeWorks) {
+        ArrayList<Course> courses = degreeWorks.getCourses();
+        for(Course course : courses) {
+            System.out.println(course);
+        }
+    }
     private static void testSignup(DegreeWorks degreeWorks) {
         System.out.println("Testing Signup Functionality\n");
 
