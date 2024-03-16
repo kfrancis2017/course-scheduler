@@ -35,7 +35,7 @@
             [{"course": "CSCE350", "prefSem": 5}], 
             [{"course": "CSCE390", "prefSem": 5}], 
             [{"course": "ENGL462", "prefSem": 5}, {"course": "ENGL463", "prefSem": 5}],
-            [{"course": "CSCE517", "prefSem": 5},{"course": "CSCE520", "prefSem": 5}, {"course": "PSYC101", "prefSem": 5} ] 
+            [{"course": "CSCE517", "prefSem": 5},{"course": "CSCE520", "prefSem": 5}, {"course": "PSYC101", "prefSem": 5}], 
 
             [{"course": "CSCE416", "prefSem": 6}], 
             [{"course": "STAT509", "prefSem": 6}],
@@ -53,25 +53,72 @@
             [{"course": "CSCE317", "prefSem": 8}, {"course": "CSCE512", "prefSem": 8}, {"course": "CSCE513", "prefSem": 8}],
             [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
             [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
-            [{"course": "ARTH107", "prefSem": 8},{"course": "FAM300", "prefSem": 8},{"course": "GERM280", "prefSem": 8}]
+            [{"course": "ARTH107", "prefSem": 8},{"course": "FAM300", "prefSem": 8},{"course": "GERM280", "prefSem": 8}],
 
             [{"course": "FREN122", "prefSem": "Any"},{"course": "ITAL122", "prefSem": "Any"},{"course": "LATN110", "prefSem": "Any"}],
             [{"course": "GERM122", "prefSem": "Any"},{"course": "JAP122", "prefSem": "Any"},{"course": "PORT121", "prefSem": "Any"}]
 
         ]
           
-    },
-    
-
-
-
-
-    {
+    },{
         "id":"fa28a55a-983a-4ad7-9357-ec7a6e73b001",
         "name":"Computer Information Systems",
         "totalCreditsRequired":120,
         "majorCreditsRequired":87,
         "electiveCreditsRequired":34,
-        "coreCourses":["162f960e-06e9-4527-8703-00c7e5994d56","d9cd0b7f-7c42-4530-85b4-d7299538cc0e"]
+        "options": [
+            [{"course": "ENGL101", "prefSem": 1}], 
+            [{"course": "MATH122", "prefSem": 1}, {"course": "MATH141", "prefSem": 1}], 
+            [{"course": "CSCE145", "prefSem": 1}], 
+            [{"course": "CSCE190", "prefSem": 1}],
+            [{"course": "ANTH161", "prefSem": 1}, {"course": "ASTR201", "prefSem": 1}, {"course": "BIOL122", "prefSem": 1}],
+
+            [{"course": "ENGL102", "prefSem": 2}],
+            [{"course": "CSCE146", "prefSem": 2}], 
+            [{"course": "CSCE215", "prefSem": 2}],
+            [{"course": "ANTH161", "prefSem": 2}, {"course": "ASTR201", "prefSem": 2}, {"course": "BIOL122", "prefSem": 2}],
+            [{"course": "AFAM202", "prefSem": 2}, {"course": "ARTE260", "prefSem": 2}, {"course": "CPLT270", "prefSem": 2}],
+
+            [{"course": "CSCE205", "prefSem": 3}, {"course": "CSCE205", "prefSem": 3}],
+            [{"course": "CSCE210", "prefSem": 3}],
+            [{"course": "CSCE247", "prefSem": 3}], 
+            [{"course": "ECON224", "prefSem": 3}], 
+            [{"course": "SPCH140", "prefSem": 3}, {"course": "SPCH14t", "prefSem": 3}, {"course": "SPCH230", "prefSem": 3}],
+
+            [{"course": "CSCE201", "prefSem": 4}],
+            [{"course": "CSCE240", "prefSem": 4}], 
+            [{"course": "MATH174", "prefSem": 4}, {"course": "MATH174", "prefSem": 4}], 
+            [{"course": "MGSC290", "prefSem": 4}],
+            [{"course": "AFAM201", "prefSem": 4}, {"course": "ANTH101", "prefSem": 4}, {"course": "EDUC360", "prefSem": 4}],
+
+            [{"course": "CSCE350", "prefSem": 5}], 
+            [{"course": "CSCE390", "prefSem": 5}], 
+            [{"course": "STAT515", "prefSem": 5}], 
+            [{"course": "ACCT222", "prefSem": 5}, {"course": "MGMT371", "prefSem": 5}, {"course": "ENGL462", "prefSem": 5}],
+            [{"course": "MGMT371", "prefSem": 5}],
+            [{"coures": "ENGL462", "prefSem": 5}, {"course": "ENGL463", "prefSem": 5}],
+
+            [{"course": "CSCE520", "prefSem": 6}], 
+            [{"course": "CSCE594", "prefSem": 6}], 
+            [{"course": "STAT516", "prefSem": 6}],
+            [{"course": "ACCT324", "prefSem": 6},{"course": "FINA333", "prefSem": 6}, {"course": "MGSC395", "prefSem": 6}],
+            [{"course": "ARTH107", "prefSem": 6}, {"course": "HIST101", "prefSem": 6}, {"course": "SOST201", "prefSem": 6}],
+
+            [{"course": "CSCE490", "prefSem": 7}], 
+            [{"course": "CSCE416", "prefSem": 7}], 
+            [{"course": "CSCE522", "prefSem": 7}],
+            [{"course": "ACCT324", "prefSem": 7},{"course": "FINA333", "prefSem": 7}, {"course": "MGSC395", "prefSem": 7}],
+            [{"course": "AERO401", "prefSem": 7},{"course": "CLAS220", "prefSem": 7}, {"course": "PSYC101", "prefSem": 7}],
+
+            [{"course": "CSCE492", "prefSem": 8}],
+            [{"course": "ITEC447", "prefSem": 8},{"course": "CSCE510", "prefSem": 8}, {"course": "ITEC560", "prefSem": 8}],
+            [{"course": "AERO401", "prefSem": 7},{"course": "CLAS220", "prefSem": 7}, {"course": "PSYC101", "prefSem": 7}],
+            [{"course": "AERO401", "prefSem": 7},{"course": "CLAS220", "prefSem": 7}, {"course": "PSYC101", "prefSem": 7}],
+
+            [{"course": "FREN122", "prefSem": "Any"},{"course": "ITAL122", "prefSem": "Any"},{"course": "LATN110", "prefSem": "Any"}],
+            [{"course": "GERM122", "prefSem": "Any"},{"course": "JAP122", "prefSem": "Any"},{"course": "PORT121", "prefSem": "Any"}]
+
+        ]
+        
     }
 ]
