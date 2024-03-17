@@ -50,7 +50,6 @@ public class Scenarios {
             input.close();
             System.exit(0);
         }
-    
     }
 
     public static void testScenario2(DegreeWorks degreeworks) {

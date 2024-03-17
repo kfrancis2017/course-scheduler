@@ -748,5 +748,563 @@
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
         "courseHolds": false
+    },
+    {
+        "courseID": "STAT110",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT112",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT201",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT206",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT506",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT509",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH111",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH112",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH115",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH122",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH141",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SCIN101",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SCIN244",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SCIN247",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SCIN317",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SCIN340",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI101",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI102",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI211",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI206",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI371",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "DIGI416",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE574",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "EMCH535",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE580",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ELCT331",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE581",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ELCT535",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ASTR201",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "BIOL122",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "AFAM202",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ARTE260",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CPLT270",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE205",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE210",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ECON224",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SPCH230",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE201",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH174",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MGSC290",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "AFAM201",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "EDUC360",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE350",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE390",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT515",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ACCT222",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MGMT371",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE594",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT516",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ACCT324",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "FINA333",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MGSC395",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "HIST101",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SOST201",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE490",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE416",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE522",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CLAS220",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PSYC101",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ITEC447",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE510",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ITEC560",
+        "title": "Description",
+        "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false
     }
 ]

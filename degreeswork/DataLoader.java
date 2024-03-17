@@ -66,7 +66,6 @@ public class DataLoader {
         }
     }
     
-  
       /**
      * Redone getAllStudents to be more in line with other "getAll" methods
      */
@@ -102,7 +101,7 @@ public class DataLoader {
                 student.setAdvisingNotes(sessionNotesList);
 
                 student.setMajor(new Major((String) studentJSON.get("major")));
-                student.setCurrentSemester((int) studentJSON.get("currentSemester"));
+                student.setCurrentSemester((String) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 student.setCurrentAdvisor(UUID.fromString((String) studentJSON.get("currentAdvisor")));
 

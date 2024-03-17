@@ -6,7 +6,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<String> currentCourses;
     private Major major;
-    private int currentSemester;
+    private String currentSemester;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
@@ -17,7 +17,7 @@ public class Student extends User {
         // Initialize all attributes with default values
         this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
-        this.currentSemester = 0;
+        this.currentSemester = "1";
         this.advisingNotes = new ArrayList<String>();
         this.program = ""; // Assuming empty string means no program assigned yet.
         this.advisor = ""; // Assuming empty string means no advisor assigned yet.
@@ -33,7 +33,7 @@ public class Student extends User {
         this.major = major; // This assumes Major is a class. Adjust if it's a different type.
     }
 
-    public void setCurrentSemester(int currentSemester) {
+    public void setCurrentSemester(String currentSemester) {
         this.currentSemester = currentSemester;
     }
 
@@ -106,7 +106,7 @@ public class Student extends User {
         return this.major; // Returns the major
     }
 
-    public int getCurrentSemester() {
+    public String getCurrentSemester() {
         return this.currentSemester;
     }
 
