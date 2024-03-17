@@ -57,7 +57,7 @@ public class Student extends User {
         this.advisor = advisor;
     }
 
-    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades) {
+    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades, ArrayList<String> semesters) {
         // Check if courseNames and grades have the same length
         if (courseNames.size() != grades.size()) {
             throw new IllegalArgumentException("Course names and grades must be of equal length");
@@ -72,6 +72,7 @@ public class Student extends User {
             ArrayList<String> courseWithGrade = new ArrayList<>();
             courseWithGrade.add(courseNames.get(i)); // Add course name
             courseWithGrade.add(grades.get(i));      // Add grade
+            courseWithGrade.add(semesters.get(i));
     
             // Add the courseWithGrade list to the finishedCourses list
             this.finishedCourses.add(courseWithGrade);
@@ -85,6 +86,7 @@ public class Student extends User {
         // Add the course ID and grade to the list
         courseWithGrade.add(courseID); // First element is the course ID
         courseWithGrade.add(grade);    // Second element is the grade
+        courseWithGrade.add(String.valueOf(currentSemester));   // Third element is the semester the semester the course was completed
         
         // Add this course and grade list to the list of finished courses
         finishedCourses.add(courseWithGrade);
@@ -94,8 +96,15 @@ public class Student extends User {
         this.dashboardWarnings = dashboardWarnings;
     }
 
-    public void createSchedule() {
-        //TODO LAST 
+    public String createSchedule() {
+        ArrayList<String> plan = Scheduler.createSchedule(this);
+        String schedule = "";
+
+        for (String string : plan) {
+            schedule += string + "\n";
+        }
+
+        return schedule;
     }
 
     public ArrayList<String> getCurrentCourses() {

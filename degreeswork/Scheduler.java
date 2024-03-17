@@ -1,5 +1,7 @@
 package degreeswork;
 
+import java.util.ArrayList;
+
 public class Scheduler {
     private int maxCreditsPerSemester;
     private CourseList courses;
@@ -17,8 +19,19 @@ public class Scheduler {
         return null;
     }
 
-    public static void createSchedule(Major major, CourseList completedCourses) {
-        
+    public static ArrayList<String> createSchedule(Student student) {
+        ArrayList<String> plan = new ArrayList<String>();
+
+        for (ArrayList<String> entry : student.getFinishedCourses()) {
+            plan.add(entry.get(0) + " Semester: " + entry.get(2));
+        }
+
+        for (String course : student.getCurrentCourses()) {
+            plan.add(course + " Semester: " + student.getCurrentSemester());
+        }
+
+
+        return plan;
     }
 
     public double currentGPA() {

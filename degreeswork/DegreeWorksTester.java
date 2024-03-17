@@ -100,4 +100,8 @@ public class DegreeWorksTester {
         }
         System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
     }
+
+    private static void testPrintSchedule(DegreeWorks degreeWorks) {
+        System.out.println("Testing printSchedule Functionality\n");
+    }
 }

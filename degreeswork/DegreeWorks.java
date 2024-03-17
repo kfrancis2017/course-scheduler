@@ -84,4 +84,8 @@ public class DegreeWorks {
     public Course findCourse(String courseID) {
         return allCourses.findCourseByCode(courseID);
     }
+
+    public void printSchedule(String username) {
+       
+    }
 }
