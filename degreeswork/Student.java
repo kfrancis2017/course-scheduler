@@ -176,5 +176,10 @@ public class Student extends User {
         return sb.toString();
     }
 
+    public String getRequirements() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getRequirements'");
+    }
+
 
 }

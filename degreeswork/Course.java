@@ -139,5 +139,4 @@ public class Course {
         }
         return sb.toString();
     }
-    // Additional methods might go here, such as isAvailable, updateCourseDetails, displayCourseDetails, isEligible, etc.
 }
