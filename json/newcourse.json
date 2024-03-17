@@ -1,0 +1,752 @@
+[
+    {
+        "courseID": "ENGL101",
+        "title": "Critical Reading and Composition",
+        "description": "This course typically covers critical reading, composition, and introduction to literature analysis. Students learn to interpret texts and write critically about them.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH141",
+        "title": "Calculus I",
+        "description": "Functions, limits, derivatives, introduction to integrals, the Fundamental Theorem of Calculus, applications of derivatives and integrals. Includes four classroom hours and one laboratory hour per week.",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH112",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MATH115",
+                    "grade": "C"
+                },
+                {
+                    "precourseID": "MATH116",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE145",
+        "title": "Algorithmic Design I",
+        "description": "Focuses on problem-solving, algorithmic design, and programming. The class includes two lecture hours and four laboratory hours per week, and employs Java as the programming language.",
+        "prerequisites": [],
+        "corequisites": [
+            {
+                "cocourseID": "MATH111"
+            },
+            {
+                "cocourseID": "MATH115"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE190",
+        "title": "Computing in the Modern World",
+        "description": "Introduction to the field of computing, covering trends in computing technology, the profession, and careers; subdisciplines in computing; and the nature of research and development.",
+        "prerequisites": [],
+        "corequisites": [
+            {
+                "cocourseID": "CSCE145"
+            },
+            {
+                "cocourseID": "CSCE104"
+            },
+            {
+                "cocourseID": "CSCE205"
+            },
+            {
+                "cocourseID": "CSCE106"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "AFAM202",
+        "title": "Introduction to African-American Studies",
+        "description": "Exploration and discussion of creative works and traditions by and about African Americans through folklore, music, art, dance, and literature.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ARTH105",
+        "title": "History of Western Art I",
+        "description": "Covers the visual arts from Paleolithic times to the Renaissance, providing a comprehensive overview of significant art movements, works, and artists during this period.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "FAMS240",
+        "title": "Film and Media Analysis",
+        "description": "Introduction to the critical study of film and media. Students will closely analyze moving images and develop written arguments about film and media.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ENGL102",
+        "title": "Rhetoric and Composition",
+        "description": "Instruction and intensive practice in researching, analyzing, and composing written arguments about academic and public issues. Requires a prerequisite grade of C or better in ENGL 101 or equivalent.",
+        "prerequisites": [
+            {
+                "precourseID": "ENGL101",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH142",
+        "title": "Calculus II",
+        "description": "Covers methods of integration, sequences and series, approximations. Includes four classroom hours and one laboratory hour each week.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH141",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CHEM111",
+        "title": "General Chemistry I",
+        "description": "Introduction to the fundamental principles of chemistry, including atomic and molecular structure, chemical bonding, stoichiometry, types of reactions, and thermochemistry. Designed for science majors.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH111",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [
+            {
+                "cocourseID": "CHEM111L"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PHYS211",
+        "title": "Essentials of Physics I",
+        "description": "Covers mechanics, wave motion, and heat. The course is algebra-based and includes a laboratory component.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH111",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [
+            {
+                "cocourseID": "PHYS211L"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE146",
+        "title": "Algorithmic Design II",
+        "description": "Continuation of CSCE 145. Emphasizes data structures, advanced programming techniques, and algorithm design.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE145",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE215",
+        "title": "Unix/Linux Fundamentals",
+        "description": "Introduction to the fundamental concepts of the Unix/Linux operating system, including its file system, shell scripting, and basic utilities.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE211",
+        "title": "Digital Logic Design",
+        "description": "Introduction to the design and analysis of combinational and sequential circuits.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE145",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE240",
+        "title": "Advanced Programming Techniques",
+        "description": "Concepts and techniques for designing software systems, including advanced programming languages features, software lifecycle, and development environments.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH374",
+        "title": "Discrete Structures",
+        "description": "Introduction to discrete mathematical structures and their applications, covering sets, combinatorics, sequences, matrices, and relations.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CHEM112",
+        "title": "General Chemistry II",
+        "description": "Continuation of CHEM111, covering additional fundamental concepts and applications in chemistry.",
+        "prerequisites": [
+            {
+                "precourseID": "CHEM111",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [
+            {
+                "cocourseID": "CHEM112L"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PHYS212",
+        "title": "Essentials of Physics II",
+        "description": "Continuation of PHYS211, covering electricity, magnetism, and optics.",
+        "prerequisites": [
+            {
+                "precourseID": "PHYS211",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [
+            {
+                "cocourseID": "PHYS212L"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PHIL213",
+        "title": "Introduction to Philosophy",
+        "description": "Survey of philosophical problems such as the nature of reality, knowledge, freedom, and ethics.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SPCH140",
+        "title": "Public Communication",
+        "description": "Introduction to the principles and practice of effective oral communication, including speech preparation and delivery.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "SAEL200",
+        "title": "Social Advocacy and Ethical Life",
+        "description": "Exploration of the ethical implications of social policies and personal actions on community well-being.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE212",
+        "title": "Introduction to Computer Architecture",
+        "description": "Fundamentals of computer architecture, including data representation, assembly language, and computer arithmetic.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE211",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE247",
+        "title": "Software Engineering",
+        "description": "Principles and practices of software development, including software life cycle, design patterns, and development methodologies.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH241",
+        "title": "Vector Calculus",
+        "description": "Covers vector algebra, geometry of three-dimensional space, and vector calculus, including divergence and curl.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "GEOL101",
+        "title": "Introductory Geology",
+        "description": "Introduction to the study of the earth, including materials, processes, history, and the environments of Earth.",
+        "prerequisites": [],
+        "corequisites": [
+            {
+                "cocourseID": "GEOL101L"
+            }
+        ],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ANTH161",
+        "title": "Introduction to Anthropology",
+        "description": "Survey of anthropology including cultural and biological aspects, archaeological and linguistic perspectives.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MSCI101",
+        "title": "Introduction to Marine Science",
+        "description": "Fundamentals of marine science, including biological, chemical, physical, and geological aspects of the marine environment.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CYBR101",
+        "title": "Introduction to Cybersecurity",
+        "description": "Foundations of cybersecurity, including information security, systems security, network security, and ethical hacking.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ANTH210",
+        "title": "Cultural Anthropology",
+        "description": "Exploration of global cultures through the lens of cultural anthropology, examining social structures, language, religion, and cultural changes.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "AFAM218",
+        "title": "African-American Culture and Society",
+        "description": "Study of African-American culture and society in the United States, exploring historical and contemporary perspectives.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE311",
+        "title": "Operating Systems",
+        "description": "Study of operating system principles, including process management, memory management, file systems, and concurrency.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE212",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE330",
+        "title": "Programming Language Structures",
+        "description": "Exploration of programming language paradigms and concepts with emphasis on language design and implementation.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE240",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE350",
+        "title": "Data Structures and Algorithms",
+        "description": "Introduction to data structures and algorithms, including their design, analysis, and implementation.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE240",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE390",
+        "title": "Professional Issues in Computer Science and Engineering",
+        "description": "Discussion of professional, ethical, legal, and social issues and responsibilities in computer science and engineering.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ENGL462",
+        "title": "Technical Writing",
+        "description": "Study and practice of technical writing, focusing on the production of clear and effective documents for scientific and technical fields.",
+        "prerequisites": [
+            {
+                "precourseID": "ENGL102",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ENGL463",
+        "title": "Advanced Technical Writing",
+        "description": "Advanced concepts and techniques in technical writing, with a focus on writing for different audiences and purposes in scientific and technical fields.",
+        "prerequisites": [
+            {
+                "precourseID": "ENGL462",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE517",
+        "title": "Computer Networks",
+        "description": "Principles and practices of computer networking, including network design, protocols, and security.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE520",
+        "title": "Database System Design",
+        "description": "Introduction to the principles of database systems, including data models, database design, query languages, and transaction management.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PSYC101",
+        "title": "Introduction to Psychology",
+        "description": "Survey of psychology topics including biological bases of behavior, learning, cognition, development, disorder, and social behavior.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE416",
+        "title": "Web Programming",
+        "description": "Introduction to web programming concepts, including client-server architecture, web design, and interactive web development.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "STAT509",
+        "title": "Statistics for Engineers",
+        "description": "Basic statistical techniques for data analysis in engineering fields. Topics include descriptive statistics, probability, and inferential methods.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE317",
+        "title": "Computer System Security",
+        "description": "Study of the principles and practices of computer system security, including attack protection, detection, and response.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE211",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE512",
+        "title": "System Programming",
+        "description": "Introduction to system-level programming concepts, including process management, scripting, and operating system APIs.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE513",
+        "title": "Computer Architecture",
+        "description": "Advanced study of computer architecture, focusing on the design and analysis of processors, memory, and system-level components.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "AERO401",
+        "title": "Aerospace Engineering Fundamentals",
+        "description": "Introduction to the fundamental concepts of aerospace engineering, including aerodynamics, propulsion, and flight mechanics.",
+        "prerequisites": [
+            {
+                "precourseID": "PHYS212",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ANTH101",
+        "title": "Introduction to Anthropology",
+        "description": "Survey of anthropology including cultural and biological aspects, archaeological and linguistic perspectives.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ECON123",
+        "title": "Introduction to Economics",
+        "description": "Basic concepts and principles of microeconomics and macroeconomics including market structures, national income, economic performance, and international trade.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Social Sciences",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE490",
+        "title": "Capstone Project for Computer Science",
+        "description": "Completion of a significant software project integrating aspects of computer science under the direction of a faculty advisor.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE355",
+        "title": "Foundations of Computation",
+        "description": "Introduction to the theory of computation, including automata, grammars, computability, and complexity.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "MATH344",
+        "title": "Applied Linear Algebra",
+        "description": "Concepts and techniques of linear algebra as applied to engineering and science, including matrix theory and linear systems.",
+        "prerequisites": [
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "CSCE492",
+        "title": "Computer Science Internship",
+        "description": "Professional work experience in a computer science setting, integrating academic study with field experience.",
+        "prerequisites": [
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ARTH107",
+        "title": "History of Asian Art",
+        "description": "Art and culture of India, China, and Japan from prehistory to the present.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "FAM300",
+        "title": "Film and Media History",
+        "description": "Surveys the development of cinema and related media from the 1820s to the present.",
+        "prerequisites": [
+            {
+                "precourseID": "FAMS240",
+                "grade": "C"
+            }
+        ],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "GERM280",
+        "title": "German Cinema",
+        "description": "Introduction to the history and analysis of German cinema from its beginnings to the present.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "FREN122",
+        "title": "Intermediate French",
+        "description": "Builds on foundational skills, focusing on language structure, communication, and cultural understanding.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "ITAL122",
+        "title": "Intermediate Italian",
+        "description": "Further development of Italian language skills, including reading, writing, and conversation.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "LATN110",
+        "title": "Introduction to Latin",
+        "description": "Basic Latin grammar and vocabulary with an introduction to Roman culture and literature.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "GERM122",
+        "title": "Intermediate German",
+        "description": "Continued language acquisition with a focus on improving proficiency in all areas.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "JAP122",
+        "title": "Intermediate Japanese",
+        "description": "Enhances understanding of Japanese language and culture through advanced study.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    },
+    {
+        "courseID": "PORT121",
+        "title": "Introduction to Portuguese",
+        "description": "Basic principles of Portuguese for beginning students focusing on listening, speaking, reading, and writing.",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "Arts and Humanities",
+        "courseHolds": false
+    }
+]
