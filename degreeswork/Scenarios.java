@@ -6,6 +6,7 @@ public class Scenarios {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
         testScenario1(degreeworks);
+        testScenario2(degreeworks);
     }
 
     public static void testScenario1(DegreeWorks degreeworks) {
@@ -50,5 +51,9 @@ public class Scenarios {
             System.exit(0);
         }
     
+    }
+
+    public static void testScenario2(DegreeWorks degreeworks) {
+        //Populate this
     }
 }
