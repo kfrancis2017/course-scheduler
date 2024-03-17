@@ -17,7 +17,7 @@ public class Scheduler {
         return null;
     }
 
-    public void createSchedule(Major major, CourseList completedCourses) {
+    public static void createSchedule(Major major, CourseList completedCourses) {
         
     }
 

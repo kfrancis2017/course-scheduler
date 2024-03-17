@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<String> currentCourses;
     private Major major;
+    private int currentSemester;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
@@ -16,11 +17,12 @@ public class Student extends User {
         // Initialize all attributes with default values
         this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
-        this.advisingNotes = new ArrayList<>();
+        this.currentSemester = 0;
+        this.advisingNotes = new ArrayList<String>();
         this.program = ""; // Assuming empty string means no program assigned yet.
         this.advisor = ""; // Assuming empty string means no advisor assigned yet.
-        this.finishedCourses = new ArrayList<>();
-        this.dashboardWarnings = new ArrayList<>();
+        this.finishedCourses = new ArrayList<ArrayList<String>>();
+        this.dashboardWarnings = new ArrayList<String>();
     }
 
     public void setCurrentCourses(ArrayList<String> currentCourses) {
@@ -29,6 +31,10 @@ public class Student extends User {
 
     public void setMajor(Major major) {
         this.major = major; // This assumes Major is a class. Adjust if it's a different type.
+    }
+
+    public void setCurrentSemester(int currentSemester) {
+        this.currentSemester = currentSemester;
     }
 
     public void setAdvisingNotes(ArrayList<String> advisingNotes) {
@@ -98,6 +104,10 @@ public class Student extends User {
 
     public Major getMajor() {
         return this.major; // Returns the major
+    }
+
+    public int getCurrentSemester() {
+        return this.currentSemester;
     }
 
     public ArrayList<String> getAdvisingNotes() {
