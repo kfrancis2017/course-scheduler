@@ -37,6 +37,12 @@ public class DegreeWorks {
         return true;
     }
 
+    public boolean advisorSignup(String username, String password, String firstname, String lastname) {
+        Advisor advisor = new Advisor();
+        allUsers.addUser(advisor);
+        return true;
+    }
+
     public String getUser(String username) {
         if (allUsers.searchUser(username))
             return allUsers.getUser(username).toString();
