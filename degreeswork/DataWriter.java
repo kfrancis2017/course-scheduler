@@ -19,7 +19,7 @@ public class DataWriter {
         saveAdvisors();
         saveAdmins();
     }
-
+    
     /**
      * Uses singleton to write student JSON file
      */
@@ -95,6 +95,7 @@ public class DataWriter {
         studentDetails.put("sessionNotes", sessionNotesArray);
 
         studentDetails.put("major", student.getMajor().getName()); // Assuming 'Major' has a 'getName()' method
+        studentDetails.put("currentSemester", student.getCurrentSemester());
         studentDetails.put("program", student.getProgram());
         studentDetails.put("currentAdvisor", student.getAdvisor().toString());
 

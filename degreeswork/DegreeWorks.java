@@ -1,13 +1,16 @@
 package degreeswork;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DegreeWorks {
 
     private User mUser;
+    private Advisor mAdvisor;
+    private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
+    private MajorList allMajors;
+
 
     public DegreeWorks(UserList users, CourseList courses) {
         this.allUsers = users;
@@ -15,23 +18,40 @@ public class DegreeWorks {
     }
 
     public DegreeWorks() {
-        DataLoader loader = new DataLoader();
-        this.allUsers = new UserList();
-        this.allCourses = new CourseList();
+        this.allUsers = UserList.getInstance();
+        this.allCourses = CourseList.getInstance();
+        this.allMajors = MajorList.getInstance();
 
-        // Combine all users into one list
-        this.allUsers.addUsers(loader.getAllStudents());
-        this.allUsers.addUsers(loader.getAllAdvisors());
-        this.allUsers.addUsers(loader.getAllAdmins());
+        DataLoader.getAllStudents();
+        DataLoader.getAllAdvisors();
+        DataLoader.getAllAdmins();
+        DataLoader.getAllCourses();
     }
 
     public boolean login(String username, String password) {
         this.mUser = allUsers.login(username, password);
+        if (this.mUser != null && this.mUser instanceof Student) {
+            this.mStudent = (Student) this.mUser; // Set mStudent if the logged-in user is a student
+        }
         return this.mUser != null;
+    }
+
+    public Advisor advisorLogin(String username, String password) {
+        // this.mUser = allUsers.advisorLogin(username, password);
+        // if (this.mUser != null && this.mUser instanceof Advisor) {
+        //     this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
+        // }
+        return allUsers.advisorLogin(username, password);
     }
 
     public boolean signup(String username, String password, String firstname, String lastname) {
         allUsers.addUser(username, password, firstname, lastname);
+        return true;
+    }
+
+    public boolean advisorSignup(String username, String password, String firstname, String lastname) {
+        Advisor advisor = new Advisor(username, password, firstname, lastname);
+        allUsers.addUser(advisor);
         return true;
     }
 
@@ -54,6 +74,19 @@ public class DegreeWorks {
         return allUsers.getAdmins();
     }
 
+    public ArrayList<Course> getCourses() {
+        return allCourses.getCourses();
+    }
+
+    public String courseToString() {
+        StringBuffer sb = new StringBuffer();
+        for (Course course : allCourses.getCourses()) {
+            sb.append(course.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
     public void printUserList() {
         System.out.println(allUsers.toString());
     }
@@ -71,6 +104,25 @@ public class DegreeWorks {
     }
 
     public Course findCourse(String courseID) {
-        return allCourses.findCourse(courseID);
+        return allCourses.findCourseByCode(courseID);
     }
+
+    public void printSchedule(String username) {
+    }
+    
+    public void viewRecord() {
+        mStudent.viewRecord();
+
+    }
+    public void getRequirements(String majorName) {
+        mStudent.printCoursesForMajor(majorName);
+    }
+
+    public void addStudentCourse(String courseID) {
+         mStudent.updateStudentTranscript(courseID, null);
+    }
+    public void allToString() {
+        System.out.println(allMajors.allToString());
+    }
+
 }

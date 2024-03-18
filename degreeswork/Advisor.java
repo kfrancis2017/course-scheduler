@@ -8,12 +8,19 @@ public class Advisor extends User {
     private String advisorSpecialization;
 
     public Advisor() {
+        super(); 
         // Initialize the adviseeList to prevent NullPointerException
         this.adviseeList = new ArrayList<>();
     }
 
-    public List<String> getAdviseeList() {
-        List<String> adviseeDetails = new ArrayList<>();
+    public Advisor(String user, String pass, String first, String last) {
+        super(user, pass, first, last ); 
+        // Initialize the adviseeList to prevent NullPointerException
+        this.adviseeList = new ArrayList<>();
+    }
+
+    public ArrayList<String> getAdviseeList() {
+        ArrayList<String> adviseeDetails = new ArrayList<String>();
         UserList userList = UserList.getInstance();
 
         for (String username : this.adviseeList) {
@@ -29,9 +36,43 @@ public class Advisor extends User {
         return adviseeDetails;
     }
 
-    public void addAdvisee(String username) {
-        this.adviseeList.add(username);
+    public Student getAdvisee(String user) {
+        for(String userName : adviseeList){
+            if(userName.equals(user)){
+                UserList users = UserList.getInstance();
+                ArrayList<Student> list = users.getStudents();
+            
+                for(Student student : list) {
+                    if(student.getUsername().equals(user)) {
+                        return student;
+                    }
+                }
+            
+            }
+
+        }
+        return null;
     }
+
+    public String getAdviseeDetails(Student student) {
+        UserList userList = UserList.getInstance(); // Access the singleton UserList instance
+       // User user = userList.getUser(username); // Use the provided method to get a User object
+        
+       // if (student != null) {
+            // Format user details into a string. Adjust formatting as needed.
+            
+            return student.toString();
+
+          //  return String.format("Username: %s, Name: %s %s", user.getUsername(), user.getFirstName(), user.getLastName()) + ;
+        // } else {
+        //     return "User not found";
+        // }
+    }
+
+    public void addAdvisee(String username) {
+        adviseeList.add(username);
+    }
+
 
     public String getAdvisorSpecialization() {
         return this.advisorSpecialization;

@@ -1,31 +1,25 @@
 package degreeswork;
+import java.util.ArrayList;
 
 public class Major {
     private String name;
-    private CourseList coreCourses;
-    private CourseList electiveCourses;
-
+    private ArrayList<Course> courses;
 
     public Major(String name) {
         this.name = name;
+        this.courses = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
-    public void addRequirement(Course course) {
-        
+
+    public void addCourse(Course course) {
+        courses.add(course);
     }
 
-    public void removeRequirement(Course course) {
-        
+    public ArrayList<Course> getCourses() {
+        return courses;
     }
 
-    public void modifyRequirement(Course oldCourse, Course newCourse) {
-        
-    }
-
-    public void listRequirements() {
-        
-    }
 }

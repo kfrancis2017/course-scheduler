@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<String> currentCourses;
     private Major major;
+    private long currentSemester;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
@@ -16,11 +17,12 @@ public class Student extends User {
         // Initialize all attributes with default values
         this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
-        this.advisingNotes = new ArrayList<>();
+        this.currentSemester = 1;
+        this.advisingNotes = new ArrayList<String>();
         this.program = ""; // Assuming empty string means no program assigned yet.
-        this.advisor = ""; // Assuming empty string means no advisor assigned yet.
-        this.finishedCourses = new ArrayList<>();
-        this.dashboardWarnings = new ArrayList<>();
+        this.advisor = " "; // Assuming empty string means no advisor assigned yet.
+        this.finishedCourses = new ArrayList<ArrayList<String>>();
+        this.dashboardWarnings = new ArrayList<String>();
     }
 
     public void setCurrentCourses(ArrayList<String> currentCourses) {
@@ -29,6 +31,10 @@ public class Student extends User {
 
     public void setMajor(Major major) {
         this.major = major; // This assumes Major is a class. Adjust if it's a different type.
+    }
+
+    public void setCurrentSemester(long currentSemester) {
+        this.currentSemester = currentSemester;
     }
 
     public void setAdvisingNotes(ArrayList<String> advisingNotes) {
@@ -51,21 +57,15 @@ public class Student extends User {
         this.advisor = advisor;
     }
 
-    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades) {
-        // Check if courseNames and grades have the same length
-        if (courseNames.size() != grades.size()) {
-            throw new IllegalArgumentException("Course names and grades must be of equal length");
-        }
-    
-        // Initialize the finishedCourses list
-        this.finishedCourses = new ArrayList<>();
+    public void setFinishedCourses(ArrayList<ArrayList<String>> finishedCourses) {
     
         // Iterate through the lists of course names and grades
-        for (int i = 0; i < courseNames.size(); i++) {
+        for (int i = 0; i < finishedCourses.size(); i++) {
             // Create a new list to store the course name and the corresponding grade
-            ArrayList<String> courseWithGrade = new ArrayList<>();
-            courseWithGrade.add(courseNames.get(i)); // Add course name
-            courseWithGrade.add(grades.get(i));      // Add grade
+            ArrayList<String> courseWithGrade = finishedCourses.get(i);
+            courseWithGrade.add(courseWithGrade.get(0)); // Add course name
+            courseWithGrade.add(courseWithGrade.get(1));      // Add grade
+            courseWithGrade.add(courseWithGrade.get(2));
     
             // Add the courseWithGrade list to the finishedCourses list
             this.finishedCourses.add(courseWithGrade);
@@ -79,6 +79,7 @@ public class Student extends User {
         // Add the course ID and grade to the list
         courseWithGrade.add(courseID); // First element is the course ID
         courseWithGrade.add(grade);    // Second element is the grade
+        courseWithGrade.add(String.valueOf(currentSemester));   // Third element is the semester the semester the course was completed
         
         // Add this course and grade list to the list of finished courses
         finishedCourses.add(courseWithGrade);
@@ -88,8 +89,15 @@ public class Student extends User {
         this.dashboardWarnings = dashboardWarnings;
     }
 
-    public void createSchedule() {
-        //TODO LAST 
+    public String createSchedule() {
+        ArrayList<String> plan = Scheduler.createSchedule(this);
+        String schedule = "";
+
+        for (String string : plan) {
+            schedule += string + "\n";
+        }
+
+        return schedule;
     }
 
     public ArrayList<String> getCurrentCourses() {
@@ -98,6 +106,10 @@ public class Student extends User {
 
     public Major getMajor() {
         return this.major; // Returns the major
+    }
+
+    public long getCurrentSemester() {
+        return this.currentSemester;
     }
 
     public ArrayList<String> getAdvisingNotes() {
@@ -176,5 +188,18 @@ public class Student extends User {
         return sb.toString();
     }
 
-
+    public void printCoursesForMajor(String majorName) {
+        MajorList majorList = MajorList.getInstance(); // Assume MajorList has a method to get the instance
+        Major major = majorList.getMajorByName(majorName); // Assume getMajorByName is a method in MajorList to find a major by name
+    
+        if (major != null) {
+            System.out.println("Courses for major: " + majorName);
+            for (Course course : major.getCourses()) { // Assume Major has a method getCourses that returns a list of courses
+                System.out.println(course.getCourseID()); // Assume Course has a getName method that returns the course name
+            }
+        } else {
+            System.out.println("Major '" + majorName + "' not found.");
+        }
+    }
+    
 }

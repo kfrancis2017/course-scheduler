@@ -101,6 +101,16 @@ public class UserList {
         return null;
     }
 
+    public Advisor advisorLogin(String username, String password) {
+        if (searchUser(username)) {
+            for (Advisor advisor : advisors) {
+                if (advisor.getUsername().equals(username) && advisor.getPassword().equals(password))
+                    return advisor;
+            }
+        }
+        return null;
+    }
+
     public void modifyUser(User user, User newUser) {
         int index = users.indexOf(user);
         if (index != -1) {
@@ -110,7 +120,7 @@ public class UserList {
 
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (User user : this.getUsers()) {
+        for (User user : users) {
             result.append(user.getFirstName()).append("\t");
             result.append(user.getLastName()).append("\n");
         }
