@@ -37,11 +37,11 @@ public class DegreeWorks {
     }
 
     public Advisor advisorLogin(String username, String password) {
-        this.mUser = allUsers.advisorLogin(username, password);
-        if (this.mUser != null && this.mUser instanceof Advisor) {
-            this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
-        }
-        return mAdvisor;
+        // this.mUser = allUsers.advisorLogin(username, password);
+        // if (this.mUser != null && this.mUser instanceof Advisor) {
+        //     this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
+        // }
+        return allUsers.advisorLogin(username, password);
     }
 
     public boolean signup(String username, String password, String firstname, String lastname) {

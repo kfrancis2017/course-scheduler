@@ -104,7 +104,7 @@ public class UserList {
     public Advisor advisorLogin(String username, String password) {
         if (searchUser(username)) {
             for (Advisor advisor : advisors) {
-                if (advisor.getUsername() == username && advisor.getPassword() == password)
+                if (advisor.getUsername().equals(username) && advisor.getPassword().equals(password))
                     return advisor;
             }
         }

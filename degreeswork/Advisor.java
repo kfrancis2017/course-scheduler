@@ -38,12 +38,12 @@ public class Advisor extends User {
 
     public Student getAdvisee(String user) {
         for(String userName : adviseeList){
-            if(userName == user){
+            if(userName.equals(user)){
                 UserList users = UserList.getInstance();
                 ArrayList<Student> list = users.getStudents();
             
                 for(Student student : list) {
-                    if(student.getUsername() == user) {
+                    if(student.getUsername().equals(user)) {
                         return student;
                     }
                 }
@@ -58,15 +58,15 @@ public class Advisor extends User {
         UserList userList = UserList.getInstance(); // Access the singleton UserList instance
        // User user = userList.getUser(username); // Use the provided method to get a User object
         
-        if (student != null) {
+       // if (student != null) {
             // Format user details into a string. Adjust formatting as needed.
             
             return student.toString();
 
           //  return String.format("Username: %s, Name: %s %s", user.getUsername(), user.getFirstName(), user.getLastName()) + ;
-        } else {
-            return "User not found";
-        }
+        // } else {
+        //     return "User not found";
+        // }
     }
 
     public void addAdvisee(String username) {

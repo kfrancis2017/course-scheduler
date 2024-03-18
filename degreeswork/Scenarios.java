@@ -69,7 +69,8 @@ public class Scenarios {
         System.out.println("Enter lasts name: ");
         String last = input.nextLine();  // Read user input
         degreeworks.advisorSignup(userName, pass, first, last);
-        Advisor current = degreeworks.advisorLogin(userName, pass);
+      //  Advisor current = degreeworks.advisorLogin(userName, pass);
+        Advisor current = new Advisor(userName, pass, first, last);
 
         System.out.println("What's your specialization?");
         current.setAdvisorSpecialization(input.nextLine());
@@ -78,14 +79,15 @@ public class Scenarios {
         String student = input.nextLine();
         
         current.addAdvisee(student);
-        System.out.println(current.getAdviseeDetails(current.getAdvisee(student)));
+        Student advisee = current.getAdvisee(student);
+        System.out.println(current.getAdviseeDetails(advisee));
 
         System.out.println("Add notes");
         String notes = input.nextLine();
         
         current.addAdvisingSession(current.getAdvisee(userName), notes);
 
-        System.out.println(current.getAdviseeDetails(current.getAdvisee(student)));
+        System.out.println(current.getAdviseeDetails(advisee));
         
         
 
