@@ -6,7 +6,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<String> currentCourses;
     private Major major;
-    private String currentSemester;
+    private long currentSemester;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
@@ -17,10 +17,10 @@ public class Student extends User {
         // Initialize all attributes with default values
         this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
-        this.currentSemester = "1";
+        this.currentSemester = 1;
         this.advisingNotes = new ArrayList<String>();
         this.program = ""; // Assuming empty string means no program assigned yet.
-        this.advisor = ""; // Assuming empty string means no advisor assigned yet.
+        this.advisor = " "; // Assuming empty string means no advisor assigned yet.
         this.finishedCourses = new ArrayList<ArrayList<String>>();
         this.dashboardWarnings = new ArrayList<String>();
     }
@@ -33,7 +33,7 @@ public class Student extends User {
         this.major = major; // This assumes Major is a class. Adjust if it's a different type.
     }
 
-    public void setCurrentSemester(String currentSemester) {
+    public void setCurrentSemester(long currentSemester) {
         this.currentSemester = currentSemester;
     }
 
@@ -115,7 +115,7 @@ public class Student extends User {
         return this.major; // Returns the major
     }
 
-    public String getCurrentSemester() {
+    public long getCurrentSemester() {
         return this.currentSemester;
     }
 
@@ -196,8 +196,7 @@ public class Student extends User {
     }
 
     public String getRequirements() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRequirements'");
+        return major.getCourses().toString();
     }
 
 
