@@ -57,22 +57,15 @@ public class Student extends User {
         this.advisor = advisor;
     }
 
-    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades, ArrayList<String> semesters) {
-        // Check if courseNames and grades have the same length
-        if (courseNames.size() != grades.size()) {
-            throw new IllegalArgumentException("Course names and grades must be of equal length");
-        }
-    
-        // Initialize the finishedCourses list
-        this.finishedCourses = new ArrayList<>();
+    public void setFinishedCourses(ArrayList<ArrayList<String>> finishedCourses) {
     
         // Iterate through the lists of course names and grades
-        for (int i = 0; i < courseNames.size(); i++) {
+        for (int i = 0; i < finishedCourses.size(); i++) {
             // Create a new list to store the course name and the corresponding grade
-            ArrayList<String> courseWithGrade = new ArrayList<>();
-            courseWithGrade.add(courseNames.get(i)); // Add course name
-            courseWithGrade.add(grades.get(i));      // Add grade
-            courseWithGrade.add(semesters.get(i));
+            ArrayList<String> courseWithGrade = finishedCourses.get(i);
+            courseWithGrade.add(courseWithGrade.get(0)); // Add course name
+            courseWithGrade.add(courseWithGrade.get(1));      // Add grade
+            courseWithGrade.add(courseWithGrade.get(2));
     
             // Add the courseWithGrade list to the finishedCourses list
             this.finishedCourses.add(courseWithGrade);

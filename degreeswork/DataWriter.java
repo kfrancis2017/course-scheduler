@@ -19,7 +19,7 @@ public class DataWriter {
         saveAdvisors();
         saveAdmins();
     }
-
+    
     /**
      * Uses singleton to write student JSON file
      */

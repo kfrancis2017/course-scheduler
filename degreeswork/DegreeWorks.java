@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class DegreeWorks {
 
     private User mUser;
+    private Advisor mAdvisor;
     private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
     private MajorList allMajors;
+
 
     public DegreeWorks(UserList users, CourseList courses) {
         this.allUsers = users;
@@ -34,8 +36,22 @@ public class DegreeWorks {
         return this.mUser != null;
     }
 
+    public Advisor advisorLogin(String username, String password) {
+        this.mUser = allUsers.login(username, password);
+        if (this.mUser != null && this.mUser instanceof Advisor) {
+            this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
+        }
+        return mAdvisor;
+    }
+
     public boolean signup(String username, String password, String firstname, String lastname) {
         allUsers.addUser(username, password, firstname, lastname);
+        return true;
+    }
+
+    public boolean advisorSignup(String username, String password, String firstname, String lastname) {
+        Advisor advisor = new Advisor(username, password, firstname, lastname);
+        allUsers.addUser(advisor);
         return true;
     }
 

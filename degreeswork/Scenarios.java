@@ -56,7 +56,37 @@ public class Scenarios {
         }
     }
 
+    @SuppressWarnings("resource")
     public static void testScenario2(DegreeWorks degreeworks) {
-        //Populate this
+        Scanner input = new Scanner(System.in);
+        System.out.println("Let's make an account!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("Enter username: ");
+        String userName = input.nextLine();  // Read user input
+        System.out.println("Enter password: ");
+        String pass = input.nextLine();  // Read user input
+        System.out.println("Enter first name: ");
+        String first = input.nextLine();  // Read user input
+        System.out.println("Enter lasts name: ");
+        String last = input.nextLine();  // Read user input
+        degreeworks.signup(userName, pass, first, last);
+        Advisor current = degreeworks.advisorLogin(userName, pass);
+
+        System.out.println("What's your specialization?");
+        current.setAdvisorSpecialization(input.nextLine());
+
+        System.out.println("You have no students add a student");
+        String student = input.nextLine();
+        
+        current.addAdvisee(student);
+        current.getAdviseeDetails(student);
+
+        System.out.println("Add notes");
+        String notes = input.nextLine();
+        
+        current.addAdvisingSession(current.getAdvisee(userName), notes);
+        
+        
+
+        
     }
 }

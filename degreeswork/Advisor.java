@@ -7,7 +7,8 @@ public class Advisor extends User {
     private ArrayList<String> adviseeList;
     private String advisorSpecialization;
 
-    public Advisor() {
+    public Advisor(String user, String pass, String first, String last) {
+        super(user, pass, first, last ); 
         // Initialize the adviseeList to prevent NullPointerException
         this.adviseeList = new ArrayList<>();
     }
@@ -29,6 +30,23 @@ public class Advisor extends User {
         return adviseeDetails;
     }
 
+    public Student getAdvisee(String user) {
+        for(String userName : adviseeList){
+            if(userName == user){
+                UserList users = UserList.getInstance();
+                ArrayList<Student> list = users.getStudents();
+            
+                for(Student student : list) {
+                    if(student.getUsername() == user) {
+                        return student;
+                    }
+                }
+            
+            }
+
+        }
+        return null;
+    }
 
     public String getAdviseeDetails(String username) {
         UserList userList = UserList.getInstance(); // Access the singleton UserList instance
