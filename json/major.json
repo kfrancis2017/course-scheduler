@@ -52,7 +52,6 @@
             [{"course": "CSCE492", "prefSem": 8}],
             [{"course": "CSCE317", "prefSem": 8}, {"course": "CSCE512", "prefSem": 8}, {"course": "CSCE513", "prefSem": 8}],
             [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
-            [{"course": "AERO401", "prefSem": 8},{"course": "ANTH101", "prefSem": 8},{"course": "ECON123", "prefSem": 8}],
             [{"course": "ARTH107", "prefSem": 8},{"course": "FAM300", "prefSem": 8},{"course": "GERM280", "prefSem": 8}],
 
             [{"course": "FREN122", "prefSem": "Any"},{"course": "ITAL122", "prefSem": "Any"},{"course": "LATN110", "prefSem": "Any"}],

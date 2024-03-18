@@ -24,7 +24,6 @@ public class DataLoader {
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
-
                 course.setCourseID((String) courseData.get("courseID"));
                 course.setTitle((String) courseData.get("title"));
                 course.setDescription((String) courseData.get("description"));

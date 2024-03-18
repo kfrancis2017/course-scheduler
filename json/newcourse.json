@@ -76,7 +76,7 @@
         "description": "Exploration and discussion of creative works and traditions by and about African Americans through folklore, music, art, dance, and literature.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -85,7 +85,7 @@
         "description": "Covers the visual arts from Paleolithic times to the Renaissance, providing a comprehensive overview of significant art movements, works, and artists during this period.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -94,7 +94,7 @@
         "description": "Introduction to the critical study of film and media. Students will closely analyze moving images and develop written arguments about film and media.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -140,7 +140,7 @@
                 "cocourseID": "CHEM111L"
             }
         ],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "SCI",
         "courseHolds": false
     },
     {
@@ -158,7 +158,7 @@
                 "cocourseID": "PHYS211L"
             }
         ],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "SCI",
         "courseHolds": false
     },
     {
@@ -241,7 +241,7 @@
                 "cocourseID": "CHEM112L"
             }
         ],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "SCI",
         "courseHolds": false
     },
     {
@@ -259,7 +259,7 @@
                 "cocourseID": "PHYS212L"
             }
         ],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "SCI",
         "courseHolds": false
     },
     {
@@ -268,7 +268,7 @@
         "description": "Survey of philosophical problems such as the nature of reality, knowledge, freedom, and ethics.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -277,7 +277,7 @@
         "description": "Introduction to the principles and practice of effective oral communication, including speech preparation and delivery.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -286,7 +286,7 @@
         "description": "Exploration of the ethical implications of social policies and personal actions on community well-being.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "AIU",
         "courseHolds": false
     },
     {
@@ -341,7 +341,7 @@
                 "cocourseID": "GEOL101L"
             }
         ],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "GSS",
         "courseHolds": false
     },
     {
@@ -350,7 +350,7 @@
         "description": "Survey of anthropology including cultural and biological aspects, archaeological and linguistic perspectives.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "GSS",
         "courseHolds": false
     },
     {
@@ -359,7 +359,7 @@
         "description": "Fundamentals of marine science, including biological, chemical, physical, and geological aspects of the marine environment.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "GSS",
         "courseHolds": false
     },
     {
@@ -368,7 +368,7 @@
         "description": "Foundations of cybersecurity, including information security, systems security, network security, and ethical hacking.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "AA",
         "courseHolds": false
     },
     {
@@ -377,7 +377,7 @@
         "description": "Exploration of global cultures through the lens of cultural anthropology, examining social structures, language, religion, and cultural changes.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "AA",
         "courseHolds": false
     },
     {
@@ -386,7 +386,7 @@
         "description": "Study of African-American culture and society in the United States, exploring historical and contemporary perspectives.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "AA",
         "courseHolds": false
     },
     {
@@ -456,7 +456,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "ENGL",
         "courseHolds": false
     },
     {
@@ -470,7 +470,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "ENGL",
         "courseHolds": false
     },
     {
@@ -484,7 +484,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "CMS",
         "courseHolds": false
     },
     {
@@ -498,7 +498,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "CMS",
         "courseHolds": false
     },
     {
@@ -507,7 +507,7 @@
         "description": "Survey of psychology topics including biological bases of behavior, learning, cognition, development, disorder, and social behavior.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "GSS",
         "courseHolds": false
     },
     {
@@ -544,7 +544,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "CMS",
         "courseHolds": false
     },
     {
@@ -558,7 +558,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "CMS",
         "courseHolds": false
     },
     {
@@ -572,7 +572,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "CMS",
         "courseHolds": false
     },
     {
@@ -586,7 +586,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Science, Technology, Engineering, & Mathematics",
+        "AOS_Req": "GSL",
         "courseHolds": false
     },
     {
@@ -595,7 +595,7 @@
         "description": "Survey of anthropology including cultural and biological aspects, archaeological and linguistic perspectives.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "GSL",
         "courseHolds": false
     },
     {
@@ -604,7 +604,7 @@
         "description": "Basic concepts and principles of microeconomics and macroeconomics including market structures, national income, economic performance, and international trade.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Social Sciences",
+        "AOS_Req": "GSL",
         "courseHolds": false
     },
     {
@@ -669,7 +669,7 @@
         "description": "Art and culture of India, China, and Japan from prehistory to the present.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "GSW",
         "courseHolds": false
     },
     {
@@ -683,7 +683,7 @@
             }
         ],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "GSW",
         "courseHolds": false
     },
     {
@@ -692,7 +692,7 @@
         "description": "Introduction to the history and analysis of German cinema from its beginnings to the present.",
         "prerequisites": [],
         "corequisites": [],
-        "AOS_Req": "Arts and Humanities",
+        "AOS_Req": "GSW",
         "courseHolds": false
     },
     {
@@ -1264,15 +1264,6 @@
     },
     {
         "courseID": "CLAS220",
-        "title": "Description",
-        "description": "None",
-        "prerequisites": [],
-        "corequisites": [],
-        "AOS_Req": "N/A",
-        "courseHolds": false
-    },
-    {
-        "courseID": "PSYC101",
         "title": "Description",
         "description": "None",
         "prerequisites": [],

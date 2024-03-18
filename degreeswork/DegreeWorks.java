@@ -88,11 +88,9 @@ public class DegreeWorks {
     public Course findCourse(String courseID) {
         return allCourses.findCourseByCode(courseID);
     }
-<<<<<<< HEAD
 
     public void printSchedule(String username) {
-       
-=======
+    }
     
     public ArrayList<ArrayList<String>> getFinishedCourses() {
         if (mStudent != null) {
@@ -107,6 +105,5 @@ public class DegreeWorks {
     }
     public void addStudentCourse(String courseID) {
          mStudent.updateStudentTranscript(courseID, null);
->>>>>>> d47e421604e378ae033e2d19107378fd66774d9d
     }
 }

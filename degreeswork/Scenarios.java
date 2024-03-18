@@ -24,7 +24,8 @@ public class Scenarios {
             System.out.println(degreeworks.getRequirements());
             System.out.println("Would you like to pick courses? Press 1 for yes.");
             if(input.nextLine() == "1") {
-                boolean next = true;
+                @SuppressWarnings("unused")
+                boolean next;
                 while(next = true) {
                     System.out.println("Write the course code of the desired course.");
                     String chosenCourseID = input.nextLine();
