@@ -6,6 +6,7 @@ import java.util.UUID;
 public class Student extends User {
     private ArrayList<String> currentCourses;
     private Major major;
+    private String currentSemester;
     private ArrayList<String> advisingNotes;
     private String program;
     private String advisor;
@@ -16,11 +17,12 @@ public class Student extends User {
         // Initialize all attributes with default values
         this.currentCourses = new ArrayList<String>();
         this.major = null; // Assuming 'null' means no major assigned yet.
-        this.advisingNotes = new ArrayList<>();
+        this.currentSemester = "1";
+        this.advisingNotes = new ArrayList<String>();
         this.program = ""; // Assuming empty string means no program assigned yet.
         this.advisor = ""; // Assuming empty string means no advisor assigned yet.
-        this.finishedCourses = new ArrayList<>();
-        this.dashboardWarnings = new ArrayList<>();
+        this.finishedCourses = new ArrayList<ArrayList<String>>();
+        this.dashboardWarnings = new ArrayList<String>();
     }
 
     public void setCurrentCourses(ArrayList<String> currentCourses) {
@@ -29,6 +31,10 @@ public class Student extends User {
 
     public void setMajor(Major major) {
         this.major = major; // This assumes Major is a class. Adjust if it's a different type.
+    }
+
+    public void setCurrentSemester(String currentSemester) {
+        this.currentSemester = currentSemester;
     }
 
     public void setAdvisingNotes(ArrayList<String> advisingNotes) {
@@ -51,7 +57,7 @@ public class Student extends User {
         this.advisor = advisor;
     }
 
-    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades) {
+    public void setFinishedCourses(ArrayList<String> courseNames, ArrayList<String> grades, ArrayList<String> semesters) {
         // Check if courseNames and grades have the same length
         if (courseNames.size() != grades.size()) {
             throw new IllegalArgumentException("Course names and grades must be of equal length");
@@ -66,6 +72,7 @@ public class Student extends User {
             ArrayList<String> courseWithGrade = new ArrayList<>();
             courseWithGrade.add(courseNames.get(i)); // Add course name
             courseWithGrade.add(grades.get(i));      // Add grade
+            courseWithGrade.add(semesters.get(i));
     
             // Add the courseWithGrade list to the finishedCourses list
             this.finishedCourses.add(courseWithGrade);
@@ -79,6 +86,7 @@ public class Student extends User {
         // Add the course ID and grade to the list
         courseWithGrade.add(courseID); // First element is the course ID
         courseWithGrade.add(grade);    // Second element is the grade
+        courseWithGrade.add(String.valueOf(currentSemester));   // Third element is the semester the semester the course was completed
         
         // Add this course and grade list to the list of finished courses
         finishedCourses.add(courseWithGrade);
@@ -88,8 +96,15 @@ public class Student extends User {
         this.dashboardWarnings = dashboardWarnings;
     }
 
-    public void createSchedule() {
-        //TODO LAST 
+    public String createSchedule() {
+        ArrayList<String> plan = Scheduler.createSchedule(this);
+        String schedule = "";
+
+        for (String string : plan) {
+            schedule += string + "\n";
+        }
+
+        return schedule;
     }
 
     public ArrayList<String> getCurrentCourses() {
@@ -98,6 +113,10 @@ public class Student extends User {
 
     public Major getMajor() {
         return this.major; // Returns the major
+    }
+
+    public String getCurrentSemester() {
+        return this.currentSemester;
     }
 
     public ArrayList<String> getAdvisingNotes() {
@@ -174,6 +193,11 @@ public class Student extends User {
         sb.append(", \ndashboardWarnings=").append(dashboardWarnings);
         sb.append('}');
         return sb.toString();
+    }
+
+    public String getRequirements() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getRequirements'");
     }
 
 

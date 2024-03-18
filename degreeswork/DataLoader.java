@@ -24,7 +24,6 @@ public class DataLoader {
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
-
                 course.setCourseID((String) courseData.get("courseID"));
                 course.setTitle((String) courseData.get("title"));
                 course.setDescription((String) courseData.get("description"));
@@ -66,7 +65,6 @@ public class DataLoader {
         }
     }
     
-  
       /**
      * Redone getAllStudents to be more in line with other "getAll" methods
      */
@@ -102,6 +100,7 @@ public class DataLoader {
                 student.setAdvisingNotes(sessionNotesList);
 
                 student.setMajor(new Major((String) studentJSON.get("major")));
+                student.setCurrentSemester((String) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 student.setCurrentAdvisor(UUID.fromString((String) studentJSON.get("currentAdvisor")));
 

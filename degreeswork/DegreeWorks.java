@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class DegreeWorks {
 
     private User mUser;
+    private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
 
@@ -25,6 +26,9 @@ public class DegreeWorks {
 
     public boolean login(String username, String password) {
         this.mUser = allUsers.login(username, password);
+        if (this.mUser != null && this.mUser instanceof Student) {
+            this.mStudent = (Student) this.mUser; // Set mStudent if the logged-in user is a student
+        }
         return this.mUser != null;
     }
 
@@ -83,5 +87,23 @@ public class DegreeWorks {
 
     public Course findCourse(String courseID) {
         return allCourses.findCourseByCode(courseID);
+    }
+
+    public void printSchedule(String username) {
+    }
+    
+    public ArrayList<ArrayList<String>> getFinishedCourses() {
+        if (mStudent != null) {
+            return mStudent.getFinishedCourses();
+        } else {
+            return null; // Return null if the logged-in user is not a student
+        }
+    }
+    
+    public String getRequirements() {
+        return mStudent.getRequirements();
+    }
+    public void addStudentCourse(String courseID) {
+         mStudent.updateStudentTranscript(courseID, null);
     }
 }
