@@ -103,11 +103,25 @@ public class DataLoader {
                 student.setMajor(new Major((String) studentJSON.get("major")));
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
+<<<<<<< HEAD
+                student.setCurrentAdvisor(UUID.fromString((String) studentJSON.get("currentAdvisor")));
+
+                JSONArray finCourses = (JSONArray) studentJSON.get("finishedCourses");
+                ArrayList<ArrayList<String>> finishedCourses = new ArrayList<ArrayList<String>>();
+                for (int i = 0; i < finCourses.size(); i++) {
+                    ArrayList<String> course = new ArrayList<String>();
+                    JSONArray finCourseEntry = (JSONArray) finCourses.get(i);
+                }
+                student.setAdviseeList(advisees);
+
+                users.addUser(student);
+=======
                 if (studentJSON.get("currentAdvisor") != null) {
                     student.setUserID(UUID.fromString((String) studentJSON.get("currentAdvisor")));
                 } else {
                     continue;
                 }                users.addUser(student);
+>>>>>>> 7d7c2d099c39a3446fe027fc6a18b14b9955c3ec
 
             }
         } catch (IOException | ParseException e) {

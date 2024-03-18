@@ -5,24 +5,24 @@ public class DegreeWorksTester {
     public static void main(String[] args) {
         // Initialize UserList and DegreeWorks instances for testing
          DegreeWorks degreeWorks = new DegreeWorks();
-        // System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
-        // System.out.println("Printing User List");
+         System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+         System.out.println("Printing User List");
 
-        // degreeWorks.printUserList();
-        // System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
-        // // Running test cases
-        // testSignup(degreeWorks);
-        // testDatabaseLogin(degreeWorks);
-        // testLogin(degreeWorks);
-        // testGetUser(degreeWorks);
-        // testGetStudents(degreeWorks);
-        // testGetAdvisors(degreeWorks);
-        // testGetAdmins(degreeWorks);
-        // testGetCourses(degreeWorks);
-        // testAddCourse(degreeWorks);
+         degreeWorks.printUserList();
+         System.out.println("*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*\n");
+        // Running test cases
+        //  testSignup(degreeWorks);
+        //  testDatabaseLogin(degreeWorks);
+        //  testLogin(degreeWorks);
+        //  testGetUser(degreeWorks);
+        //  testGetStudents(degreeWorks);
+        //  testGetAdvisors(degreeWorks);
+        //  testGetAdmins(degreeWorks);
+        //  testGetCourses(degreeWorks);
+         //testAddCourse(degreeWorks);
         // testRemoveCourse(degreeWorks);
         // testUpdateCourse(degreeWorks);
-        testGetCourses(degreeWorks);
+       // testGetCourses(degreeWorks);
         System.out.println(degreeWorks.courseToString());
     }
 
