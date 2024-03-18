@@ -66,15 +66,18 @@ public class Scenarios {
         System.out.println("Enter lasts name: ");
         String last = input.nextLine();  // Read user input
         degreeworks.signup(userName, pass, first, last);
-        degreeworks.login(userName, pass);
+        Advisor current = degreeworks.advisorLogin(userName, pass);
+
 
         System.out.println("You have no students add a student");
         String stud = input.nextLine();
         
-        Advisor user = 
+        current.addAdvisee(stud);
+        current.getAdviseeDetails(stud);
+
         
         System.out.println("Here's your list now");
-        degreeworks.getStudents();
+        current.getAdviseeList();
         
 
         

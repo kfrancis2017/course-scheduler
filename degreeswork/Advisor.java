@@ -7,8 +7,8 @@ public class Advisor extends User {
     private ArrayList<String> adviseeList;
     private String advisorSpecialization;
 
-    public Advisor() {
-        super(); 
+    public Advisor(String user, String pass, String first, String last) {
+        super(user, pass, first, last ); 
         // Initialize the adviseeList to prevent NullPointerException
         this.adviseeList = new ArrayList<>();
     }
