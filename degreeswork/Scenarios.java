@@ -68,16 +68,20 @@ public class Scenarios {
         degreeworks.signup(userName, pass, first, last);
         Advisor current = degreeworks.advisorLogin(userName, pass);
 
+        System.out.println("What's your specialization?");
+        current.setAdvisorSpecialization(input.nextLine());
 
         System.out.println("You have no students add a student");
-        String stud = input.nextLine();
+        String student = input.nextLine();
         
-        current.addAdvisee(stud);
-        current.getAdviseeDetails(stud);
+        current.addAdvisee(student);
+        current.getAdviseeDetails(student);
 
+        System.out.println("Add notes");
+        String notes = input.nextLine();
         
-        System.out.println("Here's your list now");
-        current.getAdviseeList();
+        current.addAdvisingSession(current.getAdvisee(userName), notes);
+        
         
 
         
