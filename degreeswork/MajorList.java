@@ -21,7 +21,7 @@ public class MajorList {
     }
 
     public boolean addMajor(Major Major) {
-        if (Major == null || findMajorByCode(Major.getName()) != null)
+        if (Major == null || getMajorByName(Major.getName()) != null)
             return false;
         Majors.add(Major);
         return true;
@@ -42,7 +42,7 @@ public class MajorList {
         return Majors.remove(Major);
     }
 
-    public Major findMajorByCode(String MajorID) {
+    public Major getMajorByName(String MajorID) {
         for (Major Major : Majors) {
             if (Major.getName().equals(MajorID)) {
                 return Major;
@@ -71,5 +71,18 @@ public class MajorList {
             sb.append("\n");
         }
         return sb.toString();        
+    }
+    
+    public void printCoursesForMajor(String majorName) {
+        Major major = getMajorByName(majorName); // Assume getMajorByName is a method in MajorList to find a major by name
+    
+        if (major != null) {
+            System.out.println("Courses for major: " + majorName);
+            for (Course course : major.getCourses()) { // Assume Major has a method getCourses that returns a list of courses
+                System.out.println(course.getCourseID()); // Assume Course has a getName method that returns the course name
+            }
+        } else {
+            System.out.println("Major '" + majorName + "' not found.");
+        }
     }
 }

@@ -8,6 +8,7 @@ public class DegreeWorks {
     private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
+    private MajorList allMajors;
 
     public DegreeWorks(UserList users, CourseList courses) {
         this.allUsers = users;
@@ -17,6 +18,7 @@ public class DegreeWorks {
     public DegreeWorks() {
         this.allUsers = UserList.getInstance();
         this.allCourses = CourseList.getInstance();
+        this.allMajors = MajorList.getInstance();
 
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
@@ -92,18 +94,19 @@ public class DegreeWorks {
     public void printSchedule(String username) {
     }
     
-    public ArrayList<ArrayList<String>> getFinishedCourses() {
-        if (mStudent != null) {
-            return mStudent.getFinishedCourses();
-        } else {
-            return null; // Return null if the logged-in user is not a student
-        }
+    public void viewRecord() {
+        mStudent.viewRecord();
+
     }
-    
-    public String getRequirements() {
-        return mStudent.getRequirements();
+    public void getRequirements(String majorName) {
+        mStudent.printCoursesForMajor(majorName);
     }
+
     public void addStudentCourse(String courseID) {
          mStudent.updateStudentTranscript(courseID, null);
     }
+    public void allToString() {
+        System.out.println(allMajors.allToString());
+    }
+
 }
