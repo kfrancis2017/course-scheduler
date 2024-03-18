@@ -77,21 +77,21 @@ public class DataLoader {
             for (Object obj : studentData) {
                 JSONObject studentJSON = (JSONObject) obj;
                 Student student = new Student();
-
+ 
                 student.setUserID(UUID.fromString((String) studentJSON.get("userID")));
                 student.setUsername((String) studentJSON.get("username"));
                 student.setPassword((String) studentJSON.get("password"));
                 student.setEmail((String) studentJSON.get("email"));
                 student.setFirstName((String) studentJSON.get("firstName"));
                 student.setLastName((String) studentJSON.get("lastName"));
-
+ 
                 JSONArray currentCoursesArray = (JSONArray) studentJSON.get("currentCourses");
                 ArrayList<String> currentCoursesList = new ArrayList<>();
                 for (Object courseObj : currentCoursesArray) {
                     currentCoursesList.add((String) courseObj);
                 }
                 student.setCurrentCourses(currentCoursesList);
-
+ 
                 // Convert JSON array of session notes into a List<String>
                 JSONArray sessionNotesArray = (JSONArray) studentJSON.get("sessionNotes");
                 ArrayList<String> sessionNotesList = new ArrayList<>();
@@ -99,7 +99,7 @@ public class DataLoader {
                     sessionNotesList.add((String) noteObj);
                 }
                 student.setAdvisingNotes(sessionNotesList);
-
+ 
                 student.setMajor(new Major((String) studentJSON.get("major")));
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
@@ -107,13 +107,25 @@ public class DataLoader {
                     student.setUserID(UUID.fromString((String) studentJSON.get("currentAdvisor")));
                 } else {
                     continue;
-                }                users.addUser(student);
-
+                }                
+                users.addUser(student);
+                JSONArray finishedCoursesArray = (JSONArray) studentJSON.get("finishedCourses");
+            for (Object courseArray : finishedCoursesArray) {
+                JSONArray innerArray = (JSONArray) courseArray;
+                String courseName = (String) innerArray.get(0); // Course name
+                String grade = (String) innerArray.get(1); // Grade
+                // Here, we check if the grade is an F, indicating a failure
+                if ("F".equals(grade)) {
+                    student.addFinishedCourse(courseName, "Failed");
+                } else {
+                    student.addFinishedCourse(courseName, grade);
+                }
+            }
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-    }
+    } 
 
     /**
      * Doesn't return an ArrayList, instead populates the singleton, where you can use getAdvisors
@@ -185,7 +197,7 @@ public class DataLoader {
     public void getAllMajors(JSONArray jsonData) {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
-
+    
         for (Object majorObj : jsonData) {
             JSONObject majorData = (JSONObject) majorObj;
             String name = (String) majorData.get("name");
@@ -205,6 +217,7 @@ public class DataLoader {
                     }
                 }
             }
+            // After constructing the Major object and adding courses, add the major to the MajorList
             majors.addMajor(major);
         }
     }

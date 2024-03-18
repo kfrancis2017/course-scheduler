@@ -19,22 +19,25 @@ public class Scenarios {
         if(degreeworks.login(userName, password)) {
             System.out.println("Login successful!");
             System.out.println("Here is your current progress in your degree:");
-            System.out.println(degreeworks.getFinishedCourses());
+            degreeworks.viewRecord();
             System.out.println("Here is your remaining courseload:");
-            System.out.println(degreeworks.getRequirements());
+            degreeworks.getRequirements("Computer Science");
             System.out.println("Would you like to pick courses? Press 1 for yes.");
-            if(input.nextLine() == "1") {
+            if(input.nextLine().equals("1")) {
                 @SuppressWarnings("unused")
-                boolean next;
+                boolean next = true;
                 while(next = true) {
                     System.out.println("Write the course code of the desired course.");
                     String chosenCourseID = input.nextLine();
                     degreeworks.addStudentCourse(chosenCourseID);
                     System.out.println("Enter new course? Press 1 for yes.");
-                    if(input.nextLine() == "1") {
+                    if(input.nextLine().equals("1")) {
                         next = true;
                     } else {
                         next = false;
+                        System.out.println("Goodbye!");
+                    input.close();
+                    System.exit(0);
                     }
                 }
             } else {
