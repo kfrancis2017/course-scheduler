@@ -101,6 +101,16 @@ public class UserList {
         return null;
     }
 
+    public Advisor advisorLogin(String username, String password) {
+        if (searchUser(username)) {
+            for (Advisor advisor : advisors) {
+                if (advisor.getUsername() == username && advisor.getPassword() == password)
+                    return advisor;
+            }
+        }
+        return null;
+    }
+
     public void modifyUser(User user, User newUser) {
         int index = users.indexOf(user);
         if (index != -1) {

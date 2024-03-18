@@ -35,7 +35,7 @@ public class DegreeWorks {
     }
 
     public Advisor advisorLogin(String username, String password) {
-        this.mUser = allUsers.login(username, password);
+        this.mUser = allUsers.advisorLogin(username, password);
         if (this.mUser != null && this.mUser instanceof Advisor) {
             this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
         }

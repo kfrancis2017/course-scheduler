@@ -5,7 +5,7 @@ public class Scenarios {
     public static void main(String[] args) {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
-        testScenario1(degreeworks);
+       // testScenario1(degreeworks);
         testScenario2(degreeworks);
     }
 
@@ -56,7 +56,7 @@ public class Scenarios {
     @SuppressWarnings("resource")
     public static void testScenario2(DegreeWorks degreeworks) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Let's make an account!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("Let's make an account.");
         System.out.println("Enter username: ");
         String userName = input.nextLine();  // Read user input
         System.out.println("Enter password: ");
@@ -65,7 +65,7 @@ public class Scenarios {
         String first = input.nextLine();  // Read user input
         System.out.println("Enter lasts name: ");
         String last = input.nextLine();  // Read user input
-        degreeworks.signup(userName, pass, first, last);
+        degreeworks.advisorSignup(userName, pass, first, last);
         Advisor current = degreeworks.advisorLogin(userName, pass);
 
         System.out.println("What's your specialization?");
@@ -75,12 +75,14 @@ public class Scenarios {
         String student = input.nextLine();
         
         current.addAdvisee(student);
-        current.getAdviseeDetails(student);
+        System.out.println(current.getAdviseeDetails(current.getAdvisee(student)));
 
         System.out.println("Add notes");
         String notes = input.nextLine();
         
         current.addAdvisingSession(current.getAdvisee(userName), notes);
+
+        System.out.println(current.getAdviseeDetails(current.getAdvisee(student)));
         
         
 
