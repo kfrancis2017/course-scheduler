@@ -42,13 +42,15 @@ public class MajorList {
         return Majors.remove(Major);
     }
 
-    public Major getMajorByName(String MajorID) {
-        for (Major Major : Majors) {
-            if (Major.getName().equals(MajorID)) {
-                return Major;
-            }
+    public Major getMajorByName(String MajorName) {
+        Major currentMajor = null;
+        for (Major major : Majors) 
+        if (major.getName().equals(MajorName)) {
+            currentMajor = major;
+        } else {
+            return null; 
         }
-        return null;
+        return currentMajor;
     }
 
     public ArrayList<Major> getMajors() {

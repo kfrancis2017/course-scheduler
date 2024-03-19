@@ -1,12 +1,16 @@
 package degreeswork;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
+import org.json.simple.parser.ParseException;
+
 public class Scenarios {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
-       // testScenario1(degreeworks);
-        testScenario2(degreeworks);
+        testScenario1(degreeworks);
+        //testScenario2(degreeworks);
     }
 
     public static void testScenario1(DegreeWorks degreeworks) {
@@ -18,10 +22,11 @@ public class Scenarios {
         String password = input.nextLine();  // Read user input
         if(degreeworks.login(userName, password)) {
             System.out.println("Login successful!");
+
             System.out.println("Here is your current progress in your degree:");
             degreeworks.viewRecord();
             System.out.println("Here is your remaining courseload:");
-            degreeworks.getRequirements("Computer Science");
+            degreeworks.getRequirements(degreeworks.getMajorName());
             System.out.println("Would you like to pick courses? Press 1 for yes.");
             if(input.nextLine().equals("1")) {
                 @SuppressWarnings("unused")
@@ -88,9 +93,6 @@ public class Scenarios {
         current.addAdvisingSession(current.getAdvisee(userName), notes);
 
         System.out.println(current.getAdviseeDetails(advisee));
-        
-        
-
-        
+        input.close();
     }
 }

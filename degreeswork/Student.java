@@ -187,19 +187,4 @@ public class Student extends User {
         sb.append('}');
         return sb.toString();
     }
-
-    public void printCoursesForMajor(String majorName) {
-        MajorList majorList = MajorList.getInstance(); // Assume MajorList has a method to get the instance
-        Major major = majorList.getMajorByName(majorName); // Assume getMajorByName is a method in MajorList to find a major by name
-    
-        if (major != null) {
-            System.out.println("Courses for major: " + majorName);
-            for (Course course : major.getCourses()) { // Assume Major has a method getCourses that returns a list of courses
-                System.out.println(course.getCourseID()); // Assume Course has a getName method that returns the course name
-            }
-        } else {
-            System.out.println("Major '" + majorName + "' not found.");
-        }
-    }
-    
 }
