@@ -7,7 +7,7 @@ public class Jvaught_tester {
         // Instead of directly reading from Scanner, pass sample data as arguments
         // You can replace these values with any other values as needed
         //testScenario1(degreeworks, "username1", "password1");
-        testScenario2(degreeworks, "username2", "password2", "John", "Doe");
+        testScenario2(degreeworks, "fake_user", "password2", "John", "Doe");
     }
 
     public static void testScenario1(DegreeWorks degreeworks, String userName, String password) {
@@ -45,18 +45,19 @@ public class Jvaught_tester {
 
         System.out.println("Adding a student (use student's name, e.g., 'Alice Smith'):");
         String studentName = "asmith12"; // Replace with actual student name
-        //create a new student here
+        //create a new student here to add to the list
         degreeworks.signup("asmith12", "password", "Alice", "Smith", false);
         current.addAdvisee(studentName);
         Student advisee = current.getAdvisee(studentName);
         System.out.println(current.getAdviseeDetails(advisee));
 
+        // Instead of reading notes from user input, set a fixed note
+        String notes = "Meeting discussed progress and future courses."; // Replace with the actual note content you want
+        current.addAdvisingSession(current.getAdvisee(studentName), notes);
+        System.out.println(current.getAdviseeDetails(advisee));
+
         DataWriter.SaveAllUsers();
-        // System.out.println("Add notes");
-        // String notes = input.nextLine();
-        // current.addAdvisingSession(current.getAdvisee(userName), notes);
-        // System.out.println(current.getAdviseeDetails(advisee));
-        DataWriter.SaveAllUsers();
+        
 
     }
 }
