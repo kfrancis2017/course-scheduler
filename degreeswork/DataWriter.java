@@ -14,7 +14,7 @@ public class DataWriter {
     /**
      * Calls the following methods to save all types of users
      */
-    public void SaveAllUsers() {
+    public static void SaveAllUsers() {
         saveStudents();
         saveAdvisors();
         saveAdmins();
@@ -23,7 +23,7 @@ public class DataWriter {
     /**
      * Uses singleton to write student JSON file
      */
-    private void saveStudents() {
+    private static void saveStudents() {
         UserList users = UserList.getInstance();
         ArrayList<Student> students = users.getStudents();
         JSONArray jsonStudents = new JSONArray();
@@ -38,7 +38,7 @@ public class DataWriter {
     /**
      * Uses singleton to write advisor JSON file
      */
-    private void saveAdvisors() {
+    private static void saveAdvisors() {
         UserList users = UserList.getInstance();
         ArrayList<Advisor> advisors = users.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
@@ -53,7 +53,7 @@ public class DataWriter {
     /**
      * Uses singleton to write admin JSON file
      */
-    private void saveAdmins() {
+    private static void saveAdmins() {
         UserList users = UserList.getInstance();
         ArrayList<Admin> admins = users.getAdmins();
 
@@ -66,7 +66,7 @@ public class DataWriter {
         writeJSONToFile("json/admins.json", jsonAdmins);
     }
 
-    private void writeJSONToFile(String filename, JSONArray jsonArray) {
+    private static void writeJSONToFile(String filename, JSONArray jsonArray) {
         try (FileWriter file = new FileWriter(filename)) {
             file.write(jsonArray.toJSONString());
             file.flush();
@@ -75,7 +75,7 @@ public class DataWriter {
         }
     }
 
-    private JSONObject getStudentJSON(Student student) {
+    private static JSONObject getStudentJSON(Student student) {
         JSONObject studentDetails = new JSONObject();
         studentDetails.put("userID", student.getUserID().toString());
         studentDetails.put("username", student.getUsername());
@@ -102,7 +102,7 @@ public class DataWriter {
         return studentDetails;
     }
 
-    private JSONObject getAdvisorJSON(Advisor advisor) {
+    private static JSONObject getAdvisorJSON(Advisor advisor) {
         JSONObject advisorDetails = new JSONObject();
         advisorDetails.put("userID", advisor.getUserID().toString());
         advisorDetails.put("username", advisor.getUsername());
@@ -122,7 +122,7 @@ public class DataWriter {
         return advisorDetails;
     }
 
-    private JSONObject getAdminJSON(Admin admin) {
+    private static JSONObject getAdminJSON(Admin admin) {
         JSONObject adminDetails = new JSONObject();
         adminDetails.put("userID", admin.getUserID().toString());
         adminDetails.put("username", admin.getUsername());

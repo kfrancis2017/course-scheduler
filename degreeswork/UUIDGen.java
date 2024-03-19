@@ -9,4 +9,8 @@ public class UUIDGen {
         UUID id = UUID.randomUUID();
         System.out.println(id);
     }
+
+    public static UUID generateID() {
+        return UUID.randomUUID();
+    }
 }

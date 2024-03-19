@@ -24,6 +24,7 @@ public class User {
      * @param lastname The User's last name
      */
     public User(String username, String password, String firstname, String lastname) {
+        this.userID = UUIDGen.generateID();
         this.username = username;
         this.password = password;
         this.firstname = firstname;
@@ -33,6 +34,7 @@ public class User {
 
     public User(){
         //creating default values
+        this.userID = UUIDGen.generateID();
         this.username="";
         this.password="";
         this.firstname="";
