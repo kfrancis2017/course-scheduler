@@ -22,4 +22,9 @@ public class Major {
         return courses;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
 }

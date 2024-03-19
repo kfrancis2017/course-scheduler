@@ -44,8 +44,8 @@ public class DegreeWorks {
         return allUsers.advisorLogin(username, password);
     }
 
-    public boolean signup(String username, String password, String firstname, String lastname) {
-        allUsers.addUser(username, password, firstname, lastname);
+    public boolean signup(String username, String password, String firstname, String lastname, boolean isAdvisor) {
+        allUsers.addUser(username, password, firstname, lastname, isAdvisor);
         return true;
     }
 
