@@ -30,7 +30,7 @@ public class DegreeWorks {
         DataLoader.getAllAdvisors();
         DataLoader.getAllAdmins();
         DataLoader.getAllCourses();
- //       DataLoader.getAllMajors();
+        DataLoader.getAllMajors();
     }
 
     public boolean login(String username, String password) {

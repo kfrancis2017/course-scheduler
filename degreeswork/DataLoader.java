@@ -23,7 +23,7 @@ public class DataLoader {
 
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("newcourse.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -32,24 +32,28 @@ public class DataLoader {
                 course.setDescription((String) courseData.get("description"));
 
                 ArrayList<ArrayList<String>> prerequisites = new ArrayList<>();
-                    JSONArray prereqDataArray = (JSONArray) courseData.get("prerequisites");
-                    for (Object obj : prereqDataArray) {
-                        JSONArray innerArray = (JSONArray) obj;
-                        ArrayList<String> prerequisiteList = new ArrayList<>();
-                        for (Object innerObj : innerArray) {
-                            JSONObject prereqJSON = (JSONObject) innerObj;
-                            String prerequisite = ((String) prereqJSON.get("precourseID")) + "\t" + (String) prereqJSON.get("grade");
-                            prerequisiteList.add(prerequisite);
-                        }
+                JSONArray prereqData = (JSONArray) courseData.get("prerequisites");
+                for (Object obj : prereqData) {
+                    JSONArray arr = new JSONArray();
+                    arr.add(obj);
+                    ArrayList<String> prerequisiteList = new ArrayList<>();
+                    JSONArray innerArray = (JSONArray) arr;
+                    for (Object innerObj : innerArray) {
+                        JSONObject prereqJSON = (JSONObject) innerObj;
+                        String prerequisite = ((String) prereqJSON.get("precourseID")) + "\t" + (String) prereqJSON.get("grade");
+                        prerequisiteList.add(prerequisite);
+                    }
                     prerequisites.add(prerequisiteList);
                 }
                 course.setPrereq(prerequisites);
 
                 ArrayList<ArrayList<String>> corequisites = new ArrayList<>();
-                JSONArray coreqDataArray = (JSONArray) courseData.get("corequisites");
-                for (Object obj : coreqDataArray) {
-                    JSONArray innerArray = (JSONArray) obj;
+                JSONArray coreqData = (JSONArray) courseData.get("corequisites");
+                for (Object obj : coreqData) {
+                    JSONArray arr = new JSONArray();
+                    arr.add(obj);
                     ArrayList<String> corequisiteList = new ArrayList<>();
+                    JSONArray innerArray = (JSONArray) arr;
                     for (Object innerObj : innerArray) {
                         JSONObject coreqJSON = (JSONObject) innerObj;
                         String corequisite = ((String) coreqJSON.get("cocourseID")) + "\t" + (String) coreqJSON.get("grade");
@@ -195,7 +199,7 @@ public class DataLoader {
         }
     }
 
-    /* 
+    
     public static void getAllMajors() {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
@@ -210,6 +214,7 @@ public class DataLoader {
                 Major major = new Major(name, id);
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
+                    System.out.println(courses.allToString());
                     JSONArray coursesArray = (JSONArray) optionObj;
                     for (Object courseObj : coursesArray) {
                         JSONObject courseData = (JSONObject) courseObj;
@@ -230,5 +235,4 @@ public class DataLoader {
             e.printStackTrace();
         }
     }
-    */
 }
