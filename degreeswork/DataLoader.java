@@ -13,17 +13,14 @@ import org.json.simple.parser.ParseException;
 
 
 public class DataLoader {
-    public DataLoader() {
-
-    }
-
+    public DataLoader() {}
+    
     public static void getAllCourses() {
         JSONParser parser = new JSONParser();
         CourseList courses = CourseList.getInstance();
-
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("newcourse.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -34,10 +31,8 @@ public class DataLoader {
                 ArrayList<ArrayList<String>> prerequisites = new ArrayList<>();
                 JSONArray prereqData = (JSONArray) courseData.get("prerequisites");
                 for (Object obj : prereqData) {
-                    JSONArray arr = new JSONArray();
-                    arr.add(obj);
                     ArrayList<String> prerequisiteList = new ArrayList<>();
-                    JSONArray innerArray = (JSONArray) arr;
+                    JSONArray innerArray = (JSONArray) obj;
                     for (Object innerObj : innerArray) {
                         JSONObject prereqJSON = (JSONObject) innerObj;
                         String prerequisite = ((String) prereqJSON.get("precourseID")) + "\t" + (String) prereqJSON.get("grade");
