@@ -1,3 +1,7 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.test.config": {
+        "workingDirectory": "${CSCE_247_IT_Dept/test/degreeswork}",
+
+    }
 }
