@@ -195,7 +195,7 @@ public class DataLoader {
         }
     }
 
-    
+    /* 
     public static void getAllMajors() {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
@@ -230,4 +230,5 @@ public class DataLoader {
             e.printStackTrace();
         }
     }
+    */
 }
