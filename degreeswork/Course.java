@@ -90,4 +90,9 @@ public class Course {
         this.courseHolds = courseHolds;
     }
 
+    @Override
+    public String toString() {
+        return courseID+" - "+title;
+    }
+
 }

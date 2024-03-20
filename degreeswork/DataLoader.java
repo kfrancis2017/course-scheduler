@@ -209,7 +209,7 @@ public class DataLoader {
                 Major major = new Major(name, id);
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
-                    System.out.println(courses.allToString());
+                    System.out.println(courses.allToString()); //<---------------------------------REMOVE THIS. THIS IS FOR TESTING
                     JSONArray coursesArray = (JSONArray) optionObj;
                     for (Object courseObj : coursesArray) {
                         JSONObject courseData = (JSONObject) courseObj;
@@ -219,7 +219,6 @@ public class DataLoader {
                             major.addCourse(course);
                         } else {
                             System.out.println("Course '" + courseName + "' not found in the course list.");
-                            // You may want to handle this case according to your application's logic
                         }
                     }
                 }
