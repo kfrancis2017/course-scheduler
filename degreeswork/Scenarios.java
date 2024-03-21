@@ -28,12 +28,12 @@ public class Scenarios {
             System.out.println("Here is your remaining courseload:");
             degreeworks.getRequirements(degreeworks.getMajorName());
             System.out.println("Would you like to pick courses? Press 1 for yes.");
-            if(input.nextLine().equals("1")) {
+            if(/*input.nextLine().equals("1")*/true) {
                 @SuppressWarnings("unused")
                 boolean next = true;
                 while(next = true) {
                     System.out.println("Write the course code of the desired course.");
-                    String chosenCourseID = input.nextLine();
+                    String chosenCourseID = "BIOL110";//input.nextLine();
                     degreeworks.addStudentCourse(chosenCourseID);
                     System.out.println("Enter new course? Press 1 for yes.");
                     if(input.nextLine().equals("1")) {
@@ -59,6 +59,7 @@ public class Scenarios {
             input.close();
             System.exit(0);
         }
+        DataWriter.SaveAllUsers();
     }
 
     @SuppressWarnings("resource")
