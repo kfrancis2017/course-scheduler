@@ -4,7 +4,7 @@
         "lastName": "Spears",
         "password": "iluvdogs2004",
         "currentSemester": 2,
-        "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "major": "Computer Information Systems",
         "currentCourses": [
             "HIST101",
             "ENGL101",
@@ -25,7 +25,7 @@
         "lastName": "Thomas",
         "password": "wetbanana",
         "currentSemester": 2,
-        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "major": "Computer Science",
         "currentCourses": [
             "ENGL101",
             "HIST101"
@@ -44,7 +44,7 @@
         "lastName": "Marquez",
         "password": "Secur3P@55",
         "currentSemester": 2,
-        "major": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "major": "Computer Science",
         "currentCourses": [
             "MATH241",
             "PHYS211",
@@ -64,10 +64,10 @@
         "lastName": "Mitchell",
         "password": "12345",
         "currentSemester": 2,
-        "major": "3fcb4e94-8b64-45e5-85f8-0c5d5e5f2b56",
+        "major": "Computer Information Systems",
         "currentCourses": [],
         "currentAdvisor": " ",
-        "program": "ARTS",
+        "program": "CSCE",
         "sessionNotes": [
             "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
         ],
@@ -80,7 +80,7 @@
         "lastName": "West",
         "password": "JuiceAr3ga",
         "currentSemester": 6,
-        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "major": "Computer Science",
         "currentCourses": [],
         "finishedCourses": [
             ["ENGL101", "A", "1"],
@@ -126,7 +126,7 @@
         "lastName": "Spears",
         "password": "iluvdogs2004",
         "currentSemester": 2,
-        "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "major": "Computer Information Systems",
         "currentCourses": [
             "HIST101",
             "ENGL101",
@@ -147,7 +147,7 @@
         "lastName": "Thomas",
         "password": "wetbanana",
         "currentSemester": 2,
-        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "major": "Computer Science",
         "currentCourses": [
             "ENGL101",
             "HIST101"
@@ -186,7 +186,7 @@
         "lastName": "Mitchell",
         "password": "12345",
         "currentSemester": 2,
-        "major": "3fcb4e94-8b64-45e5-85f8-0c5d5e5f2b56",
+        "major": "Computer Information Systems",
         "currentCourses": [],
 
         "currentAdvisor": " ",
@@ -197,21 +197,5 @@
         "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
         "email": "amitchell@email.sc.edu",
         "username": "amitchell"
-    },
-    {
-        "firstName": "Brax",
-        "lastName": "West",
-        "password": "JuiceAr3ga",
-        "currentSemester": 6,
-        "major": "94d14278-e626-466e-8743-757505f8fba6",
-        "currentCourses": [],
-        "currentAdvisor": " ",
-        "program": "CEC",
-        "sessionNotes": [
-            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
-        ],
-        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "email": "bwest@email.sc.edu",
-        "username": "bwest"
     }
 ]

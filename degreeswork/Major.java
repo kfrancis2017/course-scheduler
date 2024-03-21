@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 public class Major {
     private String name;
-    private String id;
     private ArrayList<Course> courses;
 
-    public Major(String name, String id) {
+    public Major(String name) {
         this.name = name;
-        this.id = id;
         this.courses = new ArrayList<>();
     }
 
@@ -16,9 +14,6 @@ public class Major {
         return name;
     }
 
-    public String getID() {
-        return id;
-    }  
 
     public void addCourse(Course course) {
         courses.add(course);

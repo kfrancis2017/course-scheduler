@@ -101,7 +101,7 @@ public class DataLoader {
                 }
                 student.setAdvisingNotes(sessionNotesList);
  
-                student.setMajor(new Major((String) studentJSON.get("major"), (String) studentJSON.get("majorID")));
+                student.setMajor(new Major((String) studentJSON.get("major")));
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 if (studentJSON.get("currentAdvisor") != null) {
@@ -205,8 +205,7 @@ public class DataLoader {
             for (Object majorObj : majorData) {
                 JSONObject majorJSON = (JSONObject) majorObj;
                 String name = (String) majorJSON.get("name");
-                String id = (String) majorJSON.get("id");
-                Major major = new Major(name, id);
+                Major major = new Major(name);
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;
