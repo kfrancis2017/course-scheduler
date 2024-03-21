@@ -17,9 +17,9 @@ public class Scenarios {
         //Login
         Scanner input = new Scanner(System.in);
         System.out.println("Enter username: ");
-        String userName = input.nextLine();  // Read user input
+        String userName = "dspears";  // Read user input
         System.out.println("Enter password: ");
-        String password = input.nextLine();  // Read user input
+        String password = "iluvdogs2004";  // Read user input
         if(degreeworks.login(userName, password)) {
             System.out.println("Login successful!");
 

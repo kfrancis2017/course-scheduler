@@ -124,7 +124,7 @@ public class DegreeWorks {
     }
 
     public void getRequirements(String majorName) {
-        allMajors.printCoursesForMajor(majorName);
+        System.out.println(allMajors.listCoursesForMajor(majorName, mStudent));
     }
 
     public void addStudentCourse(String courseID) {

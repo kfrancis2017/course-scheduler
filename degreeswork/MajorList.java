@@ -44,11 +44,11 @@ public class MajorList {
 
     public Major getMajorByName(String MajorName) {
         Major currentMajor = null;
-        for (Major major : Majors) 
-        if (major.getName().equals(MajorName)) {
-            currentMajor = major;
-        } else {
-            return null; 
+        for (Major major : Majors) {
+            if (major.getName().equals(MajorName)) {
+                currentMajor = major;
+                break; 
+            }
         }
         return currentMajor;
     }
@@ -75,16 +75,19 @@ public class MajorList {
         return sb.toString();        
     }
     
-    public void printCoursesForMajor(String majorName) {
-        Major major = getMajorByName(majorName); // Assume getMajorByName is a method in MajorList to find a major by name
-    
+    public CourseList listCoursesForMajor(String majorName, Student student) {
+        Major major = getMajorByName(majorName);
+        CourseList list = new CourseList();
         if (major != null) {
             System.out.println("Courses for major: " + majorName);
-            for (Course course : major.getCourses()) { // Assume Major has a method getCourses that returns a list of courses
-                System.out.println(course.getCourseID()); // Assume Course has a getName method that returns the course name
+            for (Course course : major.getCourses()) {
+                if (!student.getCurrentCourses().contains(course.getCourseID())) {
+                    list.addCourse(course);
+                }
             }
         } else {
             System.out.println("Major '" + majorName + "' not found.");
         }
+        return list;
     }
 }

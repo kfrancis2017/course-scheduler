@@ -209,7 +209,6 @@ public class DataLoader {
                 Major major = new Major(name, id);
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
-                    System.out.println(courses.allToString()); //<---------------------------------REMOVE THIS. THIS IS FOR TESTING
                     JSONArray coursesArray = (JSONArray) optionObj;
                     for (Object courseObj : coursesArray) {
                         JSONObject courseData = (JSONObject) courseObj;
