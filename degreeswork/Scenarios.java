@@ -86,7 +86,6 @@ public class Scenarios {
         
         current.addAdvisee(student);
         Student advisee = current.getAdvisee(student);
-        System.out.println(current.getAdviseeDetails(advisee));
 
         // System.out.println("Add notes");
         // String notes = input.nextLine();

@@ -17,7 +17,6 @@ public class DataWriter {
     public static void SaveAllUsers() {
         saveStudents();
         saveAdvisors();
-        saveAdmins();
     }
     
     /**
@@ -48,22 +47,6 @@ public class DataWriter {
         }
 
         writeJSONToFile("json/advisor.json", jsonAdvisors);
-    }
-
-    /**
-     * Uses singleton to write admin JSON file
-     */
-    private static void saveAdmins() {
-        UserList users = UserList.getInstance();
-        ArrayList<Admin> admins = users.getAdmins();
-
-        JSONArray jsonAdmins = new JSONArray();
-
-        for (Admin admin : admins) {
-            jsonAdmins.add(getAdminJSON(admin));
-        }
-
-        writeJSONToFile("json/admin.json", jsonAdmins);
     }
 
     private static void writeJSONToFile(String filename, JSONArray jsonArray) {
@@ -121,19 +104,4 @@ public class DataWriter {
 
         return advisorDetails;
     }
-
-    private static JSONObject getAdminJSON(Admin admin) {
-        JSONObject adminDetails = new JSONObject();
-        adminDetails.put("userID", admin.getUserID().toString());
-        adminDetails.put("username", admin.getUsername());
-        adminDetails.put("password", admin.getPassword());
-        adminDetails.put("email", admin.getEmail());
-        adminDetails.put("firstName", admin.getFirstName());
-        adminDetails.put("lastName", admin.getLastName());
-        adminDetails.put("accountStatus", admin.getAccountStatus());
-
-        return adminDetails;
-    }
-
-    
 }

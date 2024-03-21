@@ -153,35 +153,7 @@ public class DataLoader {
         }
 
     }
-
-    /**
-     * Populates singleton, same logic as above
-     */
-    public static void getAllAdmins() {
-        UserList users = UserList.getInstance();
-
-        JSONParser parser = new JSONParser();
-        try {
-            JSONArray adminData = (JSONArray) parser.parse(new FileReader("json/admin.json"));
-            for (Object obj : adminData) {
-                JSONObject adminJSON = (JSONObject) obj;
-                Admin admin = new Admin();
-
-                admin.setUserID(UUID.fromString((String) adminJSON.get("userID")));
-                admin.setUsername((String) adminJSON.get("username"));
-                admin.setPassword((String) adminJSON.get("password"));
-                admin.setEmail((String) adminJSON.get("email"));
-                admin.setFirstName((String) adminJSON.get("firstName"));
-                admin.setLastName((String) adminJSON.get("lastName"));
-                admin.setAccountStatus((String) adminJSON.get("accountStatus"));
-
-                users.addUser(admin);
-            }
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
-        }
-    }
-
+    
     public static void getAllMajors() {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();

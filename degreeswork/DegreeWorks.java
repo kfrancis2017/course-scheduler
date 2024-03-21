@@ -9,7 +9,6 @@ import org.json.simple.parser.ParseException;
 public class DegreeWorks {
 
     private User mUser;
-    private Advisor mAdvisor;
     private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
@@ -28,7 +27,6 @@ public class DegreeWorks {
 
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
-        DataLoader.getAllAdmins();
         DataLoader.getAllCourses();
         DataLoader.getAllMajors();
     }
@@ -73,10 +71,6 @@ public class DegreeWorks {
 
     public ArrayList<Advisor> getAdvisors() {
         return allUsers.getAdvisors();
-    }
-
-    public ArrayList<Admin> getAdmins() {
-        return allUsers.getAdmins();
     }
 
     public ArrayList<Course> getCourses() {

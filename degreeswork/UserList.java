@@ -7,7 +7,6 @@ public class UserList {
     private ArrayList<User> users;
     private ArrayList<Student> students;
     private ArrayList<Advisor> advisors;
-    private ArrayList<Admin> admins;
 
     /**
      * Initialize the userlists
@@ -16,7 +15,6 @@ public class UserList {
         users = new ArrayList<User>();
         students = new ArrayList<Student>();
         advisors = new ArrayList<Advisor>();
-        admins = new ArrayList<Admin>();
     }
 
     /**
@@ -85,16 +83,6 @@ public class UserList {
         }
         return advisors;
     }
-
-    public ArrayList<Admin> getAdmins() {
-        for (User user : users) {
-            if (user instanceof Admin) {
-                admins.add((Admin) user);
-            }
-        }
-        return admins;
-    }
-
     public User login(String username, String password) {
         if (searchUser(username)){
             if (getUser(username).checkPassword(password)){

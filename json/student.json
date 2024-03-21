@@ -11,13 +11,6 @@
             "CSCE215",
             "CSCE145"
         ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
         "program": "CEC",
         "sessionNotes": [
@@ -36,13 +29,6 @@
         "currentCourses": [
             "ENGL101",
             "HIST101"
-        ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
         ],
         "currentAdvisor": " ",
         "program": "CEC",
@@ -64,13 +50,6 @@
             "PHYS211",
             "CHEM111"
         ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
         "program": "SCI",
         "sessionNotes": [
@@ -87,13 +66,6 @@
         "currentSemester": 2,
         "major": "Computer Information Systems",
         "currentCourses": [],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
         "program": "CSCE",
         "sessionNotes": [
@@ -110,36 +82,6 @@
         "currentSemester": 6,
         "major": "Computer Science",
         "currentCourses": [],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"],
-            ["ENGL102", "A", "2"],
-            ["MATH142", "B", "2"],
-            ["PHYS211", "B", "2"],
-            ["PHYS211L", "B", "2"],
-            ["CSCE146", "A", "2"],
-            ["CSCE215", "A", "2"],
-            ["CSCE211", "A", "3"],
-            ["CSCE240", "A", "3"],
-            ["MATH374", "B", "3"],
-            ["PHYS212", "B", "3"],
-            ["PHYS212L", "B", "3"],
-            ["SPCH145", "A", "3"],
-            ["CSCE212", "A", "4"],
-            ["CSCE247", "A", "4"],
-            ["GEOG201", "A", "4"],
-            ["MATH241", "B", "4"],
-            ["ANTH101", "A", "4"],
-            ["CSCE311", "A", "5"],
-            ["CSCE330", "A", "5"],
-            ["CSCE350", "B", "5"],
-            ["CSCE390", "A", "5"],
-            ["ENGL463", "A", "5"],
-            ["POLI201", "A", "5"]
-        ],
         "currentAdvisor": " ",
         "program": "CEC",
         "sessionNotes": [
@@ -161,13 +103,6 @@
             "CSCE215",
             "CSCE145"
         ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
         "program": "CEC",
         "sessionNotes": [
@@ -187,13 +122,6 @@
             "ENGL101",
             "HIST101"
         ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
         "program": "CEC",
         "sessionNotes": [
@@ -208,18 +136,11 @@
         "lastName": "Marquez",
         "password": "Secur3P@55",
         "currentSemester": 2,
-        "major": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "major": "Computer Science",
         "currentCourses": [
             "MATH241",
             "PHYS211",
             "CHEM111"
-        ],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
         ],
         "currentAdvisor": " ",
         "program": "SCI",
@@ -237,20 +158,29 @@
         "currentSemester": 2,
         "major": "Computer Information Systems",
         "currentCourses": [],
-        "finishedCourses": [
-            ["ENGL101", "A", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"]
-        ],
         "currentAdvisor": " ",
-        "program": "ARTS",
+        "program": "CSCE",
         "sessionNotes": [
             "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
         ],
         "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
         "email": "amitchell@email.sc.edu",
         "username": "amitchell"
+    },
+    {
+        "firstName": "Brax",
+        "lastName": "West",
+        "password": "JuiceAr3ga",
+        "currentSemester": 6,
+        "major": "Computer Science",
+        "currentCourses": [],
+        "currentAdvisor": " ",
+        "program": "CEC",
+        "sessionNotes": [
+            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "bwest@email.sc.edu",
+        "username": "bwest"
     }
 ]
