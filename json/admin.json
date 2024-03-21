@@ -1,38 +1,38 @@
 [
     {
-        "userID": "a1e34bf5-d6f7-48cc-a675-c8c475a737b2",
-        "username": "jsmith",
-        "password": "Js!2024",
-        "email": "jsmith@sc.edu",
+        "accountStatus": "Open",
         "firstName": "John",
         "lastName": "Smith",
-        "accountStatus": "Open"
+        "password": "Js!2024",
+        "userID": "a1e34bf5-d6f7-48cc-a675-c8c475a737b2",
+        "email": "jsmith@sc.edu",
+        "username": "jsmith"
     },
     {
-        "userID": "c345fde6-1234-5678-9101-11a2b3c4d5e6",
-        "username": "tjackson",
-        "password": "Tj2024!",
-        "email": "tjackson@sc.edu",
+        "accountStatus": "Pending",
         "firstName": "Tanya",
         "lastName": "Jackson",
-        "accountStatus": "Pending"
+        "password": "Tj2024!",
+        "userID": "c345fde6-1234-5678-9101-11a2b3c4d5e6",
+        "email": "tjackson@sc.edu",
+        "username": "tjackson"
     },
     {
-        "userID": "d4567ef8-9a1b-2c3d-4e5f-67890a1b2c3d",
-        "username": "chloe92",
-        "password": "ChloE*923",
-        "email": "chloe92@sc.edu",
+        "accountStatus": "Open",
         "firstName": "Chloe",
         "lastName": "Taylor",
-        "accountStatus": "Open"
+        "password": "ChloE*923",
+        "userID": "d4567ef8-9a1b-2c3d-4e5f-67890a1b2c3d",
+        "email": "chloe92@sc.edu",
+        "username": "chloe92"
     },
     {
-        "userID": "e56789fa-b1c2-3d4e-5f6e-7a8b9c0d1e2f",
-        "username": "mark_admin",
-        "password": "M4rk3d!",
-        "email": "mark_admin@sc.edu",
+        "accountStatus": "Open",
         "firstName": "Mark",
         "lastName": "Johnson",
-        "accountStatus": "Open"
+        "password": "M4rk3d!",
+        "userID": "e56789fa-b1c2-3d4e-5f6e-7a8b9c0d1e2f",
+        "email": "mark_admin@sc.edu",
+        "username": "mark_admin"
     }
 ]

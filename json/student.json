@@ -1,111 +1,87 @@
 [
     {
-        "userID": "6f56258d-70fa-4b72-964d-974990611dc4",
-        "username": "dspears",
-        "password": "iluvdogs2004",
-        "email": "dspears@email.sc.edu",
         "firstName": "Dominic",
         "lastName": "Spears",
-        "accountStatus": "Open",
-        "currentCourses": ["HIST101", "ENGL101", "CSCE215", "CSCE145"],
-        "major":"Computer Information Systems",
-        "majorID": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "password": "iluvdogs2004",
         "currentSemester": 2,
-        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
+        "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "currentCourses": [
+            "HIST101",
+            "ENGL101",
+            "CSCE215",
+            "CSCE145"
+        ],
+        "currentAdvisor": " ",
         "program": "CEC",
-        "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
-        "finishedCourses": [
-            ["ELCT101", "A", "1"],
-            ["HIST101", "A", "1"],
-            ["ENGL101", "A", "1"],
-            ["CSCE215", "F", "1"],
-            ["CSCE145", "A", "1"]
-        ]
+        "sessionNotes": [
+            "dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dspears@email.sc.edu",
+        "username": "dspears"
     },
     {
-        "userID": "a73bf1c8-9f37-468a-a444-c54c8a91ab51",
-        "username": "vtho24",
-        "password": "wetbanana",
-        "email": "vtho24@email.sc.edu",
         "firstName": "Victor",
         "lastName": "Thomas",
-        "accountStatus": "Open",
-        "currentCourses": ["ENGL101", "HIST101"],
-        "major": "Computer Science",
-        "majorID": "94d14278-e626-466e-8743-757505f8fba6",
+        "password": "wetbanana",
         "currentSemester": 2,
+        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "currentCourses": [
+            "ENGL101",
+            "HIST101"
+        ],
+        "currentAdvisor": " ",
         "program": "CEC",
-        "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
-        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
-        "finishedCourses": [
-            ["ELCT101", "B", "1"],
-            ["HIST101", "B", "1"],
-            ["ENGL101", "B", "1"],
-            ["CSCE215", "F", "1"],
-            ["CSCE145", "C", "1"]
-        ]
+        "sessionNotes": [
+            "dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "vtho24@email.sc.edu",
+        "username": "vtho24"
     },
     {
-        "userID": "b34fd1e8-c6a1-4d2a-9d5c-34fa3d041c54",
-        "username": "lmarquez",
-        "password": "Secur3P@55",
-        "email": "lmarquez@email.sc.edu",
         "firstName": "Luisa",
         "lastName": "Marquez",
-        "accountStatus": "Probation",
-        "currentCourses": ["MATH241", "PHYS211", "CHEM111"],
-        "major": "Business Administration",
-        "majorID": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "password": "Secur3P@55",
         "currentSemester": 2,
+        "major": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "currentCourses": [
+            "MATH241",
+            "PHYS211",
+            "CHEM111"
+        ],
+        "currentAdvisor": " ",
         "program": "SCI",
-        "currentAdvisor": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
-        "sessionNotes": ["bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. 03012024"],
-        "finishedCourses": [
-            ["MATH141", "C", "1"],
-            ["PHYS201", "B", "1"],
-            ["CHEM101", "C", "1"],
-            ["ENGL102", "D", "1"],
-            ["CSCE102", "B", "1"]
-        ]
+        "sessionNotes": [
+            "bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. 03012024"
+        ],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "lmarquez@email.sc.edu",
+        "username": "lmarquez"
     },
     {
-        "userID": "c48d89a3-aae1-4b59-bcde-29d2db5d3e4d",
-        "username": "thill",
+        "firstName": "Anna",
+        "lastName": "Mitchell",
         "password": "12345",
-        "email": "thill@email.sc.edu",
-        "firstName": "Tawnie",
-        "lastName": "Hill",
-        "accountStatus": "Pending",
-        "currentCourses": [],
-        "major": "Computer Information Systems",
-        "majorID": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
         "currentSemester": 2,
-        "program": "CSCE",
-        "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "sessionNotes": ["emily1985 wrote: Student is considering a change in ID. Explore options in next meeting. 11202024"],
-        "finishedCourses": [
-            ["ARTS101", "B", "1"],
-            ["ARTS102", "A", "1"],
-            ["HIST105", "A", "1"],
-            ["ENGL110", "B", "1"],
-            ["PHIL101", "C", "1"]
-        ]
+        "major": "3fcb4e94-8b64-45e5-85f8-0c5d5e5f2b56",
+        "currentCourses": [],
+        "currentAdvisor": " ",
+        "program": "ARTS",
+        "sessionNotes": [
+            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "amitchell@email.sc.edu",
+        "username": "amitchell"
     },
     {
-        "userID": "9757f1f3-e9a5-4533-93b2-ce3c50866854",
-        "username": "bwest",
-        "password": "JuiceAr3ga",
-        "email": "bwest@email.sc.edu",
         "firstName": "Brax",
         "lastName": "West",
-        "accountStatus": "Open",
-        "currentCourses": [],
-        "major": "Computer Science",
-        "majorID": "94d14278-e626-466e-8743-757505f8fba6",
+        "password": "JuiceAr3ga",
         "currentSemester": 6,
-        "program": "CEC",
-        "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "sessionNotes": ["emily1985 wrote: Student is considering a change in ID. Explore options in next meeting. 11202024"],
+        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "currentCourses": [],
         "finishedCourses": [
             ["ENGL101", "A", "1"],
             ["MATH141", "A", "1"],
@@ -135,56 +111,107 @@
             ["CSCE390", "A", "5"],
             ["ENGL463", "A", "5"],
             ["POLI201", "A", "5"]
-        ]
+        ],
+        "currentAdvisor": " ",
+        "program": "CEC",
+        "sessionNotes": [
+            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "bwest@email.sc.edu",
+        "username": "bwest"
     },
     {
-        "userID": "d5970f60-d321-4051-8161-369062b61bac",
-        "username": "thill21",
-        "password": "limbo",
-        "email": "thill21@email.sc.edu",
-        "firstName": "Tawnie",
-        "lastName": "Hill",
-        "accountStatus": "Open",
-        "currentCourses": [],
-        "major": "Computer Information Systems",
-        "majorID": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
-        "currentSemester": 7,
+        "firstName": "Dominic",
+        "lastName": "Spears",
+        "password": "iluvdogs2004",
+        "currentSemester": 2,
+        "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "currentCourses": [
+            "HIST101",
+            "ENGL101",
+            "CSCE215",
+            "CSCE145"
+        ],
+        "currentAdvisor": " ",
         "program": "CEC",
-        "currentAdvisor": null,
-        "sessionNotes": [],
-        "finishedCourses": [
-            ["ENGL101", "C", "1"],
-            ["MATH141", "A", "1"],
-            ["CSCE145", "A", "1"],
-            ["CSCE190", "A", "1"],
-            ["CHEM101", "A", "1"],
-            ["ENGL102", "B", "2"],
-            ["CHEM102", "B", "2"],
-            ["CSCE146", "B", "2"],
-            ["CSCE215", "A", "2"],
-            ["ARTE260", "A", "2"],
-            ["CSCE205", "A", "3"],
-            ["CSCE210", "B", "3"],
-            ["CSCE247", "B", "3"],
-            ["ECON224", "A", "3"],
-            ["SPCH145", "A", "3"],
-            ["CSCE201", "B", "4"],
-            ["CSCE240", "B", "4"],
-            ["MATH174", "B", "4"],
-            ["MGSC290", "A", "4"],
-            ["AFAM201", "A", "4"],
-            ["CSCE350", "B", "5"],
-            ["CSCE390", "A", "5"],
-            ["STAT515", "A", "5"],
-            ["ACCT222", "B", "5"],
-            ["MGMT371", "A", "5"],
-            ["ENGL463", "A", "5"],
-            ["CSCE520", "B", "6"],
-            ["CSCE594", "C", "6"],
-            ["STAT516", "B", "6"],
-            ["ECON311", "A", "6"],
-            ["ARTH107", "A", "6"]
-        ]
+        "sessionNotes": [
+            "dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dspears@email.sc.edu",
+        "username": "dspears"
+    },
+    {
+        "firstName": "Victor",
+        "lastName": "Thomas",
+        "password": "wetbanana",
+        "currentSemester": 2,
+        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "currentCourses": [
+            "ENGL101",
+            "HIST101"
+        ],
+        "currentAdvisor": " ",
+        "program": "CEC",
+        "sessionNotes": [
+            "dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "vtho24@email.sc.edu",
+        "username": "vtho24"
+    },
+    {
+        "firstName": "Luisa",
+        "lastName": "Marquez",
+        "password": "Secur3P@55",
+        "currentSemester": 2,
+        "major": "e9b1fc25-4e64-4f8e-a9d6-516f54138762",
+        "currentCourses": [
+            "MATH241",
+            "PHYS211",
+            "CHEM111"
+        ],
+        "currentAdvisor": " ",
+        "program": "SCI",
+        "sessionNotes": [
+            "bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. 03012024"
+        ],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "lmarquez@email.sc.edu",
+        "username": "lmarquez"
+    },
+    {
+        "firstName": "Anna",
+        "lastName": "Mitchell",
+        "password": "12345",
+        "currentSemester": 2,
+        "major": "3fcb4e94-8b64-45e5-85f8-0c5d5e5f2b56",
+        "currentCourses": [],
+
+        "currentAdvisor": " ",
+        "program": "ARTS",
+        "sessionNotes": [
+            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "amitchell@email.sc.edu",
+        "username": "amitchell"
+    },
+    {
+        "firstName": "Brax",
+        "lastName": "West",
+        "password": "JuiceAr3ga",
+        "currentSemester": 6,
+        "major": "94d14278-e626-466e-8743-757505f8fba6",
+        "currentCourses": [],
+        "currentAdvisor": " ",
+        "program": "CEC",
+        "sessionNotes": [
+            "emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "bwest@email.sc.edu",
+        "username": "bwest"
     }
 ]
-

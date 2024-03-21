@@ -41,8 +41,11 @@ public class UserList {
         }
     }
 
-    public void addUser(String username, String password, String firstname, String lastname) {
-        addUser(new User(username, password, firstname, lastname));
+    public void addUser(String username, String password, String firstname, String lastname, boolean isAdvisor) {
+        if (isAdvisor)
+            addUser(new Advisor(username, password, firstname, lastname));
+        else
+            addUser(new Student(username, password, firstname, lastname));
     }
 
     public boolean searchUser(String username) {

@@ -87,12 +87,12 @@ public class Scenarios {
         Student advisee = current.getAdvisee(student);
         System.out.println(current.getAdviseeDetails(advisee));
 
-        System.out.println("Add notes");
-        String notes = input.nextLine();
+        // System.out.println("Add notes");
+        // String notes = input.nextLine();
         
-        current.addAdvisingSession(current.getAdvisee(userName), notes);
+      //  current.addAdvisingSession(current.getAdvisee(userName), notes);
 
-        System.out.println(current.getAdviseeDetails(advisee));
+        DataWriter.SaveAllUsers();
         input.close();
     }
 }
