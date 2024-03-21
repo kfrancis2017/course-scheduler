@@ -1,5 +1,6 @@
 package degreeswork;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,16 +13,14 @@ import org.json.simple.parser.ParseException;
 
 
 public class DataLoader {
-    public DataLoader() {
-
-    }
+    public DataLoader() {}
+    
     public static void getAllCourses() {
         JSONParser parser = new JSONParser();
         CourseList courses = CourseList.getInstance();
-
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/course.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -46,8 +45,10 @@ public class DataLoader {
                 ArrayList<ArrayList<String>> corequisites = new ArrayList<>();
                 JSONArray coreqData = (JSONArray) courseData.get("corequisites");
                 for (Object obj : coreqData) {
+                    JSONArray arr = new JSONArray();
+                    arr.add(obj);
                     ArrayList<String> corequisiteList = new ArrayList<>();
-                    JSONArray innerArray = (JSONArray) obj;
+                    JSONArray innerArray = (JSONArray) arr;
                     for (Object innerObj : innerArray) {
                         JSONObject coreqJSON = (JSONObject) innerObj;
                         String corequisite = ((String) coreqJSON.get("cocourseID")) + "\t" + (String) coreqJSON.get("grade");
@@ -100,7 +101,7 @@ public class DataLoader {
                 }
                 student.setAdvisingNotes(sessionNotesList);
  
-                student.setMajor(new Major((String) studentJSON.get("major")));
+                student.setMajor(new Major((String) studentJSON.get("major"), (String) studentJSON.get("majorID")));
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 if (studentJSON.get("currentAdvisor") != null) {
@@ -194,31 +195,37 @@ public class DataLoader {
     }
 
     
-    public void getAllMajors(JSONArray jsonData) {
+    public static void getAllMajors() {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
-    
-        for (Object majorObj : jsonData) {
-            JSONObject majorData = (JSONObject) majorObj;
-            String name = (String) majorData.get("name");
-            Major major = new Major(name);
-            JSONArray options = (JSONArray) majorData.get("options");
-            for (Object optionObj : options) {
-                JSONArray coursesArray = (JSONArray) optionObj;
-                for (Object courseObj : coursesArray) {
-                    JSONObject courseData = (JSONObject) courseObj;
-                    String courseName = (String) courseData.get("course");
-                    Course course = courses.findCourseByCode(courseName);
-                    if (course != null) {
-                        major.addCourse(course);
-                    } else {
-                        System.out.println("Course '" + courseName + "' not found in the course list.");
-                        // You may want to handle this case according to your application's logic
+        JSONParser parser = new JSONParser();
+
+        try {
+            JSONArray majorData = (JSONArray) parser.parse(new FileReader("json/major.json"));
+            for (Object majorObj : majorData) {
+                JSONObject majorJSON = (JSONObject) majorObj;
+                String name = (String) majorJSON.get("name");
+                String id = (String) majorJSON.get("id");
+                Major major = new Major(name, id);
+                JSONArray options = (JSONArray) majorJSON.get("options");
+                for (Object optionObj : options) {
+                    JSONArray coursesArray = (JSONArray) optionObj;
+                    for (Object courseObj : coursesArray) {
+                        JSONObject courseData = (JSONObject) courseObj;
+                        String courseName = (String) courseData.get("course");
+                        Course course = courses.findCourseByCode(courseName);
+                        if (course != null) {
+                            major.addCourse(course);
+                        } else {
+                            System.out.println("Course '" + courseName + "' not found in the course list.");
+                        }
                     }
                 }
+                // After constructing the Major object and adding courses, add the major to the MajorList
+                majors.addMajor(major);
             }
-            // After constructing the Major object and adding courses, add the major to the MajorList
-            majors.addMajor(major);
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
         }
     }
 }
