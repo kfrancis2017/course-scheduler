@@ -9,8 +9,8 @@ public class Scenarios {
     public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
-        testScenario1(degreeworks);
-        //testScenario2(degreeworks);
+        //testScenario1(degreeworks);
+        testScenario2(degreeworks);
     }
 
     public static void testScenario1(DegreeWorks degreeworks) {
