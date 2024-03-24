@@ -25,6 +25,19 @@ public class Student extends User {
         this.dashboardWarnings = new ArrayList<String>();
     }
 
+    public Student(String username, String password, String firstname, String lastname) {
+        super(username, password, firstname, lastname);
+        // Initialize all attributes with default values
+        this.currentCourses = new ArrayList<String>();
+        this.major = new Major("undecided"); // Assuming 'null' means no major assigned yet.
+        this.currentSemester = 1;
+        this.advisingNotes = new ArrayList<String>();
+        this.program = ""; // Assuming empty string means no program assigned yet.
+        this.advisor = " "; // Assuming empty string means no advisor assigned yet.
+        this.finishedCourses = new ArrayList<ArrayList<String>>();
+        this.dashboardWarnings = new ArrayList<String>();
+    }
+
     public void setCurrentCourses(ArrayList<String> currentCourses) {
         this.currentCourses = currentCourses;
     }
@@ -187,19 +200,4 @@ public class Student extends User {
         sb.append('}');
         return sb.toString();
     }
-
-    public void printCoursesForMajor(String majorName) {
-        MajorList majorList = MajorList.getInstance(); // Assume MajorList has a method to get the instance
-        Major major = majorList.getMajorByName(majorName); // Assume getMajorByName is a method in MajorList to find a major by name
-    
-        if (major != null) {
-            System.out.println("Courses for major: " + majorName);
-            for (Course course : major.getCourses()) { // Assume Major has a method getCourses that returns a list of courses
-                System.out.println(course.getCourseID()); // Assume Course has a getName method that returns the course name
-            }
-        } else {
-            System.out.println("Major '" + majorName + "' not found.");
-        }
-    }
-    
 }

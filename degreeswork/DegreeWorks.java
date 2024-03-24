@@ -1,11 +1,14 @@
 package degreeswork;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
+
+import org.json.simple.parser.ParseException;
 
 public class DegreeWorks {
 
     private User mUser;
-    private Advisor mAdvisor;
     private Student mStudent;
     private UserList allUsers;
     private CourseList allCourses;
@@ -17,15 +20,15 @@ public class DegreeWorks {
         this.allCourses = courses;
     }
 
-    public DegreeWorks() {
+    public DegreeWorks() throws FileNotFoundException, IOException, ParseException {
         this.allUsers = UserList.getInstance();
         this.allCourses = CourseList.getInstance();
         this.allMajors = MajorList.getInstance();
 
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
-        DataLoader.getAllAdmins();
         DataLoader.getAllCourses();
+        DataLoader.getAllMajors();
     }
 
     public boolean login(String username, String password) {
@@ -44,8 +47,8 @@ public class DegreeWorks {
         return allUsers.advisorLogin(username, password);
     }
 
-    public boolean signup(String username, String password, String firstname, String lastname) {
-        allUsers.addUser(username, password, firstname, lastname);
+    public boolean signup(String username, String password, String firstname, String lastname, boolean isAdvisor) {
+        allUsers.addUser(username, password, firstname, lastname, isAdvisor);
         return true;
     }
 
@@ -68,10 +71,6 @@ public class DegreeWorks {
 
     public ArrayList<Advisor> getAdvisors() {
         return allUsers.getAdvisors();
-    }
-
-    public ArrayList<Admin> getAdmins() {
-        return allUsers.getAdmins();
     }
 
     public ArrayList<Course> getCourses() {
@@ -114,12 +113,16 @@ public class DegreeWorks {
         mStudent.viewRecord();
 
     }
+    public String getMajorName() {
+        return mStudent.getMajor().getName();
+    }
+
     public void getRequirements(String majorName) {
-        mStudent.printCoursesForMajor(majorName);
+        System.out.println(allMajors.listCoursesForMajor(majorName, mStudent));
     }
 
     public void addStudentCourse(String courseID) {
-         mStudent.updateStudentTranscript(courseID, null);
+        mStudent.updateStudentTranscript(courseID, null);
     }
     public void allToString() {
         System.out.println(allMajors.allToString());

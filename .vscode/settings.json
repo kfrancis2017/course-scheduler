@@ -1,3 +1,7 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.test.config": {
+        "workingDirectory": "${test/degreeswork}",
+
+    }
 }

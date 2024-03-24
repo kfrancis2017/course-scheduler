@@ -22,7 +22,6 @@ This repository contains the source code and documentation for the redevelopment
 ## Acknowledgements
 
 We would like to express our gratitude to Portia Plante, Professor of CSCE 247 for her guidance and support throughout the development process.
-Thanks to OpenAI for their wonderful assistance with our project.
 
 ---
 **Note:** This README is subject to change as the project evolves. Please refer to the latest version for the most up-to-date information.

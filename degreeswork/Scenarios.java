@@ -1,11 +1,15 @@
 package degreeswork;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
+import org.json.simple.parser.ParseException;
+
 public class Scenarios {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
-       // testScenario1(degreeworks);
+        //testScenario1(degreeworks);
         testScenario2(degreeworks);
     }
 
@@ -13,22 +17,23 @@ public class Scenarios {
         //Login
         Scanner input = new Scanner(System.in);
         System.out.println("Enter username: ");
-        String userName = input.nextLine();  // Read user input
+        String userName = "dspears";  // Read user input
         System.out.println("Enter password: ");
-        String password = input.nextLine();  // Read user input
+        String password = "iluvdogs2004";  // Read user input
         if(degreeworks.login(userName, password)) {
             System.out.println("Login successful!");
+
             System.out.println("Here is your current progress in your degree:");
             degreeworks.viewRecord();
             System.out.println("Here is your remaining courseload:");
-            degreeworks.getRequirements("Computer Science");
+            degreeworks.getRequirements(degreeworks.getMajorName());
             System.out.println("Would you like to pick courses? Press 1 for yes.");
-            if(input.nextLine().equals("1")) {
+            if(/*input.nextLine().equals("1")*/true) {
                 @SuppressWarnings("unused")
                 boolean next = true;
                 while(next = true) {
                     System.out.println("Write the course code of the desired course.");
-                    String chosenCourseID = input.nextLine();
+                    String chosenCourseID = "BIOL110";//input.nextLine();
                     degreeworks.addStudentCourse(chosenCourseID);
                     System.out.println("Enter new course? Press 1 for yes.");
                     if(input.nextLine().equals("1")) {
@@ -54,6 +59,7 @@ public class Scenarios {
             input.close();
             System.exit(0);
         }
+        DataWriter.SaveAllUsers();
     }
 
     @SuppressWarnings("resource")
@@ -80,17 +86,14 @@ public class Scenarios {
         
         current.addAdvisee(student);
         Student advisee = current.getAdvisee(student);
-        System.out.println(current.getAdviseeDetails(advisee));
 
-        System.out.println("Add notes");
-        String notes = input.nextLine();
+        // System.out.println("Add notes");
+        // String notes = input.nextLine();
         
-        current.addAdvisingSession(current.getAdvisee(userName), notes);
+      //  current.addAdvisingSession(current.getAdvisee(userName), notes);
 
-        System.out.println(current.getAdviseeDetails(advisee));
-        
-        
-
-        
+        DataWriter.SaveAllUsers();
+        input.close();
     }
 }
+    

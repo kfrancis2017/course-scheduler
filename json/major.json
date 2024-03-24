@@ -79,7 +79,7 @@
             [{"course": "CSCE210", "prefSem": 3}],
             [{"course": "CSCE247", "prefSem": 3}], 
             [{"course": "ECON224", "prefSem": 3}], 
-            [{"course": "SPCH140", "prefSem": 3}, {"course": "SPCH14t", "prefSem": 3}, {"course": "SPCH230", "prefSem": 3}],
+            [{"course": "SPCH140", "prefSem": 3}, {"course": "SPCH140", "prefSem": 3}, {"course": "SPCH230", "prefSem": 3}],
 
             [{"course": "CSCE201", "prefSem": 4}],
             [{"course": "CSCE240", "prefSem": 4}], 

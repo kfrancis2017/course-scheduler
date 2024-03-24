@@ -14,16 +14,15 @@ public class DataWriter {
     /**
      * Calls the following methods to save all types of users
      */
-    public void SaveAllUsers() {
+    public static void SaveAllUsers() {
         saveStudents();
         saveAdvisors();
-        saveAdmins();
     }
     
     /**
      * Uses singleton to write student JSON file
      */
-    private void saveStudents() {
+    private static void saveStudents() {
         UserList users = UserList.getInstance();
         ArrayList<Student> students = users.getStudents();
         JSONArray jsonStudents = new JSONArray();
@@ -32,13 +31,13 @@ public class DataWriter {
             jsonStudents.add(getStudentJSON(student));
         }
 
-        writeJSONToFile("json/students.json", jsonStudents);
+        writeJSONToFile("json/student.json", jsonStudents);
     }
 
     /**
      * Uses singleton to write advisor JSON file
      */
-    private void saveAdvisors() {
+    private static void saveAdvisors() {
         UserList users = UserList.getInstance();
         ArrayList<Advisor> advisors = users.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
@@ -47,26 +46,10 @@ public class DataWriter {
             jsonAdvisors.add(getAdvisorJSON(advisor));
         }
 
-        writeJSONToFile("json/advisors.json", jsonAdvisors);
+        writeJSONToFile("json/advisor.json", jsonAdvisors);
     }
 
-    /**
-     * Uses singleton to write admin JSON file
-     */
-    private void saveAdmins() {
-        UserList users = UserList.getInstance();
-        ArrayList<Admin> admins = users.getAdmins();
-
-        JSONArray jsonAdmins = new JSONArray();
-
-        for (Admin admin : admins) {
-            jsonAdmins.add(getAdminJSON(admin));
-        }
-
-        writeJSONToFile("json/admins.json", jsonAdmins);
-    }
-
-    private void writeJSONToFile(String filename, JSONArray jsonArray) {
+    private static void writeJSONToFile(String filename, JSONArray jsonArray) {
         try (FileWriter file = new FileWriter(filename)) {
             file.write(jsonArray.toJSONString());
             file.flush();
@@ -75,7 +58,7 @@ public class DataWriter {
         }
     }
 
-    private JSONObject getStudentJSON(Student student) {
+    private static JSONObject getStudentJSON(Student student) {
         JSONObject studentDetails = new JSONObject();
         studentDetails.put("userID", student.getUserID().toString());
         studentDetails.put("username", student.getUsername());
@@ -102,7 +85,7 @@ public class DataWriter {
         return studentDetails;
     }
 
-    private JSONObject getAdvisorJSON(Advisor advisor) {
+    private static JSONObject getAdvisorJSON(Advisor advisor) {
         JSONObject advisorDetails = new JSONObject();
         advisorDetails.put("userID", advisor.getUserID().toString());
         advisorDetails.put("username", advisor.getUsername());
@@ -121,19 +104,4 @@ public class DataWriter {
 
         return advisorDetails;
     }
-
-    private JSONObject getAdminJSON(Admin admin) {
-        JSONObject adminDetails = new JSONObject();
-        adminDetails.put("userID", admin.getUserID().toString());
-        adminDetails.put("username", admin.getUsername());
-        adminDetails.put("password", admin.getPassword());
-        adminDetails.put("email", admin.getEmail());
-        adminDetails.put("firstName", admin.getFirstName());
-        adminDetails.put("lastName", admin.getLastName());
-        adminDetails.put("accountStatus", admin.getAccountStatus());
-
-        return adminDetails;
-    }
-
-    
 }
