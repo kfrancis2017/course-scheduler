@@ -6,11 +6,11 @@
         "majorCreditsRequired":90,
         "electiveCreditsRequired":26,
         "options": [
-            [{"course": "ENGL101", "prefSem": 1}],
-            [{"course": "MATH141", "prefSem": 1}], 
-            [{"course": "CSCE145", "prefSem": 1}],
-            [{"course": "CSCE190", "prefSem": 1}],
-            [{"course": "AFAM202", "prefSem": 1}, {"course": "ARTH105", "prefSem": 1}, {"course": "FAMS240", "prefSem": 1}],
+            ["ENGL101"],
+            ["MATH141"], 
+            ["CSCE145"],
+            ["CSCE190"],
+            ["AFAM202", "ARTH105", "FAMS240"],
 
             [{"course": "ENGL102", "prefSem": 2}],
             [{"course": "MATH142", "prefSem": 2}],

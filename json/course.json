@@ -19,7 +19,8 @@
         ],
         "corequisites": [],
         "AOS_Req": "Engineering",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ECHE310",
