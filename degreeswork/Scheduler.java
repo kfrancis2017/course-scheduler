@@ -112,8 +112,6 @@ public class Scheduler {
 
  
 
-
-        return null;
     }
 
     public double currentGPA() {
