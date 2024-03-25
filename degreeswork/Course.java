@@ -11,6 +11,7 @@ public class Course {
     private ArrayList<ArrayList<String>> coreq; // Same structure for corequisites.
     private String AOS_Req;
     private boolean courseHolds;
+    private int hours;
 
     public Course() {
         this.prereq = new ArrayList<>();
@@ -20,9 +21,10 @@ public class Course {
         this.courseID = "";
         this.description = "";
         this.courseHolds = false;
+        this.hours = 0;
     }
 
-    public Course(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean courseHolds) {
+    public Course(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean courseHolds, int hours) {
         this.title = title;
         this.courseID = courseID;
         this.description = description;
@@ -30,6 +32,7 @@ public class Course {
         this.coreq = coreq;
         this.AOS_Req = AOS_Req;
         this.courseHolds = courseHolds;
+        this.hours = hours;
     }
 
     // Getters
@@ -61,6 +64,10 @@ public class Course {
         return courseHolds;
     }
 
+    public int getHours() {
+        return hours;
+    }
+
     // Setters
     public void setTitle(String title) {
         this.title = title;
@@ -88,6 +95,10 @@ public class Course {
 
     public void setCourseHolds(boolean courseHolds) {
         this.courseHolds = courseHolds;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     @Override
