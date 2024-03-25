@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Major {
     private String name;
-    private ArrayList<Course> courses;
+    private ArrayList<ArrayList<Course>> courses;
 
     public Major(String name) {
         this.name = name;
@@ -16,10 +16,12 @@ public class Major {
 
 
     public void addCourse(Course course) {
-        courses.add(course);
+        ArrayList<Course> addTo = new ArrayList<Course>();
+        addTo.add(course);
+        courses.add(addTo);
     }
 
-    public ArrayList<Course> getCourses() {
+    public ArrayList<ArrayList<Course>> getCourses() {
         return courses;
     }
 

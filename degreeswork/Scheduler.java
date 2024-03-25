@@ -1,5 +1,8 @@
 package degreeswork;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Scheduler {
@@ -19,13 +22,13 @@ public class Scheduler {
         return null;
     }
 
-    public static ArrayList<String> createSchedule(Student student) {
+    public static void createSchedule(Student student) {
         // Create the arraylist that will hold the plan
         ArrayList<ArrayList<Course>> plan = new ArrayList<ArrayList<Course>>(); 
 
         // Load student's major
         Major major = student.getMajor();
-        ArrayList<Course> majorCourses = major.getCourses();
+        ArrayList<ArrayList<Course>> majorCourses = major.getCourses();
 
         // Loads student's finished courses, which contains courseID, grade, and semester taken
         ArrayList<ArrayList<String>> finCourDetails = student.getFinishedCourses();
@@ -48,13 +51,62 @@ public class Scheduler {
             plan.get(Integer.parseInt(list.get(2))).add(courses.findCourseByCode(list.get(0)));
         }
 
-        // Fill an array of courses that need to be taken still to fufill major
+        // Creates an arraylist of courses that need to be taken still to fufill major
         ArrayList<Course> todo = new ArrayList<Course>();
 
-        if ()
+        // Fills todo list with courses from major map
+        for (ArrayList<Course> options : majorCourses) {
+            for (Course fin : finishedCourses) {
+                // Checks if student has already finished a course found on the major map
+                if (!options.get(0).toString().equals(fin.toString())) 
+                    todo.add(options.get(0));
+                
+            }
+        }
 
+        // Fill out the plan with todo list
+        for (ArrayList<Course> sem : plan) {
+            int semHours = 0;
+            // Tally up credits of finished courses if present
+            for (Course course : sem) {
+                semHours += course.getHours();
+            }
 
+            while (semHours < 15) {
+                // Adds the course at the top of the todo list to the plan
+                sem.add(todo.get(0));
 
+                // Add the added courses credit hours to the semester total
+                semHours += todo.get(0).getHours();
+
+                // Remove the course after adding to plan
+                todo.remove(0);
+
+                // Shift up the remaining courses
+                for (int i = 0; i < todo.size(); i++) {
+                    todo.set(i, todo.get(i+1));
+                }
+            }
+        }
+
+        // Beginning text file creation
+
+        // Create string for file name
+        String fileName = student.getUsername() + "Plan.txt";
+
+        // Write ArrayList contents to the file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (int i = 0; i < plan.size(); i++) {
+                writer.write("Semester " + i + ":\n");
+                writer.write("__________________\n");
+                for (int j = 0; j < plan.get(i).size(); j++) {
+                    writer.write(plan.get(i).get(i).toString() +"\n");
+                }
+                writer.newLine(); // Add a newline after each item
+            }
+        } catch (IOException e) {
+
+        }
 
 
 
