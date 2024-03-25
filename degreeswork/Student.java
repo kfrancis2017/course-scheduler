@@ -102,15 +102,8 @@ public class Student extends User {
         this.dashboardWarnings = dashboardWarnings;
     }
 
-    public String createSchedule() {
-        ArrayList<String> plan = Scheduler.createSchedule(this);
-        String schedule = "";
-
-        for (String string : plan) {
-            schedule += string + "\n";
-        }
-
-        return schedule;
+    public void createSchedule() {
+        Scheduler.createSchedule(this);
     }
 
     public ArrayList<String> getCurrentCourses() {
