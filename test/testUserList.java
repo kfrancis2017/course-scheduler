@@ -46,13 +46,14 @@ public class testUserList {
 
     @Test
     public void testGetUser() {
-        User student = new Student("john123", "password", "John", "Doe");
+        User student = new Student("john12", "password", "John", "Doe");
         userList.addUser(student);
-        Assert.assertEquals(student, userList.getUser("john123"));
+        Assert.assertEquals(student, userList.getUser("john12"));
     }
 
     @Test
     public void testGetStudents() {
+        userList.clear();
         userList.addUser("john123", "password", "John", "Doe", false);
         userList.addUser("jane456", "password", "Jane", "Smith", true);
         userList.addUser("sam789", "password", "Sam", "Johnson", false);
@@ -69,19 +70,19 @@ public class testUserList {
 
     @Test
     public void testLogin() {
-        User student = new Student("john123", "password", "John", "Doe");
+        User student = new Student("john12345", "password", "John", "Doe");
         userList.addUser(student);
-        Assert.assertEquals(student, userList.login("john123", "password"));
-        Assert.assertNull(userList.login("john123", "wrongPassword"));
+        Assert.assertEquals(student, userList.login("john12345", "password"));
+        Assert.assertNull(userList.login("john12345", "wrongPassword"));
         Assert.assertNull(userList.login("invalidUser", "password"));
     }
 
     @Test
     public void testModifyUser() {
-        User student = new Student("john123", "password", "John", "Doe");
+        User student = new Student("john123456", "password", "John", "Doe");
         userList.addUser(student);
-        User newStudent = new Student("john123", "newPassword", "John", "Doe");
+        User newStudent = new Student("john123456", "newPassword", "John", "Doe");
         userList.modifyUser(student, newStudent);
-        Assert.assertEquals("newPassword", userList.getUser("john123").getPassword());
+        Assert.assertEquals("newPassword", userList.getUser("john123456").getPassword());
     }
 }
