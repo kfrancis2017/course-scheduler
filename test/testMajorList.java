@@ -12,6 +12,7 @@ public class testMajorList {
     @Test
     public void testAddMajor() {
         MajorList majorList = MajorList.getInstance();
+        majorList.clear();
         Major major1 = new Major("Computer Science");
         Major major2 = new Major("Electrical Engineering");
 
@@ -23,6 +24,7 @@ public class testMajorList {
     @Test
     public void testModifyMajor() {
         MajorList majorList = MajorList.getInstance();
+        majorList.clear();
         Major oldMajor = new Major("Computer Science");
         majorList.addMajor(oldMajor);
 
@@ -33,6 +35,7 @@ public class testMajorList {
     @Test
     public void testDeleteMajor() {
         MajorList majorList = MajorList.getInstance();
+        majorList.clear();
         Major major = new Major("Computer Science");
         majorList.addMajor(major);
 
