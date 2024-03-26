@@ -59,7 +59,7 @@ public class DataLoader {
 
                 course.setAOS_Req((String) courseData.get("AOS_Req"));
                 course.setCourseHolds((Boolean) courseData.get("courseHolds"));
-                course.setHours((int) courseData.get("hours"));
+                course.setHours((int)(long) courseData.get("hours"));
                 courses.addCourse(course);
             }
         } catch (IOException | ParseException e) {

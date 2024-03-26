@@ -6,7 +6,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH141",
@@ -30,7 +31,8 @@
         ],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE145",
@@ -46,7 +48,8 @@
             }
         ],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE190",
@@ -68,7 +71,8 @@
             }
         ],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "AFAM202",
@@ -77,7 +81,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ARTH105",
@@ -86,7 +91,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "FAMS240",
@@ -95,7 +101,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ENGL102",
@@ -109,7 +116,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH142",
@@ -123,7 +131,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CHEM111",
@@ -141,7 +150,8 @@
             }
         ],
         "AOS_Req": "SCI",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "PHYS211",
@@ -159,7 +169,8 @@
             }
         ],
         "AOS_Req": "SCI",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE146",
@@ -173,7 +184,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE215",
@@ -182,7 +194,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE211",
@@ -196,7 +209,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE240",
@@ -210,7 +224,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH374",
@@ -224,7 +239,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CHEM112",
@@ -242,7 +258,8 @@
             }
         ],
         "AOS_Req": "SCI",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "PHYS212",
@@ -260,7 +277,8 @@
             }
         ],
         "AOS_Req": "SCI",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "PHIL213",
@@ -269,7 +287,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SPCH140",
@@ -278,7 +297,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SAEL200",
@@ -287,7 +307,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AIU",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE212",
@@ -301,7 +322,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE247",
@@ -315,7 +337,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH241",
@@ -329,7 +352,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "GEOL101",
@@ -342,7 +366,8 @@
             }
         ],
         "AOS_Req": "GSS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ANTH161",
@@ -351,7 +376,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MSCI101",
@@ -360,7 +386,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CYBR101",
@@ -369,7 +396,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AA",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ANTH210",
@@ -378,7 +406,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AA",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "AFAM218",
@@ -387,7 +416,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "AA",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE311",
@@ -401,7 +431,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE330",
@@ -415,7 +446,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE350",
@@ -429,7 +461,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE390",
@@ -443,7 +476,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ENGL462",
@@ -457,7 +491,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "ENGL",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ENGL463",
@@ -471,7 +506,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "ENGL",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE517",
@@ -485,7 +521,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "CMS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE520",
@@ -499,7 +536,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "CMS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "PSYC101",
@@ -508,7 +546,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE416",
@@ -522,7 +561,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT509",
@@ -531,7 +571,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE317",
@@ -545,7 +586,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "CMS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE512",
@@ -559,7 +601,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "CMS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE513",
@@ -573,7 +616,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "CMS",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "AERO401",
@@ -587,7 +631,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "GSL",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ANTH101",
@@ -596,7 +641,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSL",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ECON123",
@@ -605,7 +651,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSL",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE490",
@@ -619,7 +666,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE355",
@@ -633,7 +681,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH344",
@@ -647,7 +696,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE492",
@@ -661,7 +711,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ARTH107",
@@ -670,7 +721,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSW",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "FAM300",
@@ -684,7 +736,8 @@
         ]],
         "corequisites": [],
         "AOS_Req": "GSW",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "GERM280",
@@ -693,7 +746,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "GSW",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "FREN122",
@@ -702,7 +756,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ITAL122",
@@ -711,7 +766,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "LATN110",
@@ -720,7 +776,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "GERM122",
@@ -729,7 +786,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "JAP122",
@@ -738,7 +796,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "PORT121",
@@ -747,7 +806,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT110",
@@ -756,7 +816,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT112",
@@ -765,7 +826,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT201",
@@ -774,7 +836,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT206",
@@ -783,7 +846,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT506",
@@ -792,7 +856,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT509",
@@ -801,7 +866,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH111",
@@ -810,7 +876,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH112",
@@ -819,7 +886,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH115",
@@ -828,7 +896,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH122",
@@ -837,7 +906,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH141",
@@ -846,7 +916,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SCIN101",
@@ -855,7 +926,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SCIN244",
@@ -864,7 +936,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SCIN247",
@@ -873,7 +946,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SCIN317",
@@ -882,7 +956,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SCIN340",
@@ -891,7 +966,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI101",
@@ -900,7 +976,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI102",
@@ -909,7 +986,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI211",
@@ -918,7 +996,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI206",
@@ -927,7 +1006,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI371",
@@ -936,7 +1016,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "DIGI416",
@@ -945,7 +1026,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE574",
@@ -954,7 +1036,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "EMCH535",
@@ -963,7 +1046,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE580",
@@ -972,7 +1056,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ELCT331",
@@ -981,7 +1066,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE581",
@@ -990,7 +1076,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ELCT535",
@@ -999,7 +1086,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ASTR201",
@@ -1008,7 +1096,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "BIOL122",
@@ -1017,7 +1106,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "AFAM202",
@@ -1026,7 +1116,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ARTE260",
@@ -1035,7 +1126,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CPLT270",
@@ -1044,7 +1136,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE205",
@@ -1053,7 +1146,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE210",
@@ -1062,7 +1156,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ECON224",
@@ -1071,7 +1166,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SPCH230",
@@ -1080,7 +1176,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE201",
@@ -1089,7 +1186,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MATH174",
@@ -1098,7 +1196,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MGSC290",
@@ -1107,7 +1206,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "AFAM201",
@@ -1116,7 +1216,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "EDUC360",
@@ -1125,7 +1226,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE350",
@@ -1134,7 +1236,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE390",
@@ -1143,7 +1246,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT515",
@@ -1152,7 +1256,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ACCT222",
@@ -1161,7 +1266,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MGMT371",
@@ -1170,7 +1276,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE594",
@@ -1179,7 +1286,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "STAT516",
@@ -1188,7 +1296,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ACCT324",
@@ -1197,7 +1306,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "FINA333",
@@ -1206,7 +1316,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "MGSC395",
@@ -1215,7 +1326,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "HIST101",
@@ -1224,7 +1336,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "SOST201",
@@ -1233,7 +1346,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE490",
@@ -1242,7 +1356,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE416",
@@ -1251,7 +1366,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE522",
@@ -1260,7 +1376,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CLAS220",
@@ -1269,7 +1386,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ITEC447",
@@ -1278,7 +1396,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "CSCE510",
@@ -1287,7 +1406,8 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     },
     {
         "courseID": "ITEC560",
@@ -1296,6 +1416,7 @@
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",
-        "courseHolds": false
+        "courseHolds": false,
+        "hours": 3
     }
 ]

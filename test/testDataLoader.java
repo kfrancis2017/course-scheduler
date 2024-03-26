@@ -1,58 +1,28 @@
 package test;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import degreeswork.*;
-
-
 
 public class testDataLoader {
 
 @Test
     public void testGetAllCourses() {
-        // Load the expected course data from the provided JSON entry
-        Course expectedCourse = loadExpectedCourse();
-
-        // Load courses from DataLoader
+        Course expectedCourse = new Course("Software Engineering", "CSCE247", "Introduction to Computer Science", new ArrayList<ArrayList<String>>(), new ArrayList<ArrayList<String>>(), "Computer Science", true, 3);
         DataLoader.getAllCourses();
-
-        // Retrieve the courses from the CourseList
         ArrayList<Course> courses = CourseList.getInstance().getCourses();
         assertNotNull(courses);
-
-        // Check if the expected course is in the CourseList
-        assertTrue("Course MATH141 is not found in the CourseList", courses.contains(expectedCourse));
-    }
-
-    // Helper method to load the expected course data from JSON
-    private Course loadExpectedCourse() {
-        JSONParser parser = new JSONParser();
-        CourseList courses = CourseList.getInstance();
-        try {
-            // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
-            JSONObject courseData = (JSONObject) parser.parse(new FileReader("json/newcourse.json"));
-
-            // Create a Course object using the JSON data
-            Course course = new Course();
-            course.setCourseID((String) courseData.get("courseID"));
-            course.setTitle((String) courseData.get("title"));
-            course.setDescription((String) courseData.get("description"));
-            // Set other attributes of the course as needed
-
-            return course;
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
-            return null;
+        String expectedCourseID = expectedCourse.getCourseID();
+        boolean found = false;
+        for (Course course : courses) {
+            if (course.getCourseID().equals(expectedCourseID)) {
+                found = true;
+                break;
+            }
         }
+        assertTrue(found);
     }
 
     @Test

@@ -6,6 +6,9 @@ public class CourseList {
     private static CourseList courseList;
     private ArrayList<Course> courses;
 
+    public void clear() {
+        courses.clear();
+    }
     public CourseList() {
         courses = new ArrayList<Course>();
     }
