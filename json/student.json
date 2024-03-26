@@ -144,7 +144,7 @@
         "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
         "currentSemester": 7,
         "program": "CEC",
-        "currentAdvisor": null,
+        "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
         "sessionNotes": [],
         "finishedCourses": [
             ["ENGL101", "C", "1"],
