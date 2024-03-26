@@ -1,5 +1,6 @@
 package test;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -34,8 +35,10 @@ public class testDataLoader {
     // Helper method to load the expected course data from JSON
     private Course loadExpectedCourse() {
         JSONParser parser = new JSONParser();
+        CourseList courses = CourseList.getInstance();
         try {
-            // Read the JSON entry for the expected course
+            // Read the array of courses from the file
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
             JSONObject courseData = (JSONObject) parser.parse(new FileReader("json/newcourse.json"));
 
             // Create a Course object using the JSON data

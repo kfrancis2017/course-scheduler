@@ -57,6 +57,11 @@ public class MajorList {
         return Majors;
     }
 
+
+    public void clear() {
+        Majors.clear(); // Clears the list of all majors
+    }
+    
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Major Major : Majors) {

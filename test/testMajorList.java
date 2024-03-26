@@ -42,7 +42,9 @@ public class testMajorList {
 
     @Test
     public void testGetMajorByName() {
+
         MajorList majorList = MajorList.getInstance();
+        majorList.clear();
         Major major = new Major("Computer Science");
         majorList.addMajor(major);
 
@@ -53,6 +55,7 @@ public class testMajorList {
     @Test
     public void testGetMajors() {
         MajorList majorList = MajorList.getInstance();
+        majorList.clear();
         Major major1 = new Major("Computer Science");
         Major major2 = new Major("Electrical Engineering");
 
