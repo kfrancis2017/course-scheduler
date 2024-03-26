@@ -31,7 +31,7 @@ public class DataWriter {
             jsonStudents.add(getStudentJSON(student));
         }
 
-        writeJSONToFile("json/student.json", jsonStudents);
+        writeJSONToFile("json/students.json", jsonStudents);
     }
 
     /**
@@ -46,7 +46,7 @@ public class DataWriter {
             jsonAdvisors.add(getAdvisorJSON(advisor));
         }
 
-        writeJSONToFile("json/advisor.json", jsonAdvisors);
+        writeJSONToFile("json/advisors.json", jsonAdvisors);
     }
 
     private static void writeJSONToFile(String filename, JSONArray jsonArray) {
