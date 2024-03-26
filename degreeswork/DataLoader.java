@@ -167,8 +167,7 @@ public class DataLoader {
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;
                     for (Object courseObj : coursesArray) {
-                        JSONObject courseData = (JSONObject) courseObj;
-                        String courseName = (String) courseData.get("course");
+                        String courseName = (String) courseObj;
                         Course course = courses.findCourseByCode(courseName);
                         if (course != null) {
                             major.addCourse(course);

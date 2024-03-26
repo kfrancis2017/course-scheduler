@@ -23,6 +23,7 @@ public class testAdvisor {
         Advisor advisor = new Advisor();
         Student student = new Student("student", "password", "Alice", "Smith");
         advisor.addAdvisee(student);
+        System.out.println(advisor.getAdviseeList());
         Assert.assertTrue(advisor.getAdviseeList().contains("student"));
     }
 
