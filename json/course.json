@@ -35,144 +35,8 @@
     {
         "courseID": "CSCE145",
         "title": "Algorithmic Design I",
-<<<<<<< HEAD
         "description": "Focuses on problem-solving, algorithmic design, and programming. The class includes two lecture hours and four laboratory hours per week, and employs Java as the programming language.",
         "prerequisites": [],
-=======
-        "description": "Problem solving and algorithm design in engineering; introduction to programming and the use of software tools.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH111",
-                    "grade": "B"
-                }
-            ],
-            [
-                {
-                    "precourseID": "MATH115",
-                    "grade": "B"
-                }
-            ]
-        ],
-        "corequisites": [],
-        "AOS_Req": "Engineering",
-        "courseHolds": false,
-        "hours": 3
-    },
-    {
-        "courseID": "ECHE310",
-        "title": "Thermodynamics of Chemical Systems",
-        "description": "Principles of thermodynamics applied to chemical processes; includes laws of thermodynamics, properties of solutions, and phase equilibria.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CHEM102",
-                    "grade": "C"
-                }
-            ],
-            [
-                {
-                    "precourseID": "PHYS212",
-                    "grade": "C"
-                },
-                {
-                    "precourseID": "MATH242",
-                    "grade": "C"
-                }
-            ],
-            [
-                {
-                    "precourseID": "ECHE220",
-                    "grade": "C"
-                },
-                {
-                    "precourseID": "MECE201",
-                    "grade": "C"
-                }
-            ]
-        ],
-        "corequisites": [],
-        "AOS_Req": "Engineering",
-        "courseHolds": false,
-        "hours": 4
-    },
-    {
-        "courseID": "BIOL301",
-        "title": "Genetics",
-        "description": "Principles of heredity with emphasis on the chemical nature of genetic material, gene expression, and genetic control mechanisms.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "BIOL101",
-                    "grade": "C"
-                }
-            ],
-            [
-                {
-                    "precourseID": "CHEM111",
-                    "grade": "C"
-                }
-            ],
-            [
-                {
-                    "precourseID": "BIOL102",
-                    "grade": "C"
-                },
-                {
-                    "precourseID": "BIOL120",
-                    "grade": "C"
-                }
-            ]
-        ],
-        "corequisites": [],
-        "AOS_Req": "Science",
-        "courseHolds": false,
-        "hours": 4
-    },
-    {
-        "courseID": "ENGL101",
-        "title": "Critical Reading and Composition",
-        "description": "Instruction in strategies for critically reading and analyzing literature and non-literary texts; structured, sustained practice in composing expository and analytical essays.",
-        "prerequisites": [],
-        "corequisites": [],
-        "AOS_Req": "CC-CMW",
-        "courseHolds": false,
-        "creditHours": 2
-    },
-    {
-        "courseID": "MECE201",
-        "title": "Statics",
-        "description": "Analysis of force systems, centroids, moments of inertia, equilibrium of rigid bodies; static analysis of structures.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH142",
-                    "grade": "C"
-                }
-            ]
-        ],
-        "corequisites": [],
-        "AOS_Req": "ENGR",
-        "courseHolds": false,
-        "hours": 3
-    },
-    {
-        "courseID": "ECEE211",
-        "title": "Electric Circuits",
-        "description": "Basic concepts of electrical engineering, including circuit elements, Kirchhoff's laws, basic network theorems, operational amplifiers, and phasor relationships for capacitors and inductors.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "PHYS212",
-                    "grade": "C"
-                },
-                {
-                    "precourseID": "MATH241",
-                    "grade": "C"
-                }
-            ]
-        ],
->>>>>>> 4c126811e00b3d38278f2b98383923620f3031aa
         "corequisites": [
             {
                 "cocourseID": "MATH111"
@@ -181,14 +45,8 @@
                 "cocourseID": "MATH115"
             }
         ],
-<<<<<<< HEAD
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false
-=======
-        "AOS_Req": "ENGR",
-        "courseHolds": false,
-        "hours": 4
->>>>>>> 4c126811e00b3d38278f2b98383923620f3031aa
     },
     {
         "courseID": "CSCE190",
@@ -218,7 +76,6 @@
         "description": "Exploration and discussion of creative works and traditions by and about African Americans through folklore, music, art, dance, and literature.",
         "prerequisites": [],
         "corequisites": [],
-<<<<<<< HEAD
         "AOS_Req": "AIU",
         "courseHolds": false
     },
@@ -1359,11 +1216,6 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false
-=======
-        "AOS_Req": "SS",
-        "courseHolds": false,
-        "hours": 1
->>>>>>> 4c126811e00b3d38278f2b98383923620f3031aa
     },
     {
         "courseID": "HIST101",
@@ -1371,7 +1223,6 @@
         "description": "None",
         "prerequisites": [],
         "corequisites": [],
-<<<<<<< HEAD
         "AOS_Req": "N/A",
         "courseHolds": false
     },
@@ -1446,54 +1297,5 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false
-=======
-        "AOS_Req": "HS",
-        "courseHolds": false,
-        "hours": 4
-    },
-    {
-        "courseID": "EMCH200",
-        "title": "Statics",
-        "description": "Analysis of force systems, centroids, moments of inertia, equilibrium of rigid bodies; static analysis of structures.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH142",
-                    "grade": "C"
-                }
-            ]
-        ],
-        "corequisites": [],
-        "AOS_Req": "ENGR",
-        "courseHolds": false,
-        "hours": 1
-    },
-    {
-        "courseID": "ELCT221",
-        "title": "Electric Circuits",
-        "description": "Basic concepts of electrical engineering, including circuit elements, Kirchhoff's laws, basic network theorems, operational amplifiers, and phasor relationships for capacitors and inductors.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "PHYS212",
-                    "grade": "C"
-                },
-                {
-                    "precourseID": "MATH241",
-                    "grade": "C"
-                }
-            ]
-        ],
-        "corequisites": [
-            [
-                {
-                    "cocourseID": "ELCT201"
-                }
-            ]
-        ],
-        "AOS_Req": "ENGR",
-        "courseHolds": false,
-        "hours": 1
->>>>>>> 4c126811e00b3d38278f2b98383923620f3031aa
     }
 ]

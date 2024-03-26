@@ -17,7 +17,7 @@ public class DataLoader {
         CourseList courses = CourseList.getInstance();
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/course.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -59,6 +59,7 @@ public class DataLoader {
 
                 course.setAOS_Req((String) courseData.get("AOS_Req"));
                 course.setCourseHolds((Boolean) courseData.get("courseHolds"));
+                course.setHours((int) courseData.get("hours"));
                 courses.addCourse(course);
             }
         } catch (IOException | ParseException e) {
