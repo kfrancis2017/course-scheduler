@@ -57,6 +57,7 @@ public class testCourseList {
     @Test
     public void testGetCourses() {
         CourseList courseList = CourseList.getInstance();
+        courseList.clear();
         Course course1 = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
         Course course2 = new Course("Physics", "PHYS101", "Introduction to Physics", new ArrayList<>(), new ArrayList<>(), "Physics", true,3);
 

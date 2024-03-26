@@ -65,7 +65,7 @@ public class testAdvisor {
         Advisor advisor = new Advisor();
         Student student = new Student("student", "password", "Alice", "Smith");
         advisor.addAdvisingSession(student, "Session notes");
-        Assert.assertEquals("Advisor said: Session notes on " + java.time.LocalDate.now(), student.getAdvisingNotes().get(0));
+        Assert.assertEquals(advisor.getUsername() + " said: Session notes on " + new java.util.Date(), student.getAdvisingNotes().get(0));
     }
 
     @Test

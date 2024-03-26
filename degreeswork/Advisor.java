@@ -28,15 +28,12 @@ public class Advisor extends User {
             if(userName.equals(user)){
                 UserList users = UserList.getInstance();
                 ArrayList<Student> list = users.getStudents();
-            
                 for(Student student : list) {
                     if(student.getUsername().equals(user)) {
                         return student;
                     }
                 }
-            
             }
-
         }
         return null;
     }
