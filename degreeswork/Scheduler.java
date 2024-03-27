@@ -18,10 +18,6 @@ public class Scheduler {
         return 0.0;
     }
 
-    public Major loadMajor(String majorDB) {
-        return null;
-    }
-
     public static void createSchedule(Student student) {
         // Create the arraylist that will hold the plan
         ArrayList<ArrayList<Course>> plan = new ArrayList<ArrayList<Course>>(); 
@@ -30,8 +26,12 @@ public class Scheduler {
         Major major = student.getMajor();
         System.out.println(major.getName());
         ArrayList<ArrayList<Course>> majorCourses = major.getCourses();
+
+        //TODO REMOVE
         for (ArrayList<Course> list : majorCourses) {
-            System.out.println(list.get(0).getCourseID());
+            for (Course course : list) {
+                System.out.println(course.toString());
+            }
         }
         // Loads student's finished courses, which contains courseID, grade, and semester taken
         ArrayList<ArrayList<String>> finCourDetails = student.getFinishedCourses();
