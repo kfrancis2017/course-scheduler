@@ -36,6 +36,10 @@ public class Scheduler {
         // Loads student's finished courses, which contains courseID, grade, and semester taken
         ArrayList<ArrayList<String>> finCourDetails = student.getFinishedCourses();
 
+        for (ArrayList<String> list : finCourDetails) {
+            System.out.println(list.get(0) + " " + list.get(1) + " " + list.get(2));
+        }
+
         ArrayList<Course> finishedCourses = new ArrayList<Course>();
 
         // Put finished courses into an arraylist
@@ -43,6 +47,9 @@ public class Scheduler {
             finishedCourses.add(courses.findCourseByCode(list.get(0)));
         }
 
+        for (Course course : finishedCourses) {
+            System.out.println(course.getCourseID());
+        }
         // Set up 8 semesters
         for (int i = 0; i < 8; i++) {
             ArrayList<Course> sem = new ArrayList<Course>();
@@ -52,6 +59,10 @@ public class Scheduler {
         // Add finished courses to their appropriate semester
         for (ArrayList<String> list : finCourDetails) {
             plan.get(Integer.parseInt(list.get(2))-1).add(courses.findCourseByCode(list.get(0)));
+        }
+
+        for (ArrayList<Course> list : plan) {
+            System.out.println(list.get(0).getCourseID());
         }
 
         // Creates an arraylist of courses that need to be taken still to fufill major
@@ -71,12 +82,14 @@ public class Scheduler {
         for (ArrayList<Course> sem : plan) {
             int semHours = 0;
             // Tally up credits of finished courses if present
-            for (int i = 0; i < sem.size(); i++) {
-                Course course = sem.get(i);
-                if(course != null) {
-                    semHours += course.getHours();
-                } else {
-                    break;
+            if (sem.size() != 0) {
+                for (int i = 0; i < sem.size(); i++) {
+                    Course course = sem.get(i);
+                    if(course != null) {
+                        semHours += course.getHours();
+                    } else {
+                        break;
+                    }
                 }
             }
 
@@ -109,7 +122,7 @@ public class Scheduler {
         // Write ArrayList contents to the file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             for (int i = 0; i < plan.size(); i++) {
-                writer.write("Semester " + i + ":\n");
+                writer.write("Semester " + (i+1) + ":\n");
                 writer.write("__________________\n");
                 for (int j = 0; j < plan.get(i).size(); j++) {
                     writer.write(plan.get(i).get(i).toString() +"\n");
