@@ -8,7 +8,7 @@
         "lastName": "Spears",
         "accountStatus": "Open",
         "currentCourses": ["HIST101", "ENGL101", "CSCE215", "CSCE145"],
-        "major": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "major": "Computer Science",
         "currentSemester": 2,
         "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
         "program": "CEC",

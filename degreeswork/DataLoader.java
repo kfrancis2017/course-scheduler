@@ -167,15 +167,17 @@ public class DataLoader {
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;
+                    ArrayList<Course> list = new ArrayList<Course>();
                     for (Object courseObj : coursesArray) {
                         String courseName = (String) courseObj;
                         Course course = courses.findCourseByCode(courseName);
                         if (course != null) {
-                            major.addCourse(course);
+                            list.add(course);
                         } else {
                             System.out.println("Course '" + courseName + "' not found in the course list.");
                         }
                     }
+                    major.addCourse(list);
                 }
                 // After constructing the Major object and adding courses, add the major to the
                 // MajorList

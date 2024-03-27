@@ -28,8 +28,11 @@ public class Scheduler {
 
         // Load student's major
         Major major = student.getMajor();
+        System.out.println(major.getName());
         ArrayList<ArrayList<Course>> majorCourses = major.getCourses();
-
+        for (ArrayList<Course> list : majorCourses) {
+            System.out.println(list.get(0).getCourseID());
+        }
         // Loads student's finished courses, which contains courseID, grade, and semester taken
         ArrayList<ArrayList<String>> finCourDetails = student.getFinishedCourses();
 
@@ -48,7 +51,7 @@ public class Scheduler {
 
         // Add finished courses to their appropriate semester
         for (ArrayList<String> list : finCourDetails) {
-            plan.get(Integer.parseInt(list.get(2))).add(courses.findCourseByCode(list.get(0)));
+            plan.get(Integer.parseInt(list.get(2))-1).add(courses.findCourseByCode(list.get(0)));
         }
 
         // Creates an arraylist of courses that need to be taken still to fufill major
@@ -68,11 +71,17 @@ public class Scheduler {
         for (ArrayList<Course> sem : plan) {
             int semHours = 0;
             // Tally up credits of finished courses if present
-            for (Course course : sem) {
-                semHours += course.getHours();
+            for (int i = 0; i < sem.size(); i++) {
+                Course course = sem.get(i);
+                if(course != null) {
+                    semHours += course.getHours();
+                } else {
+                    break;
+                }
             }
 
             while (semHours < 15) {
+                if (!todo.isEmpty()) {
                 // Adds the course at the top of the todo list to the plan
                 sem.add(todo.get(0));
 
@@ -85,6 +94,9 @@ public class Scheduler {
                 // Shift up the remaining courses
                 for (int i = 0; i < todo.size(); i++) {
                     todo.set(i, todo.get(i+1));
+                }
+                } else {
+                    break;
                 }
             }
         }
@@ -107,11 +119,6 @@ public class Scheduler {
         } catch (IOException e) {
 
         }
-
-
-
- 
-
     }
 
     public double currentGPA() {
