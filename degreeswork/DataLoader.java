@@ -108,8 +108,7 @@ public class DataLoader {
                     JSONArray innerArray = (JSONArray) courseArray;
                     String courseName = (String) innerArray.get(0); // Course name
                     String grade = (String) innerArray.get(1); // Grade
-                    String semester = (String) innerArray.get(2); // Semester
-                    student.addFinishedCourse(courseName, grade, semester);
+                    student.addFinishedCourse(courseName, grade);
                 }
             }
         } catch (IOException | ParseException e) {
@@ -168,17 +167,15 @@ public class DataLoader {
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;
-                    ArrayList<Course> list = new ArrayList<Course>();
                     for (Object courseObj : coursesArray) {
                         String courseName = (String) courseObj;
                         Course course = courses.findCourseByCode(courseName);
                         if (course != null) {
-                            list.add(course);
+                            major.addCourse(course);
                         } else {
                             System.out.println("Course '" + courseName + "' not found in the course list.");
                         }
                     }
-                    major.addCourse(list);
                 }
                 // After constructing the Major object and adding courses, add the major to the
                 // MajorList

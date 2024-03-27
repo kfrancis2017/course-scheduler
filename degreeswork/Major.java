@@ -7,15 +7,18 @@ public class Major {
 
     public Major(String name) {
         this.name = name;
-        this.courses = new ArrayList<ArrayList<Course>>();
+        this.courses = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public void addCourse(ArrayList<Course> list) {
-        courses.add(list);
+
+    public void addCourse(Course course) {
+        ArrayList<Course> addTo = new ArrayList<Course>();
+        addTo.add(course);
+        courses.add(addTo);
     }
 
     public ArrayList<ArrayList<Course>> getCourses() {

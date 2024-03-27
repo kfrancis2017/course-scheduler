@@ -85,14 +85,13 @@ public class Student extends User {
         }
     }
 
-    public void addFinishedCourse(String courseID, String grade, String semester) {
+    public void addFinishedCourse(String courseID, String grade) {
         // Create a new ArrayList to store the course and grade
         ArrayList<String> courseWithGrade = new ArrayList<>();
         
         // Add the course ID and grade to the list
         courseWithGrade.add(courseID); // First element is the course ID
         courseWithGrade.add(grade);    // Second element is the grade
-        courseWithGrade.add(semester);
         courseWithGrade.add(String.valueOf(currentSemester));   // Third element is the semester the semester the course was completed
         
         // Add this course and grade list to the list of finished courses
@@ -132,15 +131,13 @@ public class Student extends User {
     }
 
     public ArrayList<ArrayList<String>> getFinishedCourses() {
-     /*    // Provides a deep copy of the finishedCourses list to avoid privacy leaks
+        // Provides a deep copy of the finishedCourses list to avoid privacy leaks
         ArrayList<ArrayList<String>> copyOfFinishedCourses = new ArrayList<>();
         for (ArrayList<String> courseGradePair : this.finishedCourses) {
             // Create a new list from each pair (to prevent modification of the original lists)
             copyOfFinishedCourses.add(new ArrayList<>(courseGradePair));
         }
-        return copyOfFinishedCourses; */
-
-        return finishedCourses;
+        return copyOfFinishedCourses;
     }
     
     public ArrayList<String> getDashboardWarnings() {

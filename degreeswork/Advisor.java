@@ -6,7 +6,6 @@ public class Advisor extends User {
 
     private ArrayList<String> adviseeList;
     private String advisorSpecialization;
-    private UserList users = UserList.getInstance();
 
     public Advisor() {
         super(); 
@@ -76,8 +75,7 @@ public class Advisor extends User {
         if (this.adviseeList == null) {
             this.adviseeList = new ArrayList<>();
         }
-        if (users.searchUser(student.getUsername()))
-            this.adviseeList.add(student.getUsername());
+        this.adviseeList.add(student.getUsername());
     }
 
     public void setAdvisorSpecialization(String specialization) {

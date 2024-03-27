@@ -32,7 +32,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "CSCE145",
@@ -49,7 +49,7 @@
         ],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "CSCE190",
@@ -72,7 +72,7 @@
         ],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "AFAM202",
@@ -132,7 +132,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "CHEM111",
@@ -151,7 +151,7 @@
         ],
         "AOS_Req": "SCI",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "PHYS211",
@@ -185,7 +185,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "CSCE215",
@@ -195,7 +195,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "CSCE211",
@@ -367,7 +367,7 @@
         ],
         "AOS_Req": "GSS",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "ANTH161",
@@ -377,7 +377,7 @@
         "corequisites": [],
         "AOS_Req": "GSS",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "MSCI101",
@@ -387,7 +387,7 @@
         "corequisites": [],
         "AOS_Req": "GSS",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "CYBR101",
@@ -477,7 +477,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "ENGL462",
@@ -632,7 +632,7 @@
         "corequisites": [],
         "AOS_Req": "GSL",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "ANTH101",
@@ -697,7 +697,7 @@
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "CSCE492",
@@ -725,7 +725,7 @@
         "hours": 3
     },
     {
-        "courseID": "FAMS300",
+        "courseID": "FAM300",
         "title": "Film and Media History",
         "description": "Surveys the development of cinema and related media from the 1820s to the present.",
         "prerequisites": [[
@@ -877,7 +877,7 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "MATH112",
@@ -887,7 +887,7 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
-        "hours": 2
+        "hours": 3
     },
     {
         "courseID": "MATH115",
@@ -897,7 +897,7 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "MATH122",
@@ -917,7 +917,7 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
-        "hours": 4
+        "hours": 3
     },
     {
         "courseID": "SCIN101",
@@ -1247,7 +1247,7 @@
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
-        "hours": 1
+        "hours": 3
     },
     {
         "courseID": "STAT515",
