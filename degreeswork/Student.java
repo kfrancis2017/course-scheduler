@@ -140,6 +140,21 @@ public class Student extends User {
         return copyOfFinishedCourses;
     }
     
+    public ArrayList<Course> getFinishedCourseObjects(ArrayList<Course> allCourses) {
+        ArrayList<Course> finishedCourseObjects = new ArrayList<>();
+        for (ArrayList<String> semesterCourses : this.getFinishedCourses()) {
+            for (String courseID : semesterCourses) {
+                for (Course course : allCourses) {
+                    if (course.getCourseID().equals(courseID)) {
+                        finishedCourseObjects.add(course);
+                        break;
+                    }
+                }
+            }
+        }
+        return finishedCourseObjects;
+    }
+    
     public ArrayList<String> getDashboardWarnings() {
         return new ArrayList<>(this.dashboardWarnings); // Provides a copy of the dashboardWarnings list
     }
