@@ -36,7 +36,8 @@ public class SchedulerTest {
         Course emch260 = new Course("Solid Mechanics", "EMCH260", "", emch260Prereqs, new ArrayList<>(), "", false, 3);
 
         ArrayList<ArrayList<String>> emch290Prereqs = new ArrayList<>();
-        emch290Prereqs.add(new ArrayList<>(Arrays.asList("PHYS211", "MATH142"))); // Prerequisites for EMCH290 are PHYS211 and MATH142
+        emch290Prereqs.add(new ArrayList<>(Arrays.asList("PHYS211"))); 
+        emch290Prereqs.add(new ArrayList<>(Arrays.asList("MATH142")));// Prerequisites for EMCH290 are PHYS211 and MATH142
         Course emch290 = new Course("Thermodynamics", "EMCH290", "", emch290Prereqs, new ArrayList<>(), "", false, 3);
 
         ArrayList<ArrayList<String>> math242Prereqs = new ArrayList<>();
@@ -49,7 +50,8 @@ public class SchedulerTest {
         
         // Semester Four Courses
         ArrayList<ArrayList<String>> emch310Prereqs = new ArrayList<>();
-        emch310Prereqs.add(new ArrayList<>(Arrays.asList("MATH242", "EMCH200"))); // Prerequisites for EMCH310 are MATH242 and EMCH200
+        emch310Prereqs.add(new ArrayList<>(Arrays.asList("MATH242")));
+        emch310Prereqs.add(new ArrayList<>(Arrays.asList("EMCH200"))); // Prerequisites for EMCH310 are MATH242 and EMCH200
         Course emch310 = new Course("Dynamics", "EMCH310", "", emch310Prereqs, new ArrayList<>(), "", false, 3);
         
         ArrayList<ArrayList<String>> emch360Prereqs = new ArrayList<>();
@@ -60,11 +62,15 @@ public class SchedulerTest {
         
         // Semester Five Courses
         ArrayList<ArrayList<String>> emch361Prereqs = new ArrayList<>();
-        emch361Prereqs.add(new ArrayList<>(Arrays.asList("EMCH290", "EMCH260", "EMCH201", "ELCT220"))); // Prerequisites for EMCH361
+        emch361Prereqs.add(new ArrayList<>(Arrays.asList("EMCH290"))); // Prerequisites for EMCH361
+        emch361Prereqs.add(new ArrayList<>(Arrays.asList("EMCH260"))); // Prerequisite for EMCH360 is EMCH200
+        emch361Prereqs.add(new ArrayList<>(Arrays.asList("EMCH201"))); // Adding MATH242 as prerequisite for simplification
+        emch361Prereqs.add(new ArrayList<>(Arrays.asList("ELCT220"))); // And EMCH290
         Course emch361 = new Course("Mechanical Engineering Lab I", "EMCH361", "", emch361Prereqs, new ArrayList<>(), "", false, 3);
         
         ArrayList<ArrayList<String>> emch368Prereqs = new ArrayList<>();
-        emch368Prereqs.add(new ArrayList<>(Arrays.asList( "ELCT220", "EMCH260"))); // Prerequisites for EMCH368
+        emch368Prereqs.add(new ArrayList<>(Arrays.asList( "ELCT220"))); // Prerequisites for EMCH368
+        emch368Prereqs.add(new ArrayList<>(Arrays.asList("EMCH260")));
         Course emch368 = new Course("Mechatronics", "EMCH368", "", emch368Prereqs, new ArrayList<>(), "", false, 4);
 
         // Semester Six Courses
@@ -81,7 +87,8 @@ public class SchedulerTest {
         Course emch362 = new Course("Mechanical Engineering Lab II", "EMCH362", "", emch362Prereqs, new ArrayList<>(), "", false, 3);
 
         ArrayList<ArrayList<String>> emch367Prereqs = new ArrayList<>();
-        emch367Prereqs.add(new ArrayList<>(Arrays.asList("EMCH368", "EMCH310"))); // Prerequisites for EMCH367 are EMCH368 and EMCH310
+        emch367Prereqs.add(new ArrayList<>(Arrays.asList("EMCH368"))); // Prerequisites for EMCH367 are EMCH368 and EMCH310
+        emch367Prereqs.add(new ArrayList<>(Arrays.asList("EMCH310")));
         Course emch367 = new Course("Controls", "EMCH367", "", emch367Prereqs, new ArrayList<>(), "", false, 3);
 
         // Semester Seven Courses
@@ -90,7 +97,9 @@ public class SchedulerTest {
         Course emch327 = new Course("Machine Design", "EMCH327", "", emch327Prereqs, new ArrayList<>(), "", false, 3);
 
         ArrayList<ArrayList<String>> emch427Prereqs = new ArrayList<>();
-        emch427Prereqs.add(new ArrayList<>(Arrays.asList("EMCH332", "EMCH354", "EMCH362"))); // Prerequisites for EMCH427 include EMCH332, EMCH354, and EMCH362
+        emch427Prereqs.add(new ArrayList<>(Arrays.asList("EMCH332")));
+        emch427Prereqs.add(new ArrayList<>(Arrays.asList("EMCH354")));
+        emch427Prereqs.add(new ArrayList<>(Arrays.asList("EMCH362"))); // Prerequisites for EMCH427 include EMCH332, EMCH354, and EMCH362
         Course emch427 = new Course("Design I", "EMCH427", "", emch427Prereqs, new ArrayList<>(), "", false, 3);
 
         // Semester Eight Courses
