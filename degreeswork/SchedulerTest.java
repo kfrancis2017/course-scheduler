@@ -64,7 +64,7 @@ public class SchedulerTest {
         Course emch361 = new Course("Mechanical Engineering Lab I", "EMCH361", "", emch361Prereqs, new ArrayList<>(), "", false, 3);
         
         ArrayList<ArrayList<String>> emch368Prereqs = new ArrayList<>();
-        emch368Prereqs.add(new ArrayList<>(Arrays.asList("CSCE206", "ELCT220", "EMCH260"))); // Prerequisites for EMCH368
+        emch368Prereqs.add(new ArrayList<>(Arrays.asList( "ELCT220", "EMCH260"))); // Prerequisites for EMCH368
         Course emch368 = new Course("Mechatronics", "EMCH368", "", emch368Prereqs, new ArrayList<>(), "", false, 4);
 
         // Semester Six Courses
@@ -167,14 +167,7 @@ public class SchedulerTest {
 
         // Create a list of completed courses (simulate student records)
         ArrayList<Course> completedCourses = new ArrayList<>();
-        completedCourses.add(emch380);
-        completedCourses.add(emch260); // Assuming the student has also completed EMCH 260
-        completedCourses.add(emch201); // And EMCH 201
-        completedCourses.add(emch200); // And EMCH 200
         completedCourses.add(emch101); // And EMCH 101 for an intro course
-        completedCourses.add(chem111);
-        completedCourses.add(phys211);
-        completedCourses.add(math142);
 
 
         ArrayList<String> completedCourseIDs = new ArrayList<>();
@@ -201,7 +194,7 @@ public class SchedulerTest {
        ArrayList<ArrayList<Course>> schedule = scheduler.createSchedule();
        System.out.println("Generated Schedule for " + student.getFirstName() + " " + student.getLastName() + ":");
        for (int semester = 0; semester < schedule.size(); semester++) {
-           System.out.println("Semester " + (semester + 1) + ":");
+           System.out.println("\n Semester " + (semester + 1) + ":");
            for (Course course : schedule.get(semester)) {
                System.out.println(course.getTitle() + " (" + course.getCourseID() + ")");
            }
