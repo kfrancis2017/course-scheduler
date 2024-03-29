@@ -101,11 +101,7 @@ public class Student extends User {
     public void setDashboardWarnings(ArrayList<String> dashboardWarnings) {
         this.dashboardWarnings = dashboardWarnings;
     }
-
-    public void createSchedule() {
-        Scheduler.createSchedule(this);
-    }
-
+    
     public ArrayList<String> getCurrentCourses() {
         return new ArrayList<>(this.currentCourses); // Provides a copy of the currentCourses list
     }
