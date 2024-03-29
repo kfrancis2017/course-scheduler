@@ -2,6 +2,7 @@ package degreeswork;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,7 +21,7 @@ public class Scheduler {
         }
     }
 
-    private boolean isPrerequisiteCompleted(ArrayList<ArrayList<String>> prerequisites, ArrayList <Course> c_courses) {
+    private boolean isPrerequisiteCompleted(ArrayList<ArrayList<String>> prerequisites, ArrayList<Course> c_courses) {
         for (ArrayList<String> orPrereqs : prerequisites) {
             boolean orComplete = false;
             for (String prereqID : orPrereqs) {
@@ -45,18 +46,19 @@ public class Scheduler {
 
         for (Course course : reqCourses) {
 
-            if (!compCourses.contains(course)) {//if completed course does NOT contain the course
-                if(isPrerequisiteCompleted(course.getPrereq(), compCourses)){//if all prereqs are completed
+            if (!compCourses.contains(course)) {// if completed course does NOT contain the course
+                if (isPrerequisiteCompleted(course.getPrereq(), compCourses)) {// if all prereqs are completed
                     needToTake.add(course);
-                }else{//if NOT ALL prereqs are completed
+                } else {// if NOT ALL prereqs are completed
                     needToTake.add(course);
                     for (ArrayList<String> prereqList : course.getPrereq()) {
-                        
+
                         if (prereqList.size() == 1) {// If there's only one prerequisite
 
                             String prereq = prereqList.get(0); // Get the prerequisite course ID
                             // Check if the course hasn't been completed or already checked
-                            if (!compCourses.contains(allCourses.get(prereq)) && !needToTake.contains(allCourses.get(prereq))) {
+                            if (!compCourses.contains(allCourses.get(prereq))
+                                    && !needToTake.contains(allCourses.get(prereq))) {
                                 needToTake.add(allCourses.get(prereq)); // Add to the list of needed courses
                             }
                         } else { // If there are multiple prerequisites
@@ -70,108 +72,49 @@ public class Scheduler {
                             }
                             // If none of the prerequisites have been completed
                             if (!anyPrereqCompleted && !needToTake.contains(allCourses.get(prereqList.get(0)))) {
-                                needToTake.add(allCourses.get(prereqList.get(0))); // Add the first one to the list of needed courses
+                                needToTake.add(allCourses.get(prereqList.get(0))); // Add the first one to the list of
+                                                                                   // needed courses
                             }
                         }
                     }
                 }
-                
+
             }
         }
 
         return needToTake;
     }
+
     public ArrayList<ArrayList<Course>> createSchedule() {
-        
-        ArrayList<ArrayList<Course>> schedule = new ArrayList<>();
-        ArrayList<Course> needToTake = new ArrayList<>();
-        for (ArrayList<Course> reqCourses : major.getCourses()) {
-            needToTake.addAll(getPre_ReqCourses(reqCourses, completedCourses)); // getCompletedCourses(reqCourses) = getCompletedCourses(reqCourses, completedCourses);
+        ArrayList<ArrayList<Course>> semesterPlans = new ArrayList<>();
+        ArrayList<Course> requiredCourses = new ArrayList<>(); // Courses required for the major
+        // Aggregate required courses, considering prerequisites
+        for (ArrayList<Course> majorCourses : major.getCourses()) {
+            requiredCourses.addAll(getPre_ReqCourses(majorCourses, completedCourses));
         }
-        //delete duplicates in needToTake
-        needToTake = new ArrayList<>(new LinkedHashSet<>(needToTake));
+        // Remove duplicate courses from the list
+        requiredCourses = new ArrayList<>(new LinkedHashSet<>(requiredCourses));
 
-        
-        // Sorting courses based on prerequisites (simplified version, consider using topological sort for complex cases)
-        // Assuming courses are added in dependency order <- THIS IS NOT TRUE necessarily
-        ArrayList<Course> sortedCourses = new ArrayList<>();
-        //need to create a combined list of sorted course and completed cuorses
-        ArrayList<Course> combinedList = new ArrayList<>();
-        ArrayList<ArrayList<Course>> infty_creditList = new ArrayList<>();
+        ArrayList<Course> allEligibleCourses = new ArrayList<>(); // To track completed and scheduled courses
+        allEligibleCourses.addAll(completedCourses);
 
-        combinedList.addAll(completedCourses);
-        while (!needToTake.isEmpty()) {
-            ArrayList<Course> nsCourses = new ArrayList<>();
-            for (int i = 0; i < needToTake.size(); i++) {
-                Course course = needToTake.get(i);
-                if (isPrerequisiteCompleted(course.getPrereq(), combinedList)) {
-                    sortedCourses.add(course);
-                    nsCourses.add(course);
-                    needToTake.remove(i);
-                    i--; // Adjust index after removal
+        while (!requiredCourses.isEmpty()) {
+            ArrayList<Course> semesterCourses = new ArrayList<>(); // Courses to take in the upcoming semester
+            for (Iterator<Course> it = requiredCourses.iterator(); it.hasNext();) {
+                Course course = it.next();
+                if (isPrerequisiteCompleted(course.getPrereq(), allEligibleCourses)) {
+                    semesterCourses.add(course);
+                    it.remove(); // Remove the course as it's now scheduled
                 }
             }
-            combinedList.addAll(nsCourses);
-            infty_creditList.add(nsCourses);
+            allEligibleCourses.addAll(semesterCourses); // Update the list of eligible courses
+            semesterPlans.add(semesterCourses); // Add the semester's courses to the plan
         }
-        
-        // Schedule courses without exceeding max credits per semester
-        // int maxCredits = 18;
-        // ArrayList<Course> semesterCourses = new ArrayList<>();
-        // int semesterCredits = 0;
 
-        // //need for loopto change to lovcation based(susing i)
+        // TODO: Adjust scheduling algorithm to consider max number of credits per
+        // semester
 
-        // for (int i = 0; i < infty_creditList.size(); i++) {
-        //     ArrayList<Course> courses = infty_creditList.get(i);
-        //     //check if all courses in the semester are less than max credits
-        //     //if so, continue as normal and add credits to schedule in order.
-        //     //else we need to go into special condition where we look at next semester and
-        //     // current one and see which class we can move without causing a pre-req issue. 
-        //     // if (semesterCredits + courses.stream().mapToInt(c -> c.getHours()).sum() <= maxCredits) {
-        //         for(Course course : courses) {
-        //             if (semesterCredits + course.getHours() <= maxCredits) {
-        //                 semesterCourses.add(course);
-        //                 semesterCredits += course.getHours();
-        //             } else {
-        //                 schedule.add(new ArrayList<>(semesterCourses));
-        //                 semesterCourses.clear();
-        //                 semesterCourses.add(course);
-        //                 semesterCredits = course.getHours();
-        //             }
-        //         }
-        //     // }else{//now we need to "simulate" moving a class to the next semester and how it affects pre-req.
-        //     //     //make "finixhed courses" all the prior semester courses(i-1,2,3...n)
-        //     //     ArrayList<Course> coursesToMove = new ArrayList<>();
-        //     //     ArrayList<Course> tempfinishedCourses = new ArrayList<>();
-        //     //     for(int j = 0; j < i; j++) {
-        //     //         tempfinishedCourses.addAll(infty_creditList.get(j));
-        //     //     }
-        //     //     ArrayList<Course> pre_req_from_next_sem = getPre_ReqCourses(infty_creditList.get(i), tempfinishedCourses); 
-
-        //     //     //if any of the pre-reqs from pre_req_next_sem do not atch a certain class in courses, move it to next semester.
-        //     //     //repeat until credit hour is met.
-        //     //     while(semesterCredits < maxCredits) {
-        //     //         for(Course course : courses) {
-        //     //             if(!pre_req_from_next_sem.contains(course)) {
-        //     //                 coursesToMove.add(course);
-        //     //                 courses.remove(course);
-        //     //             }
-        //     //         }
-        //     //         pre_req_from_next_sem = getPre_ReqCourses(semesterCourses, tempfinishedCourses);
-        //     //         for(Course course : coursesToMove) {
-        //     //             semesterCourses.add(course);
-        //     //             semesterCredits += course.getHours();
-        //     //         }
-        //     //         coursesToMove.clear();
-        //     //     }
-        //     // }
-
-
-
-        // }
-        // if (!semesterCourses.isEmpty()) schedule.add(semesterCourses);
-        
-        return infty_creditList;
+        return semesterPlans;
     }
+
 }
