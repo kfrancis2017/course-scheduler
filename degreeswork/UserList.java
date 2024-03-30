@@ -57,7 +57,25 @@ public class UserList {
     public User getUser(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                return user;
+                return getStudent(username);
+            }
+        }
+        return null; // User not found
+    }
+
+    public Student getStudent(String username) {
+        for (Student student : students) {
+            if (student.getUsername().equals(username)) {
+                return student;
+            }
+        }
+        return null; // User not found
+    }
+
+    public Advisor getAdvisor(String username) {
+        for (Advisor advisor : advisors) {
+            if (advisor.getUsername().equals(username)) {
+                return advisor;
             }
         }
         return null; // User not found
