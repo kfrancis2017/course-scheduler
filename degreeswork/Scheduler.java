@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 
 public class Scheduler {
@@ -47,11 +48,11 @@ public class Scheduler {
         for (Course course : reqCourses) {
 
             if (!compCourses.contains(course)) {// if completed course does NOT contain the course
-                if (isPrerequisiteCompleted(course.getPrereq(), compCourses)) {// if all prereqs are completed
+                if (isPrerequisiteCompleted(course.getPrereqClean(), compCourses)) {// if all prereqs are completed
                     needToTake.add(course);
                 } else {// if NOT ALL prereqs are completed
                     needToTake.add(course);
-                    for (ArrayList<String> prereqList : course.getPrereq()) {
+                    for (ArrayList<String> prereqList : course.getPrereqClean()) {
 
                         if (prereqList.size() == 1) {// If there's only one prerequisite
 
@@ -59,6 +60,12 @@ public class Scheduler {
                             // Check if the course hasn't been completed or already checked
                             if (!compCourses.contains(allCourses.get(prereq))
                                     && !needToTake.contains(allCourses.get(prereq))) {
+                                
+                                //need to remove any characters after the tab, if the tab exists:
+                                int index = prereq.indexOf('\t');
+                                if (index != -1) {
+                                    prereq = prereq.substring(0, index);
+                                }
                                 needToTake.add(allCourses.get(prereq)); // Add to the list of needed courses
                             }
                         } else { // If there are multiple prerequisites
@@ -92,8 +99,10 @@ public class Scheduler {
         for (ArrayList<Course> majorCourses : major.getCourses()) {
             requiredCourses.addAll(getPre_ReqCourses(majorCourses, completedCourses));
         }
-        // Remove duplicate courses from the list
+        // Remove duplicates and then remove null values
         requiredCourses = new ArrayList<>(new LinkedHashSet<>(requiredCourses));
+        requiredCourses.removeIf(Objects::isNull);
+
 
         ArrayList<Course> allEligibleCourses = new ArrayList<>(); // To track completed and scheduled courses
         allEligibleCourses.addAll(completedCourses);
@@ -102,7 +111,7 @@ public class Scheduler {
             ArrayList<Course> semesterCourses = new ArrayList<>(); // Courses to take in the upcoming semester
             for (Iterator<Course> it = requiredCourses.iterator(); it.hasNext();) {
                 Course course = it.next();
-                if (isPrerequisiteCompleted(course.getPrereq(), allEligibleCourses)) {
+                if (isPrerequisiteCompleted(course.getPrereqClean(), allEligibleCourses)) {
                     semesterCourses.add(course);
                     it.remove(); // Remove the course as it's now scheduled
                 }

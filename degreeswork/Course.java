@@ -52,6 +52,24 @@ public class Course {
         return prereq;
     }
 
+    public ArrayList<ArrayList<String>> getPrereqClean() {//this is for SCHEDULING PURPOSES PRIMARILY
+        // Iterate over each ArrayList<String> in the outer list
+        for (ArrayList<String> preReq : prereq) {
+            // Iterate over each String in the inner ArrayList
+            for (int i = 0; i < preReq.size(); i++) {
+                String currentString = preReq.get(i);
+                int indexOfTab = currentString.indexOf('\t');
+                // If a tab character is found, substring from the beginning to the tab index
+                if (indexOfTab != -1) {
+                    preReq.set(i, currentString.substring(0, indexOfTab));
+                }
+            }
+        }
+        return prereq;
+    }
+    
+    
+    
     public ArrayList<ArrayList<String>> getCoreq() {
         return coreq;
     }

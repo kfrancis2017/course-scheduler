@@ -4,11 +4,11 @@ import java.util.ArrayList;
 public class Major {
     private String name;
     private ArrayList<ArrayList<Course>> courses;
-    private CourseList courseList;
+    private ArrayList<Course> courseList;
 
     public Major(String name) {
         this.name = name;
-        
+        this.courses = new ArrayList<>();
     }
 
     public String getName() {
@@ -22,13 +22,8 @@ public class Major {
         courses.add(addTo);
     }
 
-
     public ArrayList<ArrayList<Course>> getCourses() {
         return courses;
-    }
-
-    public void setCourseList(ArrayList<ArrayList<Course>> courses) {
-        this.courses = courses;
     }
 
     public ArrayList<Course> getCourseList() {
