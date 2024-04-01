@@ -9,6 +9,10 @@ This repository contains the source code and documentation for the redevelopment
 - Kevin Francis
 - Xin Lin
 
+## Prototype Presentation
+
+https://mockitt.wondershare.com/proto/oDRvmeWysb0j50iaPjt4/sharing?view_mode=device&screen=rbpU8Ei6V5cx8ucYQ&canvasId=rcU8c0U0yXeRggmO
+
 ## Project Structure
 
 - **/lib**: This directory contains all the libraries used in the project. Ensure that all necessary libraries are included here to run the project successfully.
