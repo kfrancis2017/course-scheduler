@@ -54,48 +54,48 @@
         "majorCreditsRequired": 87,
         "electiveCreditsRequired": 34,
         "options": [
-            ["ENGL101"], 
-            ["MATH122", "MATH141"], 
-            ["CSCE145"], 
-            ["CSCE190"],
-            ["ANTH161", "ASTR201", "BIOL122"],
-            ["ENGL102"],
-            ["CSCE146"], 
-            ["CSCE215"],
-            ["ANTH161", "ASTR201", "BIOL122"],
-            ["AFAM202", "ARTE260", "CPLT270"],
-            ["CSCE205"],
-            ["CSCE210"],
-            ["CSCE247"], 
-            ["ECON224"], 
-            ["SPCH140"],
-            ["CSCE201"],
-            ["CSCE240"], 
-            ["MATH174"], 
-            ["MGSC290"],
-            ["AFAM201", "ANTH101", "EDUC360"],
-            ["CSCE350"], 
-            ["CSCE390"], 
-            ["STAT515"], 
-            ["ACCT222", "MGMT371", "ENGL462"],
-            ["MGMT371"],
-            ["ENGL462", "ENGL463"],
-            ["CSCE520"], 
-            ["CSCE594"], 
-            ["STAT516"],
-            ["ACCT324", "FINA333", "MGSC395"],
-            ["ARTH107", "HIST101", "SOST201"],
-            ["CSCE490"], 
-            ["CSCE416"], 
-            ["CSCE522"],
-            ["ACCT324", "FINA333", "MGSC395"],
-            ["AERO401", "CLAS220", "PSYC101"],
-            ["CSCE492"],
-            ["ITEC447", "CSCE510", "ITEC560"],
-            ["AERO401", "CLAS220", "PSYC101"],
-            ["AERO401", "CLAS220", "PSYC101"],
-            ["FREN122", "ITAL122", "LATN110"],
-            ["GERM122", "JAP122", "PORT121"]
+            [{"courseID": "ENGL101"}], 
+            [{"courseID": "MATH122"}, {"courseID": "MATH141"}], 
+            [{"courseID": "CSCE145"}], 
+            [{"courseID": "CSCE190"}],
+            [{"courseID": "ANTH161"}, {"courseID": "ASTR201"}, {"courseID": "BIOL122"}],
+            [{"courseID": "ENGL102"}],
+            [{"courseID": "CSCE146"}], 
+            [{"courseID": "CSCE215"}],
+            [{"courseID": "ANTH161"}, {"courseID": "ASTR201"}, {"courseID": "BIOL122"}],
+            [{"courseID": "AFAM202"}, {"courseID": "ARTE260"}, {"courseID": "CPLT270"}],
+            [{"courseID": "CSCE205"}],
+            [{"courseID": "CSCE210"}],
+            [{"courseID": "CSCE247"}], 
+            [{"courseID": "ECON224"}], 
+            [{"courseID": "SPCH140"}],
+            [{"courseID": "CSCE201"}],
+            [{"courseID": "CSCE240"}], 
+            [{"courseID": "MATH174"}], 
+            [{"courseID": "MGSC290"}],
+            [{"courseID": "AFAM201"}, {"courseID": "ANTH101"}, {"courseID": "EDUC360"}],
+            [{"courseID": "CSCE350"}], 
+            [{"courseID": "CSCE390"}], 
+            [{"courseID": "STAT515"}], 
+            [{"courseID": "ACCT222"}, {"courseID": "MGMT371"}, {"courseID": "ENGL462"}],
+            [{"courseID": "MGMT371"}],
+            [{"courseID": "ENGL462"}, {"courseID": "ENGL463"}],
+            [{"courseID": "CSCE520"}], 
+            [{"courseID": "CSCE594"}], 
+            [{"courseID": "STAT516"}],
+            [{"courseID": "ACCT324"}, {"courseID": "FINA333"}, {"courseID": "MGSC395"}],
+            [{"courseID": "ARTH107"}, {"courseID": "HIST101"}, {"courseID": "SOST201"}],
+            [{"courseID": "CSCE490"}], 
+            [{"courseID": "CSCE416"}], 
+            [{"courseID": "CSCE522"}],
+            [{"courseID": "ACCT324"}, {"courseID": "FINA333"}, {"courseID": "MGSC395"}],
+            [{"courseID": "AERO401"}, {"courseID": "CLAS220"}, {"courseID": "PSYC101"}],
+            [{"courseID": "CSCE492"}],
+            [{"courseID": "ITEC447"}, {"courseID": "CSCE510"}, {"courseID": "ITEC560"}],
+            [{"courseID": "AERO401"}, {"courseID": "CLAS220"}, {"courseID": "PSYC101"}],
+            [{"courseID": "AERO401"}, {"courseID": "CLAS220"}, {"courseID": "PSYC101"}],
+            [{"courseID": "FREN122"}, {"courseID": "ITAL122"}, {"courseID": "LATN110"}],
+            [{"courseID": "GERM122"}, {"courseID": "JAP122"}, {"courseID": "PORT121"}]
         ]
     },
     {
@@ -104,9 +104,9 @@
         "totalCreditsRequired": 9,
         "majorCreditsRequired": 0,
         "options": [
-            ["STAT110", "STAT112"],
-            ["STAT201", "STAT206"],
-            ["STAT506", "STAT509"]
+                [{"courseID": "STAT110"}, {"courseID": "STAT112"}],
+                [{"courseID": "STAT201"}, {"courseID": "STAT206"}],
+                [{"courseID": "STAT506"}, {"courseID": "STAT509"}]
         ]
     },
     {
@@ -115,9 +115,9 @@
         "totalCreditsRequired": 9,
         "majorCreditsRequired": 0,
         "options": [
-            ["MATH111"],
-            ["MATH112", "MATH115"],
-            ["MATH122", "MATH141"]
+                [{"courseID": "MATH111"}],
+                [{"courseID": "MATH112"}, {"courseID": "MATH115"}],
+                [{"courseID": "MATH122"}, {"courseID": "MATH141"}]
         ]
     },
     {
@@ -126,9 +126,9 @@
         "totalCreditsRequired": 9,
         "majorCreditsRequired": 0,
         "options": [
-            ["SCIN101"],
-            ["SCIN244", "SCIN247"],
-            ["SCIN317", "SCIN340"]
+            [{"courseID": "SCIN101"}],
+            [{"courseID": "SCIN244"}, {"courseID": "SCIN247"}],
+            [{"courseID": "SCIN317"}, {"courseID": "SCIN340"}]
         ]
     },
     {
@@ -137,9 +137,9 @@
         "totalCreditsRequired": 9,
         "majorCreditsRequired": 0,
         "options": [
-            ["DIGI101", "DIGI102"],
-            ["DIGI211", "DIGI206"],
-            ["DIGI371", "DIGI416"]
+            [{"courseID": "DIGI101"}, {"courseID": "DIGI102"}],
+            [{"courseID": "DIGI211"}, {"courseID": "DIGI206"}],
+            [{"courseID": "DIGI371"}, {"courseID": "DIGI416"}]
         ]
     },
     {
@@ -148,9 +148,9 @@
         "totalCreditsRequired": 9,
         "majorCreditsRequired": 0,
         "options": [
-            ["CSCE574", "EMCH535"],
-            ["CSCE580", "ELCT331"],
-            ["CSCE581", "ELCT535"]
+            [{"courseID": "CSCE574"}, {"courseID": "EMCH535"}],
+            [{"courseID": "CSCE580"}, {"courseID": "ELCT331"}],
+            [{"courseID": "CSCE581"}, {"courseID": "ELCT535"}]
         ]
     }
 ]
