@@ -111,8 +111,12 @@ public class DataLoader {
                 // Access existing major list to assign student's major
                 MajorList majors = MajorList.getInstance();
                 String majorName = (String) studentJSON.get("major");
-                student.setMajor(majors.getMajorByName(majorName));
-
+                System.out.println("Student " + studentJSON.get("username") + " is in "  + majorName);
+                if (majors.getMajorByName(majorName) == null) {
+                    System.out.println("Major " + majorName + " not found");
+                } else {
+                    student.setMajor(majors.getMajorByName(majorName));
+                }
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 student.setAdvisor((String) studentJSON.get("currentAdvisor"));
@@ -172,7 +176,6 @@ public class DataLoader {
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
         JSONParser parser = new JSONParser();
-        
 
         try {
             JSONArray majorData = (JSONArray) parser.parse(new FileReader("json/major.json"));
@@ -180,14 +183,14 @@ public class DataLoader {
                 JSONObject majorJSON = (JSONObject) majorObj;
                 String name = (String) majorJSON.get("name");
                 Major major = new Major(name);
-
                 ArrayList<ArrayList<Course>> options = new ArrayList<>();
                 JSONArray optionsArray = (JSONArray) majorJSON.get("options");
                 for (Object obj : optionsArray) {
                 JSONArray innerArray = (JSONArray) obj;
                 ArrayList<Course> innerList = new ArrayList<>();
+                System.out.println(name);
                 for (Object innerObj : innerArray) {
-                    JSONObject innerObjJson = (JSONObject) innerObj;
+                    JSONObject innerObjJson = (JSONObject) parser.parse(innerObj.toString());
                     String courseID = (String) innerObjJson.get("courseID");
                     Course course = courses.findCourseByCode(courseID);
                     innerList.add(course);

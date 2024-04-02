@@ -38,14 +38,14 @@ public class testScheduler {
         Major major = student.getMajor();
 
         System.out.println(student.getMajor().toString());
-        
+        System.out.println(student.getMajor().getCourseList());
 
+        
         Scheduler scheduler = new Scheduler(major, student, major.getCourseList());
         ArrayList<ArrayList<Course>> schedule = scheduler.createSchedule();
 
         System.out.println(major.toString());
         System.out.println(schedule.get(0).get(0).getCourseID());
-
 
        System.out.println("Generated Schedule for " + student.getFirstName() + " " + student.getLastName() + ":");
        
