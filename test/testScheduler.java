@@ -16,9 +16,6 @@ public class testScheduler {
         Scheduler scheduler = new Scheduler(major, student, major.getCourseList());
         ArrayList<ArrayList<Course>> schedule = scheduler.createSchedule();
 
-        System.out.println(major.toString());
-        System.out.println(schedule.get(0).get(0).getCourseID());
-
 
        System.out.println("Generated Schedule for " + student.getFirstName() + " " + student.getLastName() + ":");
        

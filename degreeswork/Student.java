@@ -141,13 +141,9 @@ public class Student extends User {
         for (ArrayList<String> semesterCourses : this.getFinishedCourses()) {
             for (String courseID : semesterCourses) {
                 for (Course course : allCourses) {
-                    if (course != null) {
-                        if (course.getCourseID().equals(courseID)) {
-                            finishedCourseObjects.add(course);
-                            break;
-                        }
-                    } else {
-                        continue;
+                    if (course.getCourseID().equals(courseID)) {
+                        finishedCourseObjects.add(course);
+                        break;
                     }
                 }
             }

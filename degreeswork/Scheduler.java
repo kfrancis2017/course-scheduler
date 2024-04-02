@@ -18,9 +18,7 @@ public class Scheduler {
         this.completedCourses = student.getFinishedCourseObjects(allCoursesList);
         this.allCourses = new HashMap<>();
         for (Course course : allCoursesList) {
-            if (course != null) { // Check if the course is not null
-                this.allCourses.put(course.getCourseID(), course);
-            }
+            this.allCourses.put(course.getCourseID(), course);
         }
     }
 
@@ -56,7 +54,7 @@ public class Scheduler {
                     needToTake.add(course);
                     for (ArrayList<String> prereqList : course.getPrereqClean()) {
 
-                            if (prereqList.size() == 1) {// If there's only one prerequisite
+                        if (prereqList.size() == 1) {// If there's only one prerequisite
 
                             String prereq = prereqList.get(0); // Get the prerequisite course ID
                             // Check if the course hasn't been completed or already checked
@@ -88,7 +86,6 @@ public class Scheduler {
                     }
                 }
 
-                }
             }
         }
 
