@@ -11,7 +11,7 @@ This repository contains the source code and documentation for the redevelopment
 
 ## Prototype Presentation
 
-https://mockitt.wondershare.com/proto/oDRvmeWysb0j50iaPjt4/sharing?view_mode=device&screen=rbpU8Ei6V5cx8ucYQ&canvasId=rcU8c0U0yXeRggmO
+https://mockitt.wondershare.com/proto/oDRvmeWysb0j50iaPjt4/sharing
 
 ## Project Structure
 
