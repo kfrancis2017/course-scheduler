@@ -109,6 +109,12 @@ public class UserList {
         }
     }
 
+    public void clear() {
+        users.clear(); // Clears the list of all users
+        students.clear(); // Clears the list of all students
+        advisors.clear(); // Clears the list of all advisors
+    }
+    
     public String toString() {
         StringBuilder result = new StringBuilder();
         for (User user : users) {

@@ -3,7 +3,8 @@ import java.util.ArrayList;
 
 public class Major {
     private String name;
-    private ArrayList<Course> courses;
+    private ArrayList<ArrayList<Course>> courses;
+    private ArrayList<Course> courseList;
 
     public Major(String name) {
         this.name = name;
@@ -16,11 +17,26 @@ public class Major {
 
 
     public void addCourse(Course course) {
-        courses.add(course);
+        ArrayList<Course> addTo = new ArrayList<Course>();
+        addTo.add(course);
+        courses.add(addTo);
     }
 
-    public ArrayList<Course> getCourses() {
+    public ArrayList<ArrayList<Course>> getCourses() {
         return courses;
+    }
+
+    public ArrayList<Course> getCourseList() {
+        ArrayList<Course> courseList = new ArrayList<>();
+        for (ArrayList<Course> innerList : courses) {
+            if (innerList.size() > 1) {
+                courseList.addAll(innerList);
+            } else {
+                Course electiveCourse = new Course("Elective", "ELCV","Elective",null, null, "", false, 0);
+                courseList.add(electiveCourse);
+            }
+        }
+        return courseList;
     }
 
     @Override

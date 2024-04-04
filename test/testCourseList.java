@@ -12,8 +12,9 @@ public class testCourseList {
     @Test
     public void testAddCourse() {
         CourseList courseList = CourseList.getInstance();
-        Course course1 = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
-        Course course2 = new Course("Physics", "PHYS101", "Introduction to Physics", new ArrayList<>(), new ArrayList<>(), "Physics", true);
+        courseList.clear();
+        Course course1 = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
+        Course course2 = new Course("Physics", "PHYS101", "Introduction to Physics", new ArrayList<>(), new ArrayList<>(), "Physics", true,3);
 
         Assert.assertTrue(courseList.addCourse(course1));
         Assert.assertTrue(courseList.addCourse(course2));
@@ -23,17 +24,19 @@ public class testCourseList {
     @Test
     public void testModifyCourse() {
         CourseList courseList = CourseList.getInstance();
-        Course oldCourse = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
+        courseList.clear();
+        Course oldCourse = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
         courseList.addCourse(oldCourse);
 
-        Course newCourse = new Course("Advanced Math", "MATH201", "Advanced Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
+        Course newCourse = new Course("Advanced Math", "MATH201", "Advanced Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
         Assert.assertTrue(courseList.modifyCourse(newCourse, oldCourse));
     }
 
     @Test
     public void testDeleteCourse() {
         CourseList courseList = CourseList.getInstance();
-        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
+        courseList.clear();
+        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true, 3);
         courseList.addCourse(course);
 
         Assert.assertTrue(courseList.deleteCourse(course));
@@ -43,7 +46,8 @@ public class testCourseList {
     @Test
     public void testFindCourseByCode() {
         CourseList courseList = CourseList.getInstance();
-        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
+        courseList.clear();
+        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
         courseList.addCourse(course);
 
         Course foundCourse = courseList.findCourseByCode("MATH101");
@@ -53,8 +57,9 @@ public class testCourseList {
     @Test
     public void testGetCourses() {
         CourseList courseList = CourseList.getInstance();
-        Course course1 = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true);
-        Course course2 = new Course("Physics", "PHYS101", "Introduction to Physics", new ArrayList<>(), new ArrayList<>(), "Physics", true);
+        courseList.clear();
+        Course course1 = new Course("Math", "MATH101", "Introduction to Mathematics", new ArrayList<>(), new ArrayList<>(), "Mathematics", true,3);
+        Course course2 = new Course("Physics", "PHYS101", "Introduction to Physics", new ArrayList<>(), new ArrayList<>(), "Physics", true,3);
 
         courseList.addCourse(course1);
         courseList.addCourse(course2);

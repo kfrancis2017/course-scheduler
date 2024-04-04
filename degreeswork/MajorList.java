@@ -57,6 +57,11 @@ public class MajorList {
         return Majors;
     }
 
+
+    public void clear() {
+        Majors.clear(); // Clears the list of all majors
+    }
+    
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Major Major : Majors) {
@@ -75,14 +80,18 @@ public class MajorList {
         return sb.toString();        
     }
     
+
+    //TODO CHECK THIS BEFORE running
     public CourseList listCoursesForMajor(String majorName, Student student) {
         Major major = getMajorByName(majorName);
         CourseList list = new CourseList();
         if (major != null) {
             System.out.println("Courses for major: " + majorName);
-            for (Course course : major.getCourses()) {
-                if (!student.getCurrentCourses().contains(course.getCourseID())) {
-                    list.addCourse(course);
+            for (ArrayList<Course> courseList : major.getCourses()) { // Changed from Course to ArrayList<Course>
+                for (Course course : courseList) { // Additional loop to iterate over ArrayList<Course>
+                    if (!student.getCurrentCourses().contains(course.getCourseID())) {
+                        list.addCourse(course);
+                    }
                 }
             }
         } else {
@@ -90,4 +99,6 @@ public class MajorList {
         }
         return list;
     }
+    
+    
 }

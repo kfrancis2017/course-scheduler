@@ -23,7 +23,7 @@ public class testCourse {
     public void testParameterizedConstructor() {
         ArrayList<ArrayList<String>> prereq = new ArrayList<>();
         ArrayList<ArrayList<String>> coreq = new ArrayList<>();
-        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", prereq, coreq, "Mathematics", true);
+        Course course = new Course("Math", "MATH101", "Introduction to Mathematics", prereq, coreq, "Mathematics", true,3);
         Assert.assertEquals("Math", course.getTitle());
         Assert.assertEquals("MATH101", course.getCourseID());
         Assert.assertEquals("Introduction to Mathematics", course.getDescription());

@@ -20,20 +20,7 @@ public class Advisor extends User {
     }
 
     public ArrayList<String> getAdviseeList() {
-        ArrayList<String> adviseeDetails = new ArrayList<String>();
-        UserList userList = UserList.getInstance();
-
-        for (String username : this.adviseeList) {
-            User user = userList.getUser(username); 
-            if (user != null) {
-    
-                adviseeDetails.add(user.getUsername());
-            }
-            else {
-                adviseeDetails.add("User not found: " +username);
-            }
-        }
-        return adviseeDetails;
+        return adviseeList;
     }
 
     public Student getAdvisee(String user) {
@@ -41,15 +28,12 @@ public class Advisor extends User {
             if(userName.equals(user)){
                 UserList users = UserList.getInstance();
                 ArrayList<Student> list = users.getStudents();
-            
                 for(Student student : list) {
                     if(student.getUsername().equals(user)) {
                         return student;
                     }
                 }
-            
             }
-
         }
         return null;
     }

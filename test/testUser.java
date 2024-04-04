@@ -50,7 +50,8 @@ public class testUser {
                                 "First Name: John\n" +
                                 "Last Name: Doe\n" +
                                 "Last Login: ";
-        Assert.assertEquals(expectedString, user.toString().substring(0, 63)); // Ignore the last login value as it changes
+        String del = user.toString();
+        Assert.assertEquals(expectedString, del.substring(0, del.length() - 16)); // Ignore the last login value as it changes
     }
 
     @Test

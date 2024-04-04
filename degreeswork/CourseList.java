@@ -6,6 +6,9 @@ public class CourseList {
     private static CourseList courseList;
     private ArrayList<Course> courses;
 
+    public void clear() {
+        courses.clear();
+    }
     public CourseList() {
         courses = new ArrayList<Course>();
     }
@@ -27,9 +30,9 @@ public class CourseList {
         return true;
     }
 
-    public boolean addCourse(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean holds) {
+    public boolean addCourse(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean holds, int hours) {
         if (findCourseByCode(courseID) != null) return false;
-        courses.add(new Course(title, courseID, description, prereq, coreq, AOS_Req, holds));
+        courses.add(new Course(title, courseID, description, prereq, coreq, AOS_Req, holds, hours));
         return true;
     }
     

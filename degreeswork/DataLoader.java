@@ -11,15 +11,13 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class DataLoader {
-    public DataLoader() {
-    }
 
     public static void getAllCourses() {
         JSONParser parser = new JSONParser();
         CourseList courses = CourseList.getInstance();
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/newcourse.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("json/course.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -61,6 +59,7 @@ public class DataLoader {
 
                 course.setAOS_Req((String) courseData.get("AOS_Req"));
                 course.setCourseHolds((Boolean) courseData.get("courseHolds"));
+                course.setHours((int)(long) courseData.get("hours"));
                 courses.addCourse(course);
             }
         } catch (IOException | ParseException e) {
@@ -169,8 +168,7 @@ public class DataLoader {
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;
                     for (Object courseObj : coursesArray) {
-                        JSONObject courseData = (JSONObject) courseObj;
-                        String courseName = (String) courseData.get("course");
+                        String courseName = (String) courseObj;
                         Course course = courses.findCourseByCode(courseName);
                         if (course != null) {
                             major.addCourse(course);

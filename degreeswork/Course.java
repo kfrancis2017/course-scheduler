@@ -11,6 +11,7 @@ public class Course {
     private ArrayList<ArrayList<String>> coreq; // Same structure for corequisites.
     private String AOS_Req;
     private boolean courseHolds;
+    private int hours;
 
     public Course() {
         this.prereq = new ArrayList<>();
@@ -20,9 +21,10 @@ public class Course {
         this.courseID = "";
         this.description = "";
         this.courseHolds = false;
+        this.hours = 0;
     }
 
-    public Course(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean courseHolds) {
+    public Course(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean courseHolds, int hours) {
         this.title = title;
         this.courseID = courseID;
         this.description = description;
@@ -30,6 +32,7 @@ public class Course {
         this.coreq = coreq;
         this.AOS_Req = AOS_Req;
         this.courseHolds = courseHolds;
+        this.hours = hours;
     }
 
     // Getters
@@ -49,6 +52,24 @@ public class Course {
         return prereq;
     }
 
+    public ArrayList<ArrayList<String>> getPrereqClean() {//this is for SCHEDULING PURPOSES PRIMARILY
+        // Iterate over each ArrayList<String> in the outer list
+        for (ArrayList<String> preReq : prereq) {
+            // Iterate over each String in the inner ArrayList
+            for (int i = 0; i < preReq.size(); i++) {
+                String currentString = preReq.get(i);
+                int indexOfTab = currentString.indexOf('\t');
+                // If a tab character is found, substring from the beginning to the tab index
+                if (indexOfTab != -1) {
+                    preReq.set(i, currentString.substring(0, indexOfTab));
+                }
+            }
+        }
+        return prereq;
+    }
+    
+    
+    
     public ArrayList<ArrayList<String>> getCoreq() {
         return coreq;
     }
@@ -59,6 +80,10 @@ public class Course {
 
     public boolean getCourseHolds() {
         return courseHolds;
+    }
+
+    public int getHours() {
+        return hours;
     }
 
     // Setters
@@ -88,6 +113,10 @@ public class Course {
 
     public void setCourseHolds(boolean courseHolds) {
         this.courseHolds = courseHolds;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     @Override
