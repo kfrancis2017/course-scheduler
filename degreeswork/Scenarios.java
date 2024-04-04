@@ -9,8 +9,8 @@ public class Scenarios {
     public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
         DegreeWorks degreeworks = new DegreeWorks();
         System.out.println("Welcome to DegreeWorks, a DegreeWorks that works!");
-        //testScenario1(degreeworks);
-        testScenario2(degreeworks);
+        testScenario1(degreeworks);
+        // testScenario2(degreeworks);
     }
 
     public static void testScenario1(DegreeWorks degreeworks) {
@@ -28,12 +28,13 @@ public class Scenarios {
             System.out.println("Here is your remaining courseload:");
             degreeworks.getRequirements(degreeworks.getMajorName());
             System.out.println("Would you like to pick courses? Press 1 for yes.");
-            if(/*input.nextLine().equals("1")*/true) {
+            if(input.nextLine().equals("1")) {
                 @SuppressWarnings("unused")
                 boolean next = true;
                 while(next = true) {
                     System.out.println("Write the course code of the desired course.");
-                    String chosenCourseID = "BIOL110";//input.nextLine();
+                    String chosenCourseID;
+                    chosenCourseID = input.nextLine();
                     degreeworks.addStudentCourse(chosenCourseID);
                     System.out.println("Enter new course? Press 1 for yes.");
                     if(input.nextLine().equals("1")) {
