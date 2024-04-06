@@ -1,0 +1,156 @@
+[
+    {
+        "id": "94d14278-e626-466e-8743-757505f8fba6",
+        "name": "Computer Science",
+        "totalCreditsRequired": 125,
+        "majorCreditsRequired": 90,
+        "electiveCreditsRequired": 26,
+        "options": [
+            ["ENGL101"],
+            ["MATH141"], 
+            ["CSCE145"],
+            ["CSCE190"],
+            ["AFAM202", "ARTH105", "FAMS240"],
+            ["ENGL102"],
+            ["MATH142"],
+            ["CHEM111", "PHYS211"],
+            ["CSCE146"],
+            ["CSCE215"],
+            ["CSCE211"],
+            ["CSCE240"],
+            ["MATH374"],
+            ["CHEM112", "PHYS212"],
+            ["PHIL213", "SPCH140", "SAEL200"],
+            ["CSCE212"], 
+            ["CSCE247"],
+            ["MATH241"],
+            ["GEOL101", "ANTH161", "MSCI101"],
+            ["CYBR101", "ANTH210", "AFAM218"],
+            ["CSCE311"], 
+            ["CSCE330"], 
+            ["CSCE350"], 
+            ["CSCE390"], 
+            ["ENGL462", "ENGL463"],
+            ["CSCE416"], 
+            ["STAT509"],
+            ["CSCE317", "CSCE512", "CSCE513"],
+            ["AERO401", "ANTH101", "ECON123"],
+            ["CSCE490"], 
+            ["CSCE355"],
+            ["MATH344"],
+            ["CSCE317", "CSCE512", "CSCE513"],
+            ["CSCE492"],
+            ["CSCE317", "CSCE512", "CSCE513"],
+            ["AERO401", "ANTH101", "ECON123"],
+            ["ARTH107", "FAM300", "GERM280"],
+            ["FREN122", "ITAL122", "LATN110"],
+            ["GERM122", "JAP122", "PORT121"]
+        ]
+    },
+    {
+        "id": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
+        "name": "Computer Information Systems",
+        "totalCreditsRequired": 120,
+        "majorCreditsRequired": 87,
+        "electiveCreditsRequired": 34,
+        "options": [
+            ["ENGL101"], 
+            ["MATH122", "MATH141"], 
+            ["CSCE145"], 
+            ["CSCE190"],
+            ["ANTH161", "ASTR201", "BIOL122"],
+            ["ENGL102"],
+            ["CSCE146"], 
+            ["CSCE215"],
+            ["ANTH161", "ASTR201", "BIOL122"],
+            ["AFAM202", "ARTE260", "CPLT270"],
+            ["CSCE205"],
+            ["CSCE210"],
+            ["CSCE247"], 
+            ["ECON224"], 
+            ["SPCH140"],
+            ["CSCE201"],
+            ["CSCE240"], 
+            ["MATH174"], 
+            ["MGSC290"],
+            ["AFAM201", "ANTH101", "EDUC360"],
+            ["CSCE350"], 
+            ["CSCE390"], 
+            ["STAT515"], 
+            ["ACCT222", "MGMT371", "ENGL462"],
+            ["MGMT371"],
+            ["ENGL462", "ENGL463"],
+            ["CSCE520"], 
+            ["CSCE594"], 
+            ["STAT516"],
+            ["ACCT324", "FINA333", "MGSC395"],
+            ["ARTH107", "HIST101", "SOST201"],
+            ["CSCE490"], 
+            ["CSCE416"], 
+            ["CSCE522"],
+            ["ACCT324", "FINA333", "MGSC395"],
+            ["AERO401", "CLAS220", "PSYC101"],
+            ["CSCE492"],
+            ["ITEC447", "CSCE510", "ITEC560"],
+            ["AERO401", "CLAS220", "PSYC101"],
+            ["AERO401", "CLAS220", "PSYC101"],
+            ["FREN122", "ITAL122", "LATN110"],
+            ["GERM122", "JAP122", "PORT121"]
+        ]
+    },
+    {
+        "id": null,
+        "name": "Statistics",
+        "totalCreditsRequired": 9,
+        "majorCreditsRequired": 0,
+        "options": [
+            ["STAT110", "STAT112"],
+            ["STAT201", "STAT206"],
+            ["STAT506", "STAT509"]
+        ]
+    },
+    {
+        "id": null,
+        "name": "Mathematics",
+        "totalCreditsRequired": 9,
+        "majorCreditsRequired": 0,
+        "options": [
+            ["MATH111"],
+            ["MATH112", "MATH115"],
+            ["MATH122", "MATH141"]
+        ]
+    },
+    {
+        "id": null,
+        "name": "Science",
+        "totalCreditsRequired": 9,
+        "majorCreditsRequired": 0,
+        "options": [
+            ["SCIN101"],
+            ["SCIN244", "SCIN247"],
+            ["SCIN317", "SCIN340"]
+        ]
+    },
+    {
+        "id": null,
+        "name": "Digital Design",
+        "totalCreditsRequired": 9,
+        "majorCreditsRequired": 0,
+        "options": [
+            ["DIGI101", "DIGI102"],
+            ["DIGI211", "DIGI206"],
+            ["DIGI371", "DIGI416"]
+        ]
+    },
+    {
+        "id": null,
+        "name": "Robotics",
+        "totalCreditsRequired": 9,
+        "majorCreditsRequired": 0,
+        "options": [
+            ["CSCE574", "EMCH535"],
+            ["CSCE580", "ELCT331"],
+            ["CSCE581", "ELCT535"]
+        ]
+    }
+]

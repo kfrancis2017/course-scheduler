@@ -1,7 +1,8 @@
-package org.openjfx.hellofx;
+package org.openjfx.controllers;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import library.App;
 
 public class PrimaryController {
 

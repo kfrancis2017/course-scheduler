@@ -10,28 +10,32 @@ public class DegreeWorks {
 
     private User mUser;
     private Student mStudent;
+    private Advisor mAdvisor;
     private UserList allUsers;
     private CourseList allCourses;
     private MajorList allMajors;
+    private static DegreeWorks degreeWorks;
 
 
-    public DegreeWorks(UserList users, CourseList courses) {
-        this.allUsers = users;
-        this.allCourses = courses;
-    }
-
-    public DegreeWorks() throws FileNotFoundException, IOException, ParseException {
-        this.allUsers = UserList.getInstance();
-        this.allCourses = CourseList.getInstance();
-        this.allMajors = MajorList.getInstance();
-
+    public DegreeWorks() {
         DataLoader.getAllStudents();
         DataLoader.getAllAdvisors();
         DataLoader.getAllCourses();
         DataLoader.getAllMajors();
+
+        this.allUsers = UserList.getInstance();
+        this.allCourses = CourseList.getInstance();
+        this.allMajors = MajorList.getInstance();
     }
 
-    public boolean login(String username, String password) {
+    public static DegreeWorks getInstance() {
+        if (degreeWorks == null) {
+            degreeWorks = new DegreeWorks();
+        }
+        return degreeWorks;
+    }
+
+    public boolean studentLogin(String username, String password) {
         this.mUser = allUsers.login(username, password);
         if (this.mUser != null && this.mUser instanceof Student) {
             this.mStudent = (Student) this.mUser; // Set mStudent if the logged-in user is a student
@@ -39,12 +43,12 @@ public class DegreeWorks {
         return this.mUser != null;
     }
 
-    public Advisor advisorLogin(String username, String password) {
-        // this.mUser = allUsers.advisorLogin(username, password);
-        // if (this.mUser != null && this.mUser instanceof Advisor) {
-        //     this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
-        // }
-        return allUsers.advisorLogin(username, password);
+    public boolean advisorLogin(String username, String password) {
+        this.mUser = allUsers.login(username, password);
+        if (this.mUser != null && this.mUser instanceof Student) {
+            this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
+        }
+        return this.mUser != null;
     }
 
     public boolean signup(String username, String password, String firstname, String lastname, boolean isAdvisor) {
