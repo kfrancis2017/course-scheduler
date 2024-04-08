@@ -3,5 +3,6 @@
     "java.test.config": {
         "workingDirectory": "${test/degreeswork}",
 
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
