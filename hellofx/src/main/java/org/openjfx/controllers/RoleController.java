@@ -25,10 +25,5 @@ public class RoleController {
     private void onAdvisorLoginClicked(ActionEvent event) throws IOException {
         App.setRoot("advisor_login");
     }
-
-    @Override
-    public void initalize(URL url, ResourceBundle rb) {
-        
-    }
     
 }
