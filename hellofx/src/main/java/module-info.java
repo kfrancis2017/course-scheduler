@@ -3,9 +3,6 @@ module org.openjfx.hellofx {
     requires javafx.fxml;
     requires json.simple;
 
-    opens org.openjfx.controllers to javafx.fxml;
-    exports org.openjfx.controllers;
-
     opens library to javafx.fxml;
     exports library;
 
