@@ -9,8 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import library.App;
-import degreeswork.*;
+import library.DegreeworksApp;
+import model.*;
 
 public class AdvisorLoginController implements Initializable {
     @FXML

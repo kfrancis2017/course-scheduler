@@ -9,8 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import library.App;
-import degreeswork.*;
+import library.*;
+import model.*;
 
 public class StudentLoginController implements Initializable {
     @FXML

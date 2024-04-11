@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.Library;
+import model.*;
 
 import java.io.IOException;
 
@@ -26,7 +26,7 @@ public class DegreeworksApp extends Application {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
-                Library.getInstance().logout();
+                DegreeWorks.getInstance().logout();
                 Platform.exit();
                 System.exit(0);
             }
