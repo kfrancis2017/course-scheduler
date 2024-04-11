@@ -41,7 +41,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>${javafx.maven.plugin.version}</version>
                 <configuration>
-                    <jlinkImageName>hellofx</jlinkImageName>
+                    <jlinkImageName>DegreeWorksfx</jlinkImageName>
                     <launcher>launcher</launcher>
                     <mainClass>hellofx/org.openjfx.hellofx.App</mainClass>
                 </configuration>
