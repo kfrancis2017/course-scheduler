@@ -1,29 +1,31 @@
-package org.openjfx.controllers;
+package controllers;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
-import library.DegreeworksApp;
-import degreeswork.*;
 
 public class RoleController {
 
     @FXML
-    private void onStudentLoginClicked(ActionEvent event) throws IOException {
-        App.setRoot("student_login");
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    void btnAdvisorClicked(MouseEvent event) {
+
     }
 
     @FXML
-    private void onAdvisorLoginClicked(ActionEvent event) throws IOException {
-        App.setRoot("advisor_login");
+    void btnStudentClicked(MouseEvent event) {
+
     }
-    
+
+    @FXML
+    void initialize() {
+
+    }
+
 }
