@@ -1,4 +1,4 @@
-package degreeswork;
+package model;
 
 import java.util.ArrayList;
 

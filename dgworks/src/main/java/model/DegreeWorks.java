@@ -1,4 +1,4 @@
-package degreeswork;
+package model;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,6 +33,12 @@ public class DegreeWorks {
             degreeWorks = new DegreeWorks();
         }
         return degreeWorks;
+    }
+
+    public void logout() {
+        this.mUser = null;
+        this.mAdvisor = null;
+        this.mStudent = null;
     }
 
     public boolean studentLogin(String username, String password) {
