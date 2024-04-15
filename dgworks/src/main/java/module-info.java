@@ -9,4 +9,7 @@ module dgworks {
     opens model to java.fxml;
     exports model;
 
+    opens controllers to java.fxml;
+    exports controllers;
+
 }

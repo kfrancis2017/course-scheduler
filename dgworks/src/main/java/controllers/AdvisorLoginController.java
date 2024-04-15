@@ -1,4 +1,4 @@
-package model;
+package controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -9,9 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import dgworks.App;
+import model.*;
 
-
-public class StudentLoginController implements Initializable {
+public class AdvisorLoginController implements Initializable {
     @FXML
     public TextField txt_username;
     @FXML
@@ -32,7 +32,7 @@ public class StudentLoginController implements Initializable {
         }
 
         return;
-        //App.setRoot("student_home");
+        //App.setRoot("advisor_home");
     }
 
     @FXML
