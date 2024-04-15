@@ -1,0 +1,24 @@
+.root {
+    -fx-background-color: #ffffff; /* White background for the whole scene */
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: black; /* Pink text for labels */
+}
+
+.button {
+    -fx-background-color: #66BB6A; /* Light green background for buttons */
+    -fx-text-fill: white; /* Black text on buttons */
+}
+
+
+.text-field, .password-field {
+    -fx-control-inner-background: #ffffff; /* White background for text fields */
+    -fx-border-color: #000000; /* Black border for a clean look */
+    -fx-border-width: 2px; /* A bold border for better visibility */
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #ff69b4; /* Pink border when focused to maintain theme consistency */
+}
