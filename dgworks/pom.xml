@@ -28,7 +28,7 @@
             <version>13</version>
         </dependency>
     </dependencies>
-    <build>
+    <build> 
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
