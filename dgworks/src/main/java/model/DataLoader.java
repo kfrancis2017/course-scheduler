@@ -17,7 +17,7 @@ public class DataLoader {
         CourseList courses = CourseList.getInstance();
         try {
             // Read the array of courses from the file
-            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("src/main/java/data/course.json"));
+            JSONArray courseDataArray = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data/course.json"));
             for (Object courseObj : courseDataArray) {
                 JSONObject courseData = (JSONObject) courseObj;
                 Course course = new Course();
@@ -74,7 +74,7 @@ public class DataLoader {
         UserList users = UserList.getInstance();
         JSONParser parser = new JSONParser();
         try {
-            JSONArray studentData = (JSONArray) parser.parse(new FileReader("src/main/java/data/student.json"));
+            JSONArray studentData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data//student.json"));
             for (Object obj : studentData) {
                 JSONObject studentJSON = (JSONObject) obj;
                 Student student = new Student();
@@ -125,7 +125,7 @@ public class DataLoader {
 
         JSONParser parser = new JSONParser();
         try {
-            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("src/main/java/data/advisor.json"));
+            JSONArray advisorData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data/advisor.json"));
             for (Object obj : advisorData) {
                 JSONObject advisorJSON = (JSONObject) obj;
                 Advisor advisor = new Advisor();
@@ -159,7 +159,7 @@ public class DataLoader {
         JSONParser parser = new JSONParser();
 
         try {
-            JSONArray majorData = (JSONArray) parser.parse(new FileReader("src/main/java/data/major.json"));
+            JSONArray majorData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data/major.json"));
             for (Object majorObj : majorData) {
                 JSONObject majorJSON = (JSONObject) majorObj;
                 String name = (String) majorJSON.get("name");
