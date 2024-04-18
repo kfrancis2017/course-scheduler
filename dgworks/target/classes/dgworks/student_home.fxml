@@ -46,5 +46,10 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Label fx:id="lbl_info" layoutX="18.0" layoutY="137.0" prefHeight="94.0" prefWidth="260.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

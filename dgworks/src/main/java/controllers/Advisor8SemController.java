@@ -12,16 +12,20 @@ import javafx.scene.input.MouseEvent;
 import dgworks.App;
 import model.*;
 
-public class Advisor8SemController {
+public class Advisor8SemController implements Initializable {
 
     @FXML
-    public void viewNotes(MouseEvent event) {
-
+    public void dashboard(MouseEvent event) throws IOException {
+        App.setRoot("advisor_home");
     }
 
     @FXML
-    public void viewPlans(MouseEvent event) {
+    public void viewNotes(MouseEvent event) throws IOException {
+        App.setRoot("advisor_notes");
+    }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
     }
 
 }

@@ -154,4 +154,8 @@ public class DegreeWorks {
         return mAdvisor.getAdviseeList();
     }
 
+    public ArrayList<String> getStudentInfo() {
+        return mStudent.getStudentInfo();
+    }
+
 }

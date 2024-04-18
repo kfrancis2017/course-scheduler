@@ -53,12 +53,12 @@
          </font>
       </Label>
       <Line endX="499.0" endY="-1.52587890625E-5" layoutX="100.0" layoutY="76.0" startX="-100.0" />
-      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="15.0" onMouseClicked="#viewPlans" prefHeight="44.0" prefWidth="103.0" text="View Plans" underline="true">
+      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="15.0" prefHeight="44.0" prefWidth="103.0" text="View Plans" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="14.0" prefHeight="44.0" prefWidth="127.0" text="Dashboard">
+      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="14.0" onMouseClicked="#dashboard" prefHeight="44.0" prefWidth="127.0" text="Dashboard">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
