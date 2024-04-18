@@ -1,0 +1,397 @@
+[
+    {
+        "accountStatus": "Open",
+        "firstName": "Dee",
+        "lastName": "Francis",
+        "password": "31459",
+        "advisorSpecialization": "CEC",
+        "adviseeList": [
+            "User not found: 6f56258d-70fa-4b72-964d-974990611dc4",
+            "dspears",
+            "vtho24",
+            "lmarquez"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dfrancis@sc.edu",
+        "username": "dfrancis"
+    },
+    {
+        "accountStatus": "Closed",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "password": "aBc123!",
+        "advisorSpecialization": "ME",
+        "adviseeList": [],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "bjensen@sc.edu",
+        "username": "bjensen"
+    },
+    {
+        "accountStatus": "Pending",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "password": "123456",
+        "advisorSpecialization": "ECE",
+        "adviseeList": [
+            "User not found: d3f5935d-4c12-4b9a-9478-620945233dfe",
+            "User not found: 9d8f0b7d-c3d0-4f56-95a9-9f202c448c47",
+            "User not found: 7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"
+        ],
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "email": "emily@sc.edu",
+        "username": "emily1985"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "password": "78910",
+        "advisorSpecialization": "CS",
+        "adviseeList": [
+            "User not found: f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"
+        ],
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "email": "thisisnotanemail",
+        "username": "invalid_email"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Test",
+        "lastName": "Account",
+        "password": "",
+        "advisorSpecialization": "IE",
+        "adviseeList": [
+            "User not found: missing",
+            "User not found: ",
+            "User not found: 12345678-abcd-90ef-1234-567890abcdef"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "testaccount@sc.edu",
+        "username": "testaccount"
+    },
+    {
+        "accountStatus": null,
+        "firstName": "Fake",
+        "lastName": "Person",
+        "password": "password",
+        "advisorSpecialization": null,
+        "adviseeList": [],
+        "userID": "49b6b64b-a689-42d3-a958-26ca21810c34",
+        "email": null,
+        "username": "test"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Dee",
+        "lastName": "Francis",
+        "password": "31459",
+        "advisorSpecialization": "CEC",
+        "adviseeList": [
+            "User not found: 6f56258d-70fa-4b72-964d-974990611dc4",
+            "dspears",
+            "vtho24",
+            "lmarquez"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dfrancis@sc.edu",
+        "username": "dfrancis"
+    },
+    {
+        "accountStatus": "Closed",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "password": "aBc123!",
+        "advisorSpecialization": "ME",
+        "adviseeList": [],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "bjensen@sc.edu",
+        "username": "bjensen"
+    },
+    {
+        "accountStatus": "Pending",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "password": "123456",
+        "advisorSpecialization": "ECE",
+        "adviseeList": [
+            "User not found: d3f5935d-4c12-4b9a-9478-620945233dfe",
+            "User not found: 9d8f0b7d-c3d0-4f56-95a9-9f202c448c47",
+            "User not found: 7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"
+        ],
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "email": "emily@sc.edu",
+        "username": "emily1985"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "password": "78910",
+        "advisorSpecialization": "CS",
+        "adviseeList": [
+            "User not found: f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"
+        ],
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "email": "thisisnotanemail",
+        "username": "invalid_email"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Test",
+        "lastName": "Account",
+        "password": "",
+        "advisorSpecialization": "IE",
+        "adviseeList": [
+            "User not found: missing",
+            "User not found: ",
+            "User not found: 12345678-abcd-90ef-1234-567890abcdef"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "testaccount@sc.edu",
+        "username": "testaccount"
+    },
+    {
+        "accountStatus": null,
+        "firstName": "Fake",
+        "lastName": "Person",
+        "password": "password",
+        "advisorSpecialization": null,
+        "adviseeList": [],
+        "userID": "49b6b64b-a689-42d3-a958-26ca21810c34",
+        "email": null,
+        "username": "test"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Dee",
+        "lastName": "Francis",
+        "password": "31459",
+        "advisorSpecialization": "CEC",
+        "adviseeList": [
+            "User not found: 6f56258d-70fa-4b72-964d-974990611dc4",
+            "dspears",
+            "vtho24",
+            "lmarquez"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dfrancis@sc.edu",
+        "username": "dfrancis"
+    },
+    {
+        "accountStatus": "Closed",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "password": "aBc123!",
+        "advisorSpecialization": "ME",
+        "adviseeList": [],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "bjensen@sc.edu",
+        "username": "bjensen"
+    },
+    {
+        "accountStatus": "Pending",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "password": "123456",
+        "advisorSpecialization": "ECE",
+        "adviseeList": [
+            "User not found: d3f5935d-4c12-4b9a-9478-620945233dfe",
+            "User not found: 9d8f0b7d-c3d0-4f56-95a9-9f202c448c47",
+            "User not found: 7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"
+        ],
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "email": "emily@sc.edu",
+        "username": "emily1985"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "password": "78910",
+        "advisorSpecialization": "CS",
+        "adviseeList": [
+            "User not found: f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"
+        ],
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "email": "thisisnotanemail",
+        "username": "invalid_email"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Test",
+        "lastName": "Account",
+        "password": "",
+        "advisorSpecialization": "IE",
+        "adviseeList": [
+            "User not found: missing",
+            "User not found: ",
+            "User not found: 12345678-abcd-90ef-1234-567890abcdef"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "testaccount@sc.edu",
+        "username": "testaccount"
+    },
+    {
+        "accountStatus": null,
+        "firstName": "Fake",
+        "lastName": "Person",
+        "password": "password",
+        "advisorSpecialization": null,
+        "adviseeList": [],
+        "userID": "49b6b64b-a689-42d3-a958-26ca21810c34",
+        "email": null,
+        "username": "test"
+    },
+    {
+        "accountStatus": "Open",
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dfrancis@sc.edu",
+        "username": "dfrancis"
+    },
+    {
+        "accountStatus": "Closed",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "password": "aBc123!",
+        "advisorSpecialization": "ME",
+        "adviseeList": [],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "bjensen@sc.edu",
+        "username": "bjensen"
+    },
+    {
+        "accountStatus": "Pending",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "password": "123456",
+        "advisorSpecialization": "ECE",
+        "adviseeList": [
+            "User not found: d3f5935d-4c12-4b9a-9478-620945233dfe",
+            "User not found: 9d8f0b7d-c3d0-4f56-95a9-9f202c448c47",
+            "User not found: 7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"
+        ],
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "email": "emily@sc.edu",
+        "username": "emily1985"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "password": "78910",
+        "advisorSpecialization": "CS",
+        "adviseeList": [
+            "User not found: f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"
+        ],
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "email": "thisisnotanemail",
+        "username": "invalid_email"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Test",
+        "lastName": "Account",
+        "password": "",
+        "advisorSpecialization": "IE",
+        "adviseeList": [
+            "User not found: missing",
+            "User not found: ",
+            "User not found: 12345678-abcd-90ef-1234-567890abcdef"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "testaccount@sc.edu",
+        "username": "testaccount"
+    },
+    {
+        "accountStatus": null,
+        "firstName": "Fake",
+        "lastName": "Person",
+        "password": "password",
+        "advisorSpecialization": null,
+        "adviseeList": [],
+        "userID": "49b6b64b-a689-42d3-a958-26ca21810c34",
+        "email": null,
+        "username": "test"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Dee",
+        "lastName": "Francis",
+        "password": "31459",
+        "advisorSpecialization": "CEC",
+        "adviseeList": [
+            "User not found: 6f56258d-70fa-4b72-964d-974990611dc4",
+            "dspears",
+            "vtho24",
+            "lmarquez"
+        ],
+        "userID": "591eb9db-17d4-4731-bce5-13547764ffdb",
+        "email": "dfrancis@sc.edu",
+        "username": "dfrancis"
+    },
+    {
+        "accountStatus": "Closed",
+        "firstName": "Bob",
+        "lastName": "Jensen",
+        "password": "aBc123!",
+        "advisorSpecialization": "ME",
+        "adviseeList": [],
+        "userID": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
+        "email": "bjensen@sc.edu",
+        "username": "bjensen"
+    },
+    {
+        "accountStatus": "Pending",
+        "firstName": "Emily",
+        "lastName": "Rodriguez",
+        "password": "123456",
+        "advisorSpecialization": "ECE",
+        "adviseeList": [
+            "User not found: d3f5935d-4c12-4b9a-9478-620945233dfe",
+            "User not found: 9d8f0b7d-c3d0-4f56-95a9-9f202c448c47",
+            "User not found: 7a1e78fa-8df0-4d6a-a8a3-6f3781e8a44e"
+        ],
+        "userID": "e3b0c442-98fc-1c14-9dd4-e7d61f54a25e",
+        "email": "emily@sc.edu",
+        "username": "emily1985"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Invalid",
+        "lastName": "User",
+        "password": "78910",
+        "advisorSpecialization": "CS",
+        "adviseeList": [
+            "User not found: f4a3e5c0-6bef-4415-8a4c-2d9a33b6f883"
+        ],
+        "userID": "9c205a39-1b34-4b29-a8c4-2a1b9e5d1425",
+        "email": "thisisnotanemail",
+        "username": "invalid_email"
+    },
+    {
+        "accountStatus": "Open",
+        "firstName": "Test",
+        "lastName": "Account",
+        "password": "",
+        "advisorSpecialization": "IE",
+        "adviseeList": [
+            "User not found: missing",
+            "User not found: ",
+            "User not found: 12345678-abcd-90ef-1234-567890abcdef"
+        ],
+        "userID": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
+        "email": "testaccount@sc.edu",
+        "username": "testaccount"
+    },
+    {
+        "accountStatus": null,
+        "firstName": "Fake",
+        "lastName": "Person",
+        "password": "password",
+        "advisorSpecialization": null,
+        "adviseeList": [],
+        "userID": "49b6b64b-a689-42d3-a958-26ca21810c34",
+        "email": null,
+        "username": "test"
+    }
+]
