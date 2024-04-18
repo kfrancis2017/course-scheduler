@@ -31,9 +31,7 @@ public class StudentLoginController implements Initializable {
             return;
         }
 
-        System.out.println("YAY logged in");
-        return;
-        //App.setRoot("student_home");
+        App.setRoot("student_home");
     }
 
     @FXML

@@ -138,4 +138,16 @@ public class DegreeWorks {
         System.out.println(allMajors.allToString());
     }
 
+    public String getStudentName() {
+        return mStudent.getFirstName() + " " + mStudent.getLastName();
+    }
+
+    public String getAdvisorName() {
+        return mAdvisor.getFirstName() + " " + mAdvisor.getLastName();
+    }
+
+    public ArrayList<String> getNotes() {
+        return mStudent.getAdvisingNotes();
+    }
+
 }
