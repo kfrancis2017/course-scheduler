@@ -24,6 +24,9 @@ public class StudentHomeController implements Initializable {
     public Label lbl_info;
 
     @FXML
+    public ListView list_cc;
+
+    @FXML
     public void logout(MouseEvent event) throws IOException {
         dg.logout();
         App.setRoot("role");
@@ -51,7 +54,7 @@ public class StudentHomeController implements Initializable {
 
         lbl_info.setText(info);
 
-
+        list_cc.getItems().addAll(dg.getCurrentCourses());
     }
 
 }

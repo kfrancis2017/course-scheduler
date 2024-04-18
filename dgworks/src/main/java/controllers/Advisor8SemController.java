@@ -9,10 +9,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import dgworks.App;
 import model.*;
 
 public class Advisor8SemController implements Initializable {
+
+    @FXML
+    public GridPane grid_advisees;
+
+    DegreeWorks dg = DegreeWorks.getInstance();
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -26,6 +33,15 @@ public class Advisor8SemController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        for (int i = 0; i < dg.getAdvisees().size(); i++) {
+            VBox vbox = new VBox();
+            Label student_username = new Label(dg.getAdvisees().get(i));
+
+            vbox.getChildren().add(student_username);
+
+            grid_advisees.add(vbox, 0, i);
+            
+        }
     }
 
 }

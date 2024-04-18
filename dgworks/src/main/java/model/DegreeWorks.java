@@ -158,4 +158,8 @@ public class DegreeWorks {
         return mStudent.getStudentInfo();
     }
 
+    public ArrayList<String> getCurrentCourses() {
+        return mStudent.getCurrentCourses();
+    }
+
 }
