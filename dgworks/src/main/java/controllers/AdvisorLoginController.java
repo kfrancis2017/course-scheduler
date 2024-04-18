@@ -31,9 +31,7 @@ public class AdvisorLoginController implements Initializable {
             return;
         }
 
-        System.out.println("YAY logged in");
-        return;
-        //App.setRoot("advisor_home");
+        App.setRoot("advisor_home");
     }
 
     @FXML
