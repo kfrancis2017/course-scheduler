@@ -3,6 +3,7 @@ module dgworks {
     requires javafx.fxml;
     requires json.simple;
     requires org.apache.pdfbox;
+    requires jfxtras.common;
 
     opens dgworks to javafx.fxml;
     exports dgworks;
@@ -12,5 +13,4 @@ module dgworks {
 
     opens controllers to java.fxml;
     exports controllers;
-
 }

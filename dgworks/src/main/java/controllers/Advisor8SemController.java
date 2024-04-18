@@ -1,26 +1,33 @@
 package controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-import dgworks.App;
-import model.*;
+import javafx.scene.layout.VBox;
+import javafx.scene.control.Label;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+import model.DegreeWorks;
 
-public class Advisor8SemController {
+public class Advisor8SemController implements Initializable {
 
     @FXML
-    public void viewNotes(MouseEvent event) {
+    private VBox courseLabels;
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        DegreeWorks dg = DegreeWorks.getInstance();
+        courseLabels.getChildren().add(new Label("CSC 101"));
+        courseLabels.getChildren().add(new Label("CSC 101"));
+
+    }
+    @FXML
+    void viewNotes(MouseEvent event) {
 
     }
 
     @FXML
-    public void viewPlans(MouseEvent event) {
+    void viewPlans(MouseEvent event) {
 
     }
 
