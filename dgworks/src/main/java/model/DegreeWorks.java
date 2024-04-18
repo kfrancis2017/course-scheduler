@@ -162,4 +162,8 @@ public class DegreeWorks {
         return mStudent.getCurrentCourses();
     }
 
+    public ArrayList<String> getAdvisorInfo() {
+        return mAdvisor.getInfo();
+    }
+
 }

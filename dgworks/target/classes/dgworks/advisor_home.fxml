@@ -63,5 +63,10 @@
       <Button layoutX="505.0" layoutY="312.0" mnemonicParsing="false" text="Remove" />
       <Button layoutX="234.0" layoutY="312.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" text="Add" />
       <Button layoutX="305.0" layoutY="312.0" mnemonicParsing="false" text="Remove" />
+      <Label fx:id="lbl_info" layoutX="14.0" layoutY="119.0" prefHeight="94.0" prefWidth="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
