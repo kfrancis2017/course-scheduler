@@ -23,12 +23,17 @@ public class Advisor8SemController implements Initializable {
     }
     @FXML
     void viewNotes(MouseEvent event) {
+    }
 
+    DegreeWorks dg = DegreeWorks.getInstance();
+
+    @FXML
+    public void dashboard(MouseEvent event) throws IOException {
+        App.setRoot("advisor_home");
     }
 
     @FXML
     void viewPlans(MouseEvent event) {
 
     }
-
 }

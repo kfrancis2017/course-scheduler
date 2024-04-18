@@ -204,4 +204,15 @@ public class Student extends User {
         sb.append('}');
         return sb.toString();
     }
+
+    public ArrayList<String> getStudentInfo() {
+        ArrayList<String> info = new ArrayList<>();
+
+        info.add("Semester: " + getCurrentSemester());
+        info.add("Major: " + getMajor());
+        info.add("Program: " + getProgram());
+        info.add("Email: " + getEmail());
+
+        return info;
+    }
 }

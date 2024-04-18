@@ -20,6 +20,9 @@ public class AdvisorHomeController implements Initializable {
     @FXML
     public Label lbl_name;
 
+    @FXML
+    public Label lbl_info;
+
     DegreeWorks dg = DegreeWorks.getInstance();
 
     @FXML
@@ -40,6 +43,14 @@ public class AdvisorHomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         lbl_name.setText(dg.getAdvisorName());
+
+        String info = "";
+
+        for (String s : dg.getAdvisorInfo()) {
+            info += s + "\n";
+        }
+
+        lbl_info.setText(info);
 
         ArrayList<String> advisees = dg.getAdvisees();
 
