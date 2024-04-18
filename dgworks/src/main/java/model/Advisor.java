@@ -85,13 +85,4 @@ public class Advisor extends User {
     public void setAdvisorSpecialization(String specialization) {
         this.advisorSpecialization = specialization;
     }
-
-    public ArrayList<String> getInfo() {
-        ArrayList<String> info = new ArrayList<>();
-
-        info.add("Specialization: " + getAdvisorSpecialization());
-        info.add("Email: " + getEmail());
-
-        return info;
-    }
 }
