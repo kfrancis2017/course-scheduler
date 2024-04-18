@@ -4,5 +4,6 @@
         "workingDirectory": "${test/degreeswork}",
 
     },
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.view": "flat"
 }

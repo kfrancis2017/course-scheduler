@@ -24,6 +24,10 @@ public class Course {
         this.hours = 0;
     }
 
+    public Course(String courseID) {
+        this.courseID = courseID;
+    }
+
     public Course(String title, String courseID, String description, ArrayList<ArrayList<String>> prereq, ArrayList<ArrayList<String>> coreq, String AOS_Req, boolean courseHolds, int hours) {
         this.title = title;
         this.courseID = courseID;

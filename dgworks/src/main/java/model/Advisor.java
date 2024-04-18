@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class Advisor extends User {
-
     private ArrayList<String> adviseeList;
     private String advisorSpecialization;
 
@@ -75,9 +74,14 @@ public class Advisor extends User {
         if (this.adviseeList == null) {
             this.adviseeList = new ArrayList<>();
         }
-        this.adviseeList.add(student.getUsername());
+        
+        // Check if student is already an advisee
+        if (!adviseeList.contains(student.getUsername())) {
+            this.adviseeList.add(student.getUsername());
+            DataWriter.SaveAllUsers();
+        }
     }
-
+    
     public void setAdvisorSpecialization(String specialization) {
         this.advisorSpecialization = specialization;
     }
