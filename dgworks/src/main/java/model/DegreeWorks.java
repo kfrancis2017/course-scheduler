@@ -51,8 +51,8 @@ public class DegreeWorks {
 
     public boolean advisorLogin(String username, String password) {
         this.mUser = allUsers.login(username, password);
-        if (this.mUser != null && this.mUser instanceof Student) {
-            this.mAdvisor = (Advisor) this.mUser; // Set mStudent if the logged-in user is a student
+        if (this.mUser != null && this.mUser instanceof Advisor) {
+            this.mAdvisor = (Advisor) this.mUser; // Set mAdvisor if the logged-in user is a student
         }
         return this.mUser != null;
     }
@@ -148,6 +148,10 @@ public class DegreeWorks {
 
     public ArrayList<String> getNotes() {
         return mStudent.getAdvisingNotes();
+    }
+
+    public ArrayList<String> getAdvisees() {
+        return mAdvisor.getAdviseeList();
     }
 
 }

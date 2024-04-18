@@ -26,7 +26,7 @@ public class AdvisorLoginController implements Initializable {
 
        DegreeWorks dg = DegreeWorks.getInstance();
 
-        if (!dg.studentLogin(username, password)) {
+        if (!dg.advisorLogin(username, password)) {
             lbl_error.setText("Invalid login credentials.");
             return;
         }
