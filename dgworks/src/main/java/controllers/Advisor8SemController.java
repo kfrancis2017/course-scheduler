@@ -4,8 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import dgworks.App;
 import javafx.fxml.Initializable;
 import model.DegreeWorks;
 
