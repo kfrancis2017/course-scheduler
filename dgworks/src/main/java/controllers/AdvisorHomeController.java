@@ -27,7 +27,8 @@ public class AdvisorHomeController implements Initializable {
     }
 
     @FXML
-    public void viewPlans(MouseEvent event) {
+    public void viewPlans(MouseEvent event) throws IOException{
+        App.setRoot("advisor_8sem");
     }
 
     @FXML
