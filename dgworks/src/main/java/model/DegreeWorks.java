@@ -87,6 +87,16 @@ public class DegreeWorks {
         return allCourses.getCourses();
     }
 
+    public Student getStudent(String username) {
+        mStudent = allUsers.searchStudent(username);
+        return mStudent;
+    }
+
+    public Advisor getAdvisor(String username) {
+        mAdvisor = allUsers.searchAdvisor(username);
+        return mAdvisor;
+    }
+
     public String courseToString() {
         StringBuffer sb = new StringBuffer();
         for (Course course : allCourses.getCourses()) {
@@ -170,4 +180,11 @@ public class DegreeWorks {
         return mStudent.getTranscript();
     }
 
+    public void setAdvisor(Advisor advisor) {
+        this.mAdvisor = advisor;
+    }
+
+    public void setStudent(Student student) {
+        this.mStudent = student;
+    }
 }

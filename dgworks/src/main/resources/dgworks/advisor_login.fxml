@@ -21,7 +21,7 @@
       <PasswordField fx:id="txt_password" layoutX="374.0" layoutY="237.0" />
       <Label layoutX="288.0" layoutY="190.0" text="Username" />
       <Label layoutX="288.0" layoutY="242.0" text="Password" />
-      <Button layoutX="407.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="26.0" prefWidth="98.0" text="Login" />
+      <Button fx:id="loginbtn" layoutX="407.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="26.0" prefWidth="98.0" text="Login" />
       <Label fx:id="lbl_error" layoutX="224.0" layoutY="297.0" prefHeight="26.0" prefWidth="150.0">
          <font>
             <Font size="18.0" />

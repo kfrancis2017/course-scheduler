@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -15,11 +17,18 @@ import dgworks.App;
 import model.*;
 
 public class Advisor8SemController implements Initializable {
-
     @FXML
     public GridPane grid_advisees;
 
-    DegreeWorks dg = DegreeWorks.getInstance();
+    private DegreeWorks dg;
+
+    public void setDegreeWorks(DegreeWorks dg) {
+        this.dg = dg;
+    }
+
+    public DegreeWorks getDegreeWorks() {
+        return this.dg;
+    }
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -31,17 +40,28 @@ public class Advisor8SemController implements Initializable {
         App.setRoot("advisor_notes");
     }
 
+    @FXML
+    public void logout(MouseEvent event) throws IOException {
+        dg.logout();
+        App.setRoot("role");
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        for (int i = 0; i < dg.getAdvisees().size(); i++) {
-            VBox vbox = new VBox();
-            Label student_username = new Label(dg.getAdvisees().get(i));
+        if (dg!=null) {
+            for (int i = 0; i < dg.getAdvisees().size(); i++) {
+                VBox vbox = new VBox();
+                Label student_username = new Label(dg.getAdvisees().get(i));
 
-            vbox.getChildren().add(student_username);
+                vbox.getChildren().add(student_username);
 
-            grid_advisees.add(vbox, 0, i);
-            
+                grid_advisees.add(vbox, 0, i);
+                
+            }
+        } else {
+            System.out.println("DegreeWorks is null");
         }
     }
+
 
 }

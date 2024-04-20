@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -13,7 +15,6 @@ import dgworks.App;
 import model.*;
 
 public class AdvisorHomeController implements Initializable {
-    
     @FXML
     public ListView<String> list_advisees;
 
@@ -23,7 +24,15 @@ public class AdvisorHomeController implements Initializable {
     @FXML
     public Label lbl_info;
 
-    DegreeWorks dg = DegreeWorks.getInstance();
+    private DegreeWorks dg;
+
+    public void setDegreeWorks(DegreeWorks dg) {
+        this.dg = dg;
+    }
+
+    public DegreeWorks getDegreeWorks() {
+        return this.dg;
+    }
 
     @FXML
     public void viewNotes(MouseEvent event) {
@@ -42,18 +51,24 @@ public class AdvisorHomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        lbl_name.setText(dg.getAdvisorName());
-
-        String info = "";
-
-        for (String s : dg.getAdvisorInfo()) {
-            info += s + "\n";
+        if (dg != null) {
+            
+            lbl_name.setText(dg.getAdvisorName());
+    
+            String info = "";
+    
+            for (String s : dg.getAdvisorInfo()) {
+                info += s + "\n";
+            }
+    
+            lbl_info.setText(info);
+    
+            ArrayList<String> advisees = dg.getAdvisees();
+    
+            list_advisees.getItems().addAll(advisees);
+        } else {
+            System.out.println("DegreeWorks object is null.");
         }
 
-        lbl_info.setText(info);
-
-        ArrayList<String> advisees = dg.getAdvisees();
-
-        list_advisees.getItems().addAll(advisees);
     }
 }

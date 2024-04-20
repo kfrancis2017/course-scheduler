@@ -3,6 +3,7 @@ module dgworks {
     requires javafx.fxml;
     requires json.simple;
     requires org.apache.pdfbox;
+    requires javafx.graphics;
 
     opens dgworks to javafx.fxml;
     exports dgworks;

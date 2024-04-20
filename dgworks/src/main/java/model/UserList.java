@@ -91,15 +91,24 @@ public class UserList {
         }
         return null;
     }
-
-    public Advisor advisorLogin(String username, String password) {
-        if (searchUser(username)) {
-            for (Advisor advisor : advisors) {
-                if (advisor.getUsername().equals(username) && advisor.getPassword().equals(password))
-                    return advisor;
+    public Student searchStudent(String username) {
+        for (Student student : students) {
+            if (student.getUsername().equals(username)) {
+                return student;
             }
         }
-        return null;
+        return null; // Student not found
+    }
+
+    public Advisor searchAdvisor(String username) {
+        DataLoader.getAllAdvisors();
+        advisors = this.getAdvisors();
+        for (Advisor advisor : advisors) {
+            if (advisor.getUsername().equals(username)) {
+                return advisor;
+            }
+        }
+        return null; // Advisor not found
     }
 
     public void modifyUser(User user, User newUser) {
