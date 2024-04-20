@@ -85,6 +85,7 @@ public class Student extends User {
         }
     }
 
+    // Used in DataLoader
     public void addFinishedCourse(String courseID, String grade, String semester) {
         // Create a new ArrayList to store the course and grade
         ArrayList<String> courseWithGrade = new ArrayList<>();
