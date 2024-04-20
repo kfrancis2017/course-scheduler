@@ -166,4 +166,8 @@ public class DegreeWorks {
         return mAdvisor.getInfo();
     }
 
+    public ArrayList<String> getStudentTranscript() {
+        return mStudent.getTranscript();
+    }
+
 }

@@ -108,7 +108,8 @@ public class DataLoader {
                     JSONArray innerArray = (JSONArray) courseArray;
                     String courseName = (String) innerArray.get(0); // Course name
                     String grade = (String) innerArray.get(1); // Grade
-                    student.addFinishedCourse(courseName, grade);
+                    String semester = (String) innerArray.get(2); // Semester
+                    student.addFinishedCourse(courseName, grade, semester);
                 }
             }
         } catch (IOException | ParseException e) {

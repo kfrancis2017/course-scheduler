@@ -58,5 +58,11 @@
          </font>
       </Label>
       <ListView fx:id="list_cc" layoutX="24.0" layoutY="261.0" prefHeight="118.0" prefWidth="200.0" />
+      <ListView fx:id="list_trans" layoutX="311.0" layoutY="129.0" prefHeight="221.0" prefWidth="278.0" />
+      <Label layoutX="413.0" layoutY="98.0" prefHeight="34.0" prefWidth="74.0" text="Progress" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -85,14 +85,14 @@ public class Student extends User {
         }
     }
 
-    public void addFinishedCourse(String courseID, String grade) {
+    public void addFinishedCourse(String courseID, String grade, String semester) {
         // Create a new ArrayList to store the course and grade
         ArrayList<String> courseWithGrade = new ArrayList<>();
         
         // Add the course ID and grade to the list
         courseWithGrade.add(courseID); // First element is the course ID
         courseWithGrade.add(grade);    // Second element is the grade
-        courseWithGrade.add(String.valueOf(currentSemester));   // Third element is the semester the semester the course was completed
+        courseWithGrade.add(semester);   // Third element is the semester the semester the course was completed
         
         // Add this course and grade list to the list of finished courses
         finishedCourses.add(courseWithGrade);
@@ -214,5 +214,17 @@ public class Student extends User {
         info.add("Email: " + getEmail());
 
         return info;
+    }
+
+    public ArrayList<String> getTranscript() {
+        ArrayList<String> transcript = new ArrayList<>();
+
+        for (ArrayList<String> finCourse : this.finishedCourses) {
+            String add = finCourse.get(0) + ", " + finCourse.get(1) + ", Semester: " + finCourse.get(2);
+
+            transcript.add(add);
+        }
+
+        return transcript;
     }
 }
