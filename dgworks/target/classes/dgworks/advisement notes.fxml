@@ -10,7 +10,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="160.0" layoutY="97.0" prefHeight="26.0" prefWidth="103.0" />
@@ -25,7 +24,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="499.0" layoutY="14.0" onMouseClicked="#viewNotes" prefHeight="44.0" prefWidth="92.0" text="Notes" underline="true">
+      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="499.0" layoutY="14.0" onMouseClicked="#viewNotes" prefHeight="44.0" prefWidth="92.0" text="Notes" textFill="#71000b" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -46,12 +45,12 @@
          </font>
       </Label>
       <TextField layoutX="30.0" layoutY="167.0" prefHeight="199.0" prefWidth="238.0" />
-      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="123.0" prefHeight="44.0" prefWidth="127.0" text="Advising Note">
+      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="123.0" prefHeight="44.0" prefWidth="127.0" text="Advising Note" textFill="#71000b">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="358.0" layoutY="88.0" prefHeight="44.0" prefWidth="127.0" text="Note History">
+      <Label accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" layoutX="358.0" layoutY="88.0" prefHeight="44.0" prefWidth="127.0" text="Note History" textFill="#71000b">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

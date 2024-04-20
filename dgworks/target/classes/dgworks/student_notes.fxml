@@ -27,7 +27,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="25.0" prefHeight="44.0" prefWidth="92.0" text="Notes" underline="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="25.0" prefHeight="44.0" prefWidth="92.0" text="Notes" textFill="#71000b" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -44,7 +44,7 @@
       </Text>
       <Label layoutX="523.0" layoutY="358.0" onMouseClicked="#logout" text="Log Out">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <ListView fx:id="list_notes" layoutX="14.0" layoutY="110.0" prefHeight="242.0" prefWidth="573.0" />
