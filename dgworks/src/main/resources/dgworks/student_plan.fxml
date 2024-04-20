@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,60 +41,5 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Accordion layoutX="309.0" layoutY="118.0" prefHeight="194.0" prefWidth="275.0">
-         <panes>
-            <TitledPane animated="false" text="Semester 1">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 2">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 3">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 4">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 5">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 6">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 7">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Semester 8">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-         </panes>
-      </Accordion>
-      <Label alignment="CENTER" layoutX="370.0" layoutY="86.0" prefHeight="32.0" prefWidth="126.0" text="Course Plans" textFill="#71000b">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="22.0" layoutY="102.0" prefHeight="18.0" prefWidth="195.0" text="Current Courses" textFill="#71000b">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <ListView fx:id="list_cc" layoutX="20.0" layoutY="141.0" prefHeight="193.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
