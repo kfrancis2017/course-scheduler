@@ -1,0 +1,36 @@
+.root {
+    /* Light green background for the overall window */
+    -fx-background-color: white
+    ; 
+}
+
+.label {
+    /* Style for labels */
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333; /* Dark gray text color for readability */
+}
+
+.button {
+    /* Default style for buttons */
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+#studentBtn {
+    /* Specific style for the Student button */
+    -fx-background-color: #71000b; /* Light green */
+}
+
+#advisorBtn {
+    /* Specific style for the Advisor button */
+    -fx-background-color: #71000b; /* Light pink */
+}
+
+.text-field, .password-field {
+    /* Style for input fields */
+    -fx-padding: 4;
+    -fx-font-size: 14px;
+}
+
