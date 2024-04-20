@@ -8,18 +8,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RoleController">
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RoleController">
    <children>
       <Button fx:id="studentBtn" layoutX="176.0" layoutY="296.0" mnemonicParsing="false" onAction="#onStudentClicked" text="Student" />
       <Button fx:id="advisorBtn" layoutX="358.0" layoutY="296.0" mnemonicParsing="false" onAction="#onAdvisorClicked" text="Advisor" />
       <Label layoutX="219.0" layoutY="80.0" text="Welcome to DegreeWorks!">
          <font>
             <Font size="24.0" />
-         </font></Label>
+         </font>
+      </Label>
       <Label layoutX="236.0" layoutY="258.0" text="Choose Role for Login">
          <font>
             <Font size="20.0" />
-         </font></Label>
+         </font>
+      </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="232.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/school.png" />

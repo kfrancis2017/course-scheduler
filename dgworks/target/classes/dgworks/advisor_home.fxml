@@ -19,7 +19,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="15.0" prefHeight="44.0" prefWidth="127.0" text="Dashboard" underline="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="15.0" prefHeight="44.0" prefWidth="127.0" text="Dashboard" textFill="#71000b" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -39,7 +39,7 @@
             <Image url="@images/school.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="414.0" layoutY="91.0" prefHeight="22.0" prefWidth="169.0" text="Advisee List">
+      <Label alignment="CENTER" layoutX="414.0" layoutY="91.0" prefHeight="22.0" prefWidth="169.0" text="Advisee List" textFill="#71000b">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="88.0" onMouseClicked="#viewNotes" prefHeight="27.0" prefWidth="154.0" text="Todo">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="88.0" onMouseClicked="#viewNotes" prefHeight="27.0" prefWidth="154.0" text="Todo" textFill="#71000b">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

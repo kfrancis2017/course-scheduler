@@ -21,7 +21,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="369.0" layoutY="24.0" prefHeight="44.0" prefWidth="127.0" text="Dashboard" underline="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="369.0" layoutY="24.0" prefHeight="44.0" prefWidth="127.0" text="Dashboard" textFill="#71000b" underline="true">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -39,7 +39,7 @@
       <Line endX="100.0" endY="152.0" layoutX="200.0" layoutY="248.0" startX="97.5" startY="-163.0" />
       <Label layoutX="524.0" layoutY="364.0" onMouseClicked="#logout" text="Log Out">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="lbl_name" layoutX="41.0" layoutY="93.0" prefHeight="44.0" prefWidth="195.0" textAlignment="CENTER">
@@ -52,9 +52,9 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="234.0" prefHeight="18.0" prefWidth="195.0" text="Current Courses">
+      <Label layoutX="26.0" layoutY="234.0" prefHeight="18.0" prefWidth="195.0" text="Current Courses" textFill="#71000b">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <ListView fx:id="list_cc" layoutX="24.0" layoutY="261.0" prefHeight="118.0" prefWidth="200.0" />
