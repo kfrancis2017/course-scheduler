@@ -191,4 +191,5 @@ public class DegreeWorks {
     public void setStudent(Student student) {
         this.mStudent = student;
     }
+    
 }

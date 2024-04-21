@@ -22,7 +22,13 @@ public class StudentHomeController implements Initializable {
     public Label lbl_name;
     
     @FXML
+    public ListView list_cc;
+
+    @FXML
     public Label lbl_info;
+
+    @FXML
+    public ListView list_trans;
 
     @FXML
     public void logout(MouseEvent event) throws IOException {
@@ -51,6 +57,11 @@ public class StudentHomeController implements Initializable {
         }
 
         lbl_info.setText(info);
+
+        list_cc.getItems().addAll(dg.getCurrentCourses());
+
+        list_trans.getItems().addAll(dg.getStudentTranscript());
+
     }
 
 }
