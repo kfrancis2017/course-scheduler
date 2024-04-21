@@ -24,26 +24,6 @@ public class Advisor8SemController implements Initializable {
     public GridPane sem1;
     private ArrayList<Course> semester1;
 
-    private ArrayList<Course> fakeCourses() {
-        ArrayList<Course> courses = new ArrayList<>();
-        // Create 6 fake course objects
-        Course course1 = new Course("CSCI101");
-        Course course2 = new Course("MATH101");
-        Course course3 = new Course("PHYS101");
-        Course course4 = new Course("ENG101");
-        Course course5 = new Course("HIST101");
-        Course course6 = new Course("ART101");
-        
-        courses.add(course1);
-        courses.add(course2);
-        courses.add(course3);
-        courses.add(course4);
-        courses.add(course5);
-        courses.add(course6);
-        
-        return courses;
-    }
-
     @FXML
     public GridPane sem2;
     private ArrayList<Course> semester2;
@@ -117,15 +97,25 @@ public class Advisor8SemController implements Initializable {
     clearAll();        
         Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
         ArrayList<ArrayList<Course>> schedule = new ArrayList<ArrayList<Course>>();
+        ArrayList<Course> finished = new ArrayList<Course>();
+        ArrayList<Course> current = new ArrayList<Course>();
 
         //First populate finished courses
         if(student.getFinishedCourses().size() > 0){
-            schedule.add(student.getFinishedCourseObjects(dg.getCourses()));
+            for(ArrayList<String> list : student.getFinishedCourses()) {
+                finished.add(dg.getAllCourses().findCourseByCode(list.get(0)));
+            }
+            System.out.println(finished);
+            schedule.add(finished);
         }
 
         //Then populate current courses
         if(student.getCurrentCourses().size() > 0){
-            schedule.add(student.getCurrentCourseObjects(dg.getCourses()));
+            for(String c : student.getCurrentCourses()) {
+                current.add(dg.getAllCourses().findCourseByCode(c));
+            }
+            System.out.println(current);
+            schedule.add(current);
         } 
 
         //Then populate future courses

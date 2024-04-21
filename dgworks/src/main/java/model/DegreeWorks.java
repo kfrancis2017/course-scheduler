@@ -90,6 +90,10 @@ public class DegreeWorks {
         return allCourses.getCourses();
     }
 
+    public CourseList getAllCourses() {
+        return allCourses;
+    }
+
     public Student getStudent(String username) {
         DataLoader.getAll();
         mStudent = allUsers.searchStudent(username);
