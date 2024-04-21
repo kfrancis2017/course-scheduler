@@ -11,7 +11,7 @@ import javafx.scene.chart.PieChart.Data;
 public class DegreeWorks {
 
     private User mUser;
-    private Student mStudent;
+    public Student mStudent;
     public Advisor mAdvisor;
     //TODO
     private UserList allUsers;
@@ -190,5 +190,9 @@ public class DegreeWorks {
 
     public void setStudent(Student student) {
         this.mStudent = student;
+    }
+
+    public void addAdvisingNote(Student student, String session) {
+        mAdvisor.addAdvisingSession(student, session);
     }
 }

@@ -10,7 +10,7 @@
         "currentCourses": ["HIST101", "ENGL101", "CSCE215", "CSCE145"],
         "major": "Computer Information Systems",
         "currentSemester": 2,
-        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024", "dfrancis wrote: Suggested courses include CSCE211, CSCE240, MATH374, HIST101, and a GFL elective. 03252025"],
+        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. Mon Oct 25 14:20:33 EDT 2023", "dfrancis wrote: Suggested courses include CSCE211, CSCE240, MATH374, HIST101, and a GFL elective. Wed Mar 25 14:20:33 EDT 2024"],
         "program": "CEC",
         "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
         "finishedCourses": [
@@ -34,7 +34,7 @@
         "currentSemester": 2,
         "program": "CEC",
         "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
-        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. 10252024"],
+        "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. Wed Mar 25 14:20:33 EDT 2024"],
         "finishedCourses": [
             ["ELCT101", "B", "1"],
             ["HIST101", "B", "1"],
@@ -56,7 +56,7 @@
         "currentSemester": 2,
         "program": "SCI",
         "currentAdvisor": "88facc64-d5f8-4e2b-99b6-bd582b8f6882",
-        "sessionNotes": ["bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. 03012024"],
+        "sessionNotes": ["bjensen wrote: Advised to improve study habits and seek tutoring for Math. Continue with planned science courses. Wed Mar 25 14:20:33 EDT 2024"],
         "finishedCourses": [
             ["MATH141", "C", "1"],
             ["PHYS201", "B", "1"],
@@ -78,7 +78,7 @@
         "currentSemester": 2,
         "program": "ARTS",
         "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "sessionNotes": ["emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"],
+        "sessionNotes": ["emily1985 wrote: Student is considering a change in major. Explore options in next meeting. Wed Mar 25 14:20:33 EDT 2024"],
         "finishedCourses": [
             ["ARTS101", "B", "1"],
             ["ARTS102", "A", "1"],
@@ -100,7 +100,7 @@
         "currentSemester": 6,
         "program": "CEC",
         "currentAdvisor": "da31f4d3-5de8-4f5b-80e0-5a2686a5408d",
-        "sessionNotes": ["emily1985 wrote: Student is considering a change in major. Explore options in next meeting. 11202024"],
+        "sessionNotes": ["emily1985 wrote: Student is considering a change in major. Explore options in next meeting. Wed Mar 25 14:20:33 EDT 2024"],
         "finishedCourses": [
             ["ENGL101", "A", "1"],
             ["MATH141", "A", "1"],

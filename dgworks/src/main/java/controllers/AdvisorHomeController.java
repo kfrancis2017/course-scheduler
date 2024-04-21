@@ -26,7 +26,8 @@ public class AdvisorHomeController implements Initializable {
     DegreeWorks dg = DegreeWorks.getInstance();
 
     @FXML
-    public void viewNotes(MouseEvent event) {
+    public void viewNotes(MouseEvent event) throws IOException {
+        App.setRoot("advisor_notes");
     }
 
     @FXML

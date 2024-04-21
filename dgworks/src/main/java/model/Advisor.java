@@ -62,7 +62,7 @@ public class Advisor extends User {
     }
 
     public void addAdvisingSession(Student student, String sessionNotes) {
-        student.addAdvisingNotes(this.getUsername() + " said: " + sessionNotes + " on " + new java.util.Date());
+        student.addAdvisingNotes(this.getUsername() + " said: " + sessionNotes + " " + new java.util.Date());
     }
 
     public void setAdviseeList(ArrayList<String> advisees) {
