@@ -231,7 +231,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="515.0" layoutY="373.0" onMouseClicked="#logout" prefHeight="27.0" prefWidth="78.0" text="Logout">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="506.0" layoutY="361.0" onMouseClicked="#logout" prefHeight="27.0" prefWidth="78.0" text="Logout">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
