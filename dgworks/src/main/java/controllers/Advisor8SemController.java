@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import dgworks.App;
 import model.*;
@@ -22,6 +23,26 @@ public class Advisor8SemController implements Initializable {
     @FXML
     public GridPane sem1;
     private ArrayList<Course> semester1;
+
+    private ArrayList<Course> fakeCourses() {
+        ArrayList<Course> courses = new ArrayList<>();
+        // Create 6 fake course objects
+        Course course1 = new Course("CSCI101");
+        Course course2 = new Course("MATH101");
+        Course course3 = new Course("PHYS101");
+        Course course4 = new Course("ENG101");
+        Course course5 = new Course("HIST101");
+        Course course6 = new Course("ART101");
+        
+        courses.add(course1);
+        courses.add(course2);
+        courses.add(course3);
+        courses.add(course4);
+        courses.add(course5);
+        courses.add(course6);
+        
+        return courses;
+    }
 
     @FXML
     public GridPane sem2;
@@ -86,8 +107,9 @@ public class Advisor8SemController implements Initializable {
             vbox.getChildren().add(student_username);
 
             grid_advisees.add(vbox, 0, i);
-            this.createSemesters();
+            //this.createSemesters();
             this.createSem1();
+            /* 
             this.createSem2();
             this.createSem3();
             this.createSem4();
@@ -95,6 +117,7 @@ public class Advisor8SemController implements Initializable {
             this.createSem6();
             this.createSem7();
             this.createSem8();       
+            */
         }
     }
 
@@ -109,7 +132,7 @@ public class Advisor8SemController implements Initializable {
         for (int i = 0; i < schedule.size(); i++) {
             switch (i) {
                 case 0:
-                    semester1 = schedule.get(i);
+                    semester1 = fakeCourses();
                     break;
                 case 1:
                     semester2 = schedule.get(i);
@@ -140,6 +163,7 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem1() {
+        semester1 = fakeCourses();
         sem1.getChildren().clear();
         for (int i = 0; i < semester1.size(); i++) {
             VBox vbox = new VBox();
@@ -168,12 +192,12 @@ public class Advisor8SemController implements Initializable {
     public void createSem3() {
         sem3.getChildren().clear();
         for (int i = 0; i < semester3.size(); i++) {
-            VBox vbox = new VBox();
+            HBox hbox = new HBox();
             Label course = new Label(semester3.get(i).getCourseID());
             Label credits = new Label("Credits: " + semester3.get(i).getHours());
-            vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem3.add(vbox, 0, i);
+            hbox.getChildren().add(course);
+            hbox.getChildren().add(credits);
+            sem3.add(hbox, 0, i);
         }
     }
 
