@@ -74,14 +74,6 @@ public class Advisor8SemController implements Initializable {
 
     private DegreeWorks dg = DegreeWorks.getInstance();
 
-    public void setDegreeWorks(DegreeWorks dg) {
-        this.dg = dg;
-    }
-
-    public DegreeWorks getDegreeWorks() {
-        return this.dg;
-    }
-
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
         App.setRoot("advisor_home");
@@ -108,8 +100,7 @@ public class Advisor8SemController implements Initializable {
 
             grid_advisees.add(vbox, 0, i);
             //this.createSemesters();
-            this.createSem1();
-            /* 
+            this.createSem1();       
             this.createSem2();
             this.createSem3();
             this.createSem4();
@@ -117,7 +108,6 @@ public class Advisor8SemController implements Initializable {
             this.createSem6();
             this.createSem7();
             this.createSem8();       
-            */
         }
     }
 
@@ -165,106 +155,160 @@ public class Advisor8SemController implements Initializable {
     public void createSem1() {
         semester1 = fakeCourses();
         sem1.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester1.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester1.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester1.get(i).getHours());
+            Label course = new Label(semester1.get(i).getCourseID() + " (" + semester1.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem1.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem1.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem2() {
+        semester2 = fakeCourses();
         sem2.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester2.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester2.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester2.get(i).getHours());
+            Label course = new Label(semester2.get(i).getCourseID() + " (" + semester2.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem2.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem2.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem3() {
+        semester3 = fakeCourses();
         sem3.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester3.size(); i++) {
-            HBox hbox = new HBox();
-            Label course = new Label(semester3.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester3.get(i).getHours());
-            hbox.getChildren().add(course);
-            hbox.getChildren().add(credits);
-            sem3.add(hbox, 0, i);
+            VBox vbox = new VBox();
+            Label course = new Label(semester3.get(i).getCourseID() + " (" + semester3.get(i).getHours() + "hrs)");
+            vbox.getChildren().add(course);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem3.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem4() {
+        semester4 = fakeCourses();
         sem4.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester4.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester4.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester4.get(i).getHours());
+            Label course = new Label(semester4.get(i).getCourseID() + " (" + semester4.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem4.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem4.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
+
     public void createSem5() {
+        semester5 = fakeCourses();
         sem5.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester5.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester5.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester5.get(i).getHours());
+            Label course = new Label(semester5.get(i).getCourseID() + " (" + semester5.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem5.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem5.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem6() {
+        semester6 = fakeCourses();
         sem6.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester6.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester6.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester6.get(i).getHours());
+            Label course = new Label(semester6.get(i).getCourseID() + " (" + semester6.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem6.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem6.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem7() {
+        semester7 = fakeCourses();
         sem7.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester7.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester7.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester7.get(i).getHours());
+            Label course = new Label(semester7.get(i).getCourseID() + " (" + semester7.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem7.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem7.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
 
     @FXML
     public void createSem8() {
+        semester8 = fakeCourses();
         sem8.getChildren().clear();
+        int columnCount = 0;
+        int rowCount = 0;
         for (int i = 0; i < semester8.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester8.get(i).getCourseID());
-            Label credits = new Label("Credits: " + semester8.get(i).getHours());
+            Label course = new Label(semester8.get(i).getCourseID() + " (" + semester8.get(i).getHours() + "hrs)");
             vbox.getChildren().add(course);
-            vbox.getChildren().add(credits);
-            sem8.add(vbox, 0, i);
+            vbox.setAlignment(javafx.geometry.Pos.CENTER);
+            sem8.add(vbox, columnCount, rowCount);
+            columnCount++;
+            if (columnCount == 3) {
+                columnCount = 0;
+                rowCount++;
+            }
         }
     }
-
-
 }

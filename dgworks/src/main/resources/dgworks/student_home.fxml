@@ -42,12 +42,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lbl_name" layoutX="41.0" layoutY="93.0" prefHeight="44.0" prefWidth="195.0" textAlignment="CENTER">
+      <Label fx:id="lbl_name" layoutX="26.0" layoutY="93.0" prefHeight="44.0" prefWidth="195.0" textAlignment="CENTER" textFill="#71000b">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lbl_info" layoutX="18.0" layoutY="137.0" prefHeight="94.0" prefWidth="260.0">
+      <Label fx:id="lbl_info" layoutX="28.0" layoutY="137.0" prefHeight="94.0" prefWidth="268.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -59,9 +59,9 @@
       </Label>
       <ListView fx:id="list_cc" layoutX="24.0" layoutY="261.0" prefHeight="118.0" prefWidth="200.0" />
       <ListView fx:id="list_trans" layoutX="311.0" layoutY="129.0" prefHeight="221.0" prefWidth="278.0" />
-      <Label layoutX="413.0" layoutY="98.0" prefHeight="34.0" prefWidth="74.0" text="Progress" textAlignment="CENTER">
+      <Label layoutX="413.0" layoutY="98.0" prefHeight="34.0" prefWidth="74.0" text="Progress" textAlignment="CENTER" textFill="#71000b">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
    </children>
