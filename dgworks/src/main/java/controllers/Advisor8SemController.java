@@ -99,7 +99,7 @@ public class Advisor8SemController implements Initializable {
             vbox.getChildren().add(student_username);
 
             grid_advisees.add(vbox, 0, i);
-            //this.createSemesters();
+            this.createSemesters();
             this.createSem1();       
             this.createSem2();
             this.createSem3();
@@ -113,16 +113,14 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSemesters() {
-        sem1.getChildren().clear();
-        //HARDCODED
-        Student student = dg.getStudent("dspears");
+    clearAll();        
+    Student student = dg.getStudent("dspears");
         Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
         ArrayList<ArrayList<Course>> schedule = scheduler.createSchedule();
-        System.out.println(schedule);
         for (int i = 0; i < schedule.size(); i++) {
             switch (i) {
                 case 0:
-                    semester1 = fakeCourses();
+                    semester1 = schedule.get(i);
                     break;
                 case 1:
                     semester2 = schedule.get(i);
@@ -152,8 +150,57 @@ public class Advisor8SemController implements Initializable {
     }
 
     @FXML
+    public void createFutureSemesters() {
+        clearAll();
+        Student student = dg.getStudent("dspears");
+        Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
+        ArrayList<ArrayList<Course>> schedule = scheduler.createNextSchedule(student);
+        for (int i = 0; i < schedule.size(); i++) {
+            switch (i) {
+                case 0:
+                    semester1 = schedule.get(i);
+                    break;
+                case 1:
+                    semester2 = schedule.get(i);
+                    break;
+                case 2:
+                    semester3 = schedule.get(i);
+                    break;
+                case 3:
+                    semester4 = schedule.get(i);
+                    break;
+                case 4:
+                    semester5 = schedule.get(i);
+                    break;
+                case 5:
+                    semester6 = schedule.get(i);
+                    break;
+                case 6:
+                    semester7 = schedule.get(i);
+                    break;
+                case 7:
+                    semester8 = schedule.get(i);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void clearAll() {
+        sem1.getChildren().clear();
+        sem2.getChildren().clear();
+        sem3.getChildren().clear();
+        sem4.getChildren().clear();
+        sem5.getChildren().clear();
+        sem6.getChildren().clear();
+        sem7.getChildren().clear();
+        sem8.getChildren().clear();
+    }
+
+
+    @FXML
     public void createSem1() {
-        semester1 = fakeCourses();
         sem1.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -173,7 +220,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem2() {
-        semester2 = fakeCourses();
         sem2.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -193,7 +239,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem3() {
-        semester3 = fakeCourses();
         sem3.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -213,7 +258,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem4() {
-        semester4 = fakeCourses();
         sem4.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -234,7 +278,6 @@ public class Advisor8SemController implements Initializable {
     @FXML
 
     public void createSem5() {
-        semester5 = fakeCourses();
         sem5.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -254,7 +297,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem6() {
-        semester6 = fakeCourses();
         sem6.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -274,7 +316,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem7() {
-        semester7 = fakeCourses();
         sem7.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;
@@ -294,7 +335,6 @@ public class Advisor8SemController implements Initializable {
 
     @FXML
     public void createSem8() {
-        semester8 = fakeCourses();
         sem8.getChildren().clear();
         int columnCount = 0;
         int rowCount = 0;

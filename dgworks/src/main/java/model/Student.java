@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class Student extends User {
     private ArrayList<String> currentCourses;
+    private ArrayList<Course> completedCourses;
     private Major major;
     private long currentSemester;
     private ArrayList<String> advisingNotes;
@@ -107,6 +108,14 @@ public class Student extends User {
         return new ArrayList<>(this.currentCourses); // Provides a copy of the currentCourses list
     }
 
+    public ArrayList<Course> getCompletedCourses() {
+        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list
+    }
+
+    public void setCompletedCourses(ArrayList<Course> completedCourses) {
+        this.completedCourses = completedCourses;
+    }
+
     public Major getMajor() {
         return this.major; // Returns the major
     }
@@ -137,7 +146,8 @@ public class Student extends User {
         return copyOfFinishedCourses;
     }
     
-    public ArrayList<Course> getFinishedCourseObjects(ArrayList<Course> allCourses) {
+    public void updateFinishedCourseObjects(ArrayList<Course> allCourses) {
+        this.completedCourses.clear();
         ArrayList<Course> finishedCourseObjects = new ArrayList<>();
         for (ArrayList<String> semesterCourses : this.getFinishedCourses()) {
             for (String courseID : semesterCourses) {
@@ -149,9 +159,45 @@ public class Student extends User {
                 }
             }
         }
-        return finishedCourseObjects;
+        this.completedCourses = finishedCourseObjects; 
+    }
+
+    public void updateCurrentCourseObjects(ArrayList<Course> allCourses) {
+        this.completedCourses.clear();
+        updateFinishedCourseObjects(allCourses);
+        ArrayList<Course> finishedCourses = this.completedCourses;
+        for (String currentCourse : this.getCurrentCourses()) {
+            for (Course course : allCourses) {
+                if (course.getCourseID().equals(currentCourse)) {
+                    finishedCourses.add(course);
+                    break;
+                }
+            }
+        }
+        this.completedCourses = finishedCourses;
+    }
+
+    public void updateBothObjects(ArrayList<Course> allCourses) {
+        updateFinishedCourseObjects(allCourses);
+        updateCurrentCourseObjects(allCourses);
+    }
+
+    public ArrayList<Course> getFinishedCourseObjects(ArrayList<Course> allCourses) {
+        updateFinishedCourseObjects(allCourses);
+        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH JUST FINISHED
+    }
+
+    public ArrayList<Course> getCurrentCourseObjects(ArrayList<Course> allCourses) {
+        updateCurrentCourseObjects(allCourses);
+        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH JUST CURRENT
+    }
+
+    public ArrayList<Course> getBothCourseObjects(ArrayList<Course> allCourses) {
+        updateBothObjects(allCourses);
+        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH BOTH
     }
     
+
     public ArrayList<String> getDashboardWarnings() {
         return new ArrayList<>(this.dashboardWarnings); // Provides a copy of the dashboardWarnings list
     }

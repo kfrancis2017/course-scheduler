@@ -77,6 +77,8 @@ public class DataLoader {
      * Redone getAllStudents to be more in line with other "getAll" methods
      */
     public static void getAllStudents() {
+        getAllMajors();
+        MajorList majors = MajorList.getInstance();
         UserList users = UserList.getInstance();
         JSONParser parser = new JSONParser();
         try {
@@ -104,7 +106,8 @@ public class DataLoader {
                     sessionNotesList.add((String) noteObj);
                 }
                 student.setAdvisingNotes(sessionNotesList);
-                student.setMajor(new Major((String) studentJSON.get("major")));
+                Major major = majors.getMajorByName((String) studentJSON.get("major"));
+                student.setMajor(major);
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
                 student.setAdvisor((String) studentJSON.get("currentAdvisor"));
@@ -161,6 +164,7 @@ public class DataLoader {
     }
     
     public static void getAllMajors() {
+        getAllCourses();
         MajorList majors = MajorList.getInstance();
         CourseList courses = CourseList.getInstance();
         JSONParser parser = new JSONParser();

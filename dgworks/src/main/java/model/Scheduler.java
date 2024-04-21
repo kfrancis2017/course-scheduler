@@ -2,6 +2,8 @@ package model;
 
 import java.util.*;
 
+import javafx.scene.chart.PieChart.Data;
+
 /**
  * The Scheduler class is responsible for managing and scheduling courses for a student based on their major
  * and courses completed. It determines which courses a student needs to take next.
@@ -126,6 +128,39 @@ public class Scheduler {
         List<List<Course>> sortedCourseLists = courseDAG.sortByChildrenAndAncestors();
         return convertListToListOfArrayLists(sortedCourseLists);
     }
+
+        /**
+     * Creates a course schedule for the student FAST FORWARD ONE SEMESTER.
+     *
+     * @return An ArrayList containing ArrayLists of Courses, which represents different semesters or terms.
+     */
+    public ArrayList<ArrayList<Course>> createNextSchedule(Student student) {
+        ArrayList<Course> requiredCourses = new ArrayList<>();
+        DataLoader.getAllCourses();
+        CourseList courses = CourseList.getInstance();
+        this.completedCourses = student.getBothCourseObjects(courses.getCourses());
+        for (ArrayList<Course> majorCourses : major.getCourses()) {
+            requiredCourses.addAll(getPre_ReqCourses(majorCourses, completedCourses));
+        }
+        requiredCourses = new ArrayList<>(new LinkedHashSet<>(requiredCourses));
+
+        CourseDAG courseDAG = new CourseDAG();
+        for (Course course : requiredCourses) {
+            courseDAG.addNode(course);
+        }
+
+        for (Course course : requiredCourses) {
+            for (ArrayList<String> prereqList : course.getPrereqClean()) {
+                Course prereqCourse = allCourses.get(prereqList.get(0));
+                if (prereqCourse != null) {
+                    courseDAG.addAncestor(prereqCourse, course);
+                }
+            }
+        }
+        List<List<Course>> sortedCourseLists = courseDAG.sortByChildrenAndAncestors();
+        return convertListToListOfArrayLists(sortedCourseLists);
+    }
+
 
     /**
      * Converts a List of Lists of Courses into an ArrayList of ArrayLists of Courses.
