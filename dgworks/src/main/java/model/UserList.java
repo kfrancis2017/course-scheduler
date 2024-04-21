@@ -92,6 +92,8 @@ public class UserList {
         return null;
     }
     public Student searchStudent(String username) {
+        DataLoader.getAllStudents();
+        students = this.getStudents();
         for (Student student : students) {
             if (student.getUsername().equals(username)) {
                 return student;

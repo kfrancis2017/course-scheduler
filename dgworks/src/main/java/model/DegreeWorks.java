@@ -6,11 +6,14 @@ import java.util.ArrayList;
 
 import org.json.simple.parser.ParseException;
 
+import javafx.scene.chart.PieChart.Data;
+
 public class DegreeWorks {
 
     private User mUser;
     private Student mStudent;
-    private Advisor mAdvisor;
+    public Advisor mAdvisor;
+    //TODO
     private UserList allUsers;
     private CourseList allCourses;
     private MajorList allMajors;
@@ -88,6 +91,7 @@ public class DegreeWorks {
     }
 
     public Student getStudent(String username) {
+        DataLoader.getAll();
         mStudent = allUsers.searchStudent(username);
         return mStudent;
     }

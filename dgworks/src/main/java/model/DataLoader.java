@@ -11,6 +11,12 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class DataLoader {
+    public static void getAll(){
+        DataLoader.getAllCourses();
+        DataLoader.getAllStudents();
+        DataLoader.getAllAdvisors();
+        DataLoader.getAllMajors();
+    }
 
     public static void getAllCourses() {
         JSONParser parser = new JSONParser();
