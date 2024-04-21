@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -16,6 +17,12 @@ public class StudentPlanController implements Initializable {
 
     @FXML
     public Label lbl_description;
+
+    @FXML
+    public Label lbl_percent;
+
+    @FXML
+    public ProgressBar bar_progress;
 
     @FXML
     public GridPane sem1;
@@ -69,10 +76,18 @@ public class StudentPlanController implements Initializable {
 
     @FXML
     public void btnGenPlan(MouseEvent event) throws IOException {
-        
+
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        double student = dg.getStudentHours();
+        double major = dg.getMajorHours();
+
+        double percent = student/major;
+
+        lbl_percent.setText(percent*100 + "% | " + dg.getStudentHours() + "/" + dg.getMajorHours());
+
+        bar_progress.setProgress(percent);
     }
 }

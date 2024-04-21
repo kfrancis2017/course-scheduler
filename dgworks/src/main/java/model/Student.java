@@ -275,5 +275,22 @@ public class Student extends User {
         return transcript;
     }
 
+    public int getHours() {
+        int hours = 0;
+
+        CourseList courseList = CourseList.getInstance();
+
+        for (ArrayList<String> list : finishedCourses) {
+            Course c = courseList.findCourseByCode(list.get(0));
+            if (c == null) {
+                hours += 3;
+                continue;
+            }
+            hours += c.getHours();
+        }
+
+        return hours;
+    }
+
     
 }

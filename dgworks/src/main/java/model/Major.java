@@ -5,10 +5,19 @@ public class Major {
     private String name;
     private ArrayList<ArrayList<Course>> courses;
     private ArrayList<Course> courseList;
+    private int hours;
 
     public Major(String name) {
         this.name = name;
         this.courses = new ArrayList<>();
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getHours() {
+        return this.hours;
     }
 
     public String getName() {

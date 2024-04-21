@@ -135,8 +135,8 @@ public class DegreeWorks {
     
     public void viewRecord() {
         mStudent.viewRecord();
-
     }
+
     public String getMajorName() {
         return mStudent.getMajor().getName();
     }
@@ -194,5 +194,13 @@ public class DegreeWorks {
 
     public void addAdvisingNote(Student student, String session) {
         mAdvisor.addAdvisingSession(student, session);
+    }
+
+    public long getMajorHours() {
+        return mStudent.getMajor().getHours();
+    }
+
+    public int getStudentHours() {
+        return mStudent.getHours();
     }
 }

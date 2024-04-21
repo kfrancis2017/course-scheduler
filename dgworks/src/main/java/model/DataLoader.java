@@ -175,6 +175,8 @@ public class DataLoader {
                 JSONObject majorJSON = (JSONObject) majorObj;
                 String name = (String) majorJSON.get("name");
                 Major major = new Major(name);
+                String hours = (String) majorJSON.get("totalCreditsRequired");
+                major.setHours(Integer.parseInt(hours));
                 JSONArray options = (JSONArray) majorJSON.get("options");
                 for (Object optionObj : options) {
                     JSONArray coursesArray = (JSONArray) optionObj;

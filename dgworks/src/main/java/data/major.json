@@ -2,7 +2,7 @@
     {
         "id": "94d14278-e626-466e-8743-757505f8fba6",
         "name": "Computer Science",
-        "totalCreditsRequired": 125,
+        "totalCreditsRequired": "125",
         "majorCreditsRequired": 90,
         "electiveCreditsRequired": 26,
         "options": [
@@ -50,7 +50,7 @@
     {
         "id": "fa28a55a-983a-4ad7-9357-ec7a6e73b001",
         "name": "Computer Information Systems",
-        "totalCreditsRequired": 120,
+        "totalCreditsRequired": "120",
         "majorCreditsRequired": 87,
         "electiveCreditsRequired": 34,
         "options": [
@@ -101,7 +101,7 @@
     {
         "id": null,
         "name": "Statistics",
-        "totalCreditsRequired": 9,
+        "totalCreditsRequired": "9",
         "majorCreditsRequired": 0,
         "options": [
             ["STAT110", "STAT112"],
@@ -112,7 +112,7 @@
     {
         "id": null,
         "name": "Mathematics",
-        "totalCreditsRequired": 9,
+        "totalCreditsRequired": "9",
         "majorCreditsRequired": 0,
         "options": [
             ["MATH111"],
@@ -123,7 +123,7 @@
     {
         "id": null,
         "name": "Science",
-        "totalCreditsRequired": 9,
+        "totalCreditsRequired": "9",
         "majorCreditsRequired": 0,
         "options": [
             ["SCIN101"],
@@ -134,7 +134,7 @@
     {
         "id": null,
         "name": "Digital Design",
-        "totalCreditsRequired": 9,
+        "totalCreditsRequired": "9",
         "majorCreditsRequired": 0,
         "options": [
             ["DIGI101", "DIGI102"],
@@ -145,7 +145,7 @@
     {
         "id": null,
         "name": "Robotics",
-        "totalCreditsRequired": 9,
+        "totalCreditsRequired": "9",
         "majorCreditsRequired": 0,
         "options": [
             ["CSCE574", "EMCH535"],
