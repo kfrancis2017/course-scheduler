@@ -73,6 +73,7 @@ public class Advisor8SemController implements Initializable {
     private ArrayList<Course> semester8;
 
     private DegreeWorks dg = DegreeWorks.getInstance();
+    private Student student = dg.getStudent("dspears");
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -114,9 +115,24 @@ public class Advisor8SemController implements Initializable {
     @FXML
     public void createSemesters() {
     clearAll();        
-    Student student = dg.getStudent("dspears");
         Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
-        ArrayList<ArrayList<Course>> schedule = scheduler.createSchedule();
+        ArrayList<ArrayList<Course>> schedule = new ArrayList<ArrayList<Course>>();
+
+        //First populate finished courses
+        if(student.getFinishedCourses().size() > 0){
+            schedule.add(student.getFinishedCourseObjects(dg.getCourses()));
+        }
+
+        //Then populate current courses
+        if(student.getCurrentCourses().size() > 0){
+            schedule.add(student.getCurrentCourseObjects(dg.getCourses()));
+        } 
+
+        //Then populate future courses
+        for (int i = 0; i < (scheduler.createSchedule().size()); i++) {
+            schedule.add(scheduler.createNextSchedule(student).get(i));
+        }
+
         for (int i = 0; i < schedule.size(); i++) {
             switch (i) {
                 case 0:
@@ -152,7 +168,6 @@ public class Advisor8SemController implements Initializable {
     @FXML
     public void createFutureSemesters() {
         clearAll();
-        Student student = dg.getStudent("dspears");
         Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
         ArrayList<ArrayList<Course>> schedule = scheduler.createNextSchedule(student);
         for (int i = 0; i < schedule.size(); i++) {
@@ -206,7 +221,14 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester1.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester1.get(i).getCourseID() + " (" + semester1.get(i).getHours() + "hrs)");
+            Course thisCourse = semester1.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester1.get(i).getHours() + "hrs)");
+            student.updateFinishedCourseObjects(dg.getCourses());
+            for (Course c : student.getCompletedCourses()) {
+                if(thisCourse.equals(c.getCourseID())){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem1.add(vbox, columnCount, rowCount);

@@ -881,9 +881,16 @@
     },
     {
         "courseID": "MATH112",
-        "title": "Description",
+        "title": "Basic Linear Algebra",
         "description": "None",
-        "prerequisites": [],
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH141",
+                    "grade": "C"
+                }
+            ]
+        ],
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
@@ -900,20 +907,17 @@
         "hours": 3
     },
     {
-        "courseID": "MATH122",
+        "courseID": "Discrete Structures",
         "title": "Description",
         "description": "None",
-        "prerequisites": [],
-        "corequisites": [],
-        "AOS_Req": "N/A",
-        "courseHolds": false,
-        "hours": 3
-    },
-    {
-        "courseID": "MATH141",
-        "title": "Description",
-        "description": "None",
-        "prerequisites": [],
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH141",
+                    "grade": "C"
+                }
+            ]
+        ],
         "corequisites": [],
         "AOS_Req": "N/A",
         "courseHolds": false,
@@ -1229,16 +1233,7 @@
         "courseHolds": false,
         "hours": 3
     },
-    {
-        "courseID": "CSCE350",
-        "title": "Description",
-        "description": "None",
-        "prerequisites": [],
-        "corequisites": [],
-        "AOS_Req": "N/A",
-        "courseHolds": false,
-        "hours": 3
-    },
+
     {
         "courseID": "CSCE390",
         "title": "Description",
@@ -1350,16 +1345,6 @@
         "hours": 3
     },
     {
-        "courseID": "CSCE490",
-        "title": "Description",
-        "description": "None",
-        "prerequisites": [],
-        "corequisites": [],
-        "AOS_Req": "N/A",
-        "courseHolds": false,
-        "hours": 3
-    },
-    {
         "courseID": "CSCE416",
         "title": "Description",
         "description": "None",
@@ -1413,6 +1398,163 @@
         "courseID": "ITEC560",
         "title": "Description",
         "description": "None",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC001",
+        "title": "Social Science Elective",
+        "description": "Options: AFAM101, AFAM102, GEOL221, ANTH102, ANTH103",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC002",
+        "title": "Language Elective",
+        "description": "Options: LATN101, FRAN101, GERM101, SPAN101, ITAL101",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC003",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC004",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC005",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC006",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [
+            [
+                {
+                    "precourseID": "MATH141",
+                    "grade": "C"
+                }
+            ]
+        ],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC007",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC008",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC009",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC010",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC011",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC012",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC013",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC014",
+        "title": "General Elective",
+        "description": "Options: AFAM201, AFAM202, GEOL321, ANTH202, ANTH203",
+        "prerequisites": [],
+        "corequisites": [],
+        "AOS_Req": "N/A",
+        "courseHolds": false,
+        "hours": 3
+    },
+    {
+        "courseID": "ELEC015",
+        "title": "Language Elective",
+        "description": "Options: LATN201, FRAN201, GERM201, SPAN201, ITAL201",
         "prerequisites": [],
         "corequisites": [],
         "AOS_Req": "N/A",

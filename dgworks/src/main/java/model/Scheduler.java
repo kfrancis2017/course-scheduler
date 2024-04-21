@@ -22,6 +22,7 @@ public class Scheduler {
      */
     public Scheduler(Major major, Student student, ArrayList<Course> allCoursesList) {
         this.major = major;
+        student.updateFinishedCourseObjects(allCoursesList);
         this.completedCourses = student.getFinishedCourseObjects(allCoursesList);
         this.allCourses = new HashMap<>();
         for (Course course : allCoursesList) {
@@ -138,6 +139,7 @@ public class Scheduler {
         ArrayList<Course> requiredCourses = new ArrayList<>();
         DataLoader.getAllCourses();
         CourseList courses = CourseList.getInstance();
+        student.updateBothObjects(courses.getCourses());
         this.completedCourses = student.getBothCourseObjects(courses.getCourses());
         for (ArrayList<Course> majorCourses : major.getCourses()) {
             requiredCourses.addAll(getPre_ReqCourses(majorCourses, completedCourses));

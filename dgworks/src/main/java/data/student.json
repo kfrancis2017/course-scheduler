@@ -7,18 +7,19 @@
         "firstName": "Dominic",
         "lastName": "Spears",
         "accountStatus": "Open",
-        "currentCourses": ["HIST101", "ENGL101", "CSCE215", "CSCE145"],
+        "currentCourses": ["CSCE146", "CSCE190", "ELEC011", "ELEC010", "ELEC012"],
         "major": "Computer Information Systems",
         "currentSemester": 2,
         "sessionNotes": ["dfrancis wrote: Suggested courses include CSCE 146, ENGL 102; need to retake Hist 101. Mon Oct 25 14:20:33 EDT 2023", "dfrancis wrote: Suggested courses include CSCE211, CSCE240, MATH374, HIST101, and a GFL elective. Wed Mar 25 14:20:33 EDT 2024"],
         "program": "CEC",
         "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
         "finishedCourses": [
-            ["ELCT101", "A", "1"],
-            ["HIST101", "A", "1"],
-            ["ENGL101", "A", "1"],
+            ["ELCT101", "A", "3"],
+            ["HIST101", "A", "3"],
+            ["ENGL101", "A", "3"],
             ["CSCE215", "F", "1"],
-            ["CSCE145", "A", "1"]
+            ["CSCE145", "A", "3"],
+            ["ELEC001", "A", "3"]
         ]
     },
     {

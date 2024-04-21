@@ -147,7 +147,9 @@ public class Student extends User {
     }
     
     public void updateFinishedCourseObjects(ArrayList<Course> allCourses) {
-        this.completedCourses.clear();
+        if(this.completedCourses != null) {
+            this.completedCourses.clear();
+        }
         ArrayList<Course> finishedCourseObjects = new ArrayList<>();
         for (ArrayList<String> semesterCourses : this.getFinishedCourses()) {
             for (String courseID : semesterCourses) {
@@ -163,7 +165,9 @@ public class Student extends User {
     }
 
     public void updateCurrentCourseObjects(ArrayList<Course> allCourses) {
-        this.completedCourses.clear();
+        if(this.completedCourses != null) {
+            this.completedCourses.clear();
+        }        
         updateFinishedCourseObjects(allCourses);
         ArrayList<Course> finishedCourses = this.completedCourses;
         for (String currentCourse : this.getCurrentCourses()) {
@@ -184,17 +188,17 @@ public class Student extends User {
 
     public ArrayList<Course> getFinishedCourseObjects(ArrayList<Course> allCourses) {
         updateFinishedCourseObjects(allCourses);
-        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH JUST FINISHED
+        return this.completedCourses; // Provides a copy of the completedCourses list WITH JUST FINISHED
     }
 
     public ArrayList<Course> getCurrentCourseObjects(ArrayList<Course> allCourses) {
         updateCurrentCourseObjects(allCourses);
-        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH JUST CURRENT
+        return this.completedCourses; // Provides a copy of the completedCourses list WITH JUST CURRENT
     }
 
     public ArrayList<Course> getBothCourseObjects(ArrayList<Course> allCourses) {
         updateBothObjects(allCourses);
-        return new ArrayList<>(this.completedCourses); // Provides a copy of the completedCourses list WITH BOTH
+        return this.completedCourses; // Provides a copy of the completedCourses list WITH BOTH
     }
     
 
@@ -291,6 +295,5 @@ public class Student extends User {
 
         return hours;
     }
-
     
 }
