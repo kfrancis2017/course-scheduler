@@ -9,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.GridPane;
 import javafx.scene.input.MouseEvent;
 import dgworks.App;
 import model.*;
@@ -23,6 +22,12 @@ public class StudentHomeController implements Initializable {
     
     @FXML
     public Label lbl_info;
+
+    @FXML
+    public ListView list_cc;
+
+    @FXML
+    public ListView list_trans;
 
     @FXML
     public void logout(MouseEvent event) throws IOException {
@@ -51,6 +56,10 @@ public class StudentHomeController implements Initializable {
         }
 
         lbl_info.setText(info);
+
+        list_cc.getItems().addAll(dg.getCurrentCourses());
+
+        list_trans.getItems().addAll(dg.getStudentTranscript());
     }
 
 }
