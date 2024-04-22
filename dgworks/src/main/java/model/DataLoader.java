@@ -120,7 +120,7 @@ public class DataLoader {
     JSONParser parser = new JSONParser();
 
     try {
-        JSONArray studentData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data//student.json"));
+        JSONArray studentData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data/student.json"));
         for (Object obj : studentData) {
             JSONObject studentJSON = (JSONObject) obj;
             Student s = users.searchStudent((String) studentJSON.get("username"));

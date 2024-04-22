@@ -108,14 +108,12 @@
         "courseID": "ENGL102",
         "title": "Rhetoric and Composition",
         "description": "Instruction and intensive practice in researching, analyzing, and composing written arguments about academic and public issues. Requires a prerequisite grade of C or better in ENGL 101 or equivalent.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "ENGL101",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "ENGL101",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Arts and Humanities",
         "courseHolds": false,
@@ -125,14 +123,12 @@
         "courseID": "MATH142",
         "title": "Calculus II",
         "description": "Covers methods of integration, sequences and series, approximations. Includes four classroom hours and one laboratory hour each week.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH141",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH141",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -142,14 +138,12 @@
         "courseID": "CHEM111",
         "title": "General Chemistry I",
         "description": "Introduction to the fundamental principles of chemistry, including atomic and molecular structure, chemical bonding, stoichiometry, types of reactions, and thermochemistry. Designed for science majors.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH111",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH111",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [
             {
                 "cocourseID": "CHEM111L"
@@ -163,14 +157,12 @@
         "courseID": "PHYS211",
         "title": "Essentials of Physics I",
         "description": "Covers mechanics, wave motion, and heat. The course is algebra-based and includes a laboratory component.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH111",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH111",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [
             {
                 "cocourseID": "PHYS211L"
@@ -184,14 +176,12 @@
         "courseID": "CSCE146",
         "title": "Algorithmic Design II",
         "description": "Continuation of CSCE 145. Emphasizes data structures, advanced programming techniques, and algorithm design.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE145",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE145",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -211,14 +201,12 @@
         "courseID": "CSCE211",
         "title": "Digital Logic Design",
         "description": "Introduction to the design and analysis of combinational and sequential circuits.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE145",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE145",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -228,14 +216,12 @@
         "courseID": "CSCE240",
         "title": "Advanced Programming Techniques",
         "description": "Concepts and techniques for designing software systems, including advanced programming languages features, software lifecycle, and development environments.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE146",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -245,14 +231,12 @@
         "courseID": "MATH374",
         "title": "Discrete Structures",
         "description": "Introduction to discrete mathematical structures and their applications, covering sets, combinatorics, sequences, matrices, and relations.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH142",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -262,14 +246,12 @@
         "courseID": "CHEM112",
         "title": "General Chemistry II",
         "description": "Continuation of CHEM111, covering additional fundamental concepts and applications in chemistry.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CHEM111",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CHEM111",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [
             {
                 "cocourseID": "CHEM112L"
@@ -283,14 +265,12 @@
         "courseID": "PHYS212",
         "title": "Essentials of Physics II",
         "description": "Continuation of PHYS211, covering electricity, magnetism, and optics.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "PHYS211",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "PHYS211",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [
             {
                 "cocourseID": "PHYS212L"
@@ -334,14 +314,12 @@
         "courseID": "CSCE212",
         "title": "Introduction to Computer Architecture",
         "description": "Fundamentals of computer architecture, including data representation, assembly language, and computer arithmetic.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE211",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE211",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -351,14 +329,12 @@
         "courseID": "CSCE247",
         "title": "Software Engineering",
         "description": "Principles and practices of software development, including software life cycle, design patterns, and development methodologies.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE146",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -368,14 +344,12 @@
         "courseID": "MATH241",
         "title": "Vector Calculus",
         "description": "Covers vector algebra, geometry of three-dimensional space, and vector calculus, including divergence and curl.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH142",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -449,14 +423,12 @@
         "courseID": "CSCE311",
         "title": "Operating Systems",
         "description": "Study of operating system principles, including process management, memory management, file systems, and concurrency.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE212",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE212",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -466,14 +438,12 @@
         "courseID": "CSCE330",
         "title": "Programming Language Structures",
         "description": "Exploration of programming language paradigms and concepts with emphasis on language design and implementation.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE240",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE240",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -483,14 +453,12 @@
         "courseID": "CSCE350",
         "title": "Data Structures and Algorithms",
         "description": "Introduction to data structures and algorithms, including their design, analysis, and implementation.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE240",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE240",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -500,14 +468,12 @@
         "courseID": "CSCE390",
         "title": "Professional Issues in Computer Science and Engineering",
         "description": "Discussion of professional, ethical, legal, and social issues and responsibilities in computer science and engineering.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE146",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -517,14 +483,12 @@
         "courseID": "ENGL462",
         "title": "Technical Writing",
         "description": "Study and practice of technical writing, focusing on the production of clear and effective documents for scientific and technical fields.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "ENGL102",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "ENGL102",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "ENGL",
         "courseHolds": false,
@@ -534,14 +498,12 @@
         "courseID": "ENGL463",
         "title": "Advanced Technical Writing",
         "description": "Advanced concepts and techniques in technical writing, with a focus on writing for different audiences and purposes in scientific and technical fields.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "ENGL462",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "ENGL462",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "ENGL",
         "courseHolds": false,
@@ -551,14 +513,12 @@
         "courseID": "CSCE517",
         "title": "Computer Networks",
         "description": "Principles and practices of computer networking, including network design, protocols, and security.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE311",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "CMS",
         "courseHolds": false,
@@ -568,14 +528,12 @@
         "courseID": "CSCE520",
         "title": "Database System Design",
         "description": "Introduction to the principles of database systems, including data models, database design, query languages, and transaction management.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE350",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "CMS",
         "courseHolds": false,
@@ -595,14 +553,12 @@
         "courseID": "CSCE416",
         "title": "Web Programming",
         "description": "Introduction to web programming concepts, including client-server architecture, web design, and interactive web development.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE146",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -622,14 +578,12 @@
         "courseID": "CSCE317",
         "title": "Computer System Security",
         "description": "Study of the principles and practices of computer system security, including attack protection, detection, and response.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE211",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE211",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "CMS",
         "courseHolds": false,
@@ -639,14 +593,12 @@
         "courseID": "CSCE512",
         "title": "System Programming",
         "description": "Introduction to system-level programming concepts, including process management, scripting, and operating system APIs.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE311",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "CMS",
         "courseHolds": false,
@@ -656,14 +608,12 @@
         "courseID": "CSCE513",
         "title": "Computer Architecture",
         "description": "Advanced study of computer architecture, focusing on the design and analysis of processors, memory, and system-level components.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE311",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE311",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "CMS",
         "courseHolds": false,
@@ -673,14 +623,12 @@
         "courseID": "AERO401",
         "title": "Aerospace Engineering Fundamentals",
         "description": "Introduction to the fundamental concepts of aerospace engineering, including aerodynamics, propulsion, and flight mechanics.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "PHYS212",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "PHYS212",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "GSL",
         "courseHolds": false,
@@ -710,14 +658,12 @@
         "courseID": "CSCE490",
         "title": "Capstone Project for Computer Science",
         "description": "Completion of a significant software project integrating aspects of computer science under the direction of a faculty advisor.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE350",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -727,14 +673,12 @@
         "courseID": "CSCE355",
         "title": "Foundations of Computation",
         "description": "Introduction to the theory of computation, including automata, grammars, computability, and complexity.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE146",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE146",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -744,14 +688,12 @@
         "courseID": "MATH344",
         "title": "Applied Linear Algebra",
         "description": "Concepts and techniques of linear algebra as applied to engineering and science, including matrix theory and linear systems.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "MATH142",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "MATH142",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -761,14 +703,12 @@
         "courseID": "CSCE492",
         "title": "Computer Science Internship",
         "description": "Professional work experience in a computer science setting, integrating academic study with field experience.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "CSCE350",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "CSCE350",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "Science, Technology, Engineering, & Mathematics",
         "courseHolds": false,
@@ -788,14 +728,12 @@
         "courseID": "FAM300",
         "title": "Film and Media History",
         "description": "Surveys the development of cinema and related media from the 1820s to the present.",
-        "prerequisites": [
-            [
-                {
-                    "precourseID": "FAMS240",
-                    "grade": "C"
-                }
-            ]
-        ],
+        "prerequisites": [[
+            {
+                "precourseID": "FAMS240",
+                "grade": "C"
+            }
+        ]],
         "corequisites": [],
         "AOS_Req": "GSW",
         "courseHolds": false,
@@ -1295,6 +1233,7 @@
         "courseHolds": false,
         "hours": 3
     },
+
     {
         "courseID": "CSCE390",
         "title": "Description",
