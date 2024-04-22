@@ -53,7 +53,7 @@ public class Advisor8SemController implements Initializable {
     private ArrayList<Course> semester8;
 
     private DegreeWorks dg = DegreeWorks.getInstance();
-    private Student student = dg.getStudent("thill21");
+    private Student student = dg.getStudent("dspears");
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -115,7 +115,7 @@ public class Advisor8SemController implements Initializable {
         } 
 
         //Then populate current courses
-        if(student.getCurrentCourses() != null){
+        if(student.getCurrentCourses().isEmpty() == false){
             ArrayList<Course> current = new ArrayList<Course>();
             for(String c : student.getCurrentCourses()) {
                 current.add(dg.getAllCourses().findCourseByCode(c));
@@ -218,12 +218,19 @@ public class Advisor8SemController implements Initializable {
             VBox vbox = new VBox();
             Course thisCourse = semester1.get(i);
             Label course = new Label(thisCourse.getCourseID() + " (" + semester1.get(i).getHours() + "hrs)");
-            student.updateFinishedCourseObjects(dg.getCourses());
-            for (Course c : student.getCompletedCourses()) {
-                if(thisCourse.equals(c.getCourseID())){
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
                     course.setStyle("-fx-background-color: #00FF00");
                 }
             }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem1.add(vbox, columnCount, rowCount);
@@ -242,7 +249,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester2.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester2.get(i).getCourseID() + " (" + semester2.get(i).getHours() + "hrs)");
+            Course thisCourse = semester2.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester2.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem2.add(vbox, columnCount, rowCount);
@@ -261,7 +282,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester3.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester3.get(i).getCourseID() + " (" + semester3.get(i).getHours() + "hrs)");
+            Course thisCourse = semester3.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester3.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem3.add(vbox, columnCount, rowCount);
@@ -280,7 +315,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester4.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester4.get(i).getCourseID() + " (" + semester4.get(i).getHours() + "hrs)");
+            Course thisCourse = semester4.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester4.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem4.add(vbox, columnCount, rowCount);
@@ -300,7 +349,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester5.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester5.get(i).getCourseID() + " (" + semester5.get(i).getHours() + "hrs)");
+            Course thisCourse = semester5.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester5.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem5.add(vbox, columnCount, rowCount);
@@ -319,7 +382,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester6.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester6.get(i).getCourseID() + " (" + semester6.get(i).getHours() + "hrs)");
+            Course thisCourse = semester6.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester6.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem6.add(vbox, columnCount, rowCount);
@@ -338,7 +415,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester7.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester7.get(i).getCourseID() + " (" + semester7.get(i).getHours() + "hrs)");
+            Course thisCourse = semester7.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester7.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem7.add(vbox, columnCount, rowCount);
@@ -357,7 +448,21 @@ public class Advisor8SemController implements Initializable {
         int rowCount = 0;
         for (int i = 0; i < semester8.size(); i++) {
             VBox vbox = new VBox();
-            Label course = new Label(semester8.get(i).getCourseID() + " (" + semester8.get(i).getHours() + "hrs)");
+            Course thisCourse = semester8.get(i);
+            Label course = new Label(thisCourse.getCourseID() + " (" + semester8.get(i).getHours() + "hrs)");
+
+            //Colors!
+            for (ArrayList<String> list : student.getFinishedCourses()) {
+                if(thisCourse.getCourseID().equals(list.get(0))){
+                    course.setStyle("-fx-background-color: #00FF00");
+                }
+            }
+            for (String c : student.getCurrentCourses()) {
+                if(thisCourse.getCourseID().equals(c)){
+                    course.setStyle("-fx-background-color: #FFFF00");
+                }
+            }
+
             vbox.getChildren().add(course);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             sem8.add(vbox, columnCount, rowCount);
