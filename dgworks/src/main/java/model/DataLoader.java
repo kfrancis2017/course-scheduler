@@ -18,7 +18,7 @@ public class DataLoader {
         DataLoader.getAllMajors();
     }
 
-    public static void getStudentSaveNotes() {
+    public static void getAllStudents() {
         {
             getAllMajors();
             MajorList majors = MajorList.getInstance();
@@ -118,7 +118,7 @@ public class DataLoader {
     /**
      * Redone getAllStudents to be more in line with other "getAll" methods
      */
-    public static void getAllStudents() {
+    public static void getAllStudentsNoNotes() {
         getAllMajors();
         MajorList majors = MajorList.getInstance();
         UserList users = UserList.getInstance();
