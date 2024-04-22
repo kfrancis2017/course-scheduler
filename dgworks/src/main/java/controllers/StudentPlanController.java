@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import dgworks.App;
 import model.*;
 
@@ -66,6 +67,9 @@ public class StudentPlanController implements Initializable {
     @FXML
     public TextField txt_course;
 
+    @FXML
+    public TextField txt_semester;
+
     DegreeWorks dg = DegreeWorks.getInstance();
     private Student student = dg.mStudent;
 
@@ -89,6 +93,20 @@ public class StudentPlanController implements Initializable {
     @FXML
     public void btnAdd(MouseEvent event) throws IOException {
         String title = txt_course.getText();
+        String semester = txt_semester.getText();
+        DataLoader.getAll();
+
+        if (!dg.searchCourse(title) || Integer.parseInt(semester) > 8 || Integer.parseInt(semester) < 1) {
+            lbl_added.setText("Invalid course id and/or semester");
+            return;
+        }
+
+        int sem = Integer.parseInt(semester) + 1;
+
+        dg.addFinishedCourse(title, "-", sem + "");
+        lbl_added.setText("Course Added! Will be considered on 'Generate Plan'");
+
+
     }
 
     @FXML

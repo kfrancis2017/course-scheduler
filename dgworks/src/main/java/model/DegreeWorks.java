@@ -207,4 +207,12 @@ public class DegreeWorks {
     public int getStudentHours() {
         return mStudent.getHours();
     }
+
+    public boolean searchCourse(String id) {
+        return !allCourses.findCourseByCode(id).equals(null);
+    }
+
+    public void addFinishedCourse(String courseID, String grade, String sem) {
+        mStudent.addFinishedCourse(courseID, grade, sem);
+    }
 }
