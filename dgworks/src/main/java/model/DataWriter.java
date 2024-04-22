@@ -41,6 +41,7 @@ public class DataWriter {
         DegreeWorks dg = DegreeWorks.getInstance();       
         ArrayList<Advisor> advisors = dg.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
+        DataLoader.getStudentSaveNotes();
 
         for (Advisor advisor : advisors) {
             jsonAdvisors.add(getAdvisorJSON(advisor));

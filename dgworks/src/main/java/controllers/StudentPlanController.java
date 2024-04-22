@@ -72,7 +72,7 @@ public class StudentPlanController implements Initializable {
 
     DegreeWorks dg = DegreeWorks.getInstance();
     private Student student = dg.mStudent;
-    private final ArrayList<ArrayList<String>> FIN_COPY = student.getFinishedCourses();
+    private final ArrayList<ArrayList<String>> finCopy = dg.mStudent.getFinishedCourses();
 
 
     @FXML
@@ -113,7 +113,7 @@ public class StudentPlanController implements Initializable {
     @FXML
     public void btnGenPlan(MouseEvent event) throws IOException {
         generate();
-        dg.mStudent.setFinCourse(FIN_COPY);
+        dg.mStudent.setFinCourse(finCopy);
     }
     
     @Override
