@@ -15,6 +15,7 @@ public class DataWriter {
      * Calls the following methods to save all types of users
      */
     public static void SaveAllUsers() {
+        DataLoader.revertFinCourses();
         saveStudents();
         saveAdvisors();
     }
@@ -41,7 +42,6 @@ public class DataWriter {
         DegreeWorks dg = DegreeWorks.getInstance();       
         ArrayList<Advisor> advisors = dg.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
-        DataLoader.getStudentSaveNotes();
 
         for (Advisor advisor : advisors) {
             jsonAdvisors.add(getAdvisorJSON(advisor));

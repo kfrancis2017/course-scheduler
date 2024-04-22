@@ -19,7 +19,7 @@ public class DataLoader {
     }
 
     public static void getAllStudents() {
-        {
+        
             getAllMajors();
             MajorList majors = MajorList.getInstance();
             UserList users = UserList.getInstance();
@@ -57,7 +57,7 @@ public class DataLoader {
             } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
-        }
+        
     }
 
     public static void getAllCourses() {
@@ -115,56 +115,31 @@ public class DataLoader {
         }
     }
 
-    /**
-     * Redone getAllStudents to be more in line with other "getAll" methods
-     */
-    public static void getAllStudentsNoNotes() {
-        getAllMajors();
-        MajorList majors = MajorList.getInstance();
-        UserList users = UserList.getInstance();
-        JSONParser parser = new JSONParser();
-        try {
-            JSONArray studentData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data//student.json"));
-            for (Object obj : studentData) {
-                JSONObject studentJSON = (JSONObject) obj;
-                Student student = new Student();
-                student.setUsername((String) studentJSON.get("username"));
-                student.setPassword((String) studentJSON.get("password"));
-                student.setEmail((String) studentJSON.get("email"));
-                student.setFirstName((String) studentJSON.get("firstName"));
-                student.setLastName((String) studentJSON.get("lastName"));
-                JSONArray currentCoursesArray = (JSONArray) studentJSON.get("currentCourses");
-                ArrayList<String> currentCoursesList = new ArrayList<>();
-                for (Object courseObj : currentCoursesArray) {
-                    currentCoursesList.add((String) courseObj);
-                }
-                student.setCurrentCourses(currentCoursesList);
+   public static void revertFinCourses() {
+    UserList users = UserList.getInstance();
+    JSONParser parser = new JSONParser();
 
-                // Convert JSON array of session notes into a List<String>
-                JSONArray sessionNotesArray = (JSONArray) studentJSON.get("sessionNotes");
-                ArrayList<String> sessionNotesList = new ArrayList<>();
-                for (Object noteObj : sessionNotesArray) {
-                    sessionNotesList.add((String) noteObj);
-                }
-                student.setAdvisingNotes(sessionNotesList);
-                Major major = majors.getMajorByName((String) studentJSON.get("major"));
-                student.setMajor(major);
-                student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
-                student.setProgram((String) studentJSON.get("program"));
-                users.addUser(student);
-                JSONArray finishedCoursesArray = (JSONArray) studentJSON.get("finishedCourses");
-                for (Object courseArray : finishedCoursesArray) {
-                    JSONArray innerArray = (JSONArray) courseArray;
-                    String courseName = (String) innerArray.get(0); // Course name
-                    String grade = (String) innerArray.get(1); // Grade
-                    String semester = (String) innerArray.get(2); // Semester
-                    student.addFinishedCourse(courseName, grade, semester);
-                }
+    try {
+        JSONArray studentData = (JSONArray) parser.parse(new FileReader("dgworks/src/main/java/data//student.json"));
+        for (Object obj : studentData) {
+            JSONObject studentJSON = (JSONObject) obj;
+            Student s = users.searchStudent((String) studentJSON.get("username"));
+            s.setFinCourse(new ArrayList<ArrayList<String>>());
+            JSONArray finishedCoursesArray = (JSONArray) studentJSON.get("finishedCourses");
+            for (Object courseArray : finishedCoursesArray) {
+                JSONArray innerArray = (JSONArray) courseArray;
+                String courseName = (String) innerArray.get(0); // Course name
+                String grade = (String) innerArray.get(1); // Grade
+                String semester = (String) innerArray.get(2); // Semester
+                
+                s.addFinishedCourse(courseName, grade, semester);
             }
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
         }
+    } catch (IOException | ParseException e) {
+        e.printStackTrace();
     }
+
+   }
 
     /**
      * Doesn't return an ArrayList, instead populates the singleton, where you can

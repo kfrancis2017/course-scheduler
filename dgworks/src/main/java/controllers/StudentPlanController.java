@@ -95,10 +95,7 @@ public class StudentPlanController implements Initializable {
     public void btnAdd(MouseEvent event) throws IOException {
         String title = txt_course.getText();
         String semester = txt_semester.getText();
-        DataLoader.getAllCourses();
-        DataLoader.getAllStudentsNoNotes();
-        DataLoader.getAllAdvisors();
-        DataLoader.getAllMajors();
+        DataLoader.getAll();
 
         if (!dg.searchCourse(title) || Integer.parseInt(semester) > 8 || Integer.parseInt(semester) < 1) {
             lbl_added.setText("Invalid course id and/or semester");
