@@ -31,7 +31,7 @@ public class DataWriter {
             jsonStudents.add(getStudentJSON(student));
         }
 
-        writeJSONToFile("json/student.json", jsonStudents);
+        writeJSONToFile("dgworks/src/main/java/data/student.json", jsonStudents);
     }
 
     /**
@@ -46,7 +46,7 @@ public class DataWriter {
             jsonAdvisors.add(getAdvisorJSON(advisor));
         }
 
-        writeJSONToFile("json/advisor.json", jsonAdvisors);
+        writeJSONToFile("dgworks/src/main/java/data/advisor.json", jsonAdvisors);
     }
 
     private static void writeJSONToFile(String filename, JSONArray jsonArray) {
@@ -60,7 +60,6 @@ public class DataWriter {
 
     private static JSONObject getStudentJSON(Student student) {
         JSONObject studentDetails = new JSONObject();
-        studentDetails.put("userID", student.getUserID().toString());
         studentDetails.put("username", student.getUsername());
         studentDetails.put("password", student.getPassword());
         studentDetails.put("email", student.getEmail());
@@ -80,7 +79,6 @@ public class DataWriter {
         studentDetails.put("major", student.getMajor().getName()); // Assuming 'Major' has a 'getName()' method
         studentDetails.put("currentSemester", student.getCurrentSemester());
         studentDetails.put("program", student.getProgram());
-        studentDetails.put("currentAdvisor", student.getAdvisor().toString());
 
         JSONArray finishedCoursesArray = new JSONArray();
         finishedCoursesArray.addAll(student.getFinishedCourses());
@@ -91,13 +89,11 @@ public class DataWriter {
 
     private static JSONObject getAdvisorJSON(Advisor advisor) {
         JSONObject advisorDetails = new JSONObject();
-        advisorDetails.put("userID", advisor.getUserID().toString());
         advisorDetails.put("username", advisor.getUsername());
         advisorDetails.put("password", advisor.getPassword());
         advisorDetails.put("email", advisor.getEmail());
         advisorDetails.put("firstName", advisor.getFirstName());
         advisorDetails.put("lastName", advisor.getLastName());
-        advisorDetails.put("accountStatus", advisor.getAccountStatus());
 
         // Convert List of advisee IDs to JSON Array
         JSONArray adviseeIDs = new JSONArray();
