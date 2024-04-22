@@ -207,6 +207,16 @@ public class DegreeWorks {
     public int getStudentHours() {
         return mStudent.getHours();
     }
+    public void saveStudent() {
+        DataLoader.getAll();
+        for(Student student : allUsers.getStudents()) {
+            if (student.getUsername().equals(mStudent.getUsername())) {
+                allUsers.getStudents().remove(student);
+                allUsers.getStudents().add(mStudent);
+            }
+        }
+        DataWriter.SaveAllUsers();
+    }    
 
     public boolean searchCourse(String id) {
         return !allCourses.findCourseByCode(id).equals(null);
@@ -215,4 +225,5 @@ public class DegreeWorks {
     public void addFinishedCourse(String courseID, String grade, String sem) {
         mStudent.addFinishedCourse(courseID, grade, sem);
     }
+
 }

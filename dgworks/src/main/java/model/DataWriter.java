@@ -23,30 +23,30 @@ public class DataWriter {
      * Uses singleton to write student JSON file
      */
     private static void saveStudents() {
-        UserList users = UserList.getInstance();
-        ArrayList<Student> students = users.getStudents();
+        DegreeWorks dg = DegreeWorks.getInstance();
+        ArrayList<Student> students = dg.getStudents();
         JSONArray jsonStudents = new JSONArray();
 
         for (Student student : students) {
             jsonStudents.add(getStudentJSON(student));
         }
 
-        writeJSONToFile("json/students.json", jsonStudents);
+        writeJSONToFile("json/student.json", jsonStudents);
     }
 
     /**
      * Uses singleton to write advisor JSON file
      */
     private static void saveAdvisors() {
-        UserList users = UserList.getInstance();
-        ArrayList<Advisor> advisors = users.getAdvisors();
+        DegreeWorks dg = DegreeWorks.getInstance();       
+        ArrayList<Advisor> advisors = dg.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
 
         for (Advisor advisor : advisors) {
             jsonAdvisors.add(getAdvisorJSON(advisor));
         }
 
-        writeJSONToFile("json/advisors.json", jsonAdvisors);
+        writeJSONToFile("json/advisor.json", jsonAdvisors);
     }
 
     private static void writeJSONToFile(String filename, JSONArray jsonArray) {
@@ -81,6 +81,10 @@ public class DataWriter {
         studentDetails.put("currentSemester", student.getCurrentSemester());
         studentDetails.put("program", student.getProgram());
         studentDetails.put("currentAdvisor", student.getAdvisor().toString());
+
+        JSONArray finishedCoursesArray = new JSONArray();
+        finishedCoursesArray.addAll(student.getFinishedCourses());
+        studentDetails.put("finishedCourses", finishedCoursesArray);
 
         return studentDetails;
     }

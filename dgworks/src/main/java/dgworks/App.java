@@ -28,6 +28,7 @@ public class App extends Application {
             @Override
             public void handle(WindowEvent t) {
                 DegreeWorks.getInstance().logout();
+                DataWriter.SaveAllUsers();
                 Platform.exit();
                 System.exit(0);
             }
@@ -46,5 +47,7 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+
 
 }
