@@ -27,8 +27,8 @@ public class App extends Application {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
-                DataWriter.SaveAllUsers();
                 DegreeWorks.getInstance().logout();
+                DataWriter.SaveAllUsers();
                 Platform.exit();
                 System.exit(0);
             }

@@ -86,7 +86,6 @@ public class DataLoader {
             for (Object obj : studentData) {
                 JSONObject studentJSON = (JSONObject) obj;
                 Student student = new Student();
-                student.setUserID(UUID.fromString((String) studentJSON.get("userID")));
                 student.setUsername((String) studentJSON.get("username"));
                 student.setPassword((String) studentJSON.get("password"));
                 student.setEmail((String) studentJSON.get("email"));
@@ -110,7 +109,6 @@ public class DataLoader {
                 student.setMajor(major);
                 student.setCurrentSemester((Long) studentJSON.get("currentSemester"));
                 student.setProgram((String) studentJSON.get("program"));
-                student.setAdvisor((String) studentJSON.get("currentAdvisor"));
                 users.addUser(student);
                 JSONArray finishedCoursesArray = (JSONArray) studentJSON.get("finishedCourses");
                 for (Object courseArray : finishedCoursesArray) {
@@ -140,13 +138,11 @@ public class DataLoader {
                 JSONObject advisorJSON = (JSONObject) obj;
                 Advisor advisor = new Advisor();
 
-                advisor.setUserID(UUID.fromString((String) advisorJSON.get("userID")));
                 advisor.setUsername((String) advisorJSON.get("username"));
                 advisor.setPassword((String) advisorJSON.get("password"));
                 advisor.setEmail((String) advisorJSON.get("email"));
                 advisor.setFirstName((String) advisorJSON.get("firstName"));
                 advisor.setLastName((String) advisorJSON.get("lastName"));
-                advisor.setAccountStatus((String) advisorJSON.get("accountStatus"));
 
                 JSONArray adviseeIDs = (JSONArray) advisorJSON.get("adviseeList");
                 ArrayList<String> advisees = new ArrayList<>();
