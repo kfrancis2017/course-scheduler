@@ -104,7 +104,7 @@ public class StudentPlanController implements Initializable {
 
         int sem = Integer.parseInt(semester) + 1;
 
-        dg.addFinishedCourse(title, "-", sem + "");
+        student.addFinishedCourse(title, "-", sem + "");
         lbl_added.setText("Course Added! Will be considered on 'Generate Plan'");
 
 
@@ -113,7 +113,7 @@ public class StudentPlanController implements Initializable {
     @FXML
     public void btnGenPlan(MouseEvent event) throws IOException {
         generate();
-        dg.mStudent.setFinishedCourses(finCopy);
+        dg.mStudent.setFinCourse(finCopy);
     }
     
     @Override
@@ -153,7 +153,7 @@ public class StudentPlanController implements Initializable {
         //First populate finished courses
         if(student.getFinishedCourses().size() > 0){
             for(ArrayList<String> list : student.getFinishedCourses()) {
-                schedule.get(Integer.parseInt(list.get(2))-1).add(dg.getAllCourses().findCourseByCode(list.get(0)));
+                schedule.get(Integer.parseInt(list.get(2))).add(dg.getAllCourses().findCourseByCode(list.get(0)));
             }       
         }
 
