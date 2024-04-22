@@ -71,6 +71,10 @@ public class Student extends User {
         this.advisor = advisor;
     }
 
+    public void setFinCourse(ArrayList<ArrayList<String>> finishedCourses) {
+        this.finishedCourses = finishedCourses;
+    }
+
     public void setFinishedCourses(ArrayList<ArrayList<String>> finishedCourses) {
     
         // Iterate through the lists of course names and grades
