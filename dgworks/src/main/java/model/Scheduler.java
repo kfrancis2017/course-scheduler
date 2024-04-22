@@ -137,7 +137,6 @@ public class Scheduler {
      */
     public ArrayList<ArrayList<Course>> createNextSchedule(Student student) {
         ArrayList<Course> requiredCourses = new ArrayList<>();
-        DataLoader.getAllCourses();
         CourseList courses = CourseList.getInstance();
         student.updateBothObjects(courses.getCourses());
         this.completedCourses = student.getBothCourseObjects(courses.getCourses());

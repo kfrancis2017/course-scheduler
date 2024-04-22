@@ -3,6 +3,8 @@ package model;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -15,7 +17,6 @@ public class DataWriter {
      * Calls the following methods to save all types of users
      */
     public static void SaveAllUsers() {
-        DataLoader.revertFinCourses();
         saveStudents();
         saveAdvisors();
     }
@@ -27,26 +28,47 @@ public class DataWriter {
         DegreeWorks dg = DegreeWorks.getInstance();
         ArrayList<Student> students = dg.getStudents();
         JSONArray jsonStudents = new JSONArray();
-
+     
+        Set<String> existingUsernames = new HashSet<>(); // Track existing usernames
+     
         for (Student student : students) {
-            jsonStudents.add(getStudentJSON(student));
+            JSONObject studentJson = getStudentJSON(student);
+            String username = (String) studentJson.get("username");
+            if (!existingUsernames.contains(username)) { // Check if username already exists
+                jsonStudents.add(studentJson);
+                existingUsernames.add(username); // Add username to existing usernames set
+            } else {
+                // Handle duplicate entry or update existing entry
+                // For example: Update existing entry with new data
+                //updateExistingStudent(jsonStudents, studentJson);
+            }
         }
-
+     
         writeJSONToFile("dgworks/src/main/java/data/student.json", jsonStudents);
     }
-
     /**
      * Uses singleton to write advisor JSON file
      */
     private static void saveAdvisors() {
-        DegreeWorks dg = DegreeWorks.getInstance();       
+        DegreeWorks dg = DegreeWorks.getInstance();
         ArrayList<Advisor> advisors = dg.getAdvisors();
         JSONArray jsonAdvisors = new JSONArray();
-
+     
+        Set<String> existingUsernames = new HashSet<>(); // Track existing usernames
+     
         for (Advisor advisor : advisors) {
-            jsonAdvisors.add(getAdvisorJSON(advisor));
+            JSONObject advisorJson = getAdvisorJSON(advisor);
+            String username = (String) advisorJson.get("username");
+            if (!existingUsernames.contains(username)) { // Check if username already exists
+                jsonAdvisors.add(advisorJson);
+                existingUsernames.add(username); // Add username to existing usernames set
+            } else {
+                // Handle duplicate entry or update existing entry
+                // For example: Update existing entry with new data
+               // updateExistingStudent(jsonStudents, studentJson);
+            }
         }
-
+     
         writeJSONToFile("dgworks/src/main/java/data/advisor.json", jsonAdvisors);
     }
 

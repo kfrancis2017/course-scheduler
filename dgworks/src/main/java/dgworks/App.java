@@ -18,16 +18,19 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    
 
     @Override
     public void start(Stage stage) throws IOException {
+        DegreeWorks dg = DegreeWorks.getInstance();
         scene = new Scene(loadFXML("role"), 600, 400);
         stage.setScene(scene);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
-                DegreeWorks.getInstance().logout();
+                dg.logout();
+                DataLoader.revertFinCourses();
                 DataWriter.SaveAllUsers();
                 Platform.exit();
                 System.exit(0);

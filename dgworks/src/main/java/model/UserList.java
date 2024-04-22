@@ -92,7 +92,6 @@ public class UserList {
         return null;
     }
     public Student searchStudent(String username) {
-        DataLoader.getAllStudents();
         students = this.getStudents();
         for (Student student : students) {
             if (student.getUsername().equals(username)) {
@@ -103,7 +102,6 @@ public class UserList {
     }
 
     public Advisor searchAdvisor(String username) {
-        DataLoader.getAllAdvisors();
         advisors = this.getAdvisors();
         for (Advisor advisor : advisors) {
             if (advisor.getUsername().equals(username)) {

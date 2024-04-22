@@ -21,10 +21,12 @@ public class DegreeWorks {
 
 
     public DegreeWorks() {
-        DataLoader.getAllStudents();
-        DataLoader.getAllAdvisors();
         DataLoader.getAllCourses();
         DataLoader.getAllMajors();
+        DataLoader.getAllStudents();
+        DataLoader.getAllAdvisors();
+        
+        
 
         this.allUsers = UserList.getInstance();
         this.allCourses = CourseList.getInstance();
@@ -78,6 +80,10 @@ public class DegreeWorks {
             return null;
     }
 
+    public UserList getAllUsers() {
+        return this.allUsers;
+    }
+
     public ArrayList<Student> getStudents() {
         return allUsers.getStudents();
     }
@@ -95,7 +101,6 @@ public class DegreeWorks {
     }
 
     public Student getStudent(String username) {
-        DataLoader.getAll();
         mStudent = allUsers.searchStudent(username);
         return mStudent;
     }
@@ -207,17 +212,7 @@ public class DegreeWorks {
     public int getStudentHours() {
         return mStudent.getHours();
     }
-    public void saveStudent() {
-        DataLoader.getAll();
-        for(Student student : allUsers.getStudents()) {
-            if (student.getUsername().equals(mStudent.getUsername())) {
-                allUsers.getStudents().remove(student);
-                allUsers.getStudents().add(mStudent);
-            }
-        }
-        DataWriter.SaveAllUsers();
-    }    
-
+   
     public boolean searchCourse(String id) {
         return !allCourses.findCourseByCode(id).equals(null);
     }
@@ -225,5 +220,6 @@ public class DegreeWorks {
     public void addFinishedCourse(String courseID, String grade, String sem) {
         mStudent.addFinishedCourse(courseID, grade, sem);
     }
+    
 
 }
