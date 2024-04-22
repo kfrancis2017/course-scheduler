@@ -49,7 +49,7 @@
       </Label>
       <Label fx:id="lbl_name" layoutX="14.0" layoutY="88.0" onMouseClicked="#viewNotes" prefHeight="27.0" prefWidth="154.0" textFill="#71000b">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Label fx:id="lbl_info" layoutX="14.0" layoutY="102.0" prefHeight="94.0" prefWidth="184.0">
