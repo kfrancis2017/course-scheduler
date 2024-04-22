@@ -14,11 +14,11 @@
         "program": "CEC",
         "currentAdvisor": "591eb9db-17d4-4731-bce5-13547764ffdb",
         "finishedCourses": [
-            ["HIST101", "A", "3"],
-            ["ENGL101", "A", "3"],
+            ["HIST101", "A", "1"],
+            ["ENGL101", "A", "1"],
             ["CSCE215", "F", "1"],
-            ["CSCE145", "A", "3"],
-            ["ELEC001", "A", "3"]
+            ["CSCE145", "A", "1"],
+            ["ELEC001", "A", "1"]
         ]
     },
     {
@@ -106,35 +106,29 @@
             ["MATH141", "A", "1"],
             ["CSCE145", "A", "1"],
             ["CSCE190", "A", "1"],
-            ["ARTE101", "A", "1"],
             ["ENGL102", "A", "2"],
             ["MATH142", "B", "2"],
             ["PHYS211", "B", "2"],
-            ["PHYS211L", "B", "2"],
             ["CSCE146", "A", "2"],
             ["CSCE215", "A", "2"],
             ["CSCE211", "A", "3"],
             ["CSCE240", "A", "3"],
             ["MATH374", "B", "3"],
             ["PHYS212", "B", "3"],
-            ["PHYS212L", "B", "3"],
-            ["SPCH145", "A", "3"],
             ["CSCE212", "A", "4"],
             ["CSCE247", "A", "4"],
-            ["GEOG201", "A", "4"],
             ["MATH241", "B", "4"],
             ["ANTH101", "A", "4"],
             ["CSCE311", "A", "5"],
             ["CSCE330", "A", "5"],
             ["CSCE350", "B", "5"],
             ["CSCE390", "A", "5"],
-            ["ENGL463", "A", "5"],
-            ["POLI201", "A", "5"]
+            ["ENGL463", "A", "5"]
         ]
     },
     {
         "userID": "d5970f60-d321-4051-8161-369062b61bac",
-        "username": "admin",
+        "username": "thill21",
         "password": "password",
         "email": "thill21@email.sc.edu",
         "firstName": "Tawnie",

@@ -13,7 +13,7 @@ public class SchedulerTest {
         ArrayList<Major> majors = MajorList.getInstance().getMajors();
 
         // Create student and set their major and finished courses
-        Student student = dg.getStudent("dspears");
+        Student student = dg.getStudent("bwest");
         // Create scheduler and generate schedule
         Scheduler scheduler = new Scheduler(student.getMajor(), student, courses);
         ArrayList<ArrayList<Course>> schedule = scheduler.createNextSchedule(student);

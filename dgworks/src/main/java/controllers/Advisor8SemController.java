@@ -53,7 +53,7 @@ public class Advisor8SemController implements Initializable {
     private ArrayList<Course> semester8;
 
     private DegreeWorks dg = DegreeWorks.getInstance();
-    private Student student = dg.getStudent("dspears");
+    private Student student = dg.getStudent("thill21");
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -97,29 +97,34 @@ public class Advisor8SemController implements Initializable {
     clearAll();        
         Scheduler scheduler = new Scheduler(student.getMajor(), student, dg.getCourses());
         ArrayList<ArrayList<Course>> schedule = new ArrayList<ArrayList<Course>>();
-        ArrayList<Course> finished = new ArrayList<Course>();
-        ArrayList<Course> current = new ArrayList<Course>();
+        for (int i = 0; i < 8; i++) {
+            schedule.add(new ArrayList<Course>());
+        }
 
         //First populate finished courses
         if(student.getFinishedCourses().size() > 0){
             for(ArrayList<String> list : student.getFinishedCourses()) {
-                finished.add(dg.getAllCourses().findCourseByCode(list.get(0)));
-            }
-            System.out.println(finished);
-            schedule.add(finished);
+                schedule.get(Integer.parseInt(list.get(2))-1).add(dg.getAllCourses().findCourseByCode(list.get(0)));
+            }       
         }
 
+        for (int i = schedule.size() - 1; i >= 0; i--) {
+            if (schedule.get(i).isEmpty()) {
+                schedule.remove(i);
+            }
+        } 
+
         //Then populate current courses
-        if(student.getCurrentCourses().size() > 0){
+        if(student.getCurrentCourses() != null){
+            ArrayList<Course> current = new ArrayList<Course>();
             for(String c : student.getCurrentCourses()) {
                 current.add(dg.getAllCourses().findCourseByCode(c));
             }
-            System.out.println(current);
             schedule.add(current);
         } 
 
         //Then populate future courses
-        for (int i = 0; i < (scheduler.createSchedule().size()); i++) {
+        for (int i = 0; i < (scheduler.createNextSchedule(student).size()); i++) {
             schedule.add(scheduler.createNextSchedule(student).get(i));
         }
 
