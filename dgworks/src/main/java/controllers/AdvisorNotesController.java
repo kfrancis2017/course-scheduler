@@ -87,7 +87,7 @@ public class AdvisorNotesController implements Initializable {
     
     @FXML
     public void viewPlans(MouseEvent event) throws IOException {
-        App.setRoot("advisor_plans");
+        App.setRoot("advisor_8sem");
     }
 
     @FXML

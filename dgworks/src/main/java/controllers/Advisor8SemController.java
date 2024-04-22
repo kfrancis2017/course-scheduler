@@ -5,6 +5,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -53,7 +55,7 @@ public class Advisor8SemController implements Initializable {
     private ArrayList<Course> semester8;
 
     private DegreeWorks dg = DegreeWorks.getInstance();
-    private Student student = dg.getStudent("dspears");
+    private Student student = dg.mStudent;
 
     @FXML
     public void dashboard(MouseEvent event) throws IOException {
@@ -71,16 +73,9 @@ public class Advisor8SemController implements Initializable {
         App.setRoot("role");
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        for (int i = 0; i < dg.getAdvisees().size(); i++) {
-            VBox vbox = new VBox();
-            Label student_username = new Label(dg.getAdvisees().get(i));
-
-            vbox.getChildren().add(student_username);
-
-            grid_advisees.add(vbox, 0, i);
-            this.createSemesters();
+    @FXML
+    public void generate() {
+        this.createSemesters();
             this.createSem1();       
             this.createSem2();
             this.createSem3();
@@ -88,7 +83,26 @@ public class Advisor8SemController implements Initializable {
             this.createSem5();
             this.createSem6();
             this.createSem7();
-            this.createSem8();       
+            this.createSem8();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        for (int i = 0; i < dg.getAdvisees().size(); i++) {
+            VBox vbox = new VBox();
+            Label student_username = new Label(dg.getAdvisees().get(i));
+
+            student_username.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                public void handle(MouseEvent event) {
+                    student = UserList.getInstance().searchStudent(student_username.getText());
+                    generate();
+                }
+            });
+
+            vbox.getChildren().add(student_username);
+
+            grid_advisees.add(vbox, 0, i);
+                   
         }
     }
 
